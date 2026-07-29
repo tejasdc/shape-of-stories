@@ -1,0 +1,354 @@
+{"books": [
+  {
+    "id": "the-hobbit",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year": 1937,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, 0.25], [0.05, 0.0], [0.12, -0.35], [0.22, -0.5], [0.35, -0.4], [0.5, 0.1], [0.6, -0.3], [0.7, 0.2], [0.82, -0.6], [0.9, 0.2], [1.0, 0.45]]}
+    ],
+    "beats": [
+      [0.05, "Unexpected party"],
+      [0.22, "Riddles with Gollum"],
+      [0.5, "Lake-town welcome"],
+      [0.6, "Smaug razes Lake-town"],
+      [0.82, "Battle of Five Armies"],
+      [1.0, "Home to the Shire"]
+    ],
+    "note": "A tidy hole: comfort disturbed, terror endured underground, treasure won, home returned to a little wider than it was."
+  },
+  {
+    "id": "the-lord-of-the-rings",
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "year": 1954,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Middle-earth (the world's line)", "source": "authored", "pts": [[0.0, 0.35], [0.08, 0.0], [0.18, -0.25], [0.32, -0.4], [0.45, -0.55], [0.58, -0.65], [0.72, -0.8], [0.85, -0.9], [0.9, 0.85], [0.93, 0.9], [0.97, 0.75], [1.0, 0.7]]},
+      {"axis": "fortune", "label": "Frodo (the ring-bearer's line)", "source": "authored", "pts": [[0.0, 0.35], [0.08, 0.0], [0.18, -0.4], [0.32, -0.5], [0.45, -0.65], [0.72, -0.85], [0.85, -0.95], [0.9, -0.6], [0.97, -0.55], [1.0, -0.4]]}
+    ],
+    "beats": [
+      [0.08, "The Ring revealed at Bag End"],
+      [0.32, "Gandalf falls in Moria"],
+      [0.72, "Siege of Minas Tirith"],
+      [0.9, "Ring destroyed at Mount Doom"],
+      [0.97, "Scouring of the Shire"],
+      [1.0, "Grey Havens"]
+    ],
+    "note": "Two lines that share a shape until the last mile: the world climbs back to peace but Frodo cannot, and the shape of victory is measured by who does not come home."
+  },
+  {
+    "id": "harry-potter-sorcerers-stone",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "year": 1997,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "cinderella",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, -0.5], [0.08, -0.55], [0.15, 0.5], [0.22, 0.65], [0.3, 0.7], [0.42, 0.6], [0.55, 0.55], [0.7, 0.4], [0.85, -0.35], [0.92, -0.55], [0.97, 0.7], [1.0, 0.85]]}
+    ],
+    "beats": [
+      [0.15, "You're a wizard, Harry"],
+      [0.3, "Sorted into Gryffindor"],
+      [0.55, "Troll defeated, friendship sealed"],
+      [0.85, "Through the trapdoor"],
+      [0.92, "Voldemort on the back of a head"],
+      [1.0, "House Cup, going home"]
+    ],
+    "note": "Vonnegut's Cinderella in a school uniform: cupboard-floor to castle-peak, one plunge at the climax, and a coronation before summer."
+  },
+  {
+    "id": "the-hunger-games",
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "year": 2008,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, -0.4], [0.05, -0.7], [0.08, -0.55], [0.2, -0.35], [0.3, -0.55], [0.45, -0.65], [0.55, -0.4], [0.62, -0.75], [0.75, -0.35], [0.85, -0.55], [0.92, 0.2], [1.0, -0.1]]}
+    ],
+    "beats": [
+      [0.05, "Prim's name is called"],
+      [0.08, "I volunteer as tribute"],
+      [0.55, "Alliance with Rue"],
+      [0.62, "Rue dies"],
+      [0.92, "Two victors allowed"],
+      [1.0, "Back on the train, watched"]
+    ],
+    "note": "A hole where the recovery is barbed: survival, yes, but as a Capitol target — the exit sits below where the story started."
+  },
+  {
+    "id": "the-martian",
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "year": 2011,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, 0.2], [0.03, -0.9], [0.08, -0.55], [0.15, -0.3], [0.2, -0.6], [0.3, -0.35], [0.4, -0.55], [0.5, -0.3], [0.6, -0.65], [0.7, -0.35], [0.8, -0.55], [0.88, -0.75], [0.94, -0.4], [0.98, 0.5], [1.0, 0.75]]}
+    ],
+    "beats": [
+      [0.03, "Left for dead on Mars"],
+      [0.08, "I'm going to have to science the shit out of this"],
+      [0.2, "Hab breach kills the potatoes"],
+      [0.6, "Iris probe explodes at launch"],
+      [0.94, "Iron Man across the sky"],
+      [1.0, "Beck catches him"]
+    ],
+    "note": "A hole worn down by sawtooth: every clever fix invites the next failure, so the axis oscillates through the descent and rise both."
+  },
+  {
+    "id": "life-of-pi",
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "year": 2001,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Pi's fortune", "source": "authored", "pts": [[0.0, 0.3], [0.1, 0.4], [0.2, 0.1], [0.28, -0.9], [0.35, -0.6], [0.42, -0.7], [0.55, -0.55], [0.7, -0.4], [0.8, -0.35], [0.9, -0.1], [0.95, 0.0], [1.0, 0.25]]},
+      {"axis": "certainty", "label": "What actually happened on that lifeboat", "source": "authored", "pts": [[0.0, 0.5], [0.28, 0.6], [0.42, 0.4], [0.6, 0.2], [0.75, 0.0], [0.9, 0.3], [0.95, 0.1], [1.0, -0.65]]}
+    ],
+    "beats": [
+      [0.28, "Tsimtsum goes down"],
+      [0.42, "Alone on the lifeboat with Richard Parker"],
+      [0.75, "The algae island and the human tooth"],
+      [0.9, "Mexican shore; the tiger walks off without looking back"],
+      [1.0, "Second story to the Japanese investigators"]
+    ],
+    "note": "The rescue is real but the certainty isn't: two accounts, one lifeboat, and the reader is asked which story they prefer."
+  },
+  {
+    "id": "the-kite-runner",
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "year": 2003,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, 0.3], [0.1, 0.45], [0.15, -0.7], [0.2, -0.55], [0.3, -0.35], [0.4, -0.15], [0.5, -0.3], [0.55, -0.45], [0.6, -0.55], [0.68, -0.65], [0.75, -0.8], [0.82, -0.6], [0.88, -0.75], [0.95, -0.45], [1.0, -0.2]]}
+    ],
+    "beats": [
+      [0.1, "Kite tournament won"],
+      [0.15, "The alley Amir didn't enter"],
+      [0.55, "There is a way to be good again"],
+      [0.75, "Sohrab in Assef's house"],
+      [0.88, "The razor in the bathtub"],
+      [1.0, "For you, a thousand times over"]
+    ],
+    "note": "A decades-wide hole with a damped exit: the debt is paid partially and late, and the ending resolves not to joy but to the smallest possible relief."
+  },
+  {
+    "id": "the-road",
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "year": 2006,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "flatline",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, -0.8], [0.15, -0.75], [0.3, -0.85], [0.4, -0.75], [0.5, -0.8], [0.6, -0.85], [0.7, -0.8], [0.85, -0.9], [0.92, -0.95], [0.97, -0.55], [1.0, -0.45]]}
+    ],
+    "beats": [
+      [0.3, "The house with the basement"],
+      [0.6, "Thief takes the cart"],
+      [0.85, "The father's cough turns bloody"],
+      [0.92, "Father dies on the beach"],
+      [1.0, "The family with the children takes the boy"]
+    ],
+    "note": "A dark flat band the length of the book with one candle at the end; the recovery is not a rise, it is a refusal to go all the way to zero."
+  },
+  {
+    "id": "never-let-me-go",
+    "title": "Never Let Me Go",
+    "author": "Kazuo Ishiguro",
+    "year": 2005,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": true,
+    "axes": [
+      {"axis": "knowledge", "label": "What Kathy and the reader understand about Hailsham", "source": "authored", "pts": [[0.0, -0.6], [0.1, -0.55], [0.2, -0.4], [0.3, -0.2], [0.45, 0.05], [0.6, 0.3], [0.7, 0.5], [0.85, 0.8], [0.95, 0.9], [1.0, 1.0]]},
+      {"axis": "fortune", "label": "Kathy's fortune", "source": "authored", "pts": [[0.0, 0.2], [0.2, 0.15], [0.35, -0.05], [0.5, -0.2], [0.6, -0.3], [0.7, -0.15], [0.85, -0.55], [0.92, -0.75], [1.0, -0.75]]}
+    ],
+    "beats": [
+      [0.2, "Madame flinches from them at the fence"],
+      [0.3, "Miss Lucy: you're told and not told"],
+      [0.45, "The Cottages, and what donation means"],
+      [0.85, "Madame confirms the deferral was a rumor"],
+      [1.0, "Kathy in the field, waiting"]
+    ],
+    "note": "The quietest scissors in fiction: knowledge climbs the whole book while fortune sinks, and neither line ever raises its voice."
+  },
+  {
+    "id": "atonement",
+    "title": "Atonement",
+    "author": "Ian McEwan",
+    "year": 2001,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "oedipus",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Robbie and Cecilia (as the novel presents it)", "source": "authored", "pts": [[0.0, 0.3], [0.1, 0.45], [0.15, -0.6], [0.2, -0.75], [0.35, -0.55], [0.5, -0.4], [0.65, -0.2], [0.75, 0.2], [0.85, 0.3], [0.92, -0.9], [1.0, -0.85]]},
+      {"axis": "certainty", "label": "Whether the reunion we just read is true", "source": "authored", "pts": [[0.0, 0.5], [0.15, 0.4], [0.5, 0.6], [0.75, 0.7], [0.85, 0.8], [0.92, -0.75], [1.0, 0.2]]}
+    ],
+    "beats": [
+      [0.15, "Briony misreads the fountain and the library"],
+      [0.2, "Robbie is taken away in the police car"],
+      [0.5, "Dunkirk retreat"],
+      [0.85, "Briony visits Cecilia and Robbie in Balham"],
+      [0.92, "London 1999: they both died in the war"]
+    ],
+    "note": "The rise you read in Part Three is the atonement itself — a fiction — and Part Four collapses fortune and certainty in the same vertical stroke."
+  },
+  {
+    "id": "the-handmaids-tale",
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "year": 1985,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "flatline",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Offred", "source": "authored", "pts": [[0.0, -0.55], [0.1, -0.65], [0.2, -0.75], [0.3, -0.5], [0.45, -0.4], [0.55, -0.6], [0.65, -0.3], [0.75, -0.55], [0.85, -0.65], [0.95, -0.45], [1.0, -0.5]]},
+      {"axis": "certainty", "label": "Whether Offred's fate can be known", "source": "authored", "pts": [[0.0, 0.35], [0.3, 0.3], [0.6, 0.2], [0.85, 0.0], [0.95, -0.55], [1.0, -0.75]]}
+    ],
+    "beats": [
+      [0.2, "The Ceremony"],
+      [0.45, "Jezebel's, and Moira surrendered"],
+      [0.75, "Ofglen gone, the network broken"],
+      [0.95, "The black van arrives"],
+      [1.0, "Historical Notes: no record either way"]
+    ],
+    "note": "The line hovers in a low band the whole book; at the last minute the van erases certainty itself — rescue and arrest sharing the same door."
+  },
+  {
+    "id": "gone-girl",
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "year": 2012,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": true,
+    "axes": [
+      {"axis": "knowledge", "label": "What the reader knows about Amy", "source": "authored", "pts": [[0.0, -0.55], [0.15, -0.45], [0.25, -0.35], [0.4, -0.25], [0.48, 0.75], [0.6, 0.8], [0.75, 0.85], [0.9, 0.9], [1.0, 0.95]]},
+      {"axis": "fortune", "label": "Nick's fortune", "source": "authored", "pts": [[0.0, -0.3], [0.2, -0.5], [0.4, -0.75], [0.5, -0.6], [0.65, -0.4], [0.8, -0.3], [0.9, -0.5], [1.0, -0.75]]}
+    ],
+    "beats": [
+      [0.05, "Amy is missing"],
+      [0.4, "Nick looks guilty from every angle"],
+      [0.48, "Cool Girl monologue: Amy is alive and framing him"],
+      [0.9, "Amy kills Desi and returns as a hero"],
+      [1.0, "The pregnancy locks the marriage shut"]
+    ],
+    "note": "A vertical mid-book snap on knowledge: the reader is dragged up to a truth Nick still cannot escape, and his line stays underground."
+  },
+  {
+    "id": "and-then-there-were-none",
+    "title": "And Then There Were None",
+    "author": "Agatha Christie",
+    "year": 1939,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Guests still alive on Soldier Island", "source": "authored", "pts": [[0.0, 0.3], [0.06, 0.15], [0.12, 0.0], [0.2, -0.1], [0.28, -0.2], [0.36, -0.3], [0.44, -0.4], [0.52, -0.5], [0.62, -0.6], [0.74, -0.7], [0.84, -0.8], [0.92, -0.95], [0.96, -0.9], [1.0, -0.85]]},
+      {"axis": "knowledge", "label": "What the reader can tell about the killer", "source": "authored", "pts": [[0.0, -0.7], [0.1, -0.6], [0.3, -0.5], [0.52, -0.35], [0.7, -0.4], [0.9, -0.65], [0.96, -0.5], [1.0, 1.0]]}
+    ],
+    "beats": [
+      [0.06, "Gramophone accuses all ten"],
+      [0.52, "Wargrave appears to be shot"],
+      [0.84, "Down to Vera and Lombard on the beach"],
+      [0.92, "Vera hangs herself under the noose Wargrave left"],
+      [1.0, "The bottled confession is found"]
+    ],
+    "note": "Two staircases in opposite directions: the survivor count steps down while reader knowledge steps sideways, and only the confession letter lets knowledge finally leap."
+  },
+  {
+    "id": "the-murder-of-roger-ackroyd",
+    "title": "The Murder of Roger Ackroyd",
+    "author": "Agatha Christie",
+    "year": 1926,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": true,
+    "axes": [
+      {"axis": "knowledge", "label": "What the reader knows about the murder", "source": "authored", "pts": [[0.0, -0.7], [0.15, -0.5], [0.35, -0.3], [0.55, -0.1], [0.75, 0.2], [0.88, 0.5], [0.92, 0.9], [1.0, 1.0]]},
+      {"axis": "certainty", "label": "Trust in Dr. Sheppard, the narrator", "source": "authored", "pts": [[0.0, 0.7], [0.3, 0.7], [0.6, 0.7], [0.85, 0.75], [0.92, -0.85], [1.0, -0.8]]}
+    ],
+    "beats": [
+      [0.15, "Ackroyd found stabbed in his study"],
+      [0.55, "Ralph Paton missing — the obvious suspect"],
+      [0.75, "The dictaphone clue"],
+      [0.92, "Poirot: the narrator is the murderer"],
+      [1.0, "Sheppard's manuscript ends"]
+    ],
+    "note": "The reader climbs a staircase of clues with a friendly narrator, then discovers at the top that the ladder itself was the confession."
+  },
+  {
+    "id": "rebecca",
+    "title": "Rebecca",
+    "author": "Daphne du Maurier",
+    "year": 1938,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": false,
+    "axes": [
+      {"axis": "knowledge", "label": "What the narrator understands about Rebecca", "source": "authored", "pts": [[0.0, -0.6], [0.1, -0.5], [0.2, -0.7], [0.3, -0.75], [0.4, -0.8], [0.5, -0.85], [0.55, -0.7], [0.6, 0.7], [0.72, 0.75], [0.82, 0.8], [0.9, 0.85], [1.0, 0.9]]}
+    ],
+    "beats": [
+      [0.1, "Arrival at Manderley, Rebecca everywhere"],
+      [0.4, "Costume ball: wearing Rebecca's dress"],
+      [0.55, "Diver finds the sunken sailboat"],
+      [0.6, "Maxim confesses: he hated her, he killed her"],
+      [0.9, "Dr. Baker: Rebecca had cancer, wanted death"],
+      [1.0, "Manderley in flames on the horizon"]
+    ],
+    "note": "One vertical stroke reorganizes the whole book: everything believed about Rebecca inverts in a single sentence, and the second half is spent replaying the first with new eyes."
+  },
+  {
+    "id": "the-da-vinci-code",
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "year": 2003,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": true,
+    "axes": [
+      {"axis": "knowledge", "label": "What Langdon and the reader piece together", "source": "authored", "pts": [[0.0, -0.7], [0.05, -0.6], [0.15, -0.4], [0.25, -0.2], [0.35, 0.0], [0.5, 0.3], [0.65, 0.5], [0.75, 0.6], [0.85, 0.75], [0.95, 0.9], [1.0, 0.95]]},
+      {"axis": "tension", "label": "Reader dread as the thriller metronome ticks", "source": "authored", "pts": [[0.0, 0.15], [0.05, 0.7], [0.1, 0.4], [0.16, 0.75], [0.22, 0.4], [0.3, 0.7], [0.36, 0.4], [0.45, 0.75], [0.55, 0.35], [0.65, 0.7], [0.75, 0.4], [0.85, 0.75], [0.92, 0.35], [1.0, 0.1]]}
+    ],
+    "beats": [
+      [0.05, "Curator dead in the Grand Gallery"],
+      [0.35, "The Priory of Sion, and what the Grail actually is"],
+      [0.5, "Teabing on Mary Magdalene"],
+      [0.75, "The Teacher is Teabing"],
+      [1.0, "Langdon kneels at the inverted pyramid"]
+    ],
+    "note": "A knowledge staircase climbing steadily while tension sawtooths beneath it — fortune barely moves at all, proof a bestseller can run on axes Vonnegut never named."
+  }
+]}

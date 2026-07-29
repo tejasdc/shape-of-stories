@@ -1,0 +1,317 @@
+{"books": [
+  {
+    "id": "the-great-gatsby",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "icarus",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Gatsby’s standing", "source": "authored", "pts": [[0.0, 0.2], [0.08, 0.35], [0.18, 0.5], [0.3, 0.55], [0.42, 0.75], [0.55, 0.6], [0.68, 0.15], [0.75, -0.35], [0.88, -0.9], [1.0, -0.85]]},
+      {"axis": "certainty", "label": "How believable the dream is", "source": "authored", "pts": [[0.0, 0.35], [0.1, 0.45], [0.2, 0.55], [0.35, 0.7], [0.45, 0.75], [0.55, 0.5], [0.68, -0.15], [0.8, -0.55], [0.92, -0.85], [1.0, -0.9]]}
+    ],
+    "beats": [
+      [0.08, "Nick moves next door"],
+      [0.3, "Reunion with Daisy"],
+      [0.68, "Plaza Hotel confrontation"],
+      [0.75, "Myrtle killed by Daisy"],
+      [0.88, "Gatsby shot in the pool"],
+      [1.0, "Funeral, nobody comes"]
+    ],
+    "note": "The dream and the man rise together and fail together; the ‘green light’ line collapses one beat ahead of the body."
+  },
+  {
+    "id": "of-mice-and-men",
+    "title": "Of Mice and Men",
+    "author": "John Steinbeck",
+    "year": 1937,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "The little-farm dream", "source": "authored", "pts": [[0.0, -0.15], [0.1, 0.1], [0.25, 0.35], [0.4, 0.55], [0.55, 0.5], [0.68, 0.0], [0.82, -0.55], [0.93, -0.9], [1.0, -0.85]]},
+      {"axis": "connection", "label": "George’s bond with Lennie", "source": "authored", "pts": [[0.0, 0.5], [0.15, 0.6], [0.35, 0.75], [0.55, 0.7], [0.7, 0.55], [0.82, 0.1], [0.93, -0.9], [1.0, -0.9]]}
+    ],
+    "beats": [
+      [0.1, "Arrive at the Salinas ranch"],
+      [0.35, "Candy joins the dream, stake in hand"],
+      [0.68, "Lennie kills the puppy"],
+      [0.82, "Lennie kills Curley’s wife"],
+      [0.93, "George shoots Lennie by the river"]
+    ],
+    "note": "The dream and the friendship track each other until the last chapter — where fortune only falls, but connection is deliberately killed."
+  },
+  {
+    "id": "the-grapes-of-wrath",
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "year": 1939,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, -0.2], [0.08, 0.1], [0.2, -0.25], [0.32, -0.45], [0.42, 0.15], [0.52, -0.35], [0.62, -0.55], [0.7, 0.2], [0.78, -0.55], [0.86, -0.7], [0.93, -0.85], [1.0, -0.45]]}
+    ],
+    "beats": [
+      [0.08, "Joads pile onto the truck"],
+      [0.2, "Grandpa dies at the roadside"],
+      [0.32, "Grandma dies crossing the desert"],
+      [0.7, "Weedpatch camp — brief dignity"],
+      [0.78, "Casy killed at the strike"],
+      [1.0, "Rose of Sharon nurses the starving man"]
+    ],
+    "note": "The line falls almost to zero and then, at the last t, lifts a fraction — the grace note is real but it does not redeem the arc."
+  },
+  {
+    "id": "1984",
+    "title": "1984",
+    "author": "George Orwell",
+    "year": 1949,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "oedipus",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, -0.4], [0.08, -0.35], [0.18, -0.2], [0.28, 0.15], [0.4, 0.5], [0.5, 0.55], [0.6, 0.35], [0.7, -0.75], [0.82, -0.9], [0.92, -0.98], [0.98, -1.0], [1.0, -1.0]]}
+    ],
+    "beats": [
+      [0.08, "Starts the diary"],
+      [0.28, "Julia’s note: ‘I love you’"],
+      [0.4, "The rented room above Charrington’s"],
+      [0.7, "Arrested; the picture falls"],
+      [0.92, "Room 101 — betrays Julia"],
+      [1.0, "‘He loved Big Brother.’"]
+    ],
+    "note": "The final beats do not curve — they flatline at the absolute floor, because the Party’s point is that no oscillation is possible from here."
+  },
+  {
+    "id": "animal-farm",
+    "title": "Animal Farm",
+    "author": "George Orwell",
+    "year": 1945,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "icarus",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "The animals’ wellbeing", "source": "authored", "pts": [[0.0, -0.3], [0.06, 0.6], [0.15, 0.7], [0.28, 0.5], [0.4, 0.2], [0.52, 0.0], [0.65, -0.4], [0.78, -0.6], [0.9, -0.75], [1.0, -0.85]]},
+      {"axis": "power", "label": "The pigs’ authority", "source": "authored", "pts": [[0.0, -0.3], [0.06, 0.15], [0.2, 0.3], [0.35, 0.5], [0.5, 0.65], [0.62, 0.8], [0.75, 0.9], [0.88, 0.95], [1.0, 1.0]]}
+    ],
+    "beats": [
+      [0.06, "Rebellion — Jones driven out"],
+      [0.35, "Snowball chased by dogs"],
+      [0.62, "Executions in the yard"],
+      [0.78, "Boxer sent to the knacker"],
+      [1.0, "Pig and man are indistinguishable"]
+    ],
+    "note": "Two lines that cross once and then keep opening: every commandment the pigs rewrite is another notch of altitude they take from the herd."
+  },
+  {
+    "id": "lord-of-the-flies",
+    "title": "Lord of the Flies",
+    "author": "William Golding",
+    "year": 1954,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, 0.2], [0.08, 0.35], [0.18, 0.25], [0.3, -0.05], [0.45, -0.3], [0.6, -0.55], [0.75, -0.75], [0.88, -0.9], [0.95, -0.55], [1.0, -0.7]]}
+    ],
+    "beats": [
+      [0.08, "Conch found, Ralph elected"],
+      [0.3, "First fire lost; ship passes"],
+      [0.6, "Simon killed in the dark"],
+      [0.75, "Piggy killed; conch shatters"],
+      [0.95, "Naval officer steps ashore"],
+      [1.0, "Ralph weeps for the end of innocence"]
+    ],
+    "note": "The rescue lifts the line only slightly and only for a beat; the coda drops again because the officer restores order but not innocence."
+  },
+  {
+    "id": "the-catcher-in-the-rye",
+    "title": "The Catcher in the Rye",
+    "author": "J. D. Salinger",
+    "year": 1951,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "flatline",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, -0.3], [0.1, -0.2], [0.2, -0.35], [0.3, -0.25], [0.4, -0.4], [0.5, -0.35], [0.6, -0.45], [0.72, -0.25], [0.82, -0.1], [0.88, 0.55], [0.95, -0.25], [1.0, -0.35]]}
+    ],
+    "beats": [
+      [0.0, "Expelled from Pencey"],
+      [0.3, "Date with Sally at the rink"],
+      [0.5, "Wakes to Mr. Antolini’s hand"],
+      [0.82, "Sneaks in to see Phoebe"],
+      [0.88, "Phoebe on the carousel — the true spike"],
+      [1.0, "Narrating from the ward"]
+    ],
+    "note": "A near-flat drift with one honest lift — the carousel — proving that when Holden actually sees something, the line can move; he just usually won’t."
+  },
+  {
+    "id": "the-old-man-and-the-sea",
+    "title": "The Old Man and the Sea",
+    "author": "Ernest Hemingway",
+    "year": 1952,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "icarus",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "The catch", "source": "authored", "pts": [[0.0, -0.45], [0.06, -0.3], [0.16, 0.0], [0.28, 0.2], [0.42, 0.35], [0.55, 0.75], [0.66, 0.4], [0.76, -0.1], [0.86, -0.65], [0.95, -0.7], [1.0, -0.55]]},
+      {"axis": "certainty", "label": "Santiago’s dignity", "source": "authored", "pts": [[0.0, 0.15], [0.1, 0.3], [0.3, 0.45], [0.5, 0.65], [0.6, 0.8], [0.76, 0.85], [0.86, 0.9], [1.0, 0.9]]}
+    ],
+    "beats": [
+      [0.06, "Sets out on the 85th day"],
+      [0.28, "The marlin takes the bait"],
+      [0.55, "Kills the marlin, lashes it to the skiff"],
+      [0.66, "First shark strikes"],
+      [0.86, "Only skeleton reaches shore"],
+      [1.0, "Dreams of the lions"]
+    ],
+    "note": "Two lines drawn deliberately apart: the fish falls to the sea, the man rises; ‘destroyed but not defeated’ is the shape of the gap between them."
+  },
+  {
+    "id": "to-kill-a-mockingbird",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "year": 1960,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": true,
+    "axes": [
+      {"axis": "knowledge", "label": "What Scout understands", "source": "authored", "pts": [[0.0, -0.3], [0.15, -0.1], [0.28, 0.1], [0.4, 0.25], [0.5, 0.4], [0.6, 0.6], [0.7, 0.75], [0.82, 0.85], [0.95, 0.9], [1.0, 0.9]]},
+      {"axis": "fortune", "label": "Scout’s childhood innocence", "source": "authored", "pts": [[0.0, 0.6], [0.15, 0.55], [0.3, 0.4], [0.45, 0.2], [0.55, 0.1], [0.65, -0.3], [0.78, -0.5], [0.88, -0.55], [0.97, -0.15], [1.0, 0.0]]}
+    ],
+    "beats": [
+      [0.28, "Atticus takes Tom’s case"],
+      [0.5, "Mob at the jailhouse"],
+      [0.6, "Trial and verdict"],
+      [0.82, "Tom shot trying to escape"],
+      [0.88, "Bob Ewell attacks the children"],
+      [0.97, "‘Hey, Boo.’"]
+    ],
+    "note": "One line climbs as the other falls — the price of knowing what Maycomb actually is; the porch coda lifts innocence off the floor but not back to childhood."
+  },
+  {
+    "id": "things-fall-apart",
+    "title": "Things Fall Apart",
+    "author": "Chinua Achebe",
+    "year": 1958,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, 0.5], [0.08, 0.6], [0.18, 0.4], [0.25, 0.15], [0.32, 0.2], [0.42, -0.2], [0.5, -0.3], [0.6, -0.2], [0.7, -0.3], [0.8, -0.45], [0.9, -0.65], [0.96, -0.85], [1.0, -0.9]]}
+    ],
+    "beats": [
+      [0.08, "Champion wrestler; three wives, full barn"],
+      [0.25, "Kills Ikemefuna with his own machete"],
+      [0.42, "Accidental killing; seven-year exile"],
+      [0.7, "Returns to a changed Umuofia"],
+      [0.9, "Beheads the court messenger"],
+      [1.0, "Hangs himself; a paragraph in the DC’s book"]
+    ],
+    "note": "The line falls in visible steps, not a slide — each drop is a specific breach; the last is the smallest, and the coldest, because it’s a footnote."
+  },
+  {
+    "id": "one-hundred-years-of-solitude",
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "year": 1967,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "Macondo across the generations", "source": "authored", "pts": [[0.0, 0.1], [0.05, 0.5], [0.1, 0.2], [0.16, 0.55], [0.22, -0.15], [0.28, 0.6], [0.34, 0.15], [0.4, -0.35], [0.46, 0.55], [0.52, -0.75], [0.58, -0.35], [0.64, -0.55], [0.72, 0.2], [0.8, 0.45], [0.86, 0.2], [0.92, -0.4], [0.97, -0.85], [1.0, -1.0]]}
+    ],
+    "beats": [
+      [0.05, "Founding of Macondo"],
+      [0.28, "Colonel Aureliano launches his 32 wars"],
+      [0.46, "Banana company brings the boom"],
+      [0.52, "Banana massacre, denied by the state"],
+      [0.6, "Four years of rain"],
+      [0.86, "Amaranta Úrsula and Aureliano’s love"],
+      [1.0, "Wind erases Macondo; the parchments are read"]
+    ],
+    "note": "Same figure, smaller each time — the amplitudes shrink as the generations repeat, and the last swing lands exactly at the ‘erasure’ floor."
+  },
+  {
+    "id": "slaughterhouse-five",
+    "title": "Slaughterhouse-Five",
+    "author": "Kurt Vonnegut",
+    "year": 1969,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "oedipus",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "In story order — Billy’s life", "source": "authored", "pts": [[0.0, 0.0], [0.08, 0.05], [0.14, -0.2], [0.2, -0.45], [0.26, -0.65], [0.32, -0.55], [0.4, -0.4], [0.46, -1.0], [0.52, -0.6], [0.58, -0.2], [0.64, 0.25], [0.7, 0.45], [0.78, -0.35], [0.84, -0.45], [0.9, 0.05], [0.96, -0.1], [1.0, -0.1]]},
+      {"axis": "fortune", "label": "In the order told — Billy unstuck in time", "source": "authored", "pts": [[0.0, 0.1], [0.05, -0.5], [0.1, 0.45], [0.15, -1.0], [0.2, 0.5], [0.25, -0.35], [0.3, -0.7], [0.35, 0.35], [0.4, -1.0], [0.45, 0.55], [0.5, -0.45], [0.55, 0.3], [0.6, -0.4], [0.65, -0.85], [0.7, 0.5], [0.75, -0.65], [0.8, 0.25], [0.85, -0.75], [0.9, -0.35], [0.95, 0.1], [1.0, 0.0]]}
+    ],
+    "beats": [
+      [0.14, "Chaplain’s assistant, Battle of the Bulge"],
+      [0.26, "Captured; boxcar east"],
+      [0.46, "Firebombing of Dresden"],
+      [0.52, "Corpse mines in the ruins"],
+      [0.7, "Optometry, big house, family"],
+      [0.78, "Sole survivor of the plane crash"],
+      [1.0, "‘Poo-tee-weet?’"]
+    ],
+    "note": "Two lines, same values, different orders — Vonnegut draws his own graph and then shreds it, because that is what the war did to the timeline."
+  },
+  {
+    "id": "the-color-purple",
+    "title": "The Color Purple",
+    "author": "Alice Walker",
+    "year": 1982,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Celie’s life", "source": "authored", "pts": [[0.0, -0.8], [0.08, -0.75], [0.18, -0.7], [0.28, -0.6], [0.38, -0.4], [0.5, -0.2], [0.6, -0.1], [0.7, 0.25], [0.8, 0.5], [0.9, 0.65], [1.0, 0.85]]},
+      {"axis": "connection", "label": "Celie ↔ Nettie ↔ Shug", "source": "authored", "pts": [[0.0, 0.35], [0.1, -0.3], [0.25, -0.55], [0.38, 0.05], [0.5, 0.4], [0.62, 0.55], [0.75, 0.65], [0.88, 0.75], [1.0, 0.95]]}
+    ],
+    "beats": [
+      [0.0, "‘You better not never tell nobody but God.’"],
+      [0.1, "Nettie forced away"],
+      [0.38, "Shug arrives at the house"],
+      [0.6, "Celie finds Nettie’s hidden letters"],
+      [0.7, "Leaves Mr. — ‘I’m poor, I’m black…’"],
+      [1.0, "Nettie and the children come home"]
+    ],
+    "note": "Connection climbs first and then pulls fortune up after it — the causal order is the argument of the book, not just its shape."
+  },
+  {
+    "id": "beloved",
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "year": 1987,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "", "source": "authored", "pts": [[0.0, -0.45], [0.08, -0.25], [0.16, -0.05], [0.26, 0.05], [0.36, -0.15], [0.46, -0.55], [0.55, -0.7], [0.66, -0.8], [0.76, -0.7], [0.86, -0.35], [0.92, -0.15], [0.97, 0.1], [1.0, 0.2]]}
+    ],
+    "beats": [
+      [0.08, "Paul D arrives at 124"],
+      [0.26, "Beloved appears at the stump"],
+      [0.46, "Paul D learns of the handsaw; leaves"],
+      [0.66, "Beloved swells; Sethe wastes"],
+      [0.86, "The thirty women come to sing"],
+      [0.97, "‘You your best thing.’"]
+    ],
+    "note": "The line falls further after Beloved is named than before she appeared — the past hurts more once it has a body — and the ending only edges back above the horizon."
+  }
+]}

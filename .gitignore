@@ -1,0 +1,7 @@
+tmp/
+data/reagan/timeseries/
+data/reagan/*.txt
+data/reagan/*.tgz
+data/reagan/*.gz
+data/reagan/*.csv
+.DS_Store

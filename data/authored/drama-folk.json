@@ -1,0 +1,384 @@
+{"books": [
+  {
+    "id": "oedipus-rex",
+    "title": "Oedipus Rex",
+    "author": "Sophocles",
+    "year": -429,
+    "kind": "drama",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Oedipus’ standing in Thebes", "source": "authored", "pts": [[0.0, 0.55], [0.08, 0.45], [0.18, 0.35], [0.3, 0.2], [0.42, 0.0], [0.55, -0.2], [0.68, -0.45], [0.8, -0.7], [0.9, -0.95], [1.0, -0.9]]},
+      {"axis": "knowledge", "label": "What Oedipus knows about himself", "source": "authored", "pts": [[0.0, -0.7], [0.08, -0.6], [0.18, -0.45], [0.3, -0.25], [0.42, -0.05], [0.55, 0.2], [0.68, 0.45], [0.8, 0.75], [0.9, 0.98], [1.0, 0.95]]}
+    ],
+    "beats": [
+      [0.05, "Plague; king vows to find killer"],
+      [0.3, "Tiresias: ‘You are the man’"],
+      [0.6, "Corinthian messenger: adopted"],
+      [0.85, "Shepherd confirms parentage"],
+      [0.95, "Jocasta hangs; Oedipus blinds himself"]
+    ],
+    "note": "Fortune and knowledge are near-perfect mirrors: every step toward the truth is a step down. The play is the crossing itself."
+  },
+  {
+    "id": "hamlet",
+    "title": "Hamlet",
+    "author": "William Shakespeare",
+    "year": 1601,
+    "kind": "drama",
+    "source": "authored",
+    "arch": "flatline",
+    "crossed": false,
+    "axes": [
+      {"axis": "certainty", "label": "Can anyone tell what is really going on?", "source": "authored", "pts": [[0.0, -0.05], [0.08, -0.25], [0.16, 0.05], [0.25, -0.15], [0.34, 0.15], [0.42, -0.1], [0.5, 0.1], [0.58, -0.2], [0.66, 0.1], [0.74, -0.15], [0.82, 0.05], [0.9, -0.1], [0.96, 0.0], [1.0, -0.15]]}
+    ],
+    "beats": [
+      [0.08, "Ghost’s claim: good news or bad?"],
+      [0.35, "Play-within-the-play as lie detector"],
+      [0.5, "‘To be or not to be’"],
+      [0.72, "Polonius killed; Ophelia drowns"],
+      [1.0, "Nearly everyone dead; nothing settled"]
+    ],
+    "note": "Vonnegut’s ‘Which Way Is Up?’: the line hovers near zero because Hamlet, and we, honestly cannot tell. The ambiguity is the honesty."
+  },
+  {
+    "id": "macbeth",
+    "title": "Macbeth",
+    "author": "William Shakespeare",
+    "year": 1606,
+    "kind": "drama",
+    "source": "authored",
+    "arch": "icarus",
+    "crossed": true,
+    "axes": [
+      {"axis": "power", "label": "Macbeth’s worldly power", "source": "authored", "pts": [[0.0, -0.05], [0.08, 0.2], [0.18, 0.4], [0.3, 0.7], [0.45, 0.8], [0.6, 0.65], [0.75, 0.35], [0.9, -0.5], [1.0, -1.0]]},
+      {"axis": "fortune", "label": "Macbeth’s soul", "source": "authored", "pts": [[0.0, 0.35], [0.08, 0.2], [0.18, -0.15], [0.3, -0.45], [0.45, -0.6], [0.6, -0.75], [0.75, -0.85], [0.9, -0.95], [1.0, -1.0]]}
+    ],
+    "beats": [
+      [0.1, "Witches’ prophecy"],
+      [0.22, "Duncan murdered"],
+      [0.4, "Banquo killed; the ghost"],
+      [0.6, "Macduff’s wife and sons slaughtered"],
+      [0.85, "Lady Macbeth: ‘out, damned spot’"],
+      [1.0, "Birnam Wood; Macduff kills him"]
+    ],
+    "note": "A scissor-shape: the power line climbs, the moral line falls, and the crossing near the middle is the exact moment of no return."
+  },
+  {
+    "id": "king-lear",
+    "title": "King Lear",
+    "author": "William Shakespeare",
+    "year": 1606,
+    "kind": "drama",
+    "source": "authored",
+    "arch": "oedipus",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "Lear’s wellbeing", "source": "authored", "pts": [[0.0, 0.2], [0.06, -0.05], [0.18, -0.35], [0.3, -0.55], [0.45, -0.8], [0.6, -0.85], [0.72, -0.6], [0.8, 0.4], [0.9, -0.9], [1.0, -1.0]]}
+    ],
+    "beats": [
+      [0.05, "Kingdom divided; Cordelia disowned"],
+      [0.25, "Daughters strip the retinue"],
+      [0.45, "Storm on the heath; madness"],
+      [0.55, "Gloucester blinded"],
+      [0.8, "Cordelia reunion"],
+      [0.95, "Cordelia hanged; Lear dies over her"]
+    ],
+    "note": "The Cordelia reunion is the cruel oedipus rise — the story lifts him just high enough that the last fall reaches all the way through the reader."
+  },
+  {
+    "id": "romeo-and-juliet",
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare",
+    "year": 1597,
+    "kind": "drama",
+    "source": "authored",
+    "arch": "icarus",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "The lovers’ fortune", "source": "authored", "pts": [[0.0, 0.05], [0.08, 0.4], [0.18, 0.7], [0.3, 0.9], [0.42, 0.5], [0.55, 0.15], [0.68, -0.3], [0.8, -0.6], [0.92, -1.0], [1.0, -0.75]]}
+    ],
+    "beats": [
+      [0.15, "Meet at the Capulet ball"],
+      [0.28, "Balcony scene"],
+      [0.35, "Married in secret"],
+      [0.52, "Tybalt kills Mercutio; Romeo kills Tybalt"],
+      [0.78, "Juliet takes the sleeping draught"],
+      [0.95, "Suicide in the tomb"],
+      [1.0, "Families reconcile over the bodies"]
+    ],
+    "note": "A steep icarus with a civic grace note: the families finally end their feud, but only after the two people who could have enjoyed peace are dead."
+  },
+  {
+    "id": "cinderella-perrault",
+    "title": "Cinderella",
+    "author": "Charles Perrault",
+    "year": 1697,
+    "kind": "folk",
+    "source": "authored",
+    "arch": "cinderella",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "Cinderella’s fortune", "source": "authored", "pts": [[0.0, -0.4], [0.12, -0.45], [0.22, -0.4], [0.32, -0.35], [0.42, 0.3], [0.52, 0.7], [0.6, -0.35], [0.68, -0.4], [0.78, 0.4], [0.88, 0.85], [0.96, 1.0], [1.0, 1.0]]}
+    ],
+    "beats": [
+      [0.05, "Mother dead; stepmother rules"],
+      [0.35, "Invitation to the ball"],
+      [0.45, "Godmother; pumpkin; slippers"],
+      [0.55, "Ball; dances with prince"],
+      [0.6, "Midnight; the flight"],
+      [0.8, "Slipper fits"],
+      [1.0, "Marriage; she forgives the sisters"]
+    ],
+    "note": "The reference shape: two rungs up, one drop back, and a final climb that goes off the top of Vonnegut’s scale. The fairy tale is not subtle."
+  },
+  {
+    "id": "waiting-for-godot",
+    "title": "Waiting for Godot",
+    "author": "Samuel Beckett",
+    "year": 1953,
+    "kind": "drama",
+    "source": "authored",
+    "arch": "flatline",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "Vladimir and Estragon’s day", "source": "authored", "pts": [[0.0, -0.15], [0.06, -0.1], [0.15, 0.05], [0.24, 0.15], [0.33, 0.0], [0.42, -0.15], [0.48, -0.2], [0.5, -0.2], [0.55, -0.15], [0.62, 0.05], [0.72, 0.15], [0.82, 0.0], [0.92, -0.15], [1.0, -0.2]]}
+    ],
+    "beats": [
+      [0.1, "‘Nothing to be done’"],
+      [0.3, "Pozzo and Lucky arrive"],
+      [0.48, "Boy: Mr Godot will come tomorrow"],
+      [0.55, "Act II opens the same tree"],
+      [0.85, "Pozzo and Lucky return, altered"],
+      [1.0, "‘Let’s go.’ They do not move"]
+    ],
+    "note": "Two nearly identical humps: nothing happens, twice. Flatlining the axis is the whole point — the play refuses the shape stories are supposed to have."
+  },
+  {
+    "id": "the-trial",
+    "title": "The Trial",
+    "author": "Franz Kafka",
+    "year": 1925,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "flatline",
+    "crossed": false,
+    "axes": [
+      {"axis": "certainty", "label": "What is K. accused of?", "source": "authored", "pts": [[0.0, 0.0], [0.08, -0.1], [0.18, -0.15], [0.28, -0.1], [0.38, -0.2], [0.48, -0.15], [0.58, -0.25], [0.68, -0.3], [0.78, -0.35], [0.88, -0.4], [0.96, -0.5], [1.0, -0.5]]}
+    ],
+    "beats": [
+      [0.02, "Arrested without charge"],
+      [0.25, "First inquiry in the attic court"],
+      [0.55, "The painter’s explanation of ‘acquittal’"],
+      [0.75, "Parable ‘Before the Law’"],
+      [1.0, "Executed ‘like a dog’"]
+    ],
+    "note": "The line barely moves because the story never grants clarity — it only makes the absence of clarity more permanent. Ambiguity as verdict."
+  },
+  {
+    "id": "the-stranger",
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "year": 1942,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "What happens to Meursault", "source": "authored", "pts": [[0.0, -0.1], [0.08, -0.05], [0.18, -0.1], [0.3, -0.2], [0.42, -0.35], [0.55, -0.5], [0.68, -0.65], [0.8, -0.75], [0.92, -0.9], [1.0, -0.95]]},
+      {"axis": "connection", "label": "What Meursault feels", "source": "authored", "pts": [[0.0, -0.05], [0.08, 0.0], [0.18, -0.05], [0.3, -0.05], [0.42, 0.0], [0.55, -0.05], [0.68, -0.05], [0.8, 0.0], [0.92, -0.1], [1.0, 0.35]]}
+    ],
+    "beats": [
+      [0.03, "‘Maman died today’"],
+      [0.4, "Kills the Arab on the beach"],
+      [0.6, "Trial for a murder about grief"],
+      [0.9, "Rejects the chaplain"],
+      [1.0, "‘The gentle indifference of the world’"]
+    ],
+    "note": "The events line falls steadily; the felt line barely twitches until the very end, when a tiny upward flicker becomes the whole point of the book."
+  },
+  {
+    "id": "the-count-of-monte-cristo",
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "year": 1844,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "hole",
+    "crossed": true,
+    "axes": [
+      {"axis": "fortune", "label": "Edmond Dantès’ fortune", "source": "authored", "pts": [[0.0, 0.5], [0.04, 0.75], [0.08, -0.9], [0.16, -0.85], [0.24, -0.7], [0.3, -0.4], [0.35, 0.4], [0.45, 0.75], [0.6, 0.9], [0.75, 0.85], [0.9, 0.7], [1.0, 0.55]]},
+      {"axis": "knowledge", "label": "What the Abbé Faria teaches him", "source": "authored", "pts": [[0.0, -0.1], [0.04, -0.1], [0.08, -0.2], [0.16, 0.05], [0.24, 0.4], [0.3, 0.65], [0.35, 0.75], [0.45, 0.85], [0.6, 0.9], [0.75, 0.9], [0.9, 0.85], [1.0, 0.8]]}
+    ],
+    "beats": [
+      [0.05, "Betrayed on his wedding day"],
+      [0.08, "Château d’If"],
+      [0.2, "Abbé Faria; the education"],
+      [0.35, "Escape in the shroud; the treasure"],
+      [0.5, "Returns as the Count"],
+      [0.85, "Vengeance completed"],
+      [1.0, "‘Wait and hope’"]
+    ],
+    "note": "The hole is a literal hole — the Château d’If. He climbs out of it richer in mind than anyone above ground, which is the whole revenge engine."
+  },
+  {
+    "id": "tess-of-the-durbervilles",
+    "title": "Tess of the d’Urbervilles",
+    "author": "Thomas Hardy",
+    "year": 1891,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "oedipus",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "Tess’s wellbeing", "source": "authored", "pts": [[0.0, 0.1], [0.06, 0.0], [0.12, -0.45], [0.2, -0.65], [0.3, 0.25], [0.4, 0.55], [0.48, -0.75], [0.6, -0.55], [0.72, -0.6], [0.8, 0.25], [0.88, 0.35], [0.94, -0.85], [1.0, -1.0]]}
+    ],
+    "beats": [
+      [0.12, "Alec assaults her"],
+      [0.2, "Sorrow born and dies"],
+      [0.35, "Talbothays dairy; Angel"],
+      [0.48, "Wedding-night confession; abandonment"],
+      [0.72, "Returns to Alec"],
+      [0.85, "Angel returns; she kills Alec"],
+      [0.94, "Stonehenge; taken at dawn"],
+      [1.0, "Executed"]
+    ],
+    "note": "A double oedipus: two hopeful climbs — the dairy, then the flight with Angel — each ends worse than before. Hardy lifts her twice only to fall further."
+  },
+  {
+    "id": "fight-club",
+    "title": "Fight Club",
+    "author": "Chuck Palahniuk",
+    "year": 1996,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": true,
+    "axes": [
+      {"axis": "knowledge", "label": "What the narrator knows about Tyler", "source": "authored", "pts": [[0.0, -0.35], [0.15, -0.25], [0.3, -0.2], [0.45, -0.15], [0.58, -0.05], [0.7, 0.1], [0.78, 0.85], [0.88, 0.9], [1.0, 0.9]]},
+      {"axis": "certainty", "label": "What in this book has been real", "source": "authored", "pts": [[0.0, 0.25], [0.15, 0.3], [0.3, 0.25], [0.45, 0.15], [0.58, 0.05], [0.7, -0.1], [0.78, -0.85], [0.88, -0.7], [1.0, -0.6]]}
+    ],
+    "beats": [
+      [0.05, "Insomnia; support groups"],
+      [0.2, "Meets Tyler on the plane"],
+      [0.35, "First fight club"],
+      [0.6, "Project Mayhem underway"],
+      [0.78, "‘You are Tyler Durden’"],
+      [0.95, "Shoots himself to kill Tyler"]
+    ],
+    "note": "One line spikes and the other collapses at the same instant — the moment the narrator understands is the moment the reader loses the ground under every prior scene."
+  },
+  {
+    "id": "frankenstein-creature-connection",
+    "augments": "frankenstein",
+    "title": "Frankenstein — the creature",
+    "author": "Mary Shelley",
+    "year": 1818,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": false,
+    "axes": [
+      {"axis": "connection", "label": "The creature’s hope of belonging", "source": "authored", "pts": [[0.24, -0.55], [0.32, -0.75], [0.42, -0.35], [0.5, 0.25], [0.56, 0.55], [0.62, -0.8], [0.72, -0.9], [0.82, -0.95], [0.92, -0.98], [1.0, -1.0]]}
+    ],
+    "beats": [
+      [0.26, "Wakes to Victor’s revulsion"],
+      [0.5, "Watches the DeLacey cottage"],
+      [0.6, "Kneels to blind DeLacey; family drives him out"],
+      [0.75, "Kills to make Victor feel it"],
+      [1.0, "Alone on the ice with the funeral pyre"]
+    ],
+    "note": "The one line inside Frankenstein that briefly rises — the creature’s hope of being loved — is the line the book takes most care to break."
+  },
+  {
+    "id": "dorian-gray-portrait",
+    "augments": "dorian-gray",
+    "title": "The Picture of Dorian Gray — the portrait",
+    "author": "Oscar Wilde",
+    "year": 1890,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": false,
+    "axes": [
+      {"axis": "fortune", "label": "The portrait (his soul)", "source": "authored", "pts": [[0.0, 0.1], [0.1, 0.05], [0.22, -0.15], [0.32, -0.35], [0.45, -0.55], [0.58, -0.7], [0.7, -0.8], [0.82, -0.9], [0.92, -0.95], [1.0, -1.0]]}
+    ],
+    "beats": [
+      [0.15, "Portrait finished; wish spoken"],
+      [0.3, "Sibyl Vane; first cruelty; first change"],
+      [0.55, "Basil sees what it has become"],
+      [0.75, "Basil murdered; Alan blackmailed"],
+      [1.0, "Stabs the portrait; is found withered"]
+    ],
+    "note": "The hidden second line the novel keeps offstage: while the surface stays high, the soul’s line dives past everything a normal life would encounter."
+  },
+  {
+    "id": "pride-and-prejudice-knowledge",
+    "augments": "pride-and-prejudice",
+    "title": "Pride and Prejudice — what Lizzy knows",
+    "author": "Jane Austen",
+    "year": 1813,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": false,
+    "axes": [
+      {"axis": "knowledge", "label": "What Lizzy knows of Darcy", "source": "authored", "pts": [[0.0, 0.0], [0.08, -0.35], [0.2, -0.6], [0.32, -0.7], [0.45, -0.15], [0.55, 0.25], [0.68, 0.55], [0.8, 0.75], [0.9, 0.85], [1.0, 0.9]]}
+    ],
+    "beats": [
+      [0.08, "‘Not handsome enough to tempt me’"],
+      [0.32, "Wickham’s story; Lizzy is sure"],
+      [0.45, "The letter after the proposal"],
+      [0.6, "Pemberley"],
+      [0.85, "Lydia and Wickham; Darcy quietly fixes it"],
+      [1.0, "‘Till this moment I never knew myself’"]
+    ],
+    "note": "The line she thinks is high (‘I have him figured out’) is the deepest trough. The rise is the slow correction of a very confident wrong opinion."
+  },
+  {
+    "id": "don-quixote-faith",
+    "augments": "don-quixote",
+    "title": "Don Quixote — faith in the dream",
+    "author": "Miguel de Cervantes",
+    "year": 1615,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "tragedy",
+    "crossed": false,
+    "axes": [
+      {"axis": "certainty", "label": "Faith in the chivalric dream", "source": "authored", "pts": [[0.0, 0.9], [0.08, 0.95], [0.18, 0.9], [0.3, 0.85], [0.42, 0.9], [0.55, 0.85], [0.68, 0.8], [0.78, 0.75], [0.88, 0.6], [0.94, 0.0], [0.98, -0.7], [1.0, -0.95]]}
+    ],
+    "beats": [
+      [0.05, "Reads too many romances; rides out"],
+      [0.15, "The windmills"],
+      [0.55, "The Cave of Montesinos"],
+      [0.78, "Defeated by the Knight of the White Moon"],
+      [0.95, "Returns home; renounces the books"],
+      [1.0, "Dies as Alonso Quijano the Good"]
+    ],
+    "note": "The one line the book protects for a thousand pages is the last one it breaks. Sanity arrives just in time to take the dream away."
+  },
+  {
+    "id": "a-christmas-carol-knowledge",
+    "augments": "a-christmas-carol",
+    "title": "A Christmas Carol — what the ghosts show",
+    "author": "Charles Dickens",
+    "year": 1843,
+    "kind": "novel",
+    "source": "authored",
+    "arch": "rise",
+    "crossed": false,
+    "axes": [
+      {"axis": "knowledge", "label": "What the ghosts have shown him", "source": "authored", "pts": [[0.0, -0.25], [0.12, -0.2], [0.22, -0.15], [0.32, 0.3], [0.5, 0.55], [0.68, 0.75], [0.82, 0.92], [0.92, 0.95], [1.0, 0.95]]}
+    ],
+    "beats": [
+      [0.18, "Marley’s chains"],
+      [0.35, "Christmas Past: Fezziwig, Belle"],
+      [0.55, "Christmas Present: Cratchits, Tiny Tim"],
+      [0.75, "Christmas Yet to Come: the unmourned grave"],
+      [1.0, "‘I will honour Christmas in my heart’"]
+    ],
+    "note": "A three-step staircase, one per ghost — each night raises Scrooge’s understanding a full rung, and the fortune line only starts to climb once the knowledge line does."
+  }
+]}

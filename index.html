@@ -1,0 +1,976 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Shape of Stories — an Atlas</title>
+<style>
+/* ============ tokens ============ */
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e;
+  --muted: #898781; --grid: #e1e0d9; --baseline: #c3c2b7; --ring: rgba(11,11,11,.10);
+  --ax-fortune: #eda100; --ax-knowledge: #2a78d6; --ax-power: #4a3aa7;
+  --ax-connection: #1baf7a; --ax-certainty: #e87ba4; --ax-tension: #e34948;
+  --div-lo: #d03b3b; --div-mid: #f0efec; --div-hi: #2a78d6;
+  --wobble: 0;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
+    --ax-fortune: #c98500; --ax-knowledge: #3987e5; --ax-power: #9085e9;
+    --ax-connection: #199e70; --ax-certainty: #d55181; --ax-tension: #e34948;
+    --div-lo: #d03b3b; --div-mid: #383835; --div-hi: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
+  --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
+  --ax-fortune: #c98500; --ax-knowledge: #3987e5; --ax-power: #9085e9;
+  --ax-connection: #199e70; --ax-certainty: #d55181; --ax-tension: #e34948;
+  --div-lo: #d03b3b; --div-mid: #383835; --div-hi: #3987e5;
+}
+:root[data-skin="chalk"], :root[data-skin="chalk"][data-theme="light"] {
+  color-scheme: dark;
+  --page: #1d2b26; --surface: #22332d; --ink: #f5f2e8; --ink2: #cfd8ce;
+  --muted: #93a396; --grid: #2e423a; --baseline: #47594f; --ring: rgba(245,242,232,.14);
+  --ax-fortune: #f2c14e; --ax-knowledge: #7db8f0; --ax-power: #b9a7f5;
+  --ax-connection: #7fd6ac; --ax-certainty: #f0a2c0; --ax-tension: #f07f74;
+  --div-lo: #f07f74; --div-mid: #3a4d44; --div-hi: #7db8f0;
+  --wobble: 1;
+}
+/* ============ base ============ */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--serif); line-height: 1.55; }
+h1,h2,h3 { font-family: var(--serif); text-wrap: balance; line-height: 1.12; }
+h2 { font-size: clamp(26px, 3.4vw, 40px); margin: 0 0 6px; font-weight: 600; }
+p  { max-width: 62ch; }
+a  { color: inherit; }
+button { font-family: var(--sans); }
+canvas { display: block; width: 100%; height: 100%; }
+section { padding: clamp(48px, 7vw, 96px) clamp(18px, 5vw, 64px); }
+.kicker { font-family: var(--sans); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.lede { color: var(--ink2); font-size: clamp(15px, 1.35vw, 18px); }
+/* ============ nav ============ */
+nav { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 4px;
+  padding: 10px clamp(14px, 4vw, 48px); background: color-mix(in srgb, var(--page) 86%, transparent);
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--ring); font-family: var(--sans); font-size: 13px; flex-wrap: wrap; }
+nav .brand { font-family: var(--serif); font-weight: 700; font-size: 15px; margin-right: 12px; white-space: nowrap; }
+nav a { text-decoration: none; color: var(--ink2); padding: 6px 9px; border-radius: 7px; white-space: nowrap; }
+nav a:hover { color: var(--ink); background: var(--ring); }
+nav .spacer { flex: 1; }
+.tbtn { border: 1px solid var(--ring); background: var(--surface); color: var(--ink); border-radius: 8px;
+  padding: 6px 11px; cursor: pointer; font-size: 12.5px; }
+.tbtn:hover { border-color: var(--baseline); }
+.tbtn[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+/* ============ hero ============ */
+#hero { padding: clamp(40px, 6vw, 84px) clamp(18px, 5vw, 64px) clamp(24px, 3vw, 44px); display: grid;
+  grid-template-columns: minmax(280px, 5fr) minmax(300px, 7fr); gap: clamp(24px, 4vw, 60px); align-items: center; }
+#hero h1 { font-size: clamp(40px, 6vw, 76px); margin: 0 0 14px; font-weight: 700; }
+#hero .heroCvWrap { aspect-ratio: 16/10; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface);
+  overflow: hidden; position: relative; }
+#hero .heroCap { position: absolute; right: 14px; bottom: 10px; font-family: var(--sans); font-size: 12px; color: var(--muted); }
+@media (max-width: 860px) { #hero { grid-template-columns: 1fr; } }
+/* ============ cards / grids ============ */
+.cardGrid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); margin-top: 26px; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 12px 14px 10px; cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,.10); }
+.card .cvWrap { aspect-ratio: 5/2; margin: 4px 0 8px; }
+.card h3 { margin: 0; font-size: 15.5px; font-weight: 650; }
+.card .meta { font-family: var(--sans); font-size: 11.5px; color: var(--muted); margin-top: 2px; display: flex; gap: 8px; flex-wrap: wrap; }
+.badge { display: inline-block; font-family: var(--sans); font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
+  padding: 1.5px 7px; border-radius: 99px; border: 1px solid var(--ring); color: var(--ink2); }
+.badge.x { border-color: transparent; background: var(--ring); font-weight: 600; }
+/* grammar */
+#grammar .cardGrid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+#grammar .card { cursor: default; }
+#grammar .card p { font-size: 13px; color: var(--ink2); margin: 6px 0 0; }
+#grammar .motto { font-family: var(--sans); font-size: 11px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+#grammar .count { float: right; font-family: var(--sans); font-size: 12px; color: var(--muted); }
+/* filters */
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; font-family: var(--sans); position: sticky; top: 52px; z-index: 5;
+  background: color-mix(in srgb, var(--page) 92%, transparent); backdrop-filter: blur(8px); padding: 10px 0; }
+.chip { border: 1px solid var(--ring); background: var(--surface); color: var(--ink2); border-radius: 99px; padding: 5px 12px;
+  font-size: 12.5px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.chip .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+#search { border: 1px solid var(--ring); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 7px 12px; font-size: 13px; min-width: 170px; }
+#atlasCount { font-size: 12.5px; color: var(--muted); margin-left: auto; }
+/* ============ lab ============ */
+#lab .labGrid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 22px; }
+.panel { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 12px 14px; }
+.panel h3 { margin: 0 0 2px; font-size: 14px; font-family: var(--sans); font-weight: 600; }
+.panel .sub { font-family: var(--sans); font-size: 11.5px; color: var(--muted); margin-bottom: 8px; }
+.panel .cvWrap { aspect-ratio: 16/10; }
+#labPick { font-family: var(--sans); font-size: 14px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--ring);
+  background: var(--surface); color: var(--ink); max-width: 100%; }
+/* ============ crossed ============ */
+#crossed .cardGrid { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+#crossed .card .cvWrap { aspect-ratio: 16/9; }
+/* ============ map & walls ============ */
+.bigWrap { position: relative; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; }
+#mapWrap { aspect-ratio: 16/9; min-height: 380px; }
+#wallWrap { height: 78vh; min-height: 480px; }
+.wallTabs { display: flex; gap: 8px; margin-top: 20px; font-family: var(--sans); }
+.hoverTip { position: absolute; pointer-events: none; background: var(--ink); color: var(--page); font-family: var(--sans);
+  font-size: 12px; padding: 5px 9px; border-radius: 7px; transform: translate(-50%, -130%); white-space: nowrap; opacity: 0; transition: opacity .12s; z-index: 3; }
+/* ============ overlays ============ */
+.overlay { position: fixed; inset: 0; z-index: 100; background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(14px); display: none; overflow-y: auto; }
+.overlay.open { display: block; }
+.sheet { max-width: 1020px; margin: 4vh auto; background: var(--surface); border: 1px solid var(--ring); border-radius: 16px;
+  padding: clamp(18px, 3vw, 36px); position: relative; }
+.sheet .close { position: absolute; top: 14px; right: 14px; }
+.sheet h2 { margin-right: 60px; }
+.sheet .meta { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.sheet .note { color: var(--ink2); font-size: 15px; max-width: 70ch; }
+.encTabs { display: flex; gap: 6px; margin: 16px 0 10px; font-family: var(--sans); flex-wrap: wrap; }
+#detailCvWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 12px; overflow: hidden; position: relative; background: var(--surface); }
+.navBtns { display: flex; gap: 8px; margin-top: 14px; }
+/* tour */
+#tour { background: var(--page); }
+#tour .stage { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 4vh 6vw; }
+#tourCvWrap { flex: 0 0 58vh; border: 1px solid var(--ring); border-radius: 16px; overflow: hidden; background: var(--surface); position: relative; }
+#tour h2 { font-size: clamp(28px, 4vw, 52px); margin: 20px 0 4px; }
+#tour .meta { font-family: var(--sans); color: var(--muted); font-size: 15px; }
+#tour .note { font-size: clamp(15px, 1.6vw, 19px); color: var(--ink2); min-height: 3.2em; opacity: 0; transition: opacity .6s; }
+#tour .hud { position: fixed; top: 14px; right: 16px; display: flex; gap: 8px; font-family: var(--sans); }
+/* method */
+#method { border-top: 1px solid var(--ring); }
+#method p, #method li { font-size: 14.5px; color: var(--ink2); }
+#method .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; }
+footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-family: var(--sans); font-size: 12.5px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+
+<nav>
+  <span class="brand">The Shape of Stories</span>
+  <a href="#grammar">Grammar</a><a href="#atlas">Atlas</a><a href="#lab">Lab</a><a href="#crossed">Crossed Axes</a>
+  <a href="#map">Map</a><a href="#walls">Walls</a><a href="#method">Method</a>
+  <span class="spacer"></span>
+  <button class="tbtn" id="tourBtn">▶ Tour</button>
+  <button class="tbtn" id="skinBtn" aria-pressed="false">Chalk</button>
+  <button class="tbtn" id="themeBtn" aria-pressed="false">Dark</button>
+</nav>
+
+<header id="hero">
+  <div>
+    <div class="kicker">After Kurt Vonnegut · 93 books · 6 axes</div>
+    <h1>The Shape of<br>Stories</h1>
+    <p class="lede">Vonnegut drew stories as lines: time across the bottom, fortune up the side.
+      This atlas draws 93 of them — 37 measured from the actual texts, 56 read by hand —
+      and asks his question one step further: <em>fortune isn’t the only axis a story can run on.</em></p>
+    <p class="lede" style="font-family:var(--sans); font-size:13px; color:var(--muted)">
+      Click any book. Toggle <b>Chalk</b> for the blackboard. Press <b>Tour</b> to watch them draw themselves.</p>
+  </div>
+  <div class="heroCvWrap"><canvas id="heroCv"></canvas><div class="heroCap" id="heroCap"></div></div>
+</header>
+
+<section id="grammar">
+  <div class="kicker">Part I — The grammar</div>
+  <h2>Eight shapes cover almost everything</h2>
+  <p class="lede">Vonnegut sketched these on a chalkboard in 1985; in 2016 a University of Vermont team mined
+    1,300+ novels and found the same families. Counts below are this survey’s.</p>
+  <div class="cardGrid" id="grammarGrid"></div>
+</section>
+
+<section id="atlas">
+  <div class="kicker">Part II — The atlas</div>
+  <h2>Ninety-three books, drawn</h2>
+  <p class="lede">Solid-count lines are measured from the full text (labMT sentiment over 100 windows, via Reagan et&nbsp;al.’s public data).
+    The rest are calibrated editorial readings — chalkboard style, the way Vonnegut did it. Both are readings.</p>
+  <div class="filters" id="filters">
+    <input id="search" type="search" placeholder="Search title or author…">
+    <span id="archChips"></span><span id="axisChips"></span>
+    <button class="chip" id="crossedChip" aria-pressed="false">⤫ crossed only</button>
+    <span id="atlasCount"></span>
+  </div>
+  <div class="cardGrid" id="atlasGrid"></div>
+</section>
+
+<section id="lab">
+  <div class="kicker">Part III — The lab</div>
+  <h2>One story, five instruments</h2>
+  <p class="lede">The same book rendered through every encoding at once — pick one and compare.
+    Crossed-axes books light up all five.</p>
+  <select id="labPick"></select>
+  <div class="labGrid" id="labGrid"></div>
+</section>
+
+<section id="crossed">
+  <div class="kicker">Part IV — The finding</div>
+  <h2>The canon runs on crossed axes</h2>
+  <p class="lede">Folk tales ride one axis. Again and again, the books that last play two against each other —
+    knowledge rising while fortune falls, power rising while the soul drains. The shaded wedge between the lines
+    is the story’s engine. Sorted by how far the scissors open.</p>
+  <div class="cardGrid" id="crossedGrid"></div>
+</section>
+
+<section id="map">
+  <div class="kicker">Part V — The map</div>
+  <h2>Every book in shape-space</h2>
+  <p class="lede">Horizontal: does the story end better or worse than it began? Vertical: is the middle a peak or a pit?
+    The archetypes fall out as regions — holes sink low, Icarus floats high, tragedies drift left, and the strange ones hug the center.</p>
+  <div class="bigWrap" id="mapWrap"><canvas id="mapCv"></canvas><div class="hoverTip" id="mapTip"></div></div>
+</section>
+
+<section id="walls">
+  <div class="kicker">Part VI — The walls</div>
+  <h2>All of them at once</h2>
+  <div class="wallTabs">
+    <button class="tbtn" data-wall="ridge" aria-pressed="true">Ridgeline</button>
+    <button class="tbtn" data-wall="barcode" aria-pressed="false">Barcodes</button>
+  </div>
+  <div class="bigWrap" id="wallWrap"><canvas id="wallCv"></canvas><div class="hoverTip" id="wallTip"></div></div>
+</section>
+
+<section id="method">
+  <div class="kicker">Appendix</div>
+  <h2>Method &amp; sources</h2>
+  <div class="cols">
+    <div>
+      <h3>Measured lines</h3>
+      <p>37 public-domain books use per-book sentiment time series computed by Reagan, Mitchell, Kiley, Danforth &amp; Dodds for
+        <i>“The emotional arcs of stories are dominated by six basic shapes”</i> (EPJ Data Science, 2016) — 100 sliding windows
+        per book, scored with the labMT happiness lexicon, published in the <code>andyreagan/core-stories</code> repository.
+        Series are smoothed and normalized per book (Vonnegut drew relative shape, not absolute happiness).
+        Orientation was independently verified by re-deriving five books from their Gutenberg texts with labMT
+        (all correlate positively, r = +0.15 to +0.67).</p>
+      <p>A sentiment lexicon hears vocabulary, not plot: Wilde narrating atrocity in gorgeous prose reads “happy.”
+        That gap between the lexical line and the felt story is genuine information — not an error.</p>
+    </div>
+    <div>
+      <h3>Authored lines</h3>
+      <p>56 post-1923 and non-novel works (plus every non-fortune axis — no such dataset exists anywhere) are
+        hand-scored editorial readings against a shared calibration rubric: −1 is the worst state canon reaches,
+        0 is ordinary life, +1 is fairy-tale peak; points sit at actual plot events; endings are encoded honestly
+        (damped recoveries stay damped). They are readings, not measurements — exactly what Vonnegut was doing at the board.</p>
+      <h3>The axes</h3>
+      <p>Beginning→End is constant. The y-axis is a choice: fortune (Vonnegut), knowledge (every mystery),
+        power (the antihero axis), connection (isolation↔belonging), tension (the reader’s axis — cf. Boyd, Blackburn &amp;
+        Pennebaker’s “narrative arc” dimensions, Science Advances 2020), and certainty (Vonnegut’s own Hamlet point).</p>
+    </div>
+    <div>
+      <h3>Provenance</h3>
+      <ul>
+        <li>Kurt Vonnegut, “The Shapes of Stories” lecture (1985) &amp; rejected master’s thesis</li>
+        <li>Reagan et&nbsp;al. 2016 · arXiv:1606.07772 · data: github.com/andyreagan/core-stories</li>
+        <li>Boyd et&nbsp;al. 2020 · Sci. Adv. 6:eaba2196 · osf.io/q2a7m</li>
+        <li>labMT lexicon: Dodds et&nbsp;al. 2011</li>
+      </ul>
+      <p>Built as a study for a Substack essay. Lines animate in telling order; reduced-motion preference is honored.</p>
+    </div>
+  </div>
+</section>
+
+<footer>“The truth is, we know so little about life, we don’t really know what the good news is and what the bad news is.” — K.V.</footer>
+
+<!-- detail overlay -->
+<div class="overlay" id="detail" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <button class="tbtn close" id="detailClose">✕ Esc</button>
+    <div class="meta" id="detailMeta"></div>
+    <h2 id="detailTitle"></h2>
+    <div class="encTabs" id="encTabs"></div>
+    <div id="detailCvWrap"><canvas id="detailCv"></canvas><div class="hoverTip" id="detailTip"></div></div>
+    <p class="note" id="detailNote"></p>
+    <div class="navBtns">
+      <button class="tbtn" id="detailPrev">← Prev</button>
+      <button class="tbtn" id="detailReplay">↻ Replay</button>
+      <button class="tbtn" id="detailNext">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- tour overlay -->
+<div class="overlay" id="tour">
+  <div class="hud">
+    <button class="tbtn" id="tourPause">⏸</button>
+    <select class="tbtn" id="tourSpeed"><option value="7000">Slow</option><option value="5000" selected>Medium</option><option value="3400">Fast</option></select>
+    <button class="tbtn" id="tourExit">✕ Esc</button>
+  </div>
+  <div class="stage">
+    <div id="tourCvWrap"><canvas id="tourCv"></canvas></div>
+    <h2 id="tourTitle"></h2>
+    <div class="meta" id="tourMeta"></div>
+    <p class="note" id="tourNote"></p>
+  </div>
+</div>
+
+<script src="data/stories.js"></script>
+<script>
+'use strict';
+/* ================= data & helpers ================= */
+const S = window.STORIES, BOOKS = S.books;
+const AXES = ['fortune','knowledge','power','connection','tension','certainty'];
+const ARCH = {
+  rise:       {name:'Rags to Riches', motto:'rise', desc:'A steady climb. Rarer in the canon than optimism predicts.'},
+  tragedy:    {name:'From Bad to Worse', motto:'fall', desc:'The floor keeps giving way. The reader stays for the dignity of the descent.'},
+  hole:       {name:'Man in a Hole', motto:'fall – rise', desc:'Somebody gets in trouble, gets out again, ends up better off. “People love that story.”'},
+  icarus:     {name:'Icarus', motto:'rise – fall', desc:'The climb that earns the crash. The higher the middle, the harder the end lands.'},
+  cinderella: {name:'Cinderella', motto:'rise – fall – rise', desc:'Rise, midnight, rise again. Vonnegut’s punchline: its shape matches the New Testament’s.'},
+  oedipus:    {name:'Oedipus', motto:'fall – rise – fall', desc:'The cruelest shape: the recovery that turns out to be the trapdoor.'},
+  flatline:   {name:'Which Way Is Up?', motto:'ambiguity', desc:'Hamlet’s shape: the line can’t be drawn because nobody can say what the good news is. Not shapelessness — honesty.'},
+};
+const ARCH_SHAPE = {
+  rise: [[0,-.7],[.25,-.35],[.5,.05],[.75,.45],[1,.8]],
+  tragedy: [[0,.35],[.25,.1],[.5,-.2],[.75,-.55],[1,-.85]],
+  hole: [[0,.35],[.2,.15],[.45,-.65],[.7,-.3],[1,.7]],
+  icarus: [[0,-.3],[.3,.3],[.55,.75],[.75,.2],[1,-.8]],
+  cinderella: [[0,-.7],[.25,.3],[.45,.6],[.6,-.6],[.8,-.2],[1,.9]],
+  oedipus: [[0,.3],[.25,-.35],[.5,.25],[.7,.45],[1,-.9]],
+  flatline: [[0,0],[.2,.06],[.4,-.08],[.6,.04],[.8,-.05],[1,0]],
+};
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+let PAL = {};
+function refreshPal() {
+  PAL = { ink: css('--ink'), ink2: css('--ink2'), muted: css('--muted'), grid: css('--grid'),
+    baseline: css('--baseline'), surface: css('--surface'), page: css('--page'),
+    divLo: css('--div-lo'), divMid: css('--div-mid'), divHi: css('--div-hi'),
+    wobble: parseFloat(css('--wobble')) || 0 };
+  for (const a of AXES) PAL[a] = css('--ax-' + a);
+}
+refreshPal();
+
+function mulberry(seed) { return function() { let t = seed += 0x6D2B79F5;
+  t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+  return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+
+/* Catmull-Rom sampling of control points -> n samples */
+function sampleAxis(ax, n = 160) {
+  if (ax.series) {
+    const s = ax.series, out = [];
+    for (let i = 0; i < n; i++) {
+      const x = i / (n - 1) * (s.length - 1), i0 = Math.floor(x), f = x - i0;
+      out.push([i / (n - 1), s[i0] + (s[Math.min(i0 + 1, s.length - 1)] - s[i0]) * f]);
+    }
+    return out;
+  }
+  const p = ax.pts, out = [];
+  const tMax = p[p.length - 1][0];               // support lines that stop early (Anne Frank)
+  const get = i => p[Math.max(0, Math.min(p.length - 1, i))];
+  for (let i = 0; i < n; i++) {
+    const t = i / (n - 1) * tMax;
+    let k = 0; while (k < p.length - 2 && p[k + 1][0] < t) k++;
+    const p0 = get(k - 1), p1 = get(k), p2 = get(k + 1), p3 = get(k + 2);
+    const span = (p2[0] - p1[0]) || 1e-9;
+    const u = Math.max(0, Math.min(1, (t - p1[0]) / span)), u2 = u * u, u3 = u2 * u;
+    const v = 0.5 * ((2 * p1[1]) + (-p0[1] + p2[1]) * u +
+      (2 * p0[1] - 5 * p1[1] + 4 * p2[1] - p3[1]) * u2 + (-p0[1] + 3 * p1[1] - 3 * p2[1] + p3[1]) * u3);
+    out.push([t, Math.max(-1, Math.min(1, v))]);
+  }
+  return out;
+}
+const primary = b => b.axes[0];
+const axColor = ax => PAL[ax.axis] || PAL.ink;
+const axName = ax => (S.axes[ax.axis] || {}).name || ax.axis;
+const axLabel = ax => ax.label ? ax.label : axName(ax);
+
+/* ================= canvas plumbing ================= */
+function fit(cv) {
+  const dpr = Math.min(devicePixelRatio || 1, 2), r = cv.getBoundingClientRect();
+  if (!r.width || !r.height) return null;
+  const w = Math.round(r.width * dpr), h = Math.round(r.height * dpr);
+  if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; }
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { ctx, W: r.width, H: r.height };
+}
+/* wobbly (chalk) or clean polyline with draw-progress */
+function strokeLine(ctx, pts, X, Y, progress, color, width = 2.2, seed = 1) {
+  const upto = Math.max(2, Math.ceil(pts.length * progress));
+  const rng = mulberry(seed);
+  const passes = PAL.wobble ? 2 : 1;
+  for (let pass = 0; pass < passes; pass++) {
+    ctx.beginPath();
+    for (let i = 0; i < upto; i++) {
+      const jx = PAL.wobble ? (rng() - .5) * 2.2 : 0, jy = PAL.wobble ? (rng() - .5) * 2.2 : 0;
+      const x = X(pts[i][0]) + jx, y = Y(pts[i][1]) + jy;
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.strokeStyle = color; ctx.lineWidth = PAL.wobble ? width * (pass ? .7 : 1.15) : width;
+    ctx.globalAlpha = PAL.wobble ? (pass ? .45 : .8) : 1;
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+  return pts[upto - 1];
+}
+function frame(ctx, W, H, opts = {}) {
+  const m = opts.m || { l: 46, r: 16, t: 14, b: 26 };
+  const X = t => m.l + t * (W - m.l - m.r);
+  const Y = v => m.t + (1 - (v + 1) / 2) * (H - m.t - m.b);
+  ctx.clearRect(0, 0, W, H);
+  ctx.strokeStyle = PAL.grid; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke(); // midline
+  ctx.strokeStyle = PAL.baseline;
+  ctx.beginPath(); ctx.moveTo(X(0), Y(1)); ctx.lineTo(X(0), Y(-1)); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(X(0), Y(-1)); ctx.lineTo(X(1), Y(-1)); ctx.stroke();
+  ctx.fillStyle = PAL.muted; ctx.font = '10.5px ' + css('--sans');
+  if (!opts.mini) {
+    ctx.textAlign = 'left'; ctx.fillText('B', X(0) + 4, Y(-1) + 14); ctx.textAlign = 'right'; ctx.fillText('E', X(1), Y(-1) + 14);
+    const axm = opts.axisMeta;
+    if (axm) { ctx.save(); ctx.translate(12, Y(0)); ctx.rotate(-Math.PI / 2); ctx.textAlign = 'center';
+      ctx.fillText(axm.hi + ' ↑', 60, 0); ctx.fillText('↓ ' + axm.lo, -60, 0); ctx.restore(); }
+  }
+  return { X, Y, m };
+}
+function endLabel(ctx, pt, X, Y, text, color, side = 0) {
+  ctx.font = '600 11px ' + css('--sans'); ctx.textAlign = 'left';
+  const w = ctx.measureText(text).width;
+  const x = Math.min(X(pt[0]) + 9, ctx.canvas.clientWidth - 6 - w);
+  const y = Math.max(12, Math.min(ctx.canvas.clientHeight - 6, Y(pt[1]) + (side ? 17 : -9)));
+  ctx.strokeStyle = PAL.surface; ctx.lineWidth = 4; ctx.lineJoin = 'round';
+  ctx.strokeText(text, x, y);
+  ctx.fillStyle = color; ctx.fillText(text, x, y);
+}
+
+/* animation registry: charts draw at progress 0..1 */
+const charts = new Set();
+function makeChart(cv, draw, dur = 2400) {
+  const c = { cv, draw, dur, p: REDUCED ? 1 : 0, playing: false, t0: 0, played: false };
+  c.render = () => { const f = fit(cv); if (f) draw(f.ctx, f.W, f.H, c.p); };
+  c.play = () => { if (REDUCED) { c.p = 1; c.render(); return; }
+    c.p = 0; c.playing = true; c.t0 = performance.now(); c.played = true; tick(); };
+  charts.add(c); return c;
+}
+let rafId = null;
+function tick() {
+  if (rafId) return;
+  const step = now => {
+    rafId = null; let any = false;
+    for (const c of charts) if (c.playing) {
+      const e = Math.min(1, (now - c.t0) / c.dur);
+      c.p = e < .5 ? 2 * e * e : 1 - Math.pow(-2 * e + 2, 2) / 2; // easeInOutQuad
+      c.render(); if (e >= 1) c.playing = false; else any = true;
+    }
+    if (any) rafId = requestAnimationFrame(step);
+  };
+  rafId = requestAnimationFrame(step);
+}
+const io = new IntersectionObserver(es => es.forEach(e => {
+  const c = e.target._chart;
+  if (c && e.isIntersecting && !c.played) c.play();
+}), { threshold: 0.25 });
+function attach(cv, draw, dur) { const c = makeChart(cv, draw, dur); cv._chart = c; io.observe(cv); c.render(); return c; }
+function redrawAll() { refreshPal(); for (const c of charts) c.render(); }
+
+/* ================= encodings ================= */
+function encLine(ctx, W, H, book, p, opts = {}) {
+  const ax = opts.axis || primary(book);
+  const f = frame(ctx, W, H, { axisMeta: S.axes[ax.axis], mini: opts.mini });
+  const pts = sampleAxis(ax);
+  const tip = strokeLine(ctx, pts, f.X, f.Y, p, axColor(ax), opts.mini ? 1.8 : 2.6, hashStr(book.id));
+  if (!opts.mini) {
+    endLabel(ctx, tip, f.X, f.Y, axLabel(ax), axColor(ax));
+    for (const [bt, txt] of (book.beats || [])) if (bt <= tip[0] + .002) {
+      const bv = valueAt(pts, bt);
+      ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(f.X(bt), f.Y(bv), 3, 0, 7); ctx.fill();
+      ctx.fillStyle = PAL.ink2; ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'center';
+      const above = bv < 0;
+      wrapText(ctx, txt, f.X(bt), f.Y(bv) + (above ? -22 : 26), 110);
+    }
+  }
+  return f;
+}
+function valueAt(pts, t) { let k = 0; while (k < pts.length - 1 && pts[k + 1][0] < t) k++;
+  const a = pts[k], b = pts[Math.min(k + 1, pts.length - 1)], span = (b[0] - a[0]) || 1;
+  return a[1] + (b[1] - a[1]) * Math.max(0, Math.min(1, (t - a[0]) / span)); }
+function wrapText(ctx, txt, x, y, w) {
+  const words = txt.split(' '); let line = '', dy = 0;
+  for (const wd of words) { const test = line ? line + ' ' + wd : wd;
+    if (ctx.measureText(test).width > w && line) { ctx.fillText(line, x, y + dy); line = wd; dy += 12; } else line = test; }
+  ctx.fillText(line, x, y + dy);
+}
+function encScissors(ctx, W, H, book, p, opts = {}) {
+  const [a, b] = [book.axes[0], book.axes[1] || book.axes[0]];
+  const f = frame(ctx, W, H, { mini: opts.mini });
+  const pa = sampleAxis(a), pb = sampleAxis(b);
+  const upto = Math.max(2, Math.ceil(Math.min(pa.length, pb.length) * p));
+  ctx.beginPath();
+  for (let i = 0; i < upto; i++) { const q = pa[i]; i ? ctx.lineTo(f.X(q[0]), f.Y(q[1])) : ctx.moveTo(f.X(q[0]), f.Y(q[1])); }
+  for (let i = Math.min(upto, pb.length) - 1; i >= 0; i--) { const q = pb[i]; ctx.lineTo(f.X(q[0]), f.Y(q[1])); }
+  ctx.closePath(); ctx.fillStyle = PAL.ink; ctx.globalAlpha = .07; ctx.fill(); ctx.globalAlpha = 1;
+  const ta = strokeLine(ctx, pa, f.X, f.Y, p, axColor(a), opts.mini ? 1.7 : 2.6, hashStr(book.id));
+  const tb = strokeLine(ctx, pb, f.X, f.Y, p, axColor(b), opts.mini ? 1.7 : 2.6, hashStr(book.id) + 7);
+  if (!opts.mini || opts.labels) {
+    endLabel(ctx, ta, f.X, f.Y, axLabel(a), axColor(a), ta[1] < tb[1] ? 1 : 0);
+    endLabel(ctx, tb, f.X, f.Y, axLabel(b), axColor(b), tb[1] <= ta[1] ? 1 : 0);
+  }
+}
+function encPhase(ctx, W, H, book, p, opts = {}) {
+  const a = book.axes[0], b = book.axes[1] || book.axes[0];
+  ctx.clearRect(0, 0, W, H);
+  const m = 46, sz = Math.min(W, H) - 2 * m, ox = (W - sz) / 2, oy = (H - sz) / 2;
+  const X = v => ox + (v + 1) / 2 * sz, Y = v => oy + (1 - (v + 1) / 2) * sz;
+  ctx.strokeStyle = PAL.grid; ctx.lineWidth = 1;
+  ctx.strokeRect(ox, oy, sz, sz);
+  ctx.beginPath(); ctx.moveTo(X(-1), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.moveTo(X(0), Y(-1)); ctx.lineTo(X(0), Y(1)); ctx.stroke();
+  ctx.fillStyle = PAL.muted; ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'center';
+  ctx.fillText(axLabel(a) + ' →', X(0), oy + sz + 16);
+  ctx.save(); ctx.translate(ox - 10, Y(0)); ctx.rotate(-Math.PI / 2); ctx.fillText(axLabel(b) + ' →', 0, 0); ctx.restore();
+  const pa = sampleAxis(a), pb = sampleAxis(b), n = Math.min(pa.length, pb.length);
+  const upto = Math.max(2, Math.ceil(n * p));
+  for (let i = 1; i < upto; i++) {
+    ctx.beginPath(); ctx.moveTo(X(pa[i - 1][1]), Y(pb[i - 1][1])); ctx.lineTo(X(pa[i][1]), Y(pb[i][1]));
+    ctx.strokeStyle = axColor(a); ctx.globalAlpha = .32 + .68 * (i / upto); ctx.lineWidth = 2.4; ctx.lineCap = 'round'; ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+  const cx = X(pa[upto - 1][1]), cy = Y(pb[upto - 1][1]);
+  ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(cx, cy, 5, 0, 7); ctx.fill();
+  ctx.fillStyle = PAL.muted; ctx.font = '600 10px ' + css('--sans');
+  ctx.fillText('start', X(pa[0][1]), Y(pb[0][1]) - 8);
+  if (p >= 1) ctx.fillText('end', cx, cy - 10);
+}
+function encLanes(ctx, W, H, book, p, opts = {}) {
+  ctx.clearRect(0, 0, W, H);
+  const axes = book.axes, n = axes.length;
+  const laneH = (H - 12) / n;
+  axes.forEach((ax, i) => {
+    const top = 6 + i * laneH, m = { l: 110, r: 14 };
+    const X = t => m.l + t * (W - m.l - m.r);
+    const Y = v => top + 6 + (1 - (v + 1) / 2) * (laneH - 18);
+    ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
+    ctx.fillStyle = axColor(ax); ctx.font = '600 10.5px ' + css('--sans'); ctx.textAlign = 'left';
+    wrapText(ctx, axLabel(ax), 8 + 46, top + laneH / 2, 92); ctx.textAlign = 'center';
+    strokeLine(ctx, sampleAxis(ax), X, Y, p, axColor(ax), 2, hashStr(book.id) + i);
+  });
+}
+let morphState = { i: 0, j: 1, f: 0 };
+function encMorph(ctx, W, H, book, p, opts = {}) {
+  // p drives crossfade between axis i and j (looped externally for detail view)
+  const axes = book.axes;
+  const a = axes[morphState.i % axes.length], b = axes[morphState.j % axes.length];
+  const f = frame(ctx, W, H, {});
+  const pa = sampleAxis(a), pb = sampleAxis(b), n = Math.min(pa.length, pb.length);
+  const mix = [];
+  const e = morphState.f;
+  for (let i = 0; i < n; i++) mix.push([pa[i][0] + (pb[i][0] - pa[i][0]) * e, pa[i][1] + (pb[i][1] - pa[i][1]) * e]);
+  const col = e < .5 ? axColor(a) : axColor(b);
+  const tip = strokeLine(ctx, mix, f.X, f.Y, p, col, 2.6, hashStr(book.id));
+  endLabel(ctx, tip, f.X, f.Y, e < .5 ? axLabel(a) : axLabel(b), col);
+}
+function sparkline(ctx, W, H, book, p) {
+  ctx.clearRect(0, 0, W, H);
+  const m = { l: 6, r: 6 };
+  const X = t => m.l + t * (W - m.l - m.r), Y = v => 5 + (1 - (v + 1) / 2) * (H - 10);
+  ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
+  const ax = primary(book);
+  strokeLine(ctx, sampleAxis(ax, 110), X, Y, p, axColor(ax), 1.9, hashStr(book.id));
+  if (book.axes.length > 1) {
+    ctx.globalAlpha = .5;
+    strokeLine(ctx, sampleAxis(book.axes[1], 110), X, Y, p, axColor(book.axes[1]), 1.4, hashStr(book.id) + 7);
+    ctx.globalAlpha = 1;
+  }
+}
+
+/* ================= hero ================= */
+const heroSeq = ['cinderella', 'hole', 'icarus', 'oedipus', 'flatline'];
+let heroIdx = 0;
+const heroCv = document.getElementById('heroCv'), heroCap = document.getElementById('heroCap');
+const heroChart = attach(heroCv, (ctx, W, H, p) => {
+  const key = heroSeq[heroIdx % heroSeq.length];
+  const f = frame(ctx, W, H, { axisMeta: { hi: 'Good fortune', lo: 'Ill fortune' } });
+  const pts = sampleAxis({ pts: ARCH_SHAPE[key] });
+  const tip = strokeLine(ctx, pts, f.X, f.Y, p, PAL.fortune, 3, hashStr(key));
+  ctx.fillStyle = PAL.ink; ctx.font = '600 13px ' + css('--serif'); ctx.textAlign = 'left';
+  if (p > .9) ctx.fillText(ARCH[key].name, f.X(0) + 10, f.Y(1) + 8);
+}, 2600);
+heroCap.textContent = 'after K.V.';
+setInterval(() => { if (!document.hidden && heroChart.p >= 1) { heroIdx++; heroChart.play(); } }, 4200);
+
+/* ================= grammar ================= */
+const archCounts = {};
+BOOKS.forEach(b => archCounts[b.arch] = (archCounts[b.arch] || 0) + 1);
+const gg = document.getElementById('grammarGrid');
+Object.entries(ARCH).forEach(([key, a]) => {
+  const card = document.createElement('div'); card.className = 'card';
+  card.innerHTML = `<span class="count">${archCounts[key] || 0} of 93</span><h3>${a.name}</h3>
+    <div class="motto">${a.motto}</div><div class="cvWrap"><canvas></canvas></div><p>${a.desc}</p>`;
+  gg.appendChild(card);
+  attach(card.querySelector('canvas'), (ctx, W, H, p) => {
+    const m = { l: 8, r: 8 };
+    ctx.clearRect(0, 0, W, H);
+    const X = t => m.l + t * (W - m.l - m.r), Y = v => 6 + (1 - (v + 1) / 2) * (H - 12);
+    ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
+    strokeLine(ctx, sampleAxis({ pts: ARCH_SHAPE[key] }, 90), X, Y, p, PAL.fortune, 2.4, hashStr(key));
+  }, 1800);
+});
+
+/* ================= atlas ================= */
+const state = { arch: null, axis: null, crossed: false, q: '' };
+const atlasGrid = document.getElementById('atlasGrid');
+const cardsById = {};
+BOOKS.forEach(book => {
+  const card = document.createElement('div'); card.className = 'card'; card.tabIndex = 0;
+  const year = book.year < 0 ? 'c. ' + Math.abs(book.year) + ' BC' : book.year;
+  card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${book.title}</h3>
+    <div class="meta"><span>${book.author} · ${year}</span></div>
+    <div class="meta"><span class="badge">${ARCH[book.arch] ? ARCH[book.arch].name : book.arch}</span>
+      <span class="badge">${axName(primary(book))}</span>
+      ${book.crossed ? '<span class="badge x">⤫ crossed</span>' : ''}
+      <span class="badge">${book.source === 'measured' ? 'measured' : 'reading'}</span></div>`;
+  atlasGrid.appendChild(card);
+  cardsById[book.id] = card;
+  attach(card.querySelector('canvas'), (ctx, W, H, p) => sparkline(ctx, W, H, book, p), 1700);
+  card.addEventListener('click', () => openDetail(book));
+  card.addEventListener('keydown', e => { if (e.key === 'Enter') openDetail(book); });
+});
+/* filters */
+const archChips = document.getElementById('archChips'), axisChips = document.getElementById('axisChips');
+Object.entries(ARCH).forEach(([k, a]) => {
+  const c = document.createElement('button'); c.className = 'chip'; c.textContent = a.name; c.dataset.k = k;
+  c.onclick = () => { state.arch = state.arch === k ? null : k; syncFilters(); }; archChips.appendChild(c);
+});
+AXES.forEach(k => {
+  const c = document.createElement('button'); c.className = 'chip'; c.dataset.k = k;
+  c.innerHTML = `<span class="dot" style="background:var(--ax-${k})"></span>${S.axes[k].name}`;
+  c.onclick = () => { state.axis = state.axis === k ? null : k; syncFilters(); }; axisChips.appendChild(c);
+});
+document.getElementById('crossedChip').onclick = e => { state.crossed = !state.crossed; syncFilters(); };
+document.getElementById('search').addEventListener('input', e => { state.q = e.target.value.toLowerCase(); syncFilters(); });
+function bookMatches(b) {
+  if (state.arch && b.arch !== state.arch) return false;
+  if (state.axis && !b.axes.some(a => a.axis === state.axis)) return false;
+  if (state.crossed && !b.crossed) return false;
+  if (state.q && !(b.title + ' ' + b.author).toLowerCase().includes(state.q)) return false;
+  return true;
+}
+function syncFilters() {
+  let n = 0;
+  BOOKS.forEach(b => { const on = bookMatches(b); cardsById[b.id].style.display = on ? '' : 'none'; if (on) n++; });
+  document.getElementById('atlasCount').textContent = n + ' of ' + BOOKS.length;
+  archChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.arch));
+  axisChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.axis));
+  document.getElementById('crossedChip').setAttribute('aria-pressed', state.crossed);
+}
+syncFilters();
+
+/* ================= detail overlay ================= */
+const detail = document.getElementById('detail'), detailCv = document.getElementById('detailCv');
+let detailBook = null, detailEnc = 'line', morphTimer = null;
+const ENCS = [['line', 'Line'], ['scissors', 'Scissors'], ['phase', 'Phase portrait'], ['lanes', 'Lanes'], ['morph', 'Morph']];
+const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
+  if (!detailBook) return;
+  ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[detailEnc](ctx, W, H, detailBook, p);
+}, 2800);
+function openDetail(book) {
+  detailBook = book;
+  const multi = book.axes.length > 1;
+  detailEnc = 'line';
+  document.getElementById('detailTitle').textContent = book.title;
+  const year = book.year < 0 ? 'c. ' + Math.abs(book.year) + ' BC' : book.year;
+  document.getElementById('detailMeta').textContent =
+    `${book.author} · ${year} · ${ARCH[book.arch] ? ARCH[book.arch].name : book.arch} · ` +
+    (book.source === 'measured' ? 'measured from text (labMT / Reagan et al.)' : 'editorial reading') +
+    (book.crossed ? ' · crossed axes' : '');
+  document.getElementById('detailNote').textContent = book.note || '';
+  const tabs = document.getElementById('encTabs'); tabs.innerHTML = '';
+  ENCS.forEach(([k, label]) => {
+    if (!multi && k !== 'line') return;
+    const b = document.createElement('button'); b.className = 'tbtn'; b.textContent = label;
+    b.setAttribute('aria-pressed', k === detailEnc);
+    b.onclick = () => { setEnc(k); };
+    tabs.appendChild(b);
+  });
+  detail.classList.add('open'); document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => { detailChart.play(); startMorphIfNeeded(); });
+}
+function setEnc(k) {
+  detailEnc = k;
+  document.getElementById('encTabs').querySelectorAll('.tbtn').forEach(b =>
+    b.setAttribute('aria-pressed', b.textContent === (ENCS.find(e => e[0] === k) || [])[1]));
+  detailChart.play(); startMorphIfNeeded();
+}
+function startMorphIfNeeded() {
+  clearInterval(morphTimer); morphTimer = null;
+  morphState = { i: 0, j: 1, f: 0 };
+  if (detailEnc === 'morph' && detailBook && detailBook.axes.length > 1 && !REDUCED) {
+    let dir = 1;
+    morphTimer = setInterval(() => {
+      morphState.f += dir * 0.02;
+      if (morphState.f >= 1.4) dir = -1; else if (morphState.f <= -0.4) dir = 1; // pause at ends
+      morphState.f = Math.max(-0.4, Math.min(1.4, morphState.f));
+      const c = Math.max(0, Math.min(1, morphState.f));
+      const keep = morphState.f;
+      morphState.f = c; detailChart.render(); morphState.f = keep;
+    }, 33);
+  }
+}
+function closeDetail() { detail.classList.remove('open'); document.body.style.overflow = ''; clearInterval(morphTimer); }
+document.getElementById('detailClose').onclick = closeDetail;
+detail.addEventListener('click', e => { if (e.target === detail) closeDetail(); });
+document.getElementById('detailReplay').onclick = () => detailChart.play();
+document.getElementById('detailPrev').onclick = () => stepDetail(-1);
+document.getElementById('detailNext').onclick = () => stepDetail(1);
+function stepDetail(d) {
+  const vis = BOOKS.filter(bookMatches);
+  const i = vis.indexOf(detailBook);
+  openDetail(vis[(i + d + vis.length) % vis.length] || BOOKS[0]);
+}
+/* detail hover readout */
+detailCv.addEventListener('pointermove', e => {
+  if (!detailBook || detailEnc === 'phase') { document.getElementById('detailTip').style.opacity = 0; return; }
+  const r = detailCv.getBoundingClientRect();
+  const t = Math.max(0, Math.min(1, (e.clientX - r.left - 46) / (r.width - 62)));
+  const parts = detailBook.axes.map(ax => {
+    const v = valueAt(sampleAxis(ax, 80), Math.min(t, ax.pts ? ax.pts[ax.pts.length - 1][0] : 1));
+    return `${axName(ax)} ${v >= 0 ? '+' : ''}${v.toFixed(2)}`;
+  });
+  const tip = document.getElementById('detailTip');
+  tip.textContent = Math.round(t * 100) + '% · ' + parts.join(' · ');
+  tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; tip.style.opacity = 1;
+});
+detailCv.addEventListener('pointerleave', () => document.getElementById('detailTip').style.opacity = 0);
+
+/* ================= lab ================= */
+const labPick = document.getElementById('labPick'), labGrid = document.getElementById('labGrid');
+BOOKS.filter(b => b.axes.length > 1).forEach(b => {
+  const o = document.createElement('option'); o.value = b.id; o.textContent = b.title + ' — ' + b.author; labPick.appendChild(o);
+});
+const LAB = [
+  ['line', 'Classic line', 'Vonnegut’s original: one axis against time.'],
+  ['scissors', 'Scissors', 'Both axes at once; the shaded wedge is the divergence.'],
+  ['phase', 'Phase portrait', 'Time hidden; the story is a path through axis-space.'],
+  ['lanes', 'Lanes', 'Each axis in its own lane, like a score.'],
+  ['morph', 'Morph', 'One line re-shaped from axis to axis.'],
+];
+const labCharts = [];
+LAB.forEach(([k, name, sub]) => {
+  const el = document.createElement('div'); el.className = 'panel';
+  el.innerHTML = `<h3>${name}</h3><div class="sub">${sub}</div><div class="cvWrap"><canvas></canvas></div>`;
+  labGrid.appendChild(el);
+  const cv = el.querySelector('canvas');
+  const c = attach(cv, (ctx, W, H, p) => {
+    const book = BOOKS.find(b => b.id === labPick.value) || BOOKS[0];
+    if (k === 'morph') { morphState = { i: 0, j: 1, f: (Math.sin(performance.now() / 900) + 1) / 2 }; }
+    ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[k](ctx, W, H, book, p, { labels: true });
+  }, 2600);
+  labCharts.push(c);
+});
+labPick.value = 'oedipus-rex';
+labPick.onchange = () => labCharts.forEach(c => c.play());
+if (!REDUCED) setInterval(() => { const c = labCharts[4]; if (c && c.p >= 1 && isVisible(c.cv)) c.render(); }, 60);
+function isVisible(el) { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
+
+/* ================= crossed gallery ================= */
+function divergence(book) {
+  if (book.axes.length < 2) return 0;
+  const a = sampleAxis(book.axes[0], 60), b = sampleAxis(book.axes[1], 60);
+  let s = 0; for (let i = 0; i < 60; i++) s += Math.abs(a[i][1] - b[i][1]);
+  return s / 60;
+}
+const crossedGrid = document.getElementById('crossedGrid');
+BOOKS.filter(b => b.crossed && b.axes.length > 1)
+  .sort((x, y) => divergence(y) - divergence(x))
+  .forEach(book => {
+    const card = document.createElement('div'); card.className = 'card';
+    card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${book.title}</h3>
+      <div class="meta"><span>${axLabel(book.axes[0])} <span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ax-${book.axes[0].axis})"></span>
+      vs <span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ax-${book.axes[1].axis})"></span> ${axLabel(book.axes[1])}</span></div>`;
+    crossedGrid.appendChild(card);
+    attach(card.querySelector('canvas'), (ctx, W, H, p) => encScissors(ctx, W, H, book, p, { mini: true }), 2100);
+    card.onclick = () => { openDetail(book); setEnc('scissors'); };
+  });
+
+/* ================= map ================= */
+function shapeCoords(book) {
+  const s = sampleAxis(primary(book), 60);
+  const start = s[0][1], end = s[s.length - 1][1];
+  const mid = s.slice(18, 42).reduce((a, q) => a + q[1], 0) / 24;
+  return { x: end - start, y: mid - (start + end) / 2 };
+}
+const ARCH_COLOR_SLOT = { rise: '--ax-knowledge', tragedy: '--ax-tension', hole: '--ax-connection',
+  icarus: '--ax-fortune', cinderella: '--ax-certainty', oedipus: '--ax-power', flatline: '--muted' };
+const mapCv = document.getElementById('mapCv');
+let mapDots = [];
+const mapChart = attach(mapCv, (ctx, W, H, p) => {
+  ctx.clearRect(0, 0, W, H);
+  const m = 54;
+  const X = v => m + (v + 1.6) / 3.2 * (W - 2 * m), Y = v => m + (1 - (v + 1.1) / 2.2) * (H - 2 * m);
+  ctx.strokeStyle = PAL.grid; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(X(-1.6), Y(0)); ctx.lineTo(X(1.6), Y(0)); ctx.moveTo(X(0), Y(-1.1)); ctx.lineTo(X(0), Y(1.1)); ctx.stroke();
+  ctx.fillStyle = PAL.muted; ctx.font = '11px ' + css('--sans'); ctx.textAlign = 'center';
+  ctx.fillText('ends worse ←', X(-1), Y(0) - 8); ctx.fillText('→ ends better', X(1), Y(0) - 8);
+  ctx.save(); ctx.translate(X(0) + 12, Y(.8)); ctx.fillText('middle is a peak ↑', 60, 0); ctx.restore();
+  ctx.save(); ctx.translate(X(0) + 12, Y(-.85)); ctx.fillText('middle is a pit ↓', 55, 0); ctx.restore();
+  mapDots = [];
+  BOOKS.forEach((b, i) => {
+    const c = shapeCoords(b), reveal = Math.max(0, Math.min(1, p * BOOKS.length * .12 - i * .1));
+    if (reveal <= 0) return;
+    const x = X(c.x), y = Y(c.y);
+    ctx.globalAlpha = reveal;
+    ctx.fillStyle = css(ARCH_COLOR_SLOT[b.arch] || '--muted');
+    ctx.strokeStyle = PAL.surface; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(x, y, 7, 0, 7); ctx.fill(); ctx.stroke();
+    ctx.globalAlpha = 1;
+    mapDots.push({ x, y, b });
+  });
+  // legend
+  let lx = m, ly = H - 22;
+  ctx.textAlign = 'left'; ctx.font = '11px ' + css('--sans');
+  Object.entries(ARCH).forEach(([k, a]) => {
+    ctx.fillStyle = css(ARCH_COLOR_SLOT[k]); ctx.beginPath(); ctx.arc(lx + 5, ly - 3, 5, 0, 7); ctx.fill();
+    ctx.fillStyle = PAL.ink2; ctx.fillText(a.name, lx + 14, ly);
+    lx += 24 + ctx.measureText(a.name).width;
+  });
+}, 3200);
+mapCv.addEventListener('pointermove', e => {
+  const r = mapCv.getBoundingClientRect(); const px = e.clientX - r.left, py = e.clientY - r.top;
+  let best = null, bd = 14 * 14;
+  for (const d of mapDots) { const q = (d.x - px) ** 2 + (d.y - py) ** 2; if (q < bd) { bd = q; best = d; } }
+  const tip = document.getElementById('mapTip');
+  if (best) { tip.textContent = best.b.title; tip.style.left = best.x + 'px'; tip.style.top = best.y + 'px'; tip.style.opacity = 1; mapCv.style.cursor = 'pointer'; mapCv._hover = best.b; }
+  else { tip.style.opacity = 0; mapCv.style.cursor = ''; mapCv._hover = null; }
+});
+mapCv.addEventListener('click', () => { if (mapCv._hover) openDetail(mapCv._hover); });
+
+/* ================= walls ================= */
+let wallMode = 'ridge';
+const wallCv = document.getElementById('wallCv');
+let wallRows = [];
+const wallChart = attach(wallCv, (ctx, W, H, p) => {
+  ctx.clearRect(0, 0, W, H);
+  wallRows = [];
+  const ORDER = ['rise', 'cinderella', 'hole', 'icarus', 'oedipus', 'tragedy', 'flatline'];
+  const sorted = [...BOOKS].sort((a, b) => (ORDER.indexOf(a.arch) - ORDER.indexOf(b.arch)) || (a.year - b.year));
+  const n = sorted.length, m = { l: 190, r: 30 };
+  if (wallMode === 'ridge') {
+    const rowH = (H - 30) / n, amp = rowH * 7;
+    sorted.forEach((b, i) => {
+      const baseY = 15 + (i + .5) * rowH;
+      const reveal = Math.max(0, Math.min(1, p * 2.2 - i / n));
+      if (reveal <= 0) return;
+      const X = t => m.l + t * (W - m.l - m.r), Y = v => baseY - v * amp / 2;
+      ctx.globalAlpha = .82 * reveal;
+      strokeLine(ctx, sampleAxis(primary(b), 110), X, Y, reveal, axColor(primary(b)), 1.4, hashStr(b.id));
+      ctx.globalAlpha = 1;
+      wallRows.push({ y: baseY, b });
+    });
+  } else {
+    const rowH = Math.max(4, (H - 30) / n);
+    sorted.forEach((b, i) => {
+      const y = 15 + i * rowH;
+      const reveal = Math.max(0, Math.min(1, p * 2.2 - i / n));
+      if (reveal <= 0) return;
+      const s = sampleAxis(primary(b), 160);
+      const w = (W - m.l - m.r) * reveal;
+      for (let x = 0; x < w; x++) {
+        const v = valueAt(s, x / (W - m.l - m.r));
+        ctx.fillStyle = divColor(v);
+        ctx.fillRect(m.l + x, y, 1.2, rowH - 1.5);
+      }
+      wallRows.push({ y: y + rowH / 2, b });
+    });
+  }
+  if (wallMode === 'barcode') {
+    ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'right';
+    ctx.fillStyle = PAL.muted;
+    const lx = W - 34, ly = 10;
+    ctx.fillText('ill', lx - 46, ly + 3); ctx.textAlign = 'left'; ctx.fillText('good', lx + 44, ly + 3);
+    for (let i = 0; i <= 40; i++) { ctx.fillStyle = divColor(i / 20 - 1); ctx.fillRect(lx - 42 + i * 2, ly - 4, 2, 9); }
+  }
+  ctx.fillStyle = PAL.muted; ctx.font = '10px ' + css('--sans'); ctx.textAlign = 'left';
+  let lastArch = '';
+  wallRows.forEach(r => { if (r.b.arch !== lastArch) { lastArch = r.b.arch;
+    ctx.fillStyle = PAL.ink2; ctx.font = '600 10.5px ' + css('--sans');
+    ctx.fillText(ARCH[lastArch] ? ARCH[lastArch].name.toUpperCase() : lastArch, 12, r.y + 3); } });
+}, 4200);
+function hexToRgb(h) { const x = parseInt(h.slice(1), 16); return [x >> 16 & 255, x >> 8 & 255, x & 255]; }
+function divColor(v) {
+  const lo = hexToRgb(PAL.divLo), mid = hexToRgb(PAL.divMid), hi = hexToRgb(PAL.divHi);
+  const t = Math.max(-1, Math.min(1, v));
+  const [a, b, f] = t < 0 ? [mid, lo, -t] : [mid, hi, t];
+  return `rgb(${a.map((c, i) => Math.round(c + (b[i] - c) * f)).join(',')})`;
+}
+wallCv.addEventListener('pointermove', e => {
+  const r = wallCv.getBoundingClientRect(), py = e.clientY - r.top;
+  let best = null, bd = 12;
+  for (const row of wallRows) { const d = Math.abs(row.y - py); if (d < bd) { bd = d; best = row; } }
+  const tip = document.getElementById('wallTip');
+  if (best) { tip.textContent = best.b.title + ' — ' + best.b.author; tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = py + 'px'; tip.style.opacity = 1; wallCv._hover = best.b; }
+  else { tip.style.opacity = 0; wallCv._hover = null; }
+});
+wallCv.addEventListener('click', () => { if (wallCv._hover) openDetail(wallCv._hover); });
+document.querySelectorAll('[data-wall]').forEach(btn => btn.onclick = () => {
+  wallMode = btn.dataset.wall;
+  document.querySelectorAll('[data-wall]').forEach(b => b.setAttribute('aria-pressed', b === btn));
+  wallChart.play();
+});
+
+/* ================= tour ================= */
+const tour = document.getElementById('tour'), tourCv = document.getElementById('tourCv');
+let tourList = [], tourIdx = 0, tourTimer = null, tourPaused = false;
+const tourChart = makeChart(tourCv, (ctx, W, H, p) => {
+  const b = tourList[tourIdx]; if (!b) return;
+  (b.axes.length > 1 ? encScissors : encLine)(ctx, W, H, b, p, {});
+}, 2600);
+function tourShow(i) {
+  tourIdx = (i + tourList.length) % tourList.length;
+  const b = tourList[tourIdx];
+  document.getElementById('tourTitle').textContent = b.title;
+  const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
+  document.getElementById('tourMeta').textContent = b.author + ' · ' + year + ' · ' + (ARCH[b.arch] ? ARCH[b.arch].name : b.arch);
+  const note = document.getElementById('tourNote');
+  note.style.opacity = 0; note.textContent = b.note || '';
+  tourChart.play();
+  setTimeout(() => note.style.opacity = 1, Math.min(2200, +document.getElementById('tourSpeed').value * .45));
+}
+function tourNextTick() {
+  clearTimeout(tourTimer);
+  if (tourPaused) return;
+  tourTimer = setTimeout(() => { tourShow(tourIdx + 1); tourNextTick(); }, +document.getElementById('tourSpeed').value);
+}
+document.getElementById('tourBtn').onclick = () => {
+  tourList = [...BOOKS].sort(() => .5 - Math.random());
+  // lead with the showpieces
+  const lead = ['oedipus-rex', 'cinderella', 'macbeth', 'gone-girl', 'a-christmas-carol', 'slaughterhouse-five'];
+  tourList.sort((a, b) => (lead.indexOf(a.id) + 999 * (lead.indexOf(a.id) < 0)) - (lead.indexOf(b.id) + 999 * (lead.indexOf(b.id) < 0)));
+  tour.classList.add('open'); document.body.style.overflow = 'hidden';
+  tourPaused = false; document.getElementById('tourPause').textContent = '⏸';
+  tourShow(0); tourNextTick();
+};
+document.getElementById('tourExit').onclick = exitTour;
+function exitTour() { tour.classList.remove('open'); document.body.style.overflow = ''; clearTimeout(tourTimer); }
+document.getElementById('tourPause').onclick = () => {
+  tourPaused = !tourPaused;
+  document.getElementById('tourPause').textContent = tourPaused ? '▶' : '⏸';
+  if (!tourPaused) tourNextTick();
+};
+document.getElementById('tourSpeed').onchange = tourNextTick;
+addEventListener('keydown', e => {
+  if (tour.classList.contains('open')) {
+    if (e.key === 'Escape') exitTour();
+    if (e.key === ' ') { e.preventDefault(); document.getElementById('tourPause').click(); }
+    if (e.key === 'ArrowRight') { tourShow(tourIdx + 1); tourNextTick(); }
+    if (e.key === 'ArrowLeft') { tourShow(tourIdx - 1); tourNextTick(); }
+  } else if (detail.classList.contains('open')) {
+    if (e.key === 'Escape') closeDetail();
+    if (e.key === 'ArrowRight') stepDetail(1);
+    if (e.key === 'ArrowLeft') stepDetail(-1);
+  }
+});
+
+/* ================= theme & skin ================= */
+const themeBtn = document.getElementById('themeBtn'), skinBtn = document.getElementById('skinBtn');
+themeBtn.onclick = () => {
+  const cur = document.documentElement.dataset.theme;
+  const dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+  themeBtn.setAttribute('aria-pressed', !dark);
+  redrawAll();
+};
+skinBtn.onclick = () => {
+  const on = document.documentElement.dataset.skin === 'chalk';
+  if (on) delete document.documentElement.dataset.skin; else document.documentElement.dataset.skin = 'chalk';
+  skinBtn.setAttribute('aria-pressed', !on);
+  redrawAll();
+};
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redrawAll);
+addEventListener('resize', () => { clearTimeout(window._rz); window._rz = setTimeout(redrawAll, 120); });
+</script>
