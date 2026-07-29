@@ -204,8 +204,9 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <section id="crossed">
   <div class="kicker">Part IV — The finding</div>
   <h2>The canon runs on crossed axes</h2>
-  <p class="lede">Folk tales ride one axis. Again and again, the books that last play two against each other —
-    knowledge rising while fortune falls, power rising while the soul drains. The shaded wedge between the lines
+  <p class="lede">Folk tales ride one axis. Again and again, the books that last play two lines against each other —
+    knowledge rising while fortune falls, power rising while the soul drains, and sometimes two readings of the
+    same axis (the lexicon vs. the plot, the telling vs. the timeline). The shaded wedge between the lines
     is the story’s engine. Sorted by how far the scissors open.</p>
   <div class="cardGrid" id="crossedGrid"></div>
 </section>
@@ -270,7 +271,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <footer>“The truth is, we know so little about life, we don’t really know what the good news is and what the bad news is.” — K.V.</footer>
 
 <!-- detail overlay -->
-<div class="overlay" id="detail" role="dialog" aria-modal="true">
+<div class="overlay" id="detail" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
   <div class="sheet">
     <button class="tbtn close" id="detailClose">✕ Esc</button>
     <div class="meta" id="detailMeta"></div>
@@ -287,7 +288,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </div>
 
 <!-- tour overlay -->
-<div class="overlay" id="tour">
+<div class="overlay" id="tour" role="dialog" aria-modal="true" aria-label="Story tour">
   <div class="hud">
     <button class="tbtn" id="tourPause">⏸</button>
     <select class="tbtn" id="tourSpeed"><option value="7000">Slow</option><option value="5000" selected>Medium</option><option value="3400">Fast</option></select>
@@ -491,10 +492,13 @@ function encScissors(ctx, W, H, book, p, opts = {}) {
   const [a, b] = [book.axes[0], book.axes[1] || book.axes[0]];
   const f = frame(ctx, W, H, { mini: opts.mini });
   const pa = sampleAxis(a), pb = sampleAxis(b);
-  const upto = Math.max(2, Math.ceil(Math.min(pa.length, pb.length) * p));
+  // ribbon paired on shared narrative time, stopping where the shorter line stops
+  const tm = Math.min(pa[pa.length - 1][0], pb[pb.length - 1][0]);
+  const N = 160, upto = Math.max(2, Math.ceil(N * p));
   ctx.beginPath();
-  for (let i = 0; i < upto; i++) { const q = pa[i]; i ? ctx.lineTo(f.X(q[0]), f.Y(q[1])) : ctx.moveTo(f.X(q[0]), f.Y(q[1])); }
-  for (let i = Math.min(upto, pb.length) - 1; i >= 0; i--) { const q = pb[i]; ctx.lineTo(f.X(q[0]), f.Y(q[1])); }
+  for (let i = 0; i < upto; i++) { const t = tm * i / (N - 1);
+    i ? ctx.lineTo(f.X(t), f.Y(valueAt(pa, t))) : ctx.moveTo(f.X(t), f.Y(valueAt(pa, t))); }
+  for (let i = upto - 1; i >= 0; i--) { const t = tm * i / (N - 1); ctx.lineTo(f.X(t), f.Y(valueAt(pb, t))); }
   ctx.closePath(); ctx.fillStyle = PAL.ink; ctx.globalAlpha = .07; ctx.fill(); ctx.globalAlpha = 1;
   const ta = strokeLine(ctx, pa, f.X, f.Y, p, axColor(a), opts.mini ? 1.7 : 2.6, hashStr(book.id));
   const tb = strokeLine(ctx, pb, f.X, f.Y, p, axColor(b), opts.mini ? 1.7 : 2.6, hashStr(book.id) + 7);
@@ -514,17 +518,21 @@ function encPhase(ctx, W, H, book, p, opts = {}) {
   ctx.fillStyle = PAL.muted; ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'center';
   ctx.fillText(axLabel(a) + ' →', X(0), oy + sz + 16);
   ctx.save(); ctx.translate(ox - 10, Y(0)); ctx.rotate(-Math.PI / 2); ctx.fillText(axLabel(b) + ' →', 0, 0); ctx.restore();
-  const pa = sampleAxis(a), pb = sampleAxis(b), n = Math.min(pa.length, pb.length);
-  const upto = Math.max(2, Math.ceil(n * p));
+  const pa = sampleAxis(a), pb = sampleAxis(b);
+  const tm = Math.min(pa[pa.length - 1][0], pb[pb.length - 1][0]);
+  const n = 160, upto = Math.max(2, Math.ceil(n * p));
+  const at = i => { const t = tm * i / (n - 1); return [X(valueAt(pa, t)), Y(valueAt(pb, t))]; };
   for (let i = 1; i < upto; i++) {
-    ctx.beginPath(); ctx.moveTo(X(pa[i - 1][1]), Y(pb[i - 1][1])); ctx.lineTo(X(pa[i][1]), Y(pb[i][1]));
+    const [x0, y0] = at(i - 1), [x1, y1] = at(i);
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1);
     ctx.strokeStyle = axColor(a); ctx.globalAlpha = .32 + .68 * (i / upto); ctx.lineWidth = 2.4; ctx.lineCap = 'round'; ctx.stroke();
   }
   ctx.globalAlpha = 1;
-  const cx = X(pa[upto - 1][1]), cy = Y(pb[upto - 1][1]);
+  const [cx, cy] = at(upto - 1);
   ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(cx, cy, 5, 0, 7); ctx.fill();
   ctx.fillStyle = PAL.muted; ctx.font = '600 10px ' + css('--sans');
-  ctx.fillText('start', X(pa[0][1]), Y(pb[0][1]) - 8);
+  const [sx, sy] = at(0);
+  ctx.fillText('start', sx, sy - 8);
   if (p >= 1) ctx.fillText('end', cx, cy - 10);
 }
 function encLanes(ctx, W, H, book, p, opts = {}) {
@@ -541,15 +549,15 @@ function encLanes(ctx, W, H, book, p, opts = {}) {
     strokeLine(ctx, sampleAxis(ax), X, Y, p, axColor(ax), 2, hashStr(book.id) + i);
   });
 }
-let morphState = { i: 0, j: 1, f: 0 };
 function encMorph(ctx, W, H, book, p, opts = {}) {
-  // p drives crossfade between axis i and j (looped externally for detail view)
+  // morph state is per-caller (opts.morph) so detail and lab views never fight
+  const st = opts.morph || { i: 0, j: 1, f: 0 };
   const axes = book.axes;
-  const a = axes[morphState.i % axes.length], b = axes[morphState.j % axes.length];
+  const a = axes[st.i % axes.length], b = axes[st.j % axes.length];
   const f = frame(ctx, W, H, {});
   const pa = sampleAxis(a), pb = sampleAxis(b), n = Math.min(pa.length, pb.length);
   const mix = [];
-  const e = morphState.f;
+  const e = st.f;
   for (let i = 0; i < n; i++) mix.push([pa[i][0] + (pb[i][0] - pa[i][0]) * e, pa[i][1] + (pb[i][1] - pa[i][1]) * e]);
   const col = e < .5 ? axColor(a) : axColor(b);
   const tip = strokeLine(ctx, mix, f.X, f.Y, p, col, 2.6, hashStr(book.id));
@@ -608,18 +616,19 @@ const atlasGrid = document.getElementById('atlasGrid');
 const cardsById = {};
 BOOKS.forEach(book => {
   const card = document.createElement('div'); card.className = 'card'; card.tabIndex = 0;
+  card.setAttribute('role', 'button'); card.setAttribute('aria-label', 'Open ' + book.title);
   const year = book.year < 0 ? 'c. ' + Math.abs(book.year) + ' BC' : book.year;
   card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${book.title}</h3>
     <div class="meta"><span>${book.author} · ${year}</span></div>
     <div class="meta"><span class="badge">${ARCH[book.arch] ? ARCH[book.arch].name : book.arch}</span>
-      <span class="badge">${axName(primary(book))}</span>
+      <span class="badge">${primary(book).source === 'measured' ? 'Sentiment' : axName(primary(book))}</span>
       ${book.crossed ? '<span class="badge x">⤫ crossed</span>' : ''}
       <span class="badge">${book.source === 'measured' ? 'measured' : 'reading'}</span></div>`;
   atlasGrid.appendChild(card);
   cardsById[book.id] = card;
   attach(card.querySelector('canvas'), (ctx, W, H, p) => sparkline(ctx, W, H, book, p), 1700);
   card.addEventListener('click', () => openDetail(book));
-  card.addEventListener('keydown', e => { if (e.key === 'Enter') openDetail(book); });
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(book); } });
 });
 /* filters */
 const archChips = document.getElementById('archChips'), axisChips = document.getElementById('axisChips');
@@ -653,11 +662,12 @@ syncFilters();
 
 /* ================= detail overlay ================= */
 const detail = document.getElementById('detail'), detailCv = document.getElementById('detailCv');
-let detailBook = null, detailEnc = 'line', morphTimer = null;
+let detailBook = null, detailEnc = 'line', morphTimer = null, lastFocus = null;
+const detailMorph = { i: 0, j: 1, f: 0 };
 const ENCS = [['line', 'Line'], ['scissors', 'Scissors'], ['phase', 'Phase portrait'], ['lanes', 'Lanes'], ['morph', 'Morph']];
 const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
   if (!detailBook) return;
-  ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[detailEnc](ctx, W, H, detailBook, p);
+  ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[detailEnc](ctx, W, H, detailBook, p, { morph: detailMorph });
 }, 2800);
 function openDetail(book) {
   detailBook = book;
@@ -665,10 +675,13 @@ function openDetail(book) {
   detailEnc = 'line';
   document.getElementById('detailTitle').textContent = book.title;
   const year = book.year < 0 ? 'c. ' + Math.abs(book.year) + ' BC' : book.year;
+  const hasMeasured = book.axes.some(ax => ax.source === 'measured');
+  const provenance = primary(book).source === 'measured'
+    ? 'measured from text (labMT / Reagan et al.)'
+    : hasMeasured ? 'editorial reading + measured overlay' : 'editorial reading';
   document.getElementById('detailMeta').textContent =
     `${book.author} · ${year} · ${ARCH[book.arch] ? ARCH[book.arch].name : book.arch} · ` +
-    (book.source === 'measured' ? 'measured from text (labMT / Reagan et al.)' : 'editorial reading') +
-    (book.crossed ? ' · crossed axes' : '');
+    provenance + (book.crossed ? ' · crossed axes' : '');
   document.getElementById('detailNote').textContent = book.note || '';
   const tabs = document.getElementById('encTabs'); tabs.innerHTML = '';
   ENCS.forEach(([k, label]) => {
@@ -678,7 +691,9 @@ function openDetail(book) {
     b.onclick = () => { setEnc(k); };
     tabs.appendChild(b);
   });
+  if (!detail.classList.contains('open')) lastFocus = document.activeElement;
   detail.classList.add('open'); document.body.style.overflow = 'hidden';
+  document.getElementById('detailClose').focus();
   requestAnimationFrame(() => { detailChart.play(); startMorphIfNeeded(); });
 }
 function setEnc(k) {
@@ -689,29 +704,32 @@ function setEnc(k) {
 }
 function startMorphIfNeeded() {
   clearInterval(morphTimer); morphTimer = null;
-  morphState = { i: 0, j: 1, f: 0 };
+  detailMorph.i = 0; detailMorph.j = 1; detailMorph.f = 0;
   if (detailEnc === 'morph' && detailBook && detailBook.axes.length > 1 && !REDUCED) {
-    let dir = 1;
+    let dir = 1, raw = 0;
     morphTimer = setInterval(() => {
-      morphState.f += dir * 0.02;
-      if (morphState.f >= 1.4) dir = -1; else if (morphState.f <= -0.4) dir = 1; // pause at ends
-      morphState.f = Math.max(-0.4, Math.min(1.4, morphState.f));
-      const c = Math.max(0, Math.min(1, morphState.f));
-      const keep = morphState.f;
-      morphState.f = c; detailChart.render(); morphState.f = keep;
+      raw += dir * 0.02;
+      if (raw >= 1.4) dir = -1; else if (raw <= -0.4) dir = 1; // pause at ends
+      raw = Math.max(-0.4, Math.min(1.4, raw));
+      detailMorph.f = Math.max(0, Math.min(1, raw));
+      detailChart.render();
     }, 33);
   }
 }
-function closeDetail() { detail.classList.remove('open'); document.body.style.overflow = ''; clearInterval(morphTimer); }
+function closeDetail() {
+  detail.classList.remove('open'); document.body.style.overflow = ''; clearInterval(morphTimer);
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
 document.getElementById('detailClose').onclick = closeDetail;
 detail.addEventListener('click', e => { if (e.target === detail) closeDetail(); });
 document.getElementById('detailReplay').onclick = () => detailChart.play();
 document.getElementById('detailPrev').onclick = () => stepDetail(-1);
 document.getElementById('detailNext').onclick = () => stepDetail(1);
 function stepDetail(d) {
-  const vis = BOOKS.filter(bookMatches);
+  let vis = BOOKS.filter(bookMatches);
+  if (!vis.length || !vis.includes(detailBook)) vis = BOOKS;
   const i = vis.indexOf(detailBook);
-  openDetail(vis[(i + d + vis.length) % vis.length] || BOOKS[0]);
+  openDetail(vis[(i + d + vis.length) % vis.length]);
 }
 /* detail hover readout */
 detailCv.addEventListener('pointermove', e => {
@@ -748,8 +766,8 @@ LAB.forEach(([k, name, sub]) => {
   const cv = el.querySelector('canvas');
   const c = attach(cv, (ctx, W, H, p) => {
     const book = BOOKS.find(b => b.id === labPick.value) || BOOKS[0];
-    if (k === 'morph') { morphState = { i: 0, j: 1, f: (Math.sin(performance.now() / 900) + 1) / 2 }; }
-    ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[k](ctx, W, H, book, p, { labels: true });
+    const labMorph = { i: 0, j: 1, f: (Math.sin(performance.now() / 900) + 1) / 2 };
+    ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[k](ctx, W, H, book, p, { labels: true, morph: labMorph });
   }, 2600);
   labCharts.push(c);
 });
@@ -905,7 +923,7 @@ document.querySelectorAll('[data-wall]').forEach(btn => btn.onclick = () => {
 
 /* ================= tour ================= */
 const tour = document.getElementById('tour'), tourCv = document.getElementById('tourCv');
-let tourList = [], tourIdx = 0, tourTimer = null, tourPaused = false;
+let tourList = [], tourIdx = 0, tourTimer = null, tourPaused = false, tourNoteTimer = null;
 const tourChart = makeChart(tourCv, (ctx, W, H, p) => {
   const b = tourList[tourIdx]; if (!b) return;
   (b.axes.length > 1 ? encScissors : encLine)(ctx, W, H, b, p, {});
@@ -919,7 +937,8 @@ function tourShow(i) {
   const note = document.getElementById('tourNote');
   note.style.opacity = 0; note.textContent = b.note || '';
   tourChart.play();
-  setTimeout(() => note.style.opacity = 1, Math.min(2200, +document.getElementById('tourSpeed').value * .45));
+  clearTimeout(tourNoteTimer);
+  tourNoteTimer = setTimeout(() => note.style.opacity = 1, Math.min(2200, +document.getElementById('tourSpeed').value * .45));
 }
 function tourNextTick() {
   clearTimeout(tourTimer);
@@ -936,7 +955,7 @@ document.getElementById('tourBtn').onclick = () => {
   tourShow(0); tourNextTick();
 };
 document.getElementById('tourExit').onclick = exitTour;
-function exitTour() { tour.classList.remove('open'); document.body.style.overflow = ''; clearTimeout(tourTimer); }
+function exitTour() { tour.classList.remove('open'); document.body.style.overflow = ''; clearTimeout(tourTimer); clearTimeout(tourNoteTimer); }
 document.getElementById('tourPause').onclick = () => {
   tourPaused = !tourPaused;
   document.getElementById('tourPause').textContent = tourPaused ? '▶' : '⏸';
