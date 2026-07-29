@@ -181,8 +181,9 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <section id="atlas">
   <div class="kicker">Part II — The atlas</div>
   <h2>Ninety-three books, drawn</h2>
-  <p class="lede">Solid-count lines are measured from the full text (labMT sentiment over 100 windows, via Reagan et&nbsp;al.’s public data).
-    The rest are calibrated editorial readings — chalkboard style, the way Vonnegut did it. Both are readings.</p>
+  <p class="lede">“Sentiment” lines are measured from the full text (labMT over 100 windows, via Reagan et&nbsp;al.’s public data);
+    the rest are calibrated editorial readings, the way Vonnegut did it at the chalkboard. A few famous books carry both —
+    the plot as remembered <em>and</em> what the lexicon heard — because the two genuinely disagree. Both are readings.</p>
   <div class="filters" id="filters">
     <input id="search" type="search" placeholder="Search title or author…">
     <span id="archChips"></span><span id="axisChips"></span>
@@ -623,7 +624,8 @@ BOOKS.forEach(book => {
     <div class="meta"><span class="badge">${ARCH[book.arch] ? ARCH[book.arch].name : book.arch}</span>
       <span class="badge">${primary(book).source === 'measured' ? 'Sentiment' : axName(primary(book))}</span>
       ${book.crossed ? '<span class="badge x">⤫ crossed</span>' : ''}
-      <span class="badge">${book.source === 'measured' ? 'measured' : 'reading'}</span></div>`;
+      <span class="badge">${primary(book).source === 'measured' ? 'measured'
+        : book.axes.some(a => a.source === 'measured') ? 'reading + measured' : 'reading'}</span></div>`;
   atlasGrid.appendChild(card);
   cardsById[book.id] = card;
   attach(card.querySelector('canvas'), (ctx, W, H, p) => sparkline(ctx, W, H, book, p), 1700);
