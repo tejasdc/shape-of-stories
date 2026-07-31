@@ -240,17 +240,18 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
         independently verified by re-deriving five books from raw Gutenberg text (all correlate positively).</p>
       <p><b>Drawn from a reading</b> (44 books): hand-scored fortune arcs against a shared calibration
         rubric — readings, not measurements, exactly what Vonnegut did at the board.</p>
-      <p><b>Scored by a reader</b> (9 books): a machine reader split each full text into 20 equal slices,
-        read each slice, and scored the protagonist’s situation 1–9 from events — never from prose mood —
-        recording the justifying event for every point (visible on hover).</p>
+      <p><b>Scored by a reader</b> (9 books): a machine reader split each full text into equal slices —
+        twenty for novels and epics, sixteen for the two shorter works — read each slice, and scored the
+        protagonist’s situation 1–9 from events, never from prose mood, recording the justifying event
+        for every point (visible on hover).</p>
     </div>
     <div>
       <h3>What we verified ourselves</h3>
       <ul>
         <li>Re-ran the 2016 decomposition on the corpus: three basic curves ± their mirrors explain ~84%
           of all arc variance. The six shapes are real.</li>
-        <li>Word-mood vs reader-scored fortune on 5 books: near-zero correlation on 4 (r = −0.12…+0.19);
-          Dorian Gray the exception (r = +0.89). Failures concentrate at endings.</li>
+        <li>Word-mood vs reader-scored fortune on 5 books: near-zero agreement on 4 (r = −0.14…+0.16);
+          Dorian Gray the exception (r = +0.90). Failures concentrate at endings.</li>
         <li>No new shapes in 9 reader-scored stories, Western or Indian.</li>
         <li>The “Ramayana” in one common anthology is Book One only — always check a text covers the
           full arc before trusting its line.</li>
@@ -352,7 +353,12 @@ function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h
 
 /* line of a book: [[t, v]] in [-1,1] */
 function lineOf(b) {
-  if (b.reader) return catmull(b.reader.pts);
+  if (b.reader) {
+    // pilot points are slice centers; pad so the line truly spans beginning to end
+    const p = b.reader.pts;
+    const padded = [[0, p[0][1]], ...p, [1, p[p.length - 1][1]]];
+    return catmull(padded);
+  }
   if (b.pts) return catmull(b.pts);
   const s = b.mood_primary, out = [];
   for (let i = 0; i < s.length; i++) out.push([i / (s.length - 1), s[i]]);
@@ -437,13 +443,14 @@ function labelText(ctx, text, x, y, color, align = 'center') {
   ctx.fillStyle = color; ctx.fillText(text, x, y);
 }
 function wrapLabel(ctx, txt, x, y, w, color) {
+  if (txt.length > 92) txt = txt.slice(0, 89).replace(/[,;\s]+\S*$/, '') + '…';
   const words = txt.split(' '); let line = '', dy = 0;
   ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'center';
   const lines = [];
   for (const wd of words) { const test = line ? line + ' ' + wd : wd;
     if (ctx.measureText(test).width > w && line) { lines.push(line); line = wd; } else line = test; }
   lines.push(line);
-  for (const l of lines) {
+  for (const l of lines.slice(0, 4)) {
     ctx.strokeStyle = PAL.surface; ctx.lineWidth = 3; ctx.strokeText(l, x, y + dy);
     ctx.fillStyle = PAL.ink2; ctx.fillText(l, x, y + dy); dy += 12;
   }
@@ -473,7 +480,7 @@ function drawBook(ctx, W, H, b, p, opts = {}) {
   const pts = lineOf(b);
   const color = b.reader ? PAL.reader : PAL.line;
   const tip = strokeLine(ctx, pts, f.X, f.Y, p, color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
-  if (!opts.mini) {
+  if (!opts.mini && W >= 480) {
     for (const beat of annotatedBeats(b)) {
       if (beat.t > tip[0] + .002) continue;
       ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(f.X(beat.t), f.Y(beat.v), 3, 0, 7); ctx.fill();
@@ -522,7 +529,7 @@ const heroChart = attach(document.getElementById('heroCv'), (ctx, W, H, p) => {
   drawBook(ctx, W, H, b, p);
   if (p > .05) labelText(ctx, b.title, 14, 34 + 16, PAL.ink, 'left');
 }, 3000);
-setInterval(() => { if (!document.hidden && heroChart.p >= 1) { heroIdx++; heroChart.play(); } }, 5200);
+if (!REDUCED) setInterval(() => { if (!document.hidden && heroChart.p >= 1) { heroIdx++; heroChart.play(); } }, 5200);
 
 /* ===== shapes ===== */
 const counts = {};
@@ -568,13 +575,14 @@ const machineChart = attach(document.getElementById('machineCv'), (ctx, W, H, p)
   const mood = moodLineOf(demo) || [];
   const X = t => m + t * (W - 2 * m), Y = v => lineTop + (1 - (v + 1) / 2) * lineH;
   ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
-  const centerT = (wx + winW / 2 - m) / (W - 2 * m);
+  // map window position so the drawn line reaches ALL the way to the end at p=1
+  const centerT = wt;
   const upto = mood.filter(q => q[0] <= centerT);
   if (upto.length > 1) strokeLine(ctx, upto, X, Y, 1, PAL.line, 2.6, 3);
   ctx.fillStyle = PAL.muted; ctx.font = '11px ' + css('--sans'); ctx.textAlign = 'left';
   ctx.fillText('…and the line draws itself (this one is really A Christmas Carol’s word-mood)', m, H - 8);
 }, 9000);
-setInterval(() => { if (!document.hidden && machineChart.p >= 1 && isVisible(machineChart.cv)) machineChart.play(); }, 11000);
+if (!REDUCED) setInterval(() => { if (!document.hidden && machineChart.p >= 1 && isVisible(machineChart.cv)) machineChart.play(); }, 11000);
 function isVisible(el) { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
 
 /* ===== atlas ===== */
@@ -730,9 +738,14 @@ READER_FIVE.forEach(id => {
     ctx.globalAlpha = 1;
     strokeLine(ctx, lineOf(b), f.X, f.Y, p, PAL.reader, 2.3, hashStr(b.id));
   }, 2300);
-  el.style.cursor = 'pointer';
-  el.onclick = () => openDetail(b);
+  makePanelClickable(el, b);
 });
+function makePanelClickable(el, b) {
+  el.style.cursor = 'pointer';
+  el.tabIndex = 0; el.setAttribute('role', 'button'); el.setAttribute('aria-label', 'Open ' + b.title);
+  el.onclick = () => openDetail(b);
+  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(b); } });
+}
 
 /* ===== east & west ===== */
 const eastGrid = document.getElementById('eastGrid');
@@ -744,8 +757,7 @@ BOOKS.filter(b => b.region === 'indian').forEach(b => {
   attach(el.querySelector('canvas'), (ctx, W, H, p) => {
     drawBook(ctx, W, H, b, p, { mini: false, m: { l: 12, r: 12, t: 24, b: 24 } });
   }, 2600);
-  el.style.cursor = 'pointer';
-  el.onclick = () => openDetail(b);
+  makePanelClickable(el, b);
 });
 
 /* ===== map ===== */
@@ -794,6 +806,23 @@ mapCv.addEventListener('pointermove', e => {
   else { tip.style.opacity = 0; mapCv.style.cursor = ''; mapCv._hover = null; }
 });
 mapCv.addEventListener('click', () => { if (mapCv._hover) openDetail(mapCv._hover); });
+/* keyboard access for the map: arrows cycle books, Enter opens */
+mapCv.tabIndex = 0; mapCv.setAttribute('role', 'application');
+mapCv.setAttribute('aria-label', 'Map of books in shape-space; use arrow keys to cycle books, Enter to open');
+let mapKbIdx = -1;
+mapCv.addEventListener('keydown', e => {
+  if (!mapDots.length) return;
+  const sorted = [...mapDots].sort((a, b) => a.x - b.x);
+  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+    e.preventDefault();
+    mapKbIdx = (mapKbIdx + (e.key === 'ArrowRight' ? 1 : -1) + sorted.length) % sorted.length;
+    const d = sorted[mapKbIdx];
+    const tip = document.getElementById('mapTip');
+    tip.textContent = d.b.title; tip.style.left = d.x + 'px'; tip.style.top = d.y + 'px'; tip.style.opacity = 1;
+    mapCv._hover = d.b;
+  }
+  if (e.key === 'Enter' && mapCv._hover) openDetail(mapCv._hover);
+});
 
 /* ===== tour ===== */
 const tour = document.getElementById('tour'), tourCv = document.getElementById('tourCv');
@@ -835,6 +864,18 @@ document.getElementById('tourPause').onclick = () => {
   if (!tourPaused) tourNextTick();
 };
 document.getElementById('tourSpeed').onchange = tourNextTick;
+/* keep Tab inside whichever overlay is open */
+addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const openOv = detail.classList.contains('open') ? detail : (tour.classList.contains('open') ? tour : null);
+  if (!openOv) return;
+  const focusables = [...openOv.querySelectorAll('button, select, [tabindex]')].filter(el => el.offsetParent);
+  if (!focusables.length) return;
+  const first = focusables[0], last = focusables[focusables.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  else if (!openOv.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+});
 addEventListener('keydown', e => {
   if (tour.classList.contains('open')) {
     if (e.key === 'Escape') exitTour();
