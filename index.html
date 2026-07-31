@@ -7,6 +7,8 @@
   --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e;
   --muted: #898781; --grid: #e1e0d9; --baseline: #c3c2b7; --ring: rgba(11,11,11,.10);
   --line: #eda100; --reader: #2a78d6;
+  --sh-rise: #2a78d6; --sh-cinderella: #e87ba4; --sh-hole: #1baf7a; --sh-icarus: #eda100;
+  --sh-oedipus: #4a3aa7; --sh-tragedy: #e34948; --sh-complex: #008300; --sh-flatline: #898781;
   --wobble: 0;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -17,6 +19,8 @@
     --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
     --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
     --line: #c98500; --reader: #3987e5;
+    --sh-rise: #3987e5; --sh-cinderella: #d55181; --sh-hole: #199e70; --sh-icarus: #c98500;
+    --sh-oedipus: #9085e9; --sh-tragedy: #e34948; --sh-complex: #229b22; --sh-flatline: #898781;
   }
 }
 :root[data-theme="dark"] {
@@ -24,12 +28,16 @@
   --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
   --line: #c98500; --reader: #3987e5;
+  --sh-rise: #3987e5; --sh-cinderella: #d55181; --sh-hole: #199e70; --sh-icarus: #c98500;
+  --sh-oedipus: #9085e9; --sh-tragedy: #e34948; --sh-complex: #229b22; --sh-flatline: #898781;
 }
 :root[data-skin="chalk"], :root[data-skin="chalk"][data-theme="light"] {
   color-scheme: dark;
   --page: #1d2b26; --surface: #22332d; --ink: #f5f2e8; --ink2: #cfd8ce;
   --muted: #93a396; --grid: #2e423a; --baseline: #47594f; --ring: rgba(245,242,232,.14);
   --line: #f2c14e; --reader: #7db8f0;
+  --sh-rise: #7db8f0; --sh-cinderella: #f0a2c0; --sh-hole: #7fd6ac; --sh-icarus: #f2c14e;
+  --sh-oedipus: #b9a7f5; --sh-tragedy: #f07f74; --sh-complex: #9fd6a0; --sh-flatline: #93a396;
   --wobble: 1;
 }
 * { box-sizing: border-box; }
@@ -173,23 +181,24 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <section id="atlas">
   <div class="kicker">Part IV — The atlas</div>
-  <h2>114 stories, one line each</h2>
+  <h2>Ninety-two Western stories, one line each</h2>
   <p class="lede">Every line answers one question — <em>how well are things going for the protagonist?</em> —
     and every line was scored the same way: an AI agent judged the story’s events beat by beat.
-    For nine works the agent read the entire text; for the rest it worked from the book’s published plot
+    For a few works the agent read the entire text; for the rest it worked from the book’s published plot
     synopsis, which is open, citable information anyone can check. Each book’s page says which, and links
-    the source. Hover any line for the event behind a point.</p>
+    the source. Lines are colored by their shape family. The Eastern classics have
+    <a href="#east">a room of their own below</a>.</p>
   <div class="filters" id="filters">
     <input id="search" type="search" placeholder="Search title or author…">
-    <span id="shapeChips"></span><span id="regionChips"></span>
+    <span id="shapeChips"></span>
     <span id="atlasCount"></span>
   </div>
   <div class="cardGrid" id="atlasGrid"></div>
 </section>
 
 <section id="reader">
-  <div class="kicker">Part V — A better reader</div>
-  <h2>What happens when the reader actually understands the book</h2>
+  <div class="kicker">Part V — Why this method</div>
+  <h2>Why score events instead of counting words?</h2>
   <p class="lede">We took five books and scored them twice: once with the word-mood method, once with an
     AI agent that read the full text and judged the <em>events</em>. On four of the five, the two lines
     barely relate — and the failures cluster at <b>endings</b>, where weddings and redemptions are brief
@@ -197,8 +206,8 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
     hear that the last page is the whole point. (Thirty-seven books in the atlas carry their word-mood
     line as a toggle, so you can check the disagreement yourself on any of them.)</p>
   <div class="keyRow">
-    <span><span class="sw" style="background:var(--reader)"></span>hero’s fortune, scored by reading events</span>
-    <span><span class="sw" style="background:var(--line)"></span>mood of the words (2016 method)</span>
+    <span><span class="sw" style="background:var(--reader)"></span>the hero’s events, scored by reading (solid, colored by shape)</span>
+    <span><span class="sw" style="background:repeating-linear-gradient(90deg,var(--muted) 0 6px,transparent 6px 11px)"></span>mood of the words (2016 method)</span>
   </div>
   <div class="panelGrid" id="readerGrid"></div>
   <p class="lede" style="margin-top:16px">And the shapes themselves? Every reader-scored line still lands
@@ -348,9 +357,14 @@ let PAL = {};
 function refreshPal() {
   PAL = { ink: css('--ink'), ink2: css('--ink2'), muted: css('--muted'), grid: css('--grid'),
     baseline: css('--baseline'), surface: css('--surface'), line: css('--line'), reader: css('--reader'),
-    wobble: parseFloat(css('--wobble')) || 0 };
+    wobble: parseFloat(css('--wobble')) || 0, sh: {} };
+  for (const k of ['rise','cinderella','hole','icarus','oedipus','tragedy','complex','flatline'])
+    PAL.sh[k] = css('--sh-' + k);
 }
 refreshPal();
+const shapeColor = b => PAL.sh[b.shape] || PAL.ink;
+const WEST = () => BOOKS.filter(b => b.region === 'west');
+const EAST = () => BOOKS.filter(b => b.region !== 'west');
 function mulberry(seed) { return function() { let t = seed += 0x6D2B79F5;
   t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61);
   return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
@@ -478,8 +492,8 @@ function annotatedBeats(b) {
 function drawBook(ctx, W, H, b, p, opts = {}) {
   const f = frame(ctx, W, H, opts);
   const pts = lineOf(b);
-  const color = PAL.reader;
-  const tip = strokeLine(ctx, pts, f.X, f.Y, p, color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
+  const color = shapeColor(b);
+  const tip = strokeLine(ctx, pts, f.X, f.Y, p, opts.color || color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
   if (!opts.mini && W >= 480) {
     for (const beat of annotatedBeats(b)) {
       if (beat.t > tip[0] + .002) continue;
@@ -521,8 +535,8 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 function attach(cv, draw, dur) { const c = makeChart(cv, draw, dur); cv._chart = c; io.observe(cv); c.render(); return c; }
 function redrawAll() { refreshPal(); for (const c of charts) c.render(); }
 
-/* ===== hero: cycle showpiece books ===== */
-const heroIds = ['a-christmas-carol', 'nala-damayanti', 'dorian-gray', 'ramayana', 'emma'];
+/* ===== hero: cycle Western showpieces (the East has its own room) ===== */
+const heroIds = ['a-christmas-carol', 'dorian-gray', 'the-great-gatsby', 'emma', 'cinderella-perrault'];
 let heroIdx = 0;
 const heroChart = attach(document.getElementById('heroCv'), (ctx, W, H, p) => {
   const b = BOOKS.find(x => x.id === heroIds[heroIdx % heroIds.length]);
@@ -538,13 +552,25 @@ const sg = document.getElementById('shapeGrid');
 SHAPE_ORDER.forEach(key => {
   const s = SHAPES[key];
   const card = document.createElement('div'); card.className = 'card';
-  card.innerHTML = `<h3>${s.name}</h3><div class="aka">${s.aka} · ${counts[key] || 0} of ${BOOKS.length} books</div>
+  card.innerHTML = `<h3>${s.name}</h3><div class="aka">${s.aka} · ${counts[key] || 0} of ${BOOKS.length} stories</div>
     <div class="cvWrap"><canvas></canvas></div><p>${SHAPE_DESC[key]}</p>`;
   sg.appendChild(card);
+  // Fig-4 style: the ideal curve bold, the actual member stories faint behind it
+  const members = BOOKS.filter(b => b.shape === key);
   attach(card.querySelector('canvas'), (ctx, W, H, p) => {
     const f = frame(ctx, W, H, { mini: true });
-    strokeLine(ctx, catmull(SHAPE_SKETCH[key], 90), f.X, f.Y, p, PAL.line, 2.4, hashStr(key));
-  }, 1800);
+    ctx.globalAlpha = .16;
+    members.forEach(b => {
+      const raw = lineOf(b).map(q => q[1]);
+      const sm = raw.map((_, i) => { const lo = Math.max(0, i - 6), hi = Math.min(raw.length, i + 7);
+        return raw.slice(lo, hi).reduce((a, v) => a + v, 0) / (hi - lo); });
+      const mn = Math.min(...sm), mx = Math.max(...sm), rng = (mx - mn) || 1;
+      const norm = sm.map(v => ((v - mn) / rng) * 1.7 - .85);
+      strokeLine(ctx, norm.map((v, i) => [i / (norm.length - 1), v]), f.X, f.Y, p, PAL.sh[key], 1.1, hashStr(b.id));
+    });
+    ctx.globalAlpha = 1;
+    strokeLine(ctx, catmull(SHAPE_SKETCH[key], 90), f.X, f.Y, p, PAL.sh[key], 3, hashStr(key));
+  }, 2200);
 });
 
 /* ===== machine explainer: sliding window animation ===== */
@@ -586,49 +612,43 @@ if (!REDUCED) setInterval(() => { if (!document.hidden && machineChart.p >= 1 &&
 function isVisible(el) { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
 
 /* ===== atlas ===== */
-const state = { shape: null, region: null, q: '' };
+const state = { shape: null, q: '' };
 const atlasGrid = document.getElementById('atlasGrid');
 const cardsById = {};
-BOOKS.forEach(b => {
+WEST().forEach(b => {
   const card = document.createElement('div'); card.className = 'card click'; card.tabIndex = 0;
   card.setAttribute('role', 'button'); card.setAttribute('aria-label', 'Open ' + b.title);
   const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
   card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${b.title}</h3>
     <div class="meta">${b.author} · ${year}</div>
-    <div><span class="shapeTag">${SHAPES[b.shape].name}</span>
-    ${b.region !== 'west' ? `<span class="shapeTag">${REGION_NAME[b.region]}</span>` : ''}</div>`;
+    <div><span class="shapeTag"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sh-${b.shape});margin-right:5px;vertical-align:0"></span>${SHAPES[b.shape].name}</span></div>`;
   atlasGrid.appendChild(card);
   cardsById[b.id] = card;
   attach(card.querySelector('canvas'), (ctx, W, H, p) => {
     const f = frame(ctx, W, H, { mini: true });
-    strokeLine(ctx, lineOf(b), f.X, f.Y, p, PAL.reader, 1.9, hashStr(b.id));
+    strokeLine(ctx, lineOf(b), f.X, f.Y, p, shapeColor(b), 1.9, hashStr(b.id));
   }, 1700);
   card.addEventListener('click', () => openDetail(b));
   card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(b); } });
 });
-const shapeChips = document.getElementById('shapeChips'), regionChips = document.getElementById('regionChips');
+const shapeChips = document.getElementById('shapeChips');
 SHAPE_ORDER.forEach(k => {
-  const c = document.createElement('button'); c.className = 'chip'; c.textContent = SHAPES[k].name; c.dataset.k = k;
+  const c = document.createElement('button'); c.className = 'chip'; c.dataset.k = k;
+  c.innerHTML = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sh-${k});margin-right:6px;vertical-align:0"></span>${SHAPES[k].name}`;
   c.onclick = () => { state.shape = state.shape === k ? null : k; syncFilters(); }; shapeChips.appendChild(c);
-});
-[['west', 'Western'], ['east', 'Eastern']].forEach(([k, label]) => {
-  const c = document.createElement('button'); c.className = 'chip'; c.textContent = label; c.dataset.k = k;
-  c.onclick = () => { state.region = state.region === k ? null : k; syncFilters(); }; regionChips.appendChild(c);
 });
 document.getElementById('search').addEventListener('input', e => { state.q = e.target.value.toLowerCase(); syncFilters(); });
 function bookMatches(b) {
+  if (b.region !== 'west') return false;
   if (state.shape && b.shape !== state.shape) return false;
-  if (state.region === 'west' && b.region !== 'west') return false;
-  if (state.region === 'east' && b.region === 'west') return false;
   if (state.q && !(b.title + ' ' + b.author).toLowerCase().includes(state.q)) return false;
   return true;
 }
 function syncFilters() {
   let n = 0;
-  BOOKS.forEach(b => { const on = bookMatches(b); cardsById[b.id].style.display = on ? '' : 'none'; if (on) n++; });
-  document.getElementById('atlasCount').textContent = n + ' of ' + BOOKS.length;
+  WEST().forEach(b => { const on = bookMatches(b); cardsById[b.id].style.display = on ? '' : 'none'; if (on) n++; });
+  document.getElementById('atlasCount').textContent = n + ' of ' + WEST().length;
   shapeChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.shape));
-  regionChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.region));
 }
 syncFilters();
 
@@ -649,14 +669,14 @@ const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
   const f = drawBook(ctx, W, H, detailBook, p);
   const mood = moodLineOf(detailBook);
   if (mood && showMood) {
-    ctx.globalAlpha = .75;
-    strokeLine(ctx, mood, f.X, f.Y, p, PAL.line, 1.8, hashStr(detailBook.id) + 5);
-    ctx.globalAlpha = 1;
+    ctx.setLineDash([6, 5]); ctx.globalAlpha = .8;
+    strokeLine(ctx, mood, f.X, f.Y, p, PAL.muted, 1.7, hashStr(detailBook.id) + 5);
+    ctx.setLineDash([]); ctx.globalAlpha = 1;
     // name each line near its first quarter, clear of the ending annotations
     const hero = lineOf(detailBook);
     const q = 0.22;
-    labelText(ctx, 'mood of the words', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.line, 'left');
-    labelText(ctx, 'the hero, read', f.X(q), f.Y(valueAt(hero, q)) + 18, PAL.reader, 'left');
+    labelText(ctx, 'mood of the words (2016 method)', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.muted, 'left');
+    labelText(ctx, 'the hero’s events', f.X(q), f.Y(valueAt(hero, q)) + 18, shapeColor(detailBook), 'left');
   }
 }, 2800);
 function openDetail(b) {
@@ -705,8 +725,9 @@ document.getElementById('detailReplay').onclick = () => detailChart.play();
 document.getElementById('detailPrev').onclick = () => stepDetail(-1);
 document.getElementById('detailNext').onclick = () => stepDetail(1);
 function stepDetail(d) {
-  let vis = BOOKS.filter(bookMatches);
-  if (!vis.length || !vis.includes(detailBook)) vis = BOOKS;
+  // navigate within the book's own cohort: filtered atlas for Western, the East room for Eastern
+  let vis = detailBook.region === 'west' ? BOOKS.filter(bookMatches) : EAST();
+  if (!vis.length || !vis.includes(detailBook)) vis = detailBook.region === 'west' ? WEST() : EAST();
   const i = vis.indexOf(detailBook);
   openDetail(vis[(i + d + vis.length) % vis.length]);
 }
@@ -743,10 +764,10 @@ READER_FIVE.forEach(id => {
   readerGrid.appendChild(el);
   attach(el.querySelector('canvas'), (ctx, W, H, p) => {
     const f = frame(ctx, W, H, { mini: true });
-    ctx.globalAlpha = .8;
-    strokeLine(ctx, moodLineOf(b), f.X, f.Y, p, PAL.line, 1.7, hashStr(b.id) + 5);
-    ctx.globalAlpha = 1;
-    strokeLine(ctx, lineOf(b), f.X, f.Y, p, PAL.reader, 2.3, hashStr(b.id));
+    ctx.setLineDash([5, 4]); ctx.globalAlpha = .8;
+    strokeLine(ctx, moodLineOf(b), f.X, f.Y, p, PAL.muted, 1.6, hashStr(b.id) + 5);
+    ctx.setLineDash([]); ctx.globalAlpha = 1;
+    strokeLine(ctx, lineOf(b), f.X, f.Y, p, shapeColor(b), 2.3, hashStr(b.id));
   }, 2300);
   makePanelClickable(el, b);
 });
@@ -773,8 +794,6 @@ EAST_ORDER.forEach(region => BOOKS.filter(b => b.region === region)
   }));
 
 /* ===== map ===== */
-const SHAPE_COLORS = { rise: '#2a78d6', cinderella: '#e87ba4', hole: '#1baf7a', icarus: '#eda100',
-  oedipus: '#4a3aa7', tragedy: '#e34948', complex: '#008300', flatline: '#898781' };
 const mapCv = document.getElementById('mapCv');
 let mapDots = [];
 attach(mapCv, (ctx, W, H, p) => {
@@ -795,19 +814,25 @@ attach(mapCv, (ctx, W, H, p) => {
     if (reveal <= 0) return;
     const x = X(end - start), y = Y(mid - (start + end) / 2);
     ctx.globalAlpha = reveal;
-    ctx.fillStyle = SHAPE_COLORS[b.shape];
+    ctx.fillStyle = PAL.sh[b.shape];
     ctx.strokeStyle = PAL.surface; ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.arc(x, y, 7, 0, 7); ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    if (b.region === 'west') { ctx.arc(x, y, 7, 0, 7); }
+    else { ctx.moveTo(x, y - 9); ctx.lineTo(x + 9, y); ctx.lineTo(x, y + 9); ctx.lineTo(x - 9, y); ctx.closePath(); }
+    ctx.fill(); ctx.stroke();
     ctx.globalAlpha = 1;
     mapDots.push({ x, y, b });
   });
   let lx = m; const ly = H - 20;
   ctx.textAlign = 'left'; ctx.font = '11px ' + css('--sans');
   SHAPE_ORDER.forEach(k => {
-    ctx.fillStyle = SHAPE_COLORS[k]; ctx.beginPath(); ctx.arc(lx + 5, ly - 3, 5, 0, 7); ctx.fill();
+    ctx.fillStyle = PAL.sh[k]; ctx.beginPath(); ctx.arc(lx + 5, ly - 3, 5, 0, 7); ctx.fill();
     ctx.fillStyle = PAL.ink2; ctx.fillText(SHAPES[k].name, lx + 14, ly);
     lx += 24 + ctx.measureText(SHAPES[k].name).width;
   });
+  ctx.fillStyle = PAL.ink2; ctx.beginPath();
+  ctx.moveTo(lx + 5, ly - 9); ctx.lineTo(lx + 10, ly - 3); ctx.lineTo(lx + 5, ly + 3); ctx.lineTo(lx, ly - 3); ctx.closePath(); ctx.fill();
+  ctx.fillText('= Eastern', lx + 15, ly);
 }, 3200);
 mapCv.addEventListener('pointermove', e => {
   const r = mapCv.getBoundingClientRect(); const px = e.clientX - r.left, py = e.clientY - r.top;
