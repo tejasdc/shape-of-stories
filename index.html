@@ -116,7 +116,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <nav>
   <span class="brand">The Shape of Stories</span>
-  <a href="#idea">The idea</a><a href="#shapes">Seven shapes</a><a href="#machine">The machine</a>
+  <a href="#idea">The idea</a><a href="#shapes">The shapes</a><a href="#machine">The machine</a>
   <a href="#atlas">Atlas</a><a href="#reader">A better reader</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#method">Method</a>
   <span class="spacer"></span>
   <button class="tbtn" id="tourBtn">▶ Tour</button>
@@ -149,11 +149,11 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <section id="shapes">
   <div class="kicker">Part II — The shapes</div>
-  <h2>Seven shapes cover nearly everything</h2>
+  <h2>Eight shapes cover everything here</h2>
   <p class="lede">Six were confirmed by the Vermont team across 1,327 novels — three basic moves, each
-    also possible upside down. The seventh is Vonnegut’s own exception: the story whose line refuses to
-    be drawn. The eighth is a braid — stories whose line genuinely reverses again and again.
-    Counts are from this atlas’s 114 stories.</p>
+    also possible upside down. The seventh is Vonnegut’s own exception: the line that refuses to commit.
+    The eighth is a braid — stories that genuinely reverse again and again; not a new basic shape, but a
+    weave of the six. Counts are from this atlas’s 114 stories.</p>
   <div class="cardGrid" id="shapeGrid"></div>
 </section>
 
@@ -299,7 +299,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <div class="overlay" id="tour" role="dialog" aria-modal="true" aria-label="Story tour">
   <div class="hud">
-    <button class="tbtn" id="tourPause">⏸</button>
+    <button class="tbtn" id="tourPause" aria-label="Pause or resume the tour">⏸</button>
     <select class="tbtn" id="tourSpeed"><option value="7000">Slow</option><option value="5000" selected>Medium</option><option value="3400">Fast</option></select>
     <button class="tbtn" id="tourExit">✕ Esc</button>
   </div>
@@ -361,7 +361,7 @@ function lineOf(b) {
   let p = b.pts;
   // beat/slice positions may not touch the edges; pad so the line spans beginning to end
   if (p[0][0] > 0.005) p = [[0, p[0][1]], ...p];
-  if (p[p.length - 1][0] < 0.955 && b.id !== 'diary-of-a-young-girl') p = [...p, [1, p[p.length - 1][1]]];
+  if (p[p.length - 1][0] < 0.995 && b.id !== 'diary-of-a-young-girl') p = [...p, [1, p[p.length - 1][1]]];
   return catmull(p);
 }
 function moodLineOf(b) {
@@ -668,9 +668,12 @@ function openDetail(b) {
   const prov = document.getElementById('detailProv');
   prov.textContent = HOW_PROV[b.how] + (b.protagonist ? ` Protagonist scored: ${b.protagonist}.` : '');
   if (b.how === 'synopsis' && b.source && b.source.length) {
-    const a = document.createElement('a');
-    a.href = b.source[0]; a.target = '_blank'; a.rel = 'noopener'; a.textContent = ' View the synopsis ↗';
-    prov.appendChild(a);
+    b.source.forEach((url, i) => {
+      const a = document.createElement('a');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = i === 0 ? ' View the synopsis ↗' : ` Supplemental source ${b.source.length > 2 ? i : ''} ↗`;
+      prov.appendChild(a);
+    });
   }
   document.getElementById('detailNote').textContent = b.note || '';
   const mt = document.getElementById('moodToggle');
@@ -863,6 +866,7 @@ document.getElementById('tourBtn').onclick = () => {
   tourList.sort((a, b) => (lead.indexOf(a.id) + 999 * (lead.indexOf(a.id) < 0)) - (lead.indexOf(b.id) + 999 * (lead.indexOf(b.id) < 0)));
   tour.classList.add('open'); document.body.style.overflow = 'hidden';
   tourPaused = false; document.getElementById('tourPause').textContent = '⏸';
+  document.getElementById('tourExit').focus();
   tourShow(0); tourNextTick();
 };
 document.getElementById('tourExit').onclick = exitTour;

@@ -1,18 +1,25 @@
 # The Shape of Stories
 
-An animated atlas of the narrative arcs of 93 books, after Kurt Vonnegut's "Shape of Stories" —
-and one step further: fortune isn't the only axis a story can run on.
+An animated atlas of the narrative arcs of 114 stories — Western canon plus 22 Eastern classics
+across eight traditions — after Kurt Vonnegut's "Shape of Stories."
 
 **Live:** https://claude.ai/code/artifact/2ca30c0c-9f32-4723-a5f7-ae8741fee187
 **Local:** `python3 -m http.server 8321` then open `http://localhost:8321/index.html`
 
 ## What's in it
 
-- **93 books** — 37 with arcs *measured* from the full text, 56 hand-scored *editorial readings*
-  calibrated against `data/RUBRIC.md`. 35 are **crossed** (two lines diverging — the survey's thesis).
-- **Six y-axes**: fortune (Vonnegut's), knowledge, power, connection, tension, certainty.
-- **Encodings**: classic line, scissors (divergence ribbon), phase portrait, lanes, morph,
-  ridgeline wall, barcode wall, shape-space map, autoplay tour, chalk skin.
+- **114 stories, one fortune line each**, all event-scored by AI agents against one rubric:
+  9 from full texts read in slices (`data/pilot/`), 105 from published plot synopses with
+  source URLs (`data/synopsis/`). Word-mood lines (Reagan et al. 2016) survive only as
+  toggleable comparison overlays on 37 pre-1923 books.
+- **Eight shape buckets** with descriptive names ("Fall, then rise") — the six confirmed
+  basic shapes, Vonnegut's refuses-to-commit line, and a "braid" bucket for true sawtooths.
+  Labels from an editorial pass (`data/shape-labels.json`) for synopsis books; the nine
+  full-text books keep their story-level analyzed shapes.
+- **22 Eastern classics** (Mesopotamia, India, Persia, Arabic tradition, China, Japan,
+  Korea, Vietnam) beside 92 Western works.
+- Annotated self-drawing lines (events at the extremes, per-point hover), shape-space map,
+  autoplay tour, chalk skin, light/dark.
 
 ## Data provenance
 
