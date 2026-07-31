@@ -1,0 +1,22 @@
+{"book": "Ramayana, the Epic of Rama, Prince of India, condensed into English verse by Romesh C. Dutt (1899)", "gutenberg_id": null, "source": "archive.org, R.C. Dutt condensed", "protagonist": "Rama", "chunks": [
+  {"i": 1,  "t": 0.025, "score": 8, "why": "Rama bends Rudra's bow, wins Sita, weddings, joyous return to Ayodhya, Rama beloved."},
+  {"i": 2,  "t": 0.075, "score": 7, "why": "Dasa-ratha decides to crown Rama, city rejoices; Manthara begins poisoning Kaikeyi."},
+  {"i": 3,  "t": 0.125, "score": 5, "why": "City decorated for coronation, but Kaikeyi demands Bharat's crown and Rama's exile."},
+  {"i": 4,  "t": 0.175, "score": 4, "why": "King's anguished lament; Rama arrives to find his father grief-stricken and speechless."},
+  {"i": 5,  "t": 0.225, "score": 3, "why": "Kaikeyi tells Rama he must go to fourteen-year jungle exile; Sita insists on following."},
+  {"i": 6,  "t": 0.275, "score": 3, "why": "Departure into exile, Ayodhya weeping; Rama, Sita, Lakshman cross Ganges to Bharad-vaja."},
+  {"i": 7,  "t": 0.325, "score": 4, "why": "Settle peacefully at Chitra-kuta; dying father recalls old curse, weeps for banished son."},
+  {"i": 8,  "t": 0.375, "score": 4, "why": "Dasa-ratha dies; Bharat comes to jungle, begs Rama to return; Rama refuses, honored by all."},
+  {"i": 9,  "t": 0.425, "score": 5, "why": "Rama gives sandals to Bharat as regent, moves deeper into forest; welcomed at Atri's hermitage."},
+  {"i": 10, "t": 0.475, "score": 6, "why": "Agastya arms Rama; peaceful cottage life at Panchavati; mild winter with Sita and Lakshman."},
+  {"i": 11, "t": 0.525, "score": 3, "why": "Surpa-nakha mutilated; Ravan plots vengeance; golden deer lures Rama away, Sita left alone with hermit-Ravan."},
+  {"i": 12, "t": 0.575, "score": 2, "why": "Ravan abducts Sita, Jatayu dies fighting; anguished Rama seeks Sugriva's alliance in exile."},
+  {"i": 13, "t": 0.625, "score": 5, "why": "Rama slays Bali, crowns Sugriva; through the rains he waits, then Vanar armies dispatched to search."},
+  {"i": 14, "t": 0.675, "score": 5, "why": "Hanuman finds Sita alive in Lanka's Asoka grove, gives Rama's ring, brings back her jewel and news."},
+  {"i": 15, "t": 0.725, "score": 6, "why": "Rama pledges vengeance; in Ravan's council Bibhishan defects to Rama, strengthening his cause."},
+  {"i": 16, "t": 0.775, "score": 3, "why": "War opens; Indrajit's serpent-noose fells both Rama and Lakshman senseless on the battlefield."},
+  {"i": 17, "t": 0.825, "score": 5, "why": "Revived, Rama slays Kumbha-karna; brothers again felled by Indrajit's magic, then Lakshman kills him."},
+  {"i": 18, "t": 0.875, "score": 7, "why": "Ravan wounds Lakshman with Sakti; Indra sends celestial chariot; Rama slays Ravan, funerals held."},
+  {"i": 19, "t": 0.925, "score": 9, "why": "Fire vindicates Sita; aerial-car return to Ayodhya; brothers reunited; Rama consecrated, golden reign."},
+  {"i": 20, "t": 0.975, "score": 3, "why": "Horse-sacrifice; sons recognized; recalled Sita, shamed by rumor, is swallowed by Earth; Rama's bliss ends and he dies."}
+]}

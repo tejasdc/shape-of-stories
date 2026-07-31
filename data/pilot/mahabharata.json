@@ -1,0 +1,27 @@
+{
+  "book": "Maha-bharata, The Epic of Ancient India Condensed into English Verse (Romesh C. Dutt)",
+  "gutenberg_id": 19630,
+  "protagonist": "Yudhishthira and the Pandava brothers (collective)",
+  "chunks": [
+    {"i": 1, "t": 0.025, "score": 7, "why": "Pandavas honored as god-born princes at Drona's tournament; Karna arrives as jealous rival to Arjun."},
+    {"i": 2, "t": 0.075, "score": 5, "why": "Karna crowned; Duryodhan's fire-plot forces exile disguised as Brahmans, journeying hopefully to Draupadi's swayamvara."},
+    {"i": 3, "t": 0.125, "score": 7, "why": "Arjun wins Draupadi, Krishna quells suitors' mob; brothers granted Indra-prastha, Yudhishthir begins Rajasuya."},
+    {"i": 4, "t": 0.175, "score": 9, "why": "Rajasuya triumph: Yudhishthir crowned emperor, all monarchs pay tribute, Krishna slays scoffing Sisupala."},
+    {"i": 5, "t": 0.225, "score": 2, "why": "Yudhishthir loses everything at rigged dice; Draupadi dragged and insulted; brothers stripped, sent into exile."},
+    {"i": 6, "t": 0.275, "score": 3, "why": "Vidura's parting blessing, Pritha's anguished farewell; exiled brothers enter jungle life listening to Savitri tale."},
+    {"i": 7, "t": 0.325, "score": 3, "why": "Still in forest exile; Markandeya narrates Savitri's story to console grieving Yudhishthir over Draupadi's suffering."},
+    {"i": 8, "t": 0.375, "score": 4, "why": "Savitri conquers Yama; Pandavas hidden as menials in Virata's court; Kurus raid, Arjun as Brihannala arms for battle."},
+    {"i": 9, "t": 0.425, "score": 7, "why": "Arjun defeats Kuru host, recovers cattle, reveals identity; Abhimanyu weds Virata's princess amid feast and gifts."},
+    {"i": 10, "t": 0.475, "score": 5, "why": "Krishna sues for peace at Hastina; Duryodhan haughtily refuses to yield even needle-point of land, war inevitable."},
+    {"i": 11, "t": 0.525, "score": 4, "why": "War joined; Bhishma scatters Pandavas day one, Arjun rallies day two; heavy carnage on both sides."},
+    {"i": 12, "t": 0.575, "score": 4, "why": "Bhishma keeps routing Pandavs; son Iravat slain; strategy set to fell Bhishma using Sikhandin."},
+    {"i": 13, "t": 0.625, "score": 5, "why": "Bhishma falls on bed of arrows, big tactical victory; Abhimanyu enters battle as Drona takes command."},
+    {"i": 14, "t": 0.675, "score": 3, "why": "Abhimanyu slaughtered by six chiefs; Arjun avenges on Jayadratha but Bhima's son Ghatotkacha killed by Karna."},
+    {"i": 15, "t": 0.725, "score": 3, "why": "Drupad and Virata slain; Yudhishthir's half-lie fells Drona; Karna takes command, Yudhishthir routed and shamed."},
+    {"i": 16, "t": 0.775, "score": 4, "why": "Karna, Salya slain; Bhima breaks Duryodhan's thigh; Aswa-thaman's midnight raid slaughters Draupadi's five sons."},
+    {"i": 17, "t": 0.825, "score": 3, "why": "Mass funeral rites; Gandhari's lament; Kunti reveals Karna was their eldest brother, Yudhishthir crushed by grief."},
+    {"i": 18, "t": 0.875, "score": 8, "why": "Yudhishthir performs Aswa-medha; Arjun's conquering horse returns; universal recognition and bounty restore glory."},
+    {"i": 19, "t": 0.925, "score": 9, "why": "Ascent to heaven: Yudhishthir reunited with brothers, Karna, Draupadi as immortals, all glorified in celestial realm."},
+    {"i": 20, "t": 0.975, "score": 8, "why": "Translator's epilogue; story concluded with Pandavas transcended to heaven, their names venerated across ages."}
+  ]
+}

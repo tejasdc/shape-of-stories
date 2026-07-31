@@ -1,0 +1,24 @@
+{
+  "book": "Nala and Damayanti (from Indian Idylls / Hindu Literature)",
+  "gutenberg_id": 13268,
+  "section": "Nala and Damayanti",
+  "protagonist": "Nala",
+  "chunks": [
+    {"i": 1, "t": 0.03125, "score": 7, "why": "Introduction and idyll: Nala the ideal prince and Damayanti the peerless princess fall in love by swan-messenger."},
+    {"i": 2, "t": 0.09375, "score": 6, "why": "Gods intercept Nala en route to Swayamvara and force him to plead their suit; Damayanti secretly vows only he."},
+    {"i": 3, "t": 0.15625, "score": 9, "why": "Damayanti chooses Nala over the gods; wedding, boons, prosperous rule, children born, Aswamedha performed."},
+    {"i": 4, "t": 0.21875, "score": 2, "why": "Kali possesses Nala; he gambles away kingdom, gold, robes to Pushkara; Damayanti sends children to safety."},
+    {"i": 5, "t": 0.28125, "score": 1, "why": "Stripped, exiled, starving; townsfolk forbidden to help; birds steal his last cloth; Nala abandons sleeping Damayanti."},
+    {"i": 6, "t": 0.34375, "score": 2, "why": "Damayanti wakes alone, seized by a python, saved by a hunter who then tries to rape her; she curses him dead."},
+    {"i": 7, "t": 0.40625, "score": 3, "why": "She wanders begging tigers and mountains for news; hermits comfort her with prophecy of reunion, then vanish."},
+    {"i": 8, "t": 0.46875, "score": 2, "why": "Joins a caravan; rogue elephants stampede the camp at night, trampling merchants; she wakes to carnage."},
+    {"i": 9, "t": 0.53125, "score": 3, "why": "Survivors blame Damayanti as demon-witch; she flees, reaches Chedi city, taken in as handmaid to the queen-mother."},
+    {"i": 10, "t": 0.59375, "score": 4, "why": "Snake Karkotaka's bite disguises Nala as dwarf Vahuka, serving Rituparna as charioteer; Sudeva spots Damayanti."},
+    {"i": 11, "t": 0.65625, "score": 6, "why": "Sudeva identifies Damayanti by her mole; she returns to father Bhima, reunited with children and kin."},
+    {"i": 12, "t": 0.71875, "score": 6, "why": "Parnada finds Nala's coded reply at Rituparna's court; Damayanti sets fake second Swayamvara as bait; Nala harnesses horses."},
+    {"i": 13, "t": 0.78125, "score": 7, "why": "Nala trades horse-lore for numbers-skill; Kali is expelled from him, cursed into a tree; freed, he speeds to Vidarbha."},
+    {"i": 14, "t": 0.84375, "score": 7, "why": "In Vidarbha, Keshini tests Vahuka; he weeps at coded verse and performs miracles (fire, water, blossoming leaves) that betray him."},
+    {"i": 15, "t": 0.90625, "score": 9, "why": "Damayanti recognizes him by his cookery, hugs children; Vayu attests her fidelity; Nala dons magic cloth and resumes his form; re-wed by Bhima."},
+    {"i": 16, "t": 0.96875, "score": 9, "why": "Nala challenges Pushkara at dice, wins back the whole kingdom, spares his brother, returns in triumph to rule Nishadha."}
+  ]
+}
