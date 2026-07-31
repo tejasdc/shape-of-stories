@@ -1,15 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Shape of Stories — an Atlas</title>
+<title>The Shape of Stories</title>
 <style>
-/* ============ tokens ============ */
 :root {
   color-scheme: light;
   --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e;
   --muted: #898781; --grid: #e1e0d9; --baseline: #c3c2b7; --ring: rgba(11,11,11,.10);
-  --ax-fortune: #eda100; --ax-knowledge: #2a78d6; --ax-power: #4a3aa7;
-  --ax-connection: #1baf7a; --ax-certainty: #e87ba4; --ax-tension: #e34948;
-  --div-lo: #d03b3b; --div-mid: #f0efec; --div-hi: #2a78d6;
+  --line: #eda100; --reader: #2a78d6;
   --wobble: 0;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -19,42 +16,32 @@
     color-scheme: dark;
     --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
     --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
-    --ax-fortune: #c98500; --ax-knowledge: #3987e5; --ax-power: #9085e9;
-    --ax-connection: #199e70; --ax-certainty: #d55181; --ax-tension: #e34948;
-    --div-lo: #d03b3b; --div-mid: #383835; --div-hi: #3987e5;
+    --line: #c98500; --reader: #3987e5;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
-  --ax-fortune: #c98500; --ax-knowledge: #3987e5; --ax-power: #9085e9;
-  --ax-connection: #199e70; --ax-certainty: #d55181; --ax-tension: #e34948;
-  --div-lo: #d03b3b; --div-mid: #383835; --div-hi: #3987e5;
+  --line: #c98500; --reader: #3987e5;
 }
 :root[data-skin="chalk"], :root[data-skin="chalk"][data-theme="light"] {
   color-scheme: dark;
   --page: #1d2b26; --surface: #22332d; --ink: #f5f2e8; --ink2: #cfd8ce;
   --muted: #93a396; --grid: #2e423a; --baseline: #47594f; --ring: rgba(245,242,232,.14);
-  --ax-fortune: #f2c14e; --ax-knowledge: #7db8f0; --ax-power: #b9a7f5;
-  --ax-connection: #7fd6ac; --ax-certainty: #f0a2c0; --ax-tension: #f07f74;
-  --div-lo: #f07f74; --div-mid: #3a4d44; --div-hi: #7db8f0;
+  --line: #f2c14e; --reader: #7db8f0;
   --wobble: 1;
 }
-/* ============ base ============ */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--serif); line-height: 1.55; }
-h1,h2,h3 { font-family: var(--serif); text-wrap: balance; line-height: 1.12; }
+h1,h2,h3 { text-wrap: balance; line-height: 1.12; }
 h2 { font-size: clamp(26px, 3.4vw, 40px); margin: 0 0 6px; font-weight: 600; }
-p  { max-width: 62ch; }
-a  { color: inherit; }
-button { font-family: var(--sans); }
+p  { max-width: 64ch; }
 canvas { display: block; width: 100%; height: 100%; }
-section { padding: clamp(48px, 7vw, 96px) clamp(18px, 5vw, 64px); }
+section { padding: clamp(44px, 6.5vw, 90px) clamp(18px, 5vw, 64px); }
 .kicker { font-family: var(--sans); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 .lede { color: var(--ink2); font-size: clamp(15px, 1.35vw, 18px); }
-/* ============ nav ============ */
 nav { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 4px;
   padding: 10px clamp(14px, 4vw, 48px); background: color-mix(in srgb, var(--page) 86%, transparent);
   backdrop-filter: blur(10px); border-bottom: 1px solid var(--ring); font-family: var(--sans); font-size: 13px; flex-wrap: wrap; }
@@ -63,62 +50,40 @@ nav a { text-decoration: none; color: var(--ink2); padding: 6px 9px; border-radi
 nav a:hover { color: var(--ink); background: var(--ring); }
 nav .spacer { flex: 1; }
 .tbtn { border: 1px solid var(--ring); background: var(--surface); color: var(--ink); border-radius: 8px;
-  padding: 6px 11px; cursor: pointer; font-size: 12.5px; }
+  padding: 6px 11px; cursor: pointer; font-size: 12.5px; font-family: var(--sans); }
 .tbtn:hover { border-color: var(--baseline); }
 .tbtn[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
-/* ============ hero ============ */
 #hero { padding: clamp(40px, 6vw, 84px) clamp(18px, 5vw, 64px) clamp(24px, 3vw, 44px); display: grid;
   grid-template-columns: minmax(280px, 5fr) minmax(300px, 7fr); gap: clamp(24px, 4vw, 60px); align-items: center; }
 #hero h1 { font-size: clamp(40px, 6vw, 76px); margin: 0 0 14px; font-weight: 700; }
-#hero .heroCvWrap { aspect-ratio: 16/10; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface);
-  overflow: hidden; position: relative; }
-#hero .heroCap { position: absolute; right: 14px; bottom: 10px; font-family: var(--sans); font-size: 12px; color: var(--muted); }
+.bigCv { aspect-ratio: 16/10; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); overflow: hidden; position: relative; }
 @media (max-width: 860px) { #hero { grid-template-columns: 1fr; } }
-/* ============ cards / grids ============ */
-.cardGrid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); margin-top: 26px; }
-.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 12px 14px 10px; cursor: pointer;
+.cardGrid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); margin-top: 26px; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 12px 14px 10px;
   transition: transform .18s ease, box-shadow .18s ease; }
-.card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,.10); }
+.card.click { cursor: pointer; }
+.card.click:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,.10); }
 .card .cvWrap { aspect-ratio: 5/2; margin: 4px 0 8px; }
 .card h3 { margin: 0; font-size: 15.5px; font-weight: 650; }
-.card .meta { font-family: var(--sans); font-size: 11.5px; color: var(--muted); margin-top: 2px; display: flex; gap: 8px; flex-wrap: wrap; }
-.badge { display: inline-block; font-family: var(--sans); font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
-  padding: 1.5px 7px; border-radius: 99px; border: 1px solid var(--ring); color: var(--ink2); }
-.badge.x { border-color: transparent; background: var(--ring); font-weight: 600; }
-/* grammar */
-#grammar .cardGrid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
-#grammar .card { cursor: default; }
-#grammar .card p { font-size: 13px; color: var(--ink2); margin: 6px 0 0; }
-#grammar .motto { font-family: var(--sans); font-size: 11px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
-#grammar .count { float: right; font-family: var(--sans); font-size: 12px; color: var(--muted); }
-/* filters */
-.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; font-family: var(--sans); position: sticky; top: 52px; z-index: 5;
-  background: color-mix(in srgb, var(--page) 92%, transparent); backdrop-filter: blur(8px); padding: 10px 0; }
-.chip { border: 1px solid var(--ring); background: var(--surface); color: var(--ink2); border-radius: 99px; padding: 5px 12px;
-  font-size: 12.5px; cursor: pointer; }
+.card .meta { font-family: var(--sans); font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+.card .aka { font-family: var(--sans); font-size: 11px; color: var(--muted); font-style: normal; }
+.card p { font-size: 13px; color: var(--ink2); margin: 6px 0 0; }
+.shapeTag { display: inline-block; font-family: var(--sans); font-size: 10.5px; letter-spacing: .04em;
+  padding: 1.5px 8px; border-radius: 99px; border: 1px solid var(--ring); color: var(--ink2); margin-top: 5px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; font-family: var(--sans);
+  position: sticky; top: 50px; z-index: 5; background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(8px); padding: 10px 0; }
+.chip { border: 1px solid var(--ring); background: var(--surface); color: var(--ink2); border-radius: 99px; padding: 5px 12px; font-size: 12.5px; cursor: pointer; font-family: var(--sans); }
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
-.chip .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
 #search { border: 1px solid var(--ring); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 7px 12px; font-size: 13px; min-width: 170px; }
 #atlasCount { font-size: 12.5px; color: var(--muted); margin-left: auto; }
-/* ============ lab ============ */
-#lab .labGrid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 22px; }
+.panelGrid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 22px; }
 .panel { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 12px 14px; }
-.panel h3 { margin: 0 0 2px; font-size: 14px; font-family: var(--sans); font-weight: 600; }
+.panel h3 { margin: 0 0 2px; font-size: 14.5px; }
 .panel .sub { font-family: var(--sans); font-size: 11.5px; color: var(--muted); margin-bottom: 8px; }
 .panel .cvWrap { aspect-ratio: 16/10; }
-#labPick { font-family: var(--sans); font-size: 14px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--ring);
-  background: var(--surface); color: var(--ink); max-width: 100%; }
-/* ============ crossed ============ */
-#crossed .cardGrid { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
-#crossed .card .cvWrap { aspect-ratio: 16/9; }
-/* ============ map & walls ============ */
-.bigWrap { position: relative; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; }
-#mapWrap { aspect-ratio: 16/9; min-height: 380px; }
-#wallWrap { height: 78vh; min-height: 480px; }
-.wallTabs { display: flex; gap: 8px; margin-top: 20px; font-family: var(--sans); }
-.hoverTip { position: absolute; pointer-events: none; background: var(--ink); color: var(--page); font-family: var(--sans);
-  font-size: 12px; padding: 5px 9px; border-radius: 7px; transform: translate(-50%, -130%); white-space: nowrap; opacity: 0; transition: opacity .12s; z-index: 3; }
-/* ============ overlays ============ */
+.keyRow { display: flex; gap: 18px; font-family: var(--sans); font-size: 12.5px; color: var(--ink2); margin: 10px 0 0; flex-wrap: wrap; }
+.keyRow .sw { display: inline-block; width: 18px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
 .overlay { position: fixed; inset: 0; z-index: 100; background: color-mix(in srgb, var(--page) 92%, transparent);
   backdrop-filter: blur(14px); display: none; overflow-y: auto; }
 .overlay.open { display: block; }
@@ -127,11 +92,13 @@ nav .spacer { flex: 1; }
 .sheet .close { position: absolute; top: 14px; right: 14px; }
 .sheet h2 { margin-right: 60px; }
 .sheet .meta { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-.sheet .note { color: var(--ink2); font-size: 15px; max-width: 70ch; }
-.encTabs { display: flex; gap: 6px; margin: 16px 0 10px; font-family: var(--sans); flex-wrap: wrap; }
-#detailCvWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 12px; overflow: hidden; position: relative; background: var(--surface); }
-.navBtns { display: flex; gap: 8px; margin-top: 14px; }
-/* tour */
+.sheet .prov { font-family: var(--sans); font-size: 13px; color: var(--ink2); margin: 12px 0 0; max-width: 75ch; }
+.sheet .note { color: var(--ink2); font-size: 15px; max-width: 72ch; }
+#detailCvWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 12px; overflow: hidden; position: relative; background: var(--surface); margin-top: 14px; }
+.hoverTip { position: absolute; pointer-events: none; background: var(--ink); color: var(--page); font-family: var(--sans);
+  font-size: 12px; padding: 5px 9px; border-radius: 7px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
+  opacity: 0; transition: opacity .12s; z-index: 3; }
+.navBtns { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
 #tour { background: var(--page); }
 #tour .stage { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 4vh 6vw; }
 #tourCvWrap { flex: 0 0 58vh; border: 1px solid var(--ring); border-radius: 16px; overflow: hidden; background: var(--surface); position: relative; }
@@ -139,7 +106,7 @@ nav .spacer { flex: 1; }
 #tour .meta { font-family: var(--sans); color: var(--muted); font-size: 15px; }
 #tour .note { font-size: clamp(15px, 1.6vw, 19px); color: var(--ink2); min-height: 3.2em; opacity: 0; transition: opacity .6s; }
 #tour .hud { position: fixed; top: 14px; right: 16px; display: flex; gap: 8px; font-family: var(--sans); }
-/* method */
+#mapWrap { aspect-ratio: 16/9; min-height: 380px; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
 #method { border-top: 1px solid var(--ring); }
 #method p, #method li { font-size: 14.5px; color: var(--ink2); }
 #method .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; }
@@ -149,8 +116,8 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <nav>
   <span class="brand">The Shape of Stories</span>
-  <a href="#grammar">Grammar</a><a href="#atlas">Atlas</a><a href="#lab">Lab</a><a href="#crossed">Crossed Axes</a>
-  <a href="#map">Map</a><a href="#walls">Walls</a><a href="#method">Method</a>
+  <a href="#idea">The idea</a><a href="#shapes">Seven shapes</a><a href="#machine">The machine</a>
+  <a href="#atlas">Atlas</a><a href="#reader">A better reader</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#method">Method</a>
   <span class="spacer"></span>
   <button class="tbtn" id="tourBtn">▶ Tour</button>
   <button class="tbtn" id="skinBtn" aria-pressed="false">Chalk</button>
@@ -159,75 +126,105 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <header id="hero">
   <div>
-    <div class="kicker">After Kurt Vonnegut · 93 books · 6 axes</div>
+    <div class="kicker">After Kurt Vonnegut · 84 books · one line each</div>
     <h1>The Shape of<br>Stories</h1>
-    <p class="lede">Vonnegut drew stories as lines: time across the bottom, fortune up the side.
-      This atlas draws 93 of them — 37 measured from the actual texts, 56 read by hand —
-      and asks his question one step further: <em>fortune isn’t the only axis a story can run on.</em></p>
+    <p class="lede">Track how well things are going for a story’s hero, moment by moment, and draw it
+      as a line: beginning on the left, end on the right, up is good luck, down is bad.
+      Thousands of very different stories draw the same few lines. These are those lines.</p>
     <p class="lede" style="font-family:var(--sans); font-size:13px; color:var(--muted)">
-      Click any book. Toggle <b>Chalk</b> for the blackboard. Press <b>Tour</b> to watch them draw themselves.</p>
+      Click any book. Toggle <b>Chalk</b> for Vonnegut’s blackboard. Press <b>Tour</b> to watch stories draw themselves.</p>
   </div>
-  <div class="heroCvWrap"><canvas id="heroCv"></canvas><div class="heroCap" id="heroCap"></div></div>
+  <div class="bigCv"><canvas id="heroCv"></canvas></div>
 </header>
 
-<section id="grammar">
-  <div class="kicker">Part I — The grammar</div>
-  <h2>Eight shapes cover almost everything</h2>
-  <p class="lede">Vonnegut sketched these on a chalkboard in 1985; in 2016 a University of Vermont team mined
-    1,300+ novels and found the same families. Counts below are this survey’s.</p>
-  <div class="cardGrid" id="grammarGrid"></div>
+<section id="idea">
+  <div class="kicker">Part I — The idea</div>
+  <h2>One line per story</h2>
+  <p class="lede">In 1985 Kurt Vonnegut walked to a chalkboard and drew story after story as a single
+    line — good fortune up, ill fortune down, beginning to end. His point: the specifics vanish and a
+    handful of simple shapes remain. His joke with teeth: since the shapes are so simple,
+    <em>“there is no reason why they can’t be fed into computers.”</em> Thirty years later, a team at the
+    University of Vermont did exactly that.</p>
+</section>
+
+<section id="shapes">
+  <div class="kicker">Part II — The shapes</div>
+  <h2>Seven shapes cover nearly everything</h2>
+  <p class="lede">Six were confirmed by the Vermont team across 1,327 novels — three basic moves, each
+    also possible upside down. The seventh is Vonnegut’s own exception: the story whose line refuses to
+    be drawn. Counts are from this atlas’s 84 books.</p>
+  <div class="cardGrid" id="shapeGrid"></div>
+</section>
+
+<section id="machine">
+  <div class="kicker">Part III — The machine</div>
+  <h2>How a computer read 1,327 books it couldn’t understand</h2>
+  <p class="lede">A computer can’t follow a plot. But ten thousand common words have been rated for
+    happiness by human readers — “laughter” scores 8.5 out of 9, “terrorist” 1.3. Take a moving chunk of
+    a book, average the ratings of its words, slide forward, average again: the line below draws itself
+    from vocabulary alone. Watch the window slide:</p>
+  <div class="bigCv" style="max-width:900px"><canvas id="machineCv"></canvas></div>
+  <p class="lede" style="margin-top:16px">The fine print that matters: this line hears the <b>mood of the
+    words</b>, not the <b>luck of the hero</b>. Most of the time they travel together. When they don’t —
+    and we tested this — the word-line can be flat, or even upside down. That test is
+    <a href="#reader">Part V</a>.</p>
 </section>
 
 <section id="atlas">
-  <div class="kicker">Part II — The atlas</div>
-  <h2>Ninety-three books, drawn</h2>
-  <p class="lede">“Sentiment” lines are measured from the full text (labMT over 100 windows, via Reagan et&nbsp;al.’s public data);
-    the rest are calibrated editorial readings, the way Vonnegut did it at the chalkboard. A few famous books carry both —
-    the plot as remembered <em>and</em> what the lexicon heard — because the two genuinely disagree. Both are readings.</p>
+  <div class="kicker">Part IV — The atlas</div>
+  <h2>Eighty-four books, one line each</h2>
+  <p class="lede">Every line answers one question: <em>how well are things going?</em> Three kinds of line,
+    told apart in plain words on each book: <b>computed from the words</b> (the Vermont method, applied to the
+    original texts), <b>drawn from a reading</b> (by hand, the way Vonnegut did it), or <b>scored by a
+    reader</b> (a machine reader that worked through the whole book in twenty slices, judging events — our
+    best instrument).</p>
   <div class="filters" id="filters">
     <input id="search" type="search" placeholder="Search title or author…">
-    <span id="archChips"></span><span id="axisChips"></span>
-    <button class="chip" id="crossedChip" aria-pressed="false">⤫ crossed only</button>
+    <span id="shapeChips"></span><span id="howChips"></span>
     <span id="atlasCount"></span>
   </div>
   <div class="cardGrid" id="atlasGrid"></div>
 </section>
 
-<section id="lab">
-  <div class="kicker">Part III — The lab</div>
-  <h2>One story, five instruments</h2>
-  <p class="lede">The same book rendered through every encoding at once — pick one and compare.
-    Crossed-axes books light up all five.</p>
-  <select id="labPick"></select>
-  <div class="labGrid" id="labGrid"></div>
+<section id="reader">
+  <div class="kicker">Part V — A better reader</div>
+  <h2>What happens when the reader actually understands the book</h2>
+  <p class="lede">We took five books and scored them twice: once with the word-mood method, once with a
+    machine reader that read all twenty slices of each book and judged the <em>events</em>. On four of the
+    five, the two lines barely relate — and the failures cluster at <b>endings</b>, where weddings and
+    redemptions are brief in words but enormous in meaning. The word-counter hears A Christmas Carol’s
+    party scenes; it cannot hear that the last page is the whole point.</p>
+  <div class="keyRow">
+    <span><span class="sw" style="background:var(--reader)"></span>hero’s fortune, scored by reading events</span>
+    <span><span class="sw" style="background:var(--line)"></span>mood of the words (2016 method)</span>
+  </div>
+  <div class="panelGrid" id="readerGrid"></div>
+  <p class="lede" style="margin-top:16px">And the shapes themselves? Every reader-scored line still lands
+    inside the same six families. The better instrument corrects <em>which</em> shape a book gets — it found
+    no new shapes. Vonnegut’s alphabet survives.</p>
 </section>
 
-<section id="crossed">
-  <div class="kicker">Part IV — The finding</div>
-  <h2>The canon runs on crossed axes</h2>
-  <p class="lede">Folk tales ride one axis. Again and again, the books that last play two lines against each other —
-    knowledge rising while fortune falls, power rising while the soul drains, and sometimes two readings of the
-    same axis (the lexicon vs. the plot, the telling vs. the timeline). The shaded wedge between the lines
-    is the story’s engine. Sorted by how far the scissors open.</p>
-  <div class="cardGrid" id="crossedGrid"></div>
+<section id="east">
+  <div class="kicker">Part VI — East and West</div>
+  <h2>The oldest stories draw the same valley</h2>
+  <p class="lede">We pointed the same reader at four Indian classics — two epics (condensed by Romesh
+    Dutt in the 1890s), one Sanskrit play, one episode-tale. Same alphabet: deep valleys, falls and
+    recoveries. Different signatures: the trapdoor is a <b>dice game</b> in both epics; battlefield
+    victories score as <em>misfortune</em> (winning at Kurukshetra is a grief); and the Ramayana keeps
+    filming after the happy ending — coronation at the peak, then Sita swallowed by the Earth. Where
+    Western tellings stop the camera at the wedding, the epic lets the wheel keep turning.</p>
+  <div class="panelGrid" id="eastGrid"></div>
+  <p class="lede" style="margin-top:16px">One caveat we owe the material: Sanskrit dramaturgy consciously
+    composes a <em>sequence of emotions</em> (the rasas), not one hero’s luck — so where an Indian text looks
+    odd under this lens, part of that is the lens.</p>
 </section>
 
 <section id="map">
-  <div class="kicker">Part V — The map</div>
+  <div class="kicker">Part VII — The map</div>
   <h2>Every book in shape-space</h2>
-  <p class="lede">Horizontal: does the story end better or worse than it began? Vertical: is the middle a peak or a pit?
-    The archetypes fall out as regions — holes sink low, Icarus floats high, tragedies drift left, and the strange ones hug the center.</p>
-  <div class="bigWrap" id="mapWrap"><canvas id="mapCv"></canvas><div class="hoverTip" id="mapTip"></div></div>
-</section>
-
-<section id="walls">
-  <div class="kicker">Part VI — The walls</div>
-  <h2>All of them at once</h2>
-  <div class="wallTabs">
-    <button class="tbtn" data-wall="ridge" aria-pressed="true">Ridgeline</button>
-    <button class="tbtn" data-wall="barcode" aria-pressed="false">Barcodes</button>
-  </div>
-  <div class="bigWrap" id="wallWrap"><canvas id="wallCv"></canvas><div class="hoverTip" id="wallTip"></div></div>
+  <p class="lede">Left–right: does the story end worse or better than it began? Up–down: is its middle a
+    peak or a pit? The shape families fall out as neighborhoods.</p>
+  <div id="mapWrap"><canvas id="mapCv"></canvas><div class="hoverTip" id="mapTip"></div></div>
 </section>
 
 <section id="method">
@@ -235,60 +232,63 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <h2>Method &amp; sources</h2>
   <div class="cols">
     <div>
-      <h3>Measured lines</h3>
-      <p>37 public-domain books use per-book sentiment time series computed by Reagan, Mitchell, Kiley, Danforth &amp; Dodds for
-        <i>“The emotional arcs of stories are dominated by six basic shapes”</i> (EPJ Data Science, 2016) — 100 sliding windows
-        per book, scored with the labMT happiness lexicon, published in the <code>andyreagan/core-stories</code> repository.
-        Series are smoothed and normalized per book (Vonnegut drew relative shape, not absolute happiness).
-        Orientation was independently verified by re-deriving five books from their Gutenberg texts with labMT
-        (all correlate positively, r = +0.15 to +0.67).</p>
-      <p>A sentiment lexicon hears vocabulary, not plot: Wilde narrating atrocity in gorgeous prose reads “happy.”
-        That gap between the lexical line and the felt story is genuine information — not an error.</p>
+      <h3>The three kinds of line</h3>
+      <p><b>Computed from the words</b> (31 books): per-book sentiment series from Reagan, Mitchell, Kiley,
+        Danforth &amp; Dodds, <i>“The emotional arcs of stories are dominated by six basic shapes”</i>
+        (EPJ Data Science, 2016), via their public <code>core-stories</code> data; labMT word-happiness
+        lexicon (Dodds et&nbsp;al. 2011); smoothed, each book normalized to its own range. Orientation
+        independently verified by re-deriving five books from raw Gutenberg text (all correlate positively).</p>
+      <p><b>Drawn from a reading</b> (44 books): hand-scored fortune arcs against a shared calibration
+        rubric — readings, not measurements, exactly what Vonnegut did at the board.</p>
+      <p><b>Scored by a reader</b> (9 books): a machine reader split each full text into 20 equal slices,
+        read each slice, and scored the protagonist’s situation 1–9 from events — never from prose mood —
+        recording the justifying event for every point (visible on hover).</p>
     </div>
     <div>
-      <h3>Authored lines</h3>
-      <p>56 post-1923 and non-novel works (plus every non-fortune axis — no such dataset exists anywhere) are
-        hand-scored editorial readings against a shared calibration rubric: −1 is the worst state canon reaches,
-        0 is ordinary life, +1 is fairy-tale peak; points sit at actual plot events; endings are encoded honestly
-        (damped recoveries stay damped). They are readings, not measurements — exactly what Vonnegut was doing at the board.</p>
-      <h3>The axes</h3>
-      <p>Beginning→End is constant. The y-axis is a choice: fortune (Vonnegut), knowledge (every mystery),
-        power (the antihero axis), connection (isolation↔belonging), tension (the reader’s axis — cf. Boyd, Blackburn &amp;
-        Pennebaker’s “narrative arc” dimensions, Science Advances 2020), and certainty (Vonnegut’s own Hamlet point).</p>
-    </div>
-    <div>
-      <h3>Provenance</h3>
+      <h3>What we verified ourselves</h3>
       <ul>
-        <li>Kurt Vonnegut, “The Shapes of Stories” lecture (1985) &amp; rejected master’s thesis</li>
-        <li>Reagan et&nbsp;al. 2016 · arXiv:1606.07772 · data: github.com/andyreagan/core-stories</li>
-        <li>Boyd et&nbsp;al. 2020 · Sci. Adv. 6:eaba2196 · osf.io/q2a7m</li>
-        <li>labMT lexicon: Dodds et&nbsp;al. 2011</li>
+        <li>Re-ran the 2016 decomposition on the corpus: three basic curves ± their mirrors explain ~84%
+          of all arc variance. The six shapes are real.</li>
+        <li>Word-mood vs reader-scored fortune on 5 books: near-zero correlation on 4 (r = −0.12…+0.19);
+          Dorian Gray the exception (r = +0.89). Failures concentrate at endings.</li>
+        <li>No new shapes in 9 reader-scored stories, Western or Indian.</li>
+        <li>The “Ramayana” in one common anthology is Book One only — always check a text covers the
+          full arc before trusting its line.</li>
       </ul>
-      <p>Built as a study for a Substack essay. Lines animate in telling order; reduced-motion preference is honored.</p>
+    </div>
+    <div>
+      <h3>Sources</h3>
+      <ul>
+        <li>Kurt Vonnegut, “The Shapes of Stories” lecture (1985); rejected master’s thesis, U. Chicago</li>
+        <li>Reagan et&nbsp;al. 2016 · EPJ Data Science 5:31 · github.com/andyreagan/core-stories</li>
+        <li>Dodds et&nbsp;al. 2011 (labMT lexicon)</li>
+        <li>Boyd, Blackburn &amp; Pennebaker 2020 · Science Advances (narrative structure beyond sentiment)</li>
+        <li>R. C. Dutt’s condensed Ramayana &amp; Mahabharata (1898–99); Ryder’s Shakuntala; Arnold’s Nala and Damayanti</li>
+        <li>Campbell, <i>The Hero with a Thousand Faces</i> — his monomyth, traced as fortune, is the valley shape</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <footer>“The truth is, we know so little about life, we don’t really know what the good news is and what the bad news is.” — K.V.</footer>
 
-<!-- detail overlay -->
 <div class="overlay" id="detail" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
   <div class="sheet">
     <button class="tbtn close" id="detailClose">✕ Esc</button>
     <div class="meta" id="detailMeta"></div>
     <h2 id="detailTitle"></h2>
-    <div class="encTabs" id="encTabs"></div>
     <div id="detailCvWrap"><canvas id="detailCv"></canvas><div class="hoverTip" id="detailTip"></div></div>
+    <p class="prov" id="detailProv"></p>
     <p class="note" id="detailNote"></p>
     <div class="navBtns">
       <button class="tbtn" id="detailPrev">← Prev</button>
       <button class="tbtn" id="detailReplay">↻ Replay</button>
       <button class="tbtn" id="detailNext">Next →</button>
+      <button class="tbtn" id="moodToggle" style="display:none" aria-pressed="true">Show word-mood line</button>
     </div>
   </div>
 </div>
 
-<!-- tour overlay -->
 <div class="overlay" id="tour" role="dialog" aria-modal="true" aria-label="Story tour">
   <div class="hud">
     <button class="tbtn" id="tourPause">⏸</button>
@@ -303,22 +303,12 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   </div>
 </div>
 
-<script src="data/stories.js"></script>
+<script src="data/stories2.js"></script>
 <script>
 'use strict';
-/* ================= data & helpers ================= */
-const S = window.STORIES, BOOKS = S.books;
-const AXES = ['fortune','knowledge','power','connection','tension','certainty'];
-const ARCH = {
-  rise:       {name:'Rags to Riches', motto:'rise', desc:'A steady climb. Rarer in the canon than optimism predicts.'},
-  tragedy:    {name:'From Bad to Worse', motto:'fall', desc:'The floor keeps giving way. The reader stays for the dignity of the descent.'},
-  hole:       {name:'Man in a Hole', motto:'fall – rise', desc:'Somebody gets in trouble, gets out again, ends up better off. “People love that story.”'},
-  icarus:     {name:'Icarus', motto:'rise – fall', desc:'The climb that earns the crash. The higher the middle, the harder the end lands.'},
-  cinderella: {name:'Cinderella', motto:'rise – fall – rise', desc:'Rise, midnight, rise again. Vonnegut’s punchline: its shape matches the New Testament’s.'},
-  oedipus:    {name:'Oedipus', motto:'fall – rise – fall', desc:'The cruelest shape: the recovery that turns out to be the trapdoor.'},
-  flatline:   {name:'Which Way Is Up?', motto:'ambiguity', desc:'Hamlet’s shape: the line can’t be drawn because nobody can say what the good news is. Not shapelessness — honesty.'},
-};
-const ARCH_SHAPE = {
+const S = window.STORIES, BOOKS = S.books, SHAPES = S.shapes;
+const SHAPE_ORDER = ['rise', 'cinderella', 'hole', 'icarus', 'oedipus', 'tragedy', 'flatline'];
+const SHAPE_SKETCH = {
   rise: [[0,-.7],[.25,-.35],[.5,.05],[.75,.45],[1,.8]],
   tragedy: [[0,.35],[.25,.1],[.5,-.2],[.75,-.55],[1,-.85]],
   hole: [[0,.35],[.2,.15],[.45,-.65],[.7,-.3],[1,.7]],
@@ -327,36 +317,55 @@ const ARCH_SHAPE = {
   oedipus: [[0,.3],[.25,-.35],[.5,.25],[.7,.45],[1,-.9]],
   flatline: [[0,0],[.2,.06],[.4,-.08],[.6,.04],[.8,-.05],[1,0]],
 };
+const SHAPE_DESC = {
+  rise: 'Things keep getting better. Rarer in great books than optimism predicts — pure ascent is hard to sustain for 300 pages.',
+  tragedy: 'The floor keeps giving way. The reader stays for the dignity of the descent.',
+  hole: 'Somebody gets into trouble and gets out again, better off. Vonnegut’s favorite; also Campbell’s Hero’s Journey, traced as luck. The most common shape here.',
+  icarus: 'The climb that earns the crash. The higher the middle, the harder the ending lands.',
+  cinderella: 'Up, a midnight, up again. Vonnegut noticed this is also the shape of the New Testament.',
+  oedipus: 'The cruelest one: a recovery that turns out to be a trapdoor.',
+  flatline: 'Hamlet’s shape: nobody — hero or reader — can tell the good news from the bad, so the line can’t commit. Not shapelessness; honesty.',
+};
+const HOW_TEXT = {
+  computed: 'computed from the words',
+  drawn: 'drawn from a reading',
+  read: 'scored by a reader',
+};
+const HOW_PROV = {
+  computed: 'This line was computed from the book’s words by the 2016 method: average happiness of a moving chunk of text. It hears the mood of the vocabulary, not the luck of the hero — treat it as the book’s soundtrack, not its plot.',
+  drawn: 'This line was drawn by hand from a reading of the plot — a judgment, not a measurement; the same thing Vonnegut was doing at the chalkboard.',
+  read: 'This line was scored by a machine reader that worked through the entire text in twenty slices, judging the hero’s situation from events. Hover the line to see the event behind every point.',
+};
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 let PAL = {};
 function refreshPal() {
   PAL = { ink: css('--ink'), ink2: css('--ink2'), muted: css('--muted'), grid: css('--grid'),
-    baseline: css('--baseline'), surface: css('--surface'), page: css('--page'),
-    divLo: css('--div-lo'), divMid: css('--div-mid'), divHi: css('--div-hi'),
+    baseline: css('--baseline'), surface: css('--surface'), line: css('--line'), reader: css('--reader'),
     wobble: parseFloat(css('--wobble')) || 0 };
-  for (const a of AXES) PAL[a] = css('--ax-' + a);
 }
 refreshPal();
-
 function mulberry(seed) { return function() { let t = seed += 0x6D2B79F5;
   t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61);
   return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
 
-/* Catmull-Rom sampling of control points -> n samples */
-function sampleAxis(ax, n = 160) {
-  if (ax.series) {
-    const s = ax.series, out = [];
-    for (let i = 0; i < n; i++) {
-      const x = i / (n - 1) * (s.length - 1), i0 = Math.floor(x), f = x - i0;
-      out.push([i / (n - 1), s[i0] + (s[Math.min(i0 + 1, s.length - 1)] - s[i0]) * f]);
-    }
-    return out;
-  }
-  const p = ax.pts, out = [];
-  const tMax = p[p.length - 1][0];               // support lines that stop early (Anne Frank)
-  const get = i => p[Math.max(0, Math.min(p.length - 1, i))];
+/* line of a book: [[t, v]] in [-1,1] */
+function lineOf(b) {
+  if (b.reader) return catmull(b.reader.pts);
+  if (b.pts) return catmull(b.pts);
+  const s = b.mood_primary, out = [];
+  for (let i = 0; i < s.length; i++) out.push([i / (s.length - 1), s[i]]);
+  return out;
+}
+function moodLineOf(b) {
+  const s = b.mood || b.mood_primary;
+  if (!s) return null;
+  return s.map((v, i) => [i / (s.length - 1), v]);
+}
+function catmull(p, n = 140) {
+  const out = [], get = i => p[Math.max(0, Math.min(p.length - 1, i))];
+  const tMax = p[p.length - 1][0];
   for (let i = 0; i < n; i++) {
     const t = i / (n - 1) * tMax;
     let k = 0; while (k < p.length - 2 && p[k + 1][0] < t) k++;
@@ -369,12 +378,11 @@ function sampleAxis(ax, n = 160) {
   }
   return out;
 }
-const primary = b => b.axes[0];
-const axColor = ax => PAL[ax.axis] || PAL.ink;
-const axName = ax => (S.axes[ax.axis] || {}).name || ax.axis;
-const axLabel = ax => ax.label ? ax.label : axName(ax);
+function valueAt(pts, t) { let k = 0; while (k < pts.length - 1 && pts[k + 1][0] < t) k++;
+  const a = pts[k], b = pts[Math.min(k + 1, pts.length - 1)], span = (b[0] - a[0]) || 1;
+  return a[1] + (b[1] - a[1]) * Math.max(0, Math.min(1, (t - a[0]) / span)); }
 
-/* ================= canvas plumbing ================= */
+/* canvas plumbing */
 function fit(cv) {
   const dpr = Math.min(devicePixelRatio || 1, 2), r = cv.getBoundingClientRect();
   if (!r.width || !r.height) return null;
@@ -384,7 +392,6 @@ function fit(cv) {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   return { ctx, W: r.width, H: r.height };
 }
-/* wobbly (chalk) or clean polyline with draw-progress */
 function strokeLine(ctx, pts, X, Y, progress, color, width = 2.2, seed = 1) {
   const upto = Math.max(2, Math.ceil(pts.length * progress));
   const rng = mulberry(seed);
@@ -403,36 +410,81 @@ function strokeLine(ctx, pts, X, Y, progress, color, width = 2.2, seed = 1) {
   ctx.globalAlpha = 1;
   return pts[upto - 1];
 }
+/* frame with PLAIN, horizontal pole labels */
 function frame(ctx, W, H, opts = {}) {
-  const m = opts.m || { l: 46, r: 16, t: 14, b: 26 };
+  const m = opts.m || { l: 14, r: 14, t: opts.mini ? 8 : 26, b: opts.mini ? 8 : 26 };
   const X = t => m.l + t * (W - m.l - m.r);
   const Y = v => m.t + (1 - (v + 1) / 2) * (H - m.t - m.b);
   ctx.clearRect(0, 0, W, H);
   ctx.strokeStyle = PAL.grid; ctx.lineWidth = 1;
-  ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke(); // midline
-  ctx.strokeStyle = PAL.baseline;
-  ctx.beginPath(); ctx.moveTo(X(0), Y(1)); ctx.lineTo(X(0), Y(-1)); ctx.stroke();
-  ctx.beginPath(); ctx.moveTo(X(0), Y(-1)); ctx.lineTo(X(1), Y(-1)); ctx.stroke();
-  ctx.fillStyle = PAL.muted; ctx.font = '10.5px ' + css('--sans');
+  ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
   if (!opts.mini) {
-    ctx.textAlign = 'left'; ctx.fillText('B', X(0) + 4, Y(-1) + 14); ctx.textAlign = 'right'; ctx.fillText('E', X(1), Y(-1) + 14);
-    const axm = opts.axisMeta;
-    if (axm) { ctx.save(); ctx.translate(12, Y(0)); ctx.rotate(-Math.PI / 2); ctx.textAlign = 'center';
-      ctx.fillText(axm.hi + ' ↑', 60, 0); ctx.fillText('↓ ' + axm.lo, -60, 0); ctx.restore(); }
+    ctx.fillStyle = PAL.muted; ctx.font = '11px ' + css('--sans');
+    ctx.textAlign = 'left';
+    ctx.fillText('good fortune ↑', m.l, 15);
+    ctx.fillText('ill fortune ↓', m.l, H - 8);
+    ctx.textAlign = 'center';
+    ctx.fillText('beginning', m.l + 34, Y(0) - 6);
+    ctx.textAlign = 'right';
+    ctx.fillText('end', X(1), Y(0) - 6);
   }
   return { X, Y, m };
 }
-function endLabel(ctx, pt, X, Y, text, color, side = 0) {
-  ctx.font = '600 11px ' + css('--sans'); ctx.textAlign = 'left';
-  const w = ctx.measureText(text).width;
-  const x = Math.min(X(pt[0]) + 9, ctx.canvas.clientWidth - 6 - w);
-  const y = Math.max(12, Math.min(ctx.canvas.clientHeight - 6, Y(pt[1]) + (side ? 17 : -9)));
+function labelText(ctx, text, x, y, color, align = 'center') {
+  ctx.font = '600 11px ' + css('--sans'); ctx.textAlign = align;
   ctx.strokeStyle = PAL.surface; ctx.lineWidth = 4; ctx.lineJoin = 'round';
   ctx.strokeText(text, x, y);
   ctx.fillStyle = color; ctx.fillText(text, x, y);
 }
-
-/* animation registry: charts draw at progress 0..1 */
+function wrapLabel(ctx, txt, x, y, w, color) {
+  const words = txt.split(' '); let line = '', dy = 0;
+  ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'center';
+  const lines = [];
+  for (const wd of words) { const test = line ? line + ' ' + wd : wd;
+    if (ctx.measureText(test).width > w && line) { lines.push(line); line = wd; } else line = test; }
+  lines.push(line);
+  for (const l of lines) {
+    ctx.strokeStyle = PAL.surface; ctx.lineWidth = 3; ctx.strokeText(l, x, y + dy);
+    ctx.fillStyle = PAL.ink2; ctx.fillText(l, x, y + dy); dy += 12;
+  }
+}
+/* annotated single line, Figure-2 style: label the extremes with events */
+function annotatedBeats(b) {
+  // choose up to 4 labels: global min, global max, final point, plus first big drop
+  const src = b.reader ? b.reader.whys : (b.beats || []);
+  if (!src.length) return [];
+  const line = lineOf(b);
+  const withV = src.map(([t, txt]) => ({ t, txt, v: valueAt(line, t) }));
+  const chosen = [];
+  const byV = [...withV].sort((a, c) => a.v - c.v);
+  chosen.push(byV[0]);                                  // lowest point
+  chosen.push(byV[byV.length - 1]);                     // highest point
+  chosen.push(withV[withV.length - 1]);                 // ending
+  if (withV.length > 6) chosen.push(withV[Math.floor(withV.length / 2)]); // midpoint flavor
+  // dedupe + enforce breathing room: keep by priority (order pushed above), min t-gap 0.14
+  const out = [];
+  for (const c of chosen) {
+    if (!out.some(o => Math.abs(o.t - c.t) < 0.14)) out.push(c);
+  }
+  return out.sort((a, c) => a.t - c.t);
+}
+function drawBook(ctx, W, H, b, p, opts = {}) {
+  const f = frame(ctx, W, H, opts);
+  const pts = lineOf(b);
+  const color = b.reader ? PAL.reader : PAL.line;
+  const tip = strokeLine(ctx, pts, f.X, f.Y, p, color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
+  if (!opts.mini) {
+    for (const beat of annotatedBeats(b)) {
+      if (beat.t > tip[0] + .002) continue;
+      ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(f.X(beat.t), f.Y(beat.v), 3, 0, 7); ctx.fill();
+      const above = beat.v < 0;
+      const x = Math.max(78, Math.min(W - 78, f.X(beat.t)));
+      wrapLabel(ctx, beat.txt, x, f.Y(beat.v) + (above ? -34 : 22), 120, PAL.ink2);
+    }
+  }
+  return f;
+}
+/* animation registry */
 const charts = new Set();
 function makeChart(cv, draw, dur = 2400) {
   const c = { cv, draw, dur, p: REDUCED ? 1 : 0, playing: false, t0: 0, played: false };
@@ -448,7 +500,7 @@ function tick() {
     rafId = null; let any = false;
     for (const c of charts) if (c.playing) {
       const e = Math.min(1, (now - c.t0) / c.dur);
-      c.p = e < .5 ? 2 * e * e : 1 - Math.pow(-2 * e + 2, 2) / 2; // easeInOutQuad
+      c.p = e < .5 ? 2 * e * e : 1 - Math.pow(-2 * e + 2, 2) / 2;
       c.render(); if (e >= 1) c.playing = false; else any = true;
     }
     if (any) rafId = requestAnimationFrame(step);
@@ -462,193 +514,103 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 function attach(cv, draw, dur) { const c = makeChart(cv, draw, dur); cv._chart = c; io.observe(cv); c.render(); return c; }
 function redrawAll() { refreshPal(); for (const c of charts) c.render(); }
 
-/* ================= encodings ================= */
-function encLine(ctx, W, H, book, p, opts = {}) {
-  const ax = opts.axis || primary(book);
-  const f = frame(ctx, W, H, { axisMeta: S.axes[ax.axis], mini: opts.mini });
-  const pts = sampleAxis(ax);
-  const tip = strokeLine(ctx, pts, f.X, f.Y, p, axColor(ax), opts.mini ? 1.8 : 2.6, hashStr(book.id));
-  if (!opts.mini) {
-    endLabel(ctx, tip, f.X, f.Y, axLabel(ax), axColor(ax));
-    for (const [bt, txt] of (book.beats || [])) if (bt <= tip[0] + .002) {
-      const bv = valueAt(pts, bt);
-      ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(f.X(bt), f.Y(bv), 3, 0, 7); ctx.fill();
-      ctx.fillStyle = PAL.ink2; ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'center';
-      const above = bv < 0;
-      wrapText(ctx, txt, f.X(bt), f.Y(bv) + (above ? -22 : 26), 110);
-    }
-  }
-  return f;
-}
-function valueAt(pts, t) { let k = 0; while (k < pts.length - 1 && pts[k + 1][0] < t) k++;
-  const a = pts[k], b = pts[Math.min(k + 1, pts.length - 1)], span = (b[0] - a[0]) || 1;
-  return a[1] + (b[1] - a[1]) * Math.max(0, Math.min(1, (t - a[0]) / span)); }
-function wrapText(ctx, txt, x, y, w) {
-  const words = txt.split(' '); let line = '', dy = 0;
-  for (const wd of words) { const test = line ? line + ' ' + wd : wd;
-    if (ctx.measureText(test).width > w && line) { ctx.fillText(line, x, y + dy); line = wd; dy += 12; } else line = test; }
-  ctx.fillText(line, x, y + dy);
-}
-function encScissors(ctx, W, H, book, p, opts = {}) {
-  const [a, b] = [book.axes[0], book.axes[1] || book.axes[0]];
-  const f = frame(ctx, W, H, { mini: opts.mini });
-  const pa = sampleAxis(a), pb = sampleAxis(b);
-  // ribbon paired on shared narrative time, stopping where the shorter line stops
-  const tm = Math.min(pa[pa.length - 1][0], pb[pb.length - 1][0]);
-  const N = 160, upto = Math.max(2, Math.ceil(N * p));
-  ctx.beginPath();
-  for (let i = 0; i < upto; i++) { const t = tm * i / (N - 1);
-    i ? ctx.lineTo(f.X(t), f.Y(valueAt(pa, t))) : ctx.moveTo(f.X(t), f.Y(valueAt(pa, t))); }
-  for (let i = upto - 1; i >= 0; i--) { const t = tm * i / (N - 1); ctx.lineTo(f.X(t), f.Y(valueAt(pb, t))); }
-  ctx.closePath(); ctx.fillStyle = PAL.ink; ctx.globalAlpha = .07; ctx.fill(); ctx.globalAlpha = 1;
-  const ta = strokeLine(ctx, pa, f.X, f.Y, p, axColor(a), opts.mini ? 1.7 : 2.6, hashStr(book.id));
-  const tb = strokeLine(ctx, pb, f.X, f.Y, p, axColor(b), opts.mini ? 1.7 : 2.6, hashStr(book.id) + 7);
-  if (!opts.mini || opts.labels) {
-    endLabel(ctx, ta, f.X, f.Y, axLabel(a), axColor(a), ta[1] < tb[1] ? 1 : 0);
-    endLabel(ctx, tb, f.X, f.Y, axLabel(b), axColor(b), tb[1] <= ta[1] ? 1 : 0);
-  }
-}
-function encPhase(ctx, W, H, book, p, opts = {}) {
-  const a = book.axes[0], b = book.axes[1] || book.axes[0];
-  ctx.clearRect(0, 0, W, H);
-  const m = 46, sz = Math.min(W, H) - 2 * m, ox = (W - sz) / 2, oy = (H - sz) / 2;
-  const X = v => ox + (v + 1) / 2 * sz, Y = v => oy + (1 - (v + 1) / 2) * sz;
-  ctx.strokeStyle = PAL.grid; ctx.lineWidth = 1;
-  ctx.strokeRect(ox, oy, sz, sz);
-  ctx.beginPath(); ctx.moveTo(X(-1), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.moveTo(X(0), Y(-1)); ctx.lineTo(X(0), Y(1)); ctx.stroke();
-  ctx.fillStyle = PAL.muted; ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'center';
-  ctx.fillText(axLabel(a) + ' →', X(0), oy + sz + 16);
-  ctx.save(); ctx.translate(ox - 10, Y(0)); ctx.rotate(-Math.PI / 2); ctx.fillText(axLabel(b) + ' →', 0, 0); ctx.restore();
-  const pa = sampleAxis(a), pb = sampleAxis(b);
-  const tm = Math.min(pa[pa.length - 1][0], pb[pb.length - 1][0]);
-  const n = 160, upto = Math.max(2, Math.ceil(n * p));
-  const at = i => { const t = tm * i / (n - 1); return [X(valueAt(pa, t)), Y(valueAt(pb, t))]; };
-  for (let i = 1; i < upto; i++) {
-    const [x0, y0] = at(i - 1), [x1, y1] = at(i);
-    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1);
-    ctx.strokeStyle = axColor(a); ctx.globalAlpha = .32 + .68 * (i / upto); ctx.lineWidth = 2.4; ctx.lineCap = 'round'; ctx.stroke();
-  }
-  ctx.globalAlpha = 1;
-  const [cx, cy] = at(upto - 1);
-  ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(cx, cy, 5, 0, 7); ctx.fill();
-  ctx.fillStyle = PAL.muted; ctx.font = '600 10px ' + css('--sans');
-  const [sx, sy] = at(0);
-  ctx.fillText('start', sx, sy - 8);
-  if (p >= 1) ctx.fillText('end', cx, cy - 10);
-}
-function encLanes(ctx, W, H, book, p, opts = {}) {
-  ctx.clearRect(0, 0, W, H);
-  const axes = book.axes, n = axes.length;
-  const laneH = (H - 12) / n;
-  axes.forEach((ax, i) => {
-    const top = 6 + i * laneH, m = { l: 110, r: 14 };
-    const X = t => m.l + t * (W - m.l - m.r);
-    const Y = v => top + 6 + (1 - (v + 1) / 2) * (laneH - 18);
-    ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
-    ctx.fillStyle = axColor(ax); ctx.font = '600 10.5px ' + css('--sans'); ctx.textAlign = 'left';
-    wrapText(ctx, axLabel(ax), 8 + 46, top + laneH / 2, 92); ctx.textAlign = 'center';
-    strokeLine(ctx, sampleAxis(ax), X, Y, p, axColor(ax), 2, hashStr(book.id) + i);
-  });
-}
-function encMorph(ctx, W, H, book, p, opts = {}) {
-  // morph state is per-caller (opts.morph) so detail and lab views never fight
-  const st = opts.morph || { i: 0, j: 1, f: 0 };
-  const axes = book.axes;
-  const a = axes[st.i % axes.length], b = axes[st.j % axes.length];
-  const f = frame(ctx, W, H, {});
-  const pa = sampleAxis(a), pb = sampleAxis(b), n = Math.min(pa.length, pb.length);
-  const mix = [];
-  const e = st.f;
-  for (let i = 0; i < n; i++) mix.push([pa[i][0] + (pb[i][0] - pa[i][0]) * e, pa[i][1] + (pb[i][1] - pa[i][1]) * e]);
-  const col = e < .5 ? axColor(a) : axColor(b);
-  const tip = strokeLine(ctx, mix, f.X, f.Y, p, col, 2.6, hashStr(book.id));
-  endLabel(ctx, tip, f.X, f.Y, e < .5 ? axLabel(a) : axLabel(b), col);
-}
-function sparkline(ctx, W, H, book, p) {
-  ctx.clearRect(0, 0, W, H);
-  const m = { l: 6, r: 6 };
-  const X = t => m.l + t * (W - m.l - m.r), Y = v => 5 + (1 - (v + 1) / 2) * (H - 10);
-  ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
-  const ax = primary(book);
-  strokeLine(ctx, sampleAxis(ax, 110), X, Y, p, axColor(ax), 1.9, hashStr(book.id));
-  if (book.axes.length > 1) {
-    ctx.globalAlpha = .5;
-    strokeLine(ctx, sampleAxis(book.axes[1], 110), X, Y, p, axColor(book.axes[1]), 1.4, hashStr(book.id) + 7);
-    ctx.globalAlpha = 1;
-  }
-}
-
-/* ================= hero ================= */
-const heroSeq = ['cinderella', 'hole', 'icarus', 'oedipus', 'flatline'];
+/* ===== hero: cycle showpiece books ===== */
+const heroIds = ['a-christmas-carol', 'nala-damayanti', 'dorian-gray', 'ramayana', 'emma'];
 let heroIdx = 0;
-const heroCv = document.getElementById('heroCv'), heroCap = document.getElementById('heroCap');
-const heroChart = attach(heroCv, (ctx, W, H, p) => {
-  const key = heroSeq[heroIdx % heroSeq.length];
-  const f = frame(ctx, W, H, { axisMeta: { hi: 'Good fortune', lo: 'Ill fortune' } });
-  const pts = sampleAxis({ pts: ARCH_SHAPE[key] });
-  const tip = strokeLine(ctx, pts, f.X, f.Y, p, PAL.fortune, 3, hashStr(key));
-  ctx.fillStyle = PAL.ink; ctx.font = '600 13px ' + css('--serif'); ctx.textAlign = 'left';
-  if (p > .9) ctx.fillText(ARCH[key].name, f.X(0) + 10, f.Y(1) + 8);
-}, 2600);
-heroCap.textContent = 'after K.V.';
-setInterval(() => { if (!document.hidden && heroChart.p >= 1) { heroIdx++; heroChart.play(); } }, 4200);
+const heroChart = attach(document.getElementById('heroCv'), (ctx, W, H, p) => {
+  const b = BOOKS.find(x => x.id === heroIds[heroIdx % heroIds.length]);
+  drawBook(ctx, W, H, b, p);
+  if (p > .05) labelText(ctx, b.title, 14, 34 + 16, PAL.ink, 'left');
+}, 3000);
+setInterval(() => { if (!document.hidden && heroChart.p >= 1) { heroIdx++; heroChart.play(); } }, 5200);
 
-/* ================= grammar ================= */
-const archCounts = {};
-BOOKS.forEach(b => archCounts[b.arch] = (archCounts[b.arch] || 0) + 1);
-const gg = document.getElementById('grammarGrid');
-Object.entries(ARCH).forEach(([key, a]) => {
+/* ===== shapes ===== */
+const counts = {};
+BOOKS.forEach(b => counts[b.shape] = (counts[b.shape] || 0) + 1);
+const sg = document.getElementById('shapeGrid');
+SHAPE_ORDER.forEach(key => {
+  const s = SHAPES[key];
   const card = document.createElement('div'); card.className = 'card';
-  card.innerHTML = `<span class="count">${archCounts[key] || 0} of 93</span><h3>${a.name}</h3>
-    <div class="motto">${a.motto}</div><div class="cvWrap"><canvas></canvas></div><p>${a.desc}</p>`;
-  gg.appendChild(card);
+  card.innerHTML = `<h3>${s.name}</h3><div class="aka">${s.aka} · ${counts[key] || 0} of ${BOOKS.length} books</div>
+    <div class="cvWrap"><canvas></canvas></div><p>${SHAPE_DESC[key]}</p>`;
+  sg.appendChild(card);
   attach(card.querySelector('canvas'), (ctx, W, H, p) => {
-    const m = { l: 8, r: 8 };
-    ctx.clearRect(0, 0, W, H);
-    const X = t => m.l + t * (W - m.l - m.r), Y = v => 6 + (1 - (v + 1) / 2) * (H - 12);
-    ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
-    strokeLine(ctx, sampleAxis({ pts: ARCH_SHAPE[key] }, 90), X, Y, p, PAL.fortune, 2.4, hashStr(key));
+    const f = frame(ctx, W, H, { mini: true });
+    strokeLine(ctx, catmull(SHAPE_SKETCH[key], 90), f.X, f.Y, p, PAL.line, 2.4, hashStr(key));
   }, 1800);
 });
 
-/* ================= atlas ================= */
-const state = { arch: null, axis: null, crossed: false, q: '' };
+/* ===== machine explainer: sliding window animation ===== */
+const machineChart = attach(document.getElementById('machineCv'), (ctx, W, H, p) => {
+  ctx.clearRect(0, 0, W, H);
+  const m = 20, textTop = 22, textH = H * .32, lineTop = textTop + textH + 34, lineH = H - lineTop - 26;
+  // the "book": rows of word-dashes
+  const rng = mulberry(7);
+  ctx.fillStyle = PAL.muted;
+  const rows = 6, perRow = 44;
+  for (let r = 0; r < rows; r++) for (let c = 0; c < perRow; c++) {
+    const w = 6 + rng() * 12;
+    const x = m + c / perRow * (W - 2 * m), y = textTop + r / rows * textH;
+    ctx.globalAlpha = .5; ctx.fillRect(x, y, w * (W - 2 * m) / perRow / 18, 3); ctx.globalAlpha = 1;
+  }
+  ctx.fillStyle = PAL.muted; ctx.font = '11px ' + css('--sans'); ctx.textAlign = 'left';
+  ctx.fillText('the book, start to finish →', m, textTop - 8);
+  // moving window
+  const wt = p; // window position 0..1
+  const winW = (W - 2 * m) * .16;
+  const wx = m + wt * (W - 2 * m - winW);
+  ctx.strokeStyle = PAL.reader; ctx.lineWidth = 2;
+  ctx.strokeRect(wx, textTop - 4, winW, textH + 8);
+  ctx.fillStyle = PAL.reader; ctx.globalAlpha = .08; ctx.fillRect(wx, textTop - 4, winW, textH + 8); ctx.globalAlpha = 1;
+  labelText(ctx, 'average the happiness of these words', wx + winW / 2, textTop + textH + 22, PAL.reader);
+  // resulting line: use A Christmas Carol's mood series for authenticity
+  const demo = BOOKS.find(b => b.id === 'a-christmas-carol');
+  const mood = moodLineOf(demo) || [];
+  const X = t => m + t * (W - 2 * m), Y = v => lineTop + (1 - (v + 1) / 2) * lineH;
+  ctx.strokeStyle = PAL.grid; ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(1), Y(0)); ctx.stroke();
+  const centerT = (wx + winW / 2 - m) / (W - 2 * m);
+  const upto = mood.filter(q => q[0] <= centerT);
+  if (upto.length > 1) strokeLine(ctx, upto, X, Y, 1, PAL.line, 2.6, 3);
+  ctx.fillStyle = PAL.muted; ctx.font = '11px ' + css('--sans'); ctx.textAlign = 'left';
+  ctx.fillText('…and the line draws itself (this one is really A Christmas Carol’s word-mood)', m, H - 8);
+}, 9000);
+setInterval(() => { if (!document.hidden && machineChart.p >= 1 && isVisible(machineChart.cv)) machineChart.play(); }, 11000);
+function isVisible(el) { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
+
+/* ===== atlas ===== */
+const state = { shape: null, how: null, q: '' };
 const atlasGrid = document.getElementById('atlasGrid');
 const cardsById = {};
-BOOKS.forEach(book => {
-  const card = document.createElement('div'); card.className = 'card'; card.tabIndex = 0;
-  card.setAttribute('role', 'button'); card.setAttribute('aria-label', 'Open ' + book.title);
-  const year = book.year < 0 ? 'c. ' + Math.abs(book.year) + ' BC' : book.year;
-  card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${book.title}</h3>
-    <div class="meta"><span>${book.author} · ${year}</span></div>
-    <div class="meta"><span class="badge">${ARCH[book.arch] ? ARCH[book.arch].name : book.arch}</span>
-      <span class="badge">${primary(book).source === 'measured' ? 'Sentiment' : axName(primary(book))}</span>
-      ${book.crossed ? '<span class="badge x">⤫ crossed</span>' : ''}
-      <span class="badge">${primary(book).source === 'measured' ? 'measured'
-        : book.axes.some(a => a.source === 'measured') ? 'reading + measured' : 'reading'}</span></div>`;
+BOOKS.forEach(b => {
+  const card = document.createElement('div'); card.className = 'card click'; card.tabIndex = 0;
+  card.setAttribute('role', 'button'); card.setAttribute('aria-label', 'Open ' + b.title);
+  const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
+  card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${b.title}</h3>
+    <div class="meta">${b.author} · ${year}</div>
+    <div><span class="shapeTag">${SHAPES[b.shape].name}</span>
+    <span class="shapeTag">${HOW_TEXT[b.how]}</span></div>`;
   atlasGrid.appendChild(card);
-  cardsById[book.id] = card;
-  attach(card.querySelector('canvas'), (ctx, W, H, p) => sparkline(ctx, W, H, book, p), 1700);
-  card.addEventListener('click', () => openDetail(book));
-  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(book); } });
+  cardsById[b.id] = card;
+  attach(card.querySelector('canvas'), (ctx, W, H, p) => {
+    const f = frame(ctx, W, H, { mini: true });
+    strokeLine(ctx, lineOf(b), f.X, f.Y, p, b.reader ? PAL.reader : PAL.line, 1.9, hashStr(b.id));
+  }, 1700);
+  card.addEventListener('click', () => openDetail(b));
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(b); } });
 });
-/* filters */
-const archChips = document.getElementById('archChips'), axisChips = document.getElementById('axisChips');
-Object.entries(ARCH).forEach(([k, a]) => {
-  const c = document.createElement('button'); c.className = 'chip'; c.textContent = a.name; c.dataset.k = k;
-  c.onclick = () => { state.arch = state.arch === k ? null : k; syncFilters(); }; archChips.appendChild(c);
+const shapeChips = document.getElementById('shapeChips'), howChips = document.getElementById('howChips');
+SHAPE_ORDER.forEach(k => {
+  const c = document.createElement('button'); c.className = 'chip'; c.textContent = SHAPES[k].name; c.dataset.k = k;
+  c.onclick = () => { state.shape = state.shape === k ? null : k; syncFilters(); }; shapeChips.appendChild(c);
 });
-AXES.forEach(k => {
-  const c = document.createElement('button'); c.className = 'chip'; c.dataset.k = k;
-  c.innerHTML = `<span class="dot" style="background:var(--ax-${k})"></span>${S.axes[k].name}`;
-  c.onclick = () => { state.axis = state.axis === k ? null : k; syncFilters(); }; axisChips.appendChild(c);
+Object.entries(HOW_TEXT).forEach(([k, label]) => {
+  const c = document.createElement('button'); c.className = 'chip'; c.textContent = label; c.dataset.k = k;
+  c.onclick = () => { state.how = state.how === k ? null : k; syncFilters(); }; howChips.appendChild(c);
 });
-document.getElementById('crossedChip').onclick = e => { state.crossed = !state.crossed; syncFilters(); };
 document.getElementById('search').addEventListener('input', e => { state.q = e.target.value.toLowerCase(); syncFilters(); });
 function bookMatches(b) {
-  if (state.arch && b.arch !== state.arch) return false;
-  if (state.axis && !b.axes.some(a => a.axis === state.axis)) return false;
-  if (state.crossed && !b.crossed) return false;
+  if (state.shape && b.shape !== state.shape) return false;
+  if (state.how && b.how !== state.how) return false;
   if (state.q && !(b.title + ' ' + b.author).toLowerCase().includes(state.q)) return false;
   return true;
 }
@@ -656,70 +618,67 @@ function syncFilters() {
   let n = 0;
   BOOKS.forEach(b => { const on = bookMatches(b); cardsById[b.id].style.display = on ? '' : 'none'; if (on) n++; });
   document.getElementById('atlasCount').textContent = n + ' of ' + BOOKS.length;
-  archChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.arch));
-  axisChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.axis));
-  document.getElementById('crossedChip').setAttribute('aria-pressed', state.crossed);
+  shapeChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.shape));
+  howChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.how));
 }
 syncFilters();
 
-/* ================= detail overlay ================= */
+/* ===== detail ===== */
 const detail = document.getElementById('detail'), detailCv = document.getElementById('detailCv');
-let detailBook = null, detailEnc = 'line', morphTimer = null, lastFocus = null;
-const detailMorph = { i: 0, j: 1, f: 0 };
-const ENCS = [['line', 'Line'], ['scissors', 'Scissors'], ['phase', 'Phase portrait'], ['lanes', 'Lanes'], ['morph', 'Morph']];
+let detailBook = null, showMood = true, lastFocus = null;
+function corr(a, b) {
+  const n = Math.min(a.length, b.length);
+  const xs = [], ys = [];
+  for (let i = 0; i < n; i++) { xs.push(a[i]); ys.push(b[i]); }
+  const ma = xs.reduce((s, v) => s + v, 0) / n, mb = ys.reduce((s, v) => s + v, 0) / n;
+  let cov = 0, va = 0, vb = 0;
+  for (let i = 0; i < n; i++) { cov += (xs[i] - ma) * (ys[i] - mb); va += (xs[i] - ma) ** 2; vb += (ys[i] - mb) ** 2; }
+  return cov / Math.sqrt(va * vb || 1);
+}
 const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
   if (!detailBook) return;
-  ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[detailEnc](ctx, W, H, detailBook, p, { morph: detailMorph });
+  const f = drawBook(ctx, W, H, detailBook, p);
+  const mood = moodLineOf(detailBook);
+  if (mood && detailBook.reader && showMood) {
+    ctx.globalAlpha = .75;
+    strokeLine(ctx, mood, f.X, f.Y, p, PAL.line, 1.8, hashStr(detailBook.id) + 5);
+    ctx.globalAlpha = 1;
+    // name each line near its first quarter, clear of the ending annotations
+    const hero = lineOf(detailBook);
+    const q = 0.22;
+    labelText(ctx, 'mood of the words', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.line, 'left');
+    labelText(ctx, 'the hero, read', f.X(q), f.Y(valueAt(hero, q)) + 18, PAL.reader, 'left');
+  }
 }, 2800);
-function openDetail(book) {
-  detailBook = book;
-  const multi = book.axes.length > 1;
-  detailEnc = 'line';
-  document.getElementById('detailTitle').textContent = book.title;
-  const year = book.year < 0 ? 'c. ' + Math.abs(book.year) + ' BC' : book.year;
-  const hasMeasured = book.axes.some(ax => ax.source === 'measured');
-  const provenance = primary(book).source === 'measured'
-    ? 'measured from text (labMT / Reagan et al.)'
-    : hasMeasured ? 'editorial reading + measured overlay' : 'editorial reading';
+function openDetail(b) {
+  detailBook = b; showMood = true;
+  document.getElementById('detailTitle').textContent = b.title;
+  const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
   document.getElementById('detailMeta').textContent =
-    `${book.author} · ${year} · ${ARCH[book.arch] ? ARCH[book.arch].name : book.arch} · ` +
-    provenance + (book.crossed ? ' · crossed axes' : '');
-  document.getElementById('detailNote').textContent = book.note || '';
-  const tabs = document.getElementById('encTabs'); tabs.innerHTML = '';
-  ENCS.forEach(([k, label]) => {
-    if (!multi && k !== 'line') return;
-    const b = document.createElement('button'); b.className = 'tbtn'; b.textContent = label;
-    b.setAttribute('aria-pressed', k === detailEnc);
-    b.onclick = () => { setEnc(k); };
-    tabs.appendChild(b);
-  });
+    `${b.author} · ${year} · shape: ${SHAPES[b.shape].name} (${SHAPES[b.shape].aka})`;
+  document.getElementById('detailProv').textContent = HOW_PROV[b.how];
+  document.getElementById('detailNote').textContent = b.note || '';
+  const mt = document.getElementById('moodToggle');
+  const hasBoth = !!(b.reader && (b.mood || b.mood_primary));
+  mt.style.display = hasBoth ? '' : 'none';
+  if (hasBoth) {
+    const r = corr(b.reader.pts.map(q => q[1]),
+      b.reader.pts.map(q => valueAt(moodLineOf(b), q[0])));
+    mt.textContent = `Word-mood line (agreement r = ${r >= 0 ? '+' : ''}${r.toFixed(2)})`;
+    mt.setAttribute('aria-pressed', 'true');
+  }
   if (!detail.classList.contains('open')) lastFocus = document.activeElement;
   detail.classList.add('open'); document.body.style.overflow = 'hidden';
   document.getElementById('detailClose').focus();
-  requestAnimationFrame(() => { detailChart.play(); startMorphIfNeeded(); });
+  requestAnimationFrame(() => detailChart.play());
 }
-function setEnc(k) {
-  detailEnc = k;
-  document.getElementById('encTabs').querySelectorAll('.tbtn').forEach(b =>
-    b.setAttribute('aria-pressed', b.textContent === (ENCS.find(e => e[0] === k) || [])[1]));
-  detailChart.play(); startMorphIfNeeded();
-}
-function startMorphIfNeeded() {
-  clearInterval(morphTimer); morphTimer = null;
-  detailMorph.i = 0; detailMorph.j = 1; detailMorph.f = 0;
-  if (detailEnc === 'morph' && detailBook && detailBook.axes.length > 1 && !REDUCED) {
-    let dir = 1, raw = 0;
-    morphTimer = setInterval(() => {
-      raw += dir * 0.02;
-      if (raw >= 1.4) dir = -1; else if (raw <= -0.4) dir = 1; // pause at ends
-      raw = Math.max(-0.4, Math.min(1.4, raw));
-      detailMorph.f = Math.max(0, Math.min(1, raw));
-      detailChart.render();
-    }, 33);
-  }
-}
+document.getElementById('moodToggle').onclick = e => {
+  showMood = !showMood;
+  e.target.setAttribute('aria-pressed', showMood);
+  detailChart.render();
+};
 function closeDetail() {
-  detail.classList.remove('open'); document.body.style.overflow = ''; clearInterval(morphTimer);
+  detail.classList.remove('open'); document.body.style.overflow = '';
   if (lastFocus && lastFocus.focus) lastFocus.focus();
 }
 document.getElementById('detailClose').onclick = closeDetail;
@@ -733,111 +692,97 @@ function stepDetail(d) {
   const i = vis.indexOf(detailBook);
   openDetail(vis[(i + d + vis.length) % vis.length]);
 }
-/* detail hover readout */
+/* hover: show the event behind the nearest point */
 detailCv.addEventListener('pointermove', e => {
-  if (!detailBook || detailEnc === 'phase') { document.getElementById('detailTip').style.opacity = 0; return; }
+  const tipEl = document.getElementById('detailTip');
+  if (!detailBook) { tipEl.style.opacity = 0; return; }
   const r = detailCv.getBoundingClientRect();
-  const t = Math.max(0, Math.min(1, (e.clientX - r.left - 46) / (r.width - 62)));
-  const parts = detailBook.axes.map(ax => {
-    const v = valueAt(sampleAxis(ax, 80), Math.min(t, ax.pts ? ax.pts[ax.pts.length - 1][0] : 1));
-    return `${axName(ax)} ${v >= 0 ? '+' : ''}${v.toFixed(2)}`;
-  });
-  const tip = document.getElementById('detailTip');
-  tip.textContent = Math.round(t * 100) + '% · ' + parts.join(' · ');
-  tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; tip.style.opacity = 1;
+  const t = Math.max(0, Math.min(1, (e.clientX - r.left - 14) / (r.width - 28)));
+  const whys = detailBook.reader ? detailBook.reader.whys : (detailBook.beats || []);
+  let best = null, bd = .06;
+  for (const [wt, txt] of whys) { const d = Math.abs(wt - t); if (d < bd) { bd = d; best = [wt, txt]; } }
+  if (best) {
+    tipEl.textContent = Math.round(best[0] * 100) + '% — ' + best[1];
+    tipEl.style.left = (e.clientX - r.left) + 'px'; tipEl.style.top = (e.clientY - r.top) + 'px'; tipEl.style.opacity = 1;
+  } else {
+    const v = valueAt(lineOf(detailBook), t);
+    tipEl.textContent = Math.round(t * 100) + '% · ' + (v >= 0 ? 'good fortune' : 'ill fortune') + ' ' + v.toFixed(2);
+    tipEl.style.left = (e.clientX - r.left) + 'px'; tipEl.style.top = (e.clientY - r.top) + 'px'; tipEl.style.opacity = 1;
+  }
 });
 detailCv.addEventListener('pointerleave', () => document.getElementById('detailTip').style.opacity = 0);
 
-/* ================= lab ================= */
-const labPick = document.getElementById('labPick'), labGrid = document.getElementById('labGrid');
-BOOKS.filter(b => b.axes.length > 1).forEach(b => {
-  const o = document.createElement('option'); o.value = b.id; o.textContent = b.title + ' — ' + b.author; labPick.appendChild(o);
-});
-const LAB = [
-  ['line', 'Classic line', 'Vonnegut’s original: one axis against time.'],
-  ['scissors', 'Scissors', 'Both axes at once; the shaded wedge is the divergence.'],
-  ['phase', 'Phase portrait', 'Time hidden; the story is a path through axis-space.'],
-  ['lanes', 'Lanes', 'Each axis in its own lane, like a score.'],
-  ['morph', 'Morph', 'One line re-shaped from axis to axis.'],
-];
-const labCharts = [];
-LAB.forEach(([k, name, sub]) => {
+/* ===== better reader: five overlay panels ===== */
+const READER_FIVE = ['the-metamorphosis', 'a-christmas-carol', 'emma', 'the-odyssey', 'dorian-gray'];
+const readerGrid = document.getElementById('readerGrid');
+READER_FIVE.forEach(id => {
+  const b = BOOKS.find(x => x.id === id);
+  const r = corr(b.reader.pts.map(q => q[1]), b.reader.pts.map(q => valueAt(moodLineOf(b), q[0])));
+  const verdict = r > .5 ? 'the methods agree' : (r < -.3 ? 'the word-line is upside down' : 'no relation');
   const el = document.createElement('div'); el.className = 'panel';
-  el.innerHTML = `<h3>${name}</h3><div class="sub">${sub}</div><div class="cvWrap"><canvas></canvas></div>`;
-  labGrid.appendChild(el);
-  const cv = el.querySelector('canvas');
-  const c = attach(cv, (ctx, W, H, p) => {
-    const book = BOOKS.find(b => b.id === labPick.value) || BOOKS[0];
-    const labMorph = { i: 0, j: 1, f: (Math.sin(performance.now() / 900) + 1) / 2 };
-    ({ line: encLine, scissors: encScissors, phase: encPhase, lanes: encLanes, morph: encMorph })[k](ctx, W, H, book, p, { labels: true, morph: labMorph });
-  }, 2600);
-  labCharts.push(c);
+  el.innerHTML = `<h3>${b.title}</h3><div class="sub">agreement r = ${r >= 0 ? '+' : ''}${r.toFixed(2)} — ${verdict}</div>
+    <div class="cvWrap"><canvas></canvas></div>`;
+  readerGrid.appendChild(el);
+  attach(el.querySelector('canvas'), (ctx, W, H, p) => {
+    const f = frame(ctx, W, H, { mini: true });
+    ctx.globalAlpha = .8;
+    strokeLine(ctx, moodLineOf(b), f.X, f.Y, p, PAL.line, 1.7, hashStr(b.id) + 5);
+    ctx.globalAlpha = 1;
+    strokeLine(ctx, lineOf(b), f.X, f.Y, p, PAL.reader, 2.3, hashStr(b.id));
+  }, 2300);
+  el.style.cursor = 'pointer';
+  el.onclick = () => openDetail(b);
 });
-labPick.value = 'oedipus-rex';
-labPick.onchange = () => labCharts.forEach(c => c.play());
-if (!REDUCED) setInterval(() => { const c = labCharts[4]; if (c && c.p >= 1 && isVisible(c.cv)) c.render(); }, 60);
-function isVisible(el) { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
 
-/* ================= crossed gallery ================= */
-function divergence(book) {
-  if (book.axes.length < 2) return 0;
-  const a = sampleAxis(book.axes[0], 60), b = sampleAxis(book.axes[1], 60);
-  let s = 0; for (let i = 0; i < 60; i++) s += Math.abs(a[i][1] - b[i][1]);
-  return s / 60;
-}
-const crossedGrid = document.getElementById('crossedGrid');
-BOOKS.filter(b => b.crossed && b.axes.length > 1)
-  .sort((x, y) => divergence(y) - divergence(x))
-  .forEach(book => {
-    const card = document.createElement('div'); card.className = 'card';
-    card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${book.title}</h3>
-      <div class="meta"><span>${axLabel(book.axes[0])} <span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ax-${book.axes[0].axis})"></span>
-      vs <span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ax-${book.axes[1].axis})"></span> ${axLabel(book.axes[1])}</span></div>`;
-    crossedGrid.appendChild(card);
-    attach(card.querySelector('canvas'), (ctx, W, H, p) => encScissors(ctx, W, H, book, p, { mini: true }), 2100);
-    card.onclick = () => { openDetail(book); setEnc('scissors'); };
-  });
+/* ===== east & west ===== */
+const eastGrid = document.getElementById('eastGrid');
+BOOKS.filter(b => b.region === 'indian').forEach(b => {
+  const el = document.createElement('div'); el.className = 'panel';
+  el.innerHTML = `<h3>${b.title}</h3><div class="sub">${b.author} · ${SHAPES[b.shape].name}</div>
+    <div class="cvWrap"><canvas></canvas></div>`;
+  eastGrid.appendChild(el);
+  attach(el.querySelector('canvas'), (ctx, W, H, p) => {
+    drawBook(ctx, W, H, b, p, { mini: false, m: { l: 12, r: 12, t: 24, b: 24 } });
+  }, 2600);
+  el.style.cursor = 'pointer';
+  el.onclick = () => openDetail(b);
+});
 
-/* ================= map ================= */
-function shapeCoords(book) {
-  const s = sampleAxis(primary(book), 60);
-  const start = s[0][1], end = s[s.length - 1][1];
-  const mid = s.slice(18, 42).reduce((a, q) => a + q[1], 0) / 24;
-  return { x: end - start, y: mid - (start + end) / 2 };
-}
-const ARCH_COLOR_SLOT = { rise: '--ax-knowledge', tragedy: '--ax-tension', hole: '--ax-connection',
-  icarus: '--ax-fortune', cinderella: '--ax-certainty', oedipus: '--ax-power', flatline: '--muted' };
+/* ===== map ===== */
+const SHAPE_COLORS = { rise: '#2a78d6', cinderella: '#e87ba4', hole: '#1baf7a', icarus: '#eda100',
+  oedipus: '#4a3aa7', tragedy: '#e34948', flatline: '#898781' };
 const mapCv = document.getElementById('mapCv');
 let mapDots = [];
-const mapChart = attach(mapCv, (ctx, W, H, p) => {
+attach(mapCv, (ctx, W, H, p) => {
   ctx.clearRect(0, 0, W, H);
   const m = 54;
   const X = v => m + (v + 1.6) / 3.2 * (W - 2 * m), Y = v => m + (1 - (v + 1.1) / 2.2) * (H - 2 * m);
   ctx.strokeStyle = PAL.grid; ctx.lineWidth = 1;
   ctx.beginPath(); ctx.moveTo(X(-1.6), Y(0)); ctx.lineTo(X(1.6), Y(0)); ctx.moveTo(X(0), Y(-1.1)); ctx.lineTo(X(0), Y(1.1)); ctx.stroke();
   ctx.fillStyle = PAL.muted; ctx.font = '11px ' + css('--sans'); ctx.textAlign = 'center';
-  ctx.fillText('ends worse ←', X(-1), Y(0) - 8); ctx.fillText('→ ends better', X(1), Y(0) - 8);
-  ctx.save(); ctx.translate(X(0) + 12, Y(.8)); ctx.fillText('middle is a peak ↑', 60, 0); ctx.restore();
-  ctx.save(); ctx.translate(X(0) + 12, Y(-.85)); ctx.fillText('middle is a pit ↓', 55, 0); ctx.restore();
+  ctx.fillText('ends worse than it began ←', X(-1), Y(0) - 8); ctx.fillText('→ ends better than it began', X(1), Y(0) - 8);
+  ctx.fillText('middle is a peak ↑', X(0) + 70, Y(.95)); ctx.fillText('middle is a pit ↓', X(0) + 66, Y(-.98));
   mapDots = [];
   BOOKS.forEach((b, i) => {
-    const c = shapeCoords(b), reveal = Math.max(0, Math.min(1, p * BOOKS.length * .12 - i * .1));
+    const s = lineOf(b);
+    const start = s[0][1], end = s[s.length - 1][1];
+    const mid = s.slice(Math.floor(s.length * .3), Math.floor(s.length * .7)).reduce((a, q) => a + q[1], 0) / (Math.floor(s.length * .7) - Math.floor(s.length * .3));
+    const reveal = Math.max(0, Math.min(1, p * BOOKS.length * .12 - i * .1));
     if (reveal <= 0) return;
-    const x = X(c.x), y = Y(c.y);
+    const x = X(end - start), y = Y(mid - (start + end) / 2);
     ctx.globalAlpha = reveal;
-    ctx.fillStyle = css(ARCH_COLOR_SLOT[b.arch] || '--muted');
+    ctx.fillStyle = SHAPE_COLORS[b.shape];
     ctx.strokeStyle = PAL.surface; ctx.lineWidth = 2;
     ctx.beginPath(); ctx.arc(x, y, 7, 0, 7); ctx.fill(); ctx.stroke();
     ctx.globalAlpha = 1;
     mapDots.push({ x, y, b });
   });
-  // legend
-  let lx = m, ly = H - 22;
+  let lx = m; const ly = H - 20;
   ctx.textAlign = 'left'; ctx.font = '11px ' + css('--sans');
-  Object.entries(ARCH).forEach(([k, a]) => {
-    ctx.fillStyle = css(ARCH_COLOR_SLOT[k]); ctx.beginPath(); ctx.arc(lx + 5, ly - 3, 5, 0, 7); ctx.fill();
-    ctx.fillStyle = PAL.ink2; ctx.fillText(a.name, lx + 14, ly);
-    lx += 24 + ctx.measureText(a.name).width;
+  SHAPE_ORDER.forEach(k => {
+    ctx.fillStyle = SHAPE_COLORS[k]; ctx.beginPath(); ctx.arc(lx + 5, ly - 3, 5, 0, 7); ctx.fill();
+    ctx.fillStyle = PAL.ink2; ctx.fillText(SHAPES[k].name, lx + 14, ly);
+    lx += 24 + ctx.measureText(SHAPES[k].name).width;
   });
 }, 3200);
 mapCv.addEventListener('pointermove', e => {
@@ -850,94 +795,21 @@ mapCv.addEventListener('pointermove', e => {
 });
 mapCv.addEventListener('click', () => { if (mapCv._hover) openDetail(mapCv._hover); });
 
-/* ================= walls ================= */
-let wallMode = 'ridge';
-const wallCv = document.getElementById('wallCv');
-let wallRows = [];
-const wallChart = attach(wallCv, (ctx, W, H, p) => {
-  ctx.clearRect(0, 0, W, H);
-  wallRows = [];
-  const ORDER = ['rise', 'cinderella', 'hole', 'icarus', 'oedipus', 'tragedy', 'flatline'];
-  const sorted = [...BOOKS].sort((a, b) => (ORDER.indexOf(a.arch) - ORDER.indexOf(b.arch)) || (a.year - b.year));
-  const n = sorted.length, m = { l: 190, r: 30 };
-  if (wallMode === 'ridge') {
-    const rowH = (H - 30) / n, amp = rowH * 7;
-    sorted.forEach((b, i) => {
-      const baseY = 15 + (i + .5) * rowH;
-      const reveal = Math.max(0, Math.min(1, p * 2.2 - i / n));
-      if (reveal <= 0) return;
-      const X = t => m.l + t * (W - m.l - m.r), Y = v => baseY - v * amp / 2;
-      ctx.globalAlpha = .82 * reveal;
-      strokeLine(ctx, sampleAxis(primary(b), 110), X, Y, reveal, axColor(primary(b)), 1.4, hashStr(b.id));
-      ctx.globalAlpha = 1;
-      wallRows.push({ y: baseY, b });
-    });
-  } else {
-    const rowH = Math.max(4, (H - 30) / n);
-    sorted.forEach((b, i) => {
-      const y = 15 + i * rowH;
-      const reveal = Math.max(0, Math.min(1, p * 2.2 - i / n));
-      if (reveal <= 0) return;
-      const s = sampleAxis(primary(b), 160);
-      const w = (W - m.l - m.r) * reveal;
-      for (let x = 0; x < w; x++) {
-        const v = valueAt(s, x / (W - m.l - m.r));
-        ctx.fillStyle = divColor(v);
-        ctx.fillRect(m.l + x, y, 1.2, rowH - 1.5);
-      }
-      wallRows.push({ y: y + rowH / 2, b });
-    });
-  }
-  if (wallMode === 'barcode') {
-    ctx.font = '10.5px ' + css('--sans'); ctx.textAlign = 'right';
-    ctx.fillStyle = PAL.muted;
-    const lx = W - 34, ly = 10;
-    ctx.fillText('ill', lx - 46, ly + 3); ctx.textAlign = 'left'; ctx.fillText('good', lx + 44, ly + 3);
-    for (let i = 0; i <= 40; i++) { ctx.fillStyle = divColor(i / 20 - 1); ctx.fillRect(lx - 42 + i * 2, ly - 4, 2, 9); }
-  }
-  ctx.fillStyle = PAL.muted; ctx.font = '10px ' + css('--sans'); ctx.textAlign = 'left';
-  let lastArch = '';
-  wallRows.forEach(r => { if (r.b.arch !== lastArch) { lastArch = r.b.arch;
-    ctx.fillStyle = PAL.ink2; ctx.font = '600 10.5px ' + css('--sans');
-    ctx.fillText(ARCH[lastArch] ? ARCH[lastArch].name.toUpperCase() : lastArch, 12, r.y + 3); } });
-}, 4200);
-function hexToRgb(h) { const x = parseInt(h.slice(1), 16); return [x >> 16 & 255, x >> 8 & 255, x & 255]; }
-function divColor(v) {
-  const lo = hexToRgb(PAL.divLo), mid = hexToRgb(PAL.divMid), hi = hexToRgb(PAL.divHi);
-  const t = Math.max(-1, Math.min(1, v));
-  const [a, b, f] = t < 0 ? [mid, lo, -t] : [mid, hi, t];
-  return `rgb(${a.map((c, i) => Math.round(c + (b[i] - c) * f)).join(',')})`;
-}
-wallCv.addEventListener('pointermove', e => {
-  const r = wallCv.getBoundingClientRect(), py = e.clientY - r.top;
-  let best = null, bd = 12;
-  for (const row of wallRows) { const d = Math.abs(row.y - py); if (d < bd) { bd = d; best = row; } }
-  const tip = document.getElementById('wallTip');
-  if (best) { tip.textContent = best.b.title + ' — ' + best.b.author; tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = py + 'px'; tip.style.opacity = 1; wallCv._hover = best.b; }
-  else { tip.style.opacity = 0; wallCv._hover = null; }
-});
-wallCv.addEventListener('click', () => { if (wallCv._hover) openDetail(wallCv._hover); });
-document.querySelectorAll('[data-wall]').forEach(btn => btn.onclick = () => {
-  wallMode = btn.dataset.wall;
-  document.querySelectorAll('[data-wall]').forEach(b => b.setAttribute('aria-pressed', b === btn));
-  wallChart.play();
-});
-
-/* ================= tour ================= */
+/* ===== tour ===== */
 const tour = document.getElementById('tour'), tourCv = document.getElementById('tourCv');
 let tourList = [], tourIdx = 0, tourTimer = null, tourPaused = false, tourNoteTimer = null;
 const tourChart = makeChart(tourCv, (ctx, W, H, p) => {
   const b = tourList[tourIdx]; if (!b) return;
-  (b.axes.length > 1 ? encScissors : encLine)(ctx, W, H, b, p, {});
+  drawBook(ctx, W, H, b, p);
 }, 2600);
 function tourShow(i) {
   tourIdx = (i + tourList.length) % tourList.length;
   const b = tourList[tourIdx];
   document.getElementById('tourTitle').textContent = b.title;
   const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
-  document.getElementById('tourMeta').textContent = b.author + ' · ' + year + ' · ' + (ARCH[b.arch] ? ARCH[b.arch].name : b.arch);
+  document.getElementById('tourMeta').textContent = `${b.author} · ${year} · ${SHAPES[b.shape].name}`;
   const note = document.getElementById('tourNote');
-  note.style.opacity = 0; note.textContent = b.note || '';
+  note.style.opacity = 0; note.textContent = b.note || SHAPE_DESC[b.shape];
   tourChart.play();
   clearTimeout(tourNoteTimer);
   tourNoteTimer = setTimeout(() => note.style.opacity = 1, Math.min(2200, +document.getElementById('tourSpeed').value * .45));
@@ -949,8 +821,7 @@ function tourNextTick() {
 }
 document.getElementById('tourBtn').onclick = () => {
   tourList = [...BOOKS].sort(() => .5 - Math.random());
-  // lead with the showpieces
-  const lead = ['oedipus-rex', 'cinderella', 'macbeth', 'gone-girl', 'a-christmas-carol', 'slaughterhouse-five'];
+  const lead = ['a-christmas-carol', 'nala-damayanti', 'ramayana', 'dorian-gray', 'emma', 'the-odyssey'];
   tourList.sort((a, b) => (lead.indexOf(a.id) + 999 * (lead.indexOf(a.id) < 0)) - (lead.indexOf(b.id) + 999 * (lead.indexOf(b.id) < 0)));
   tour.classList.add('open'); document.body.style.overflow = 'hidden';
   tourPaused = false; document.getElementById('tourPause').textContent = '⏸';
@@ -977,7 +848,7 @@ addEventListener('keydown', e => {
   }
 });
 
-/* ================= theme & skin ================= */
+/* ===== theme & skin ===== */
 const themeBtn = document.getElementById('themeBtn'), skinBtn = document.getElementById('skinBtn');
 themeBtn.onclick = () => {
   const cur = document.documentElement.dataset.theme;
