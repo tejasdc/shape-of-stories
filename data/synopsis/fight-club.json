@@ -1,0 +1,26 @@
+{
+  "id": "fight-club",
+  "title": "Fight Club",
+  "author": "Chuck Palahniuk",
+  "year": 1996,
+  "region": "west",
+  "protagonist": "The unnamed narrator",
+  "source": ["https://en.wikipedia.org/wiki/Fight_Club_(novel)"],
+  "beats": [
+    {"t": 0.03, "score": 3, "event": "Insomniac from job stress; his doctor dismisses him"},
+    {"t": 0.08, "score": 4, "event": "Fakes cancer to attend support groups for release"},
+    {"t": 0.12, "score": 3, "event": "Marla, another faker, ruins his catharsis"},
+    {"t": 0.18, "score": 4, "event": "Meets the charismatic Tyler Durden on a work trip"},
+    {"t": 0.24, "score": 2, "event": "His condo is destroyed in an explosion"},
+    {"t": 0.28, "score": 5, "event": "Moves in with Tyler in an abandoned house"},
+    {"t": 0.32, "score": 5, "event": "First fistfight with Tyler in a parking lot"},
+    {"t": 0.40, "score": 6, "event": "Fight club forms; men join for release"},
+    {"t": 0.50, "score": 5, "event": "Marla and Tyler begin sleeping together"},
+    {"t": 0.60, "score": 4, "event": "Fight club spawns Project Mayhem across cities"},
+    {"t": 0.70, "score": 2, "event": "His friend Bob is killed in a sabotage operation"},
+    {"t": 0.80, "score": 1, "event": "Marla reveals he and Tyler are the same person"},
+    {"t": 0.90, "score": 1, "event": "Tyler plans to bomb a museum; narrator cannot stop him"},
+    {"t": 0.95, "score": 1, "event": "Cornered on the roof, held at gunpoint by his other self"},
+    {"t": 1.0, "score": 2, "event": "Shoots himself; wakes in a psych ward as plans continue"}
+  ]
+}

@@ -1,0 +1,17 @@
+{"id": "oedipus-rex", "title": "Oedipus Rex", "author": "Sophocles", "year": -429, "region": "west", "protagonist": "Oedipus", "source": ["https://en.wikipedia.org/wiki/Oedipus_Rex"], "beats": [
+{"t": 0.05, "score": 5, "event": "Thebes under plague; king Oedipus resolves to find the cause"},
+{"t": 0.12, "score": 5, "event": "Creon returns from Delphi: Laius's murderer still pollutes the city"},
+{"t": 0.18, "score": 5, "event": "Oedipus vows to find and curse the killer"},
+{"t": 0.25, "score": 4, "event": "Tiresias summoned; accuses Oedipus himself of the murder"},
+{"t": 0.32, "score": 5, "event": "Oedipus dismisses the prophet; suspects a plot with Creon"},
+{"t": 0.42, "score": 4, "event": "Jocasta tells of Laius killed at a fork in the road"},
+{"t": 0.50, "score": 3, "event": "Oedipus recognizes his own violent crossroads encounter"},
+{"t": 0.60, "score": 4, "event": "Corinth messenger: Polybus is dead; Oedipus briefly relieved"},
+{"t": 0.68, "score": 3, "event": "Messenger reveals: Merope is not his true mother"},
+{"t": 0.75, "score": 3, "event": "The old shepherd is summoned; Jocasta begs him to stop asking"},
+{"t": 0.82, "score": 1, "event": "Shepherd confesses: the exposed child was Laius and Jocasta's son"},
+{"t": 0.87, "score": 1, "event": "Oedipus grasps he killed his father and married his mother"},
+{"t": 0.92, "score": 1, "event": "Jocasta hangs herself in the bedchamber"},
+{"t": 0.96, "score": 1, "event": "Oedipus gouges out his own eyes with her gold pins"},
+{"t": 1.00, "score": 1, "event": "Blinded Oedipus begs Creon for exile from Thebes"}
+]}

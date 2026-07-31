@@ -1,0 +1,18 @@
+{"id": "tale-of-chunhyang", "title": "The Tale of Chunhyang", "author": "traditional (pansori)", "year": 1700, "region": "korea", "protagonist": "Chunhyang", "source": ["https://en.wikipedia.org/wiki/The_Tale_of_Chunhyang"], "beats": [
+  {"t": 0.05, "score": 7, "event": "Yi Mongryong spots Chunhyang on a swing and falls in love at first sight"},
+  {"t": 0.12, "score": 5, "event": "His servant approaches on his behalf; Chunhyang declines"},
+  {"t": 0.20, "score": 8, "event": "Her mother Wolmae gives consent to the union"},
+  {"t": 0.25, "score": 9, "event": "Chunhyang and Mongryong marry that same day"},
+  {"t": 0.35, "score": 3, "event": "Mongryong must leave for Hanyang with his transferred father"},
+  {"t": 0.40, "score": 5, "event": "She gives him a ring and vows to remain faithful"},
+  {"t": 0.48, "score": 3, "event": "Corrupt Byeon Hakdo arrives as the new magistrate"},
+  {"t": 0.55, "score": 2, "event": "Summoned as though a gisaeng; she protests her status"},
+  {"t": 0.62, "score": 1, "event": "Refuses Byeon's demands; is beaten and imprisoned"},
+  {"t": 0.72, "score": 2, "event": "Chunhyang languishes in jail as Byeon's abuses continue"},
+  {"t": 0.78, "score": 2, "event": "Mongryong wins first place in the state exam, made secret royal inspector"},
+  {"t": 0.84, "score": 2, "event": "He returns disguised as a beggar to investigate Byeon's rule"},
+  {"t": 0.88, "score": 2, "event": "He tests her fidelity by proposing she become his gisaeng; she refuses"},
+  {"t": 0.92, "score": 8, "event": "The ring reveals his true identity to the stunned Chunhyang"},
+  {"t": 0.96, "score": 9, "event": "Mongryong punishes Byeon and frees Chunhyang"},
+  {"t": 1.00, "score": 9, "event": "The reunited couple live happily ever after"}
+]}

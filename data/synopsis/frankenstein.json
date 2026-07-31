@@ -1,0 +1,18 @@
+{"id": "frankenstein", "title": "Frankenstein", "author": "Mary Shelley", "year": 1818, "region": "west", "protagonist": "Victor Frankenstein", "source": ["https://en.wikipedia.org/wiki/Frankenstein"], "beats": [
+{"t": 0.05, "score": 3, "event": "Walton finds Victor dying on the Arctic ice; Victor begins his tale"},
+{"t": 0.12, "score": 4, "event": "His mother Caroline dies of scarlet fever; Victor leaves for Ingolstadt"},
+{"t": 0.20, "score": 6, "event": "Obsessive study reveals to him a way to bestow life on dead matter"},
+{"t": 0.28, "score": 3, "event": "Victor animates the creature; is horrified by what he has made and flees"},
+{"t": 0.36, "score": 2, "event": "News from Geneva: his younger brother William has been murdered"},
+{"t": 0.42, "score": 2, "event": "Justine is tried and executed for the crime; Victor stays silent"},
+{"t": 0.50, "score": 3, "event": "On the Mer de Glace the creature demands his creator hear him out"},
+{"t": 0.58, "score": 4, "event": "Victor agrees to build the creature a female companion"},
+{"t": 0.68, "score": 3, "event": "In his Orkney lab Victor tears the half-finished female to pieces"},
+{"t": 0.74, "score": 1, "event": "The creature murders Henry Clerval in revenge on a Scottish shore"},
+{"t": 0.82, "score": 5, "event": "Victor marries his childhood love Elizabeth Lavenza"},
+{"t": 0.87, "score": 1, "event": "On the wedding night the creature strangles Elizabeth"},
+{"t": 0.91, "score": 1, "event": "Victor's father Alphonse dies of grief soon after"},
+{"t": 0.95, "score": 1, "event": "Victor pursues the creature across ice and snow to the Arctic"},
+{"t": 0.98, "score": 1, "event": "Victor dies on Walton's ship, still vowing vengeance"},
+{"t": 1.00, "score": 2, "event": "The creature boards, mourns Victor, and vanishes to burn himself on a pyre"}
+]}

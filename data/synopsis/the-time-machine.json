@@ -1,0 +1,20 @@
+{"id": "the-time-machine", "title": "The Time Machine", "author": "H. G. Wells", "year": 1895, "region": "west", "protagonist": "The Time Traveller", "source": ["https://en.wikipedia.org/wiki/The_Time_Machine"], "beats": [
+  {"t": 0.03, "score": 6, "event": "Time Traveller demos a model machine to dinner guests"},
+  {"t": 0.06, "score": 5, "event": "A week later he recounts his journey"},
+  {"t": 0.10, "score": 6, "event": "Travels to A.D. 802,701"},
+  {"t": 0.15, "score": 5, "event": "Discovers the childlike Eloi amid deteriorating buildings"},
+  {"t": 0.22, "score": 4, "event": "Notes the Eloi are content but lack curiosity and fear the dark"},
+  {"t": 0.32, "score": 2, "event": "Returns to arrival point; his machine is gone"},
+  {"t": 0.40, "score": 3, "event": "Encounters the ape-like Morlocks living underground"},
+  {"t": 0.50, "score": 2, "event": "Realizes the Morlocks abduct and eat the Eloi at night"},
+  {"t": 0.58, "score": 6, "event": "Rescues Weena from drowning"},
+  {"t": 0.68, "score": 5, "event": "Travels to a derelict museum to arm himself"},
+  {"t": 0.78, "score": 3, "event": "Morlock attack; his fire spreads into a forest fire"},
+  {"t": 0.82, "score": 2, "event": "Weena consumed by fire along with the Morlocks"},
+  {"t": 0.86, "score": 2, "event": "Morlocks use the Sphinx statue to trap him"},
+  {"t": 0.90, "score": 6, "event": "He retrieves his machine and escapes"},
+  {"t": 0.93, "score": 3, "event": "Travels ~30 million years forward, sees Earth dying"},
+  {"t": 0.96, "score": 6, "event": "Returns home three hours after his departure"},
+  {"t": 0.98, "score": 5, "event": "Presents white flowers from Weena as evidence"},
+  {"t": 1.00, "score": 3, "event": "Sets out on another journey and never returns"}
+]}

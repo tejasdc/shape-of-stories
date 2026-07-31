@@ -1,0 +1,25 @@
+{
+  "id": "the-great-gatsby",
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "year": 1925,
+  "region": "west",
+  "protagonist": "Jay Gatsby",
+  "source": ["https://en.wikipedia.org/wiki/The_Great_Gatsby"],
+  "beats": [
+    {"t": 0.05, "score": 6, "event": "Nick moves next door; sees Gatsby gaze at Daisy's green light"},
+    {"t": 0.12, "score": 7, "event": "Gatsby throws lavish nightly parties in hope Daisy will come"},
+    {"t": 0.20, "score": 6, "event": "Nick and Gatsby meet at one of the parties"},
+    {"t": 0.28, "score": 6, "event": "Gatsby impresses Nick with tales of war heroism and Oxford"},
+    {"t": 0.38, "score": 7, "event": "Jordan reveals Gatsby's old 1917 romance with Daisy"},
+    {"t": 0.48, "score": 8, "event": "Gatsby uses Nick to stage a reunion with Daisy"},
+    {"t": 0.58, "score": 8, "event": "Gatsby and Daisy embark on an affair"},
+    {"t": 0.70, "score": 4, "event": "Tom notices the affair and grows suspicious"},
+    {"t": 0.76, "score": 2, "event": "At Plaza Hotel Tom exposes Gatsby's bootlegging past"},
+    {"t": 0.82, "score": 2, "event": "Daisy driving Gatsby's car strikes and kills Myrtle Wilson"},
+    {"t": 0.87, "score": 2, "event": "Gatsby waits outside Daisy's house, ready to take blame"},
+    {"t": 0.92, "score": 1, "event": "George Wilson shoots Gatsby in his pool, then himself"},
+    {"t": 0.96, "score": 2, "event": "Only a handful attend Gatsby's funeral; his father arrives"},
+    {"t": 1.00, "score": 3, "event": "Nick leaves East Egg, gazes once more at the green light"}
+  ]
+}

@@ -1,0 +1,22 @@
+{"id": "les-miserables", "title": "Les Misérables", "author": "Victor Hugo", "year": 1862, "region": "west", "protagonist": "Jean Valjean", "source": ["https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables"], "beats": [
+  {"t": 0.03, "score": 3, "event": "Valjean released after 19 years imprisoned for stealing bread"},
+  {"t": 0.06, "score": 5, "event": "Bishop Myriel's mercy after the theft triggers transformation"},
+  {"t": 0.12, "score": 8, "event": "As Madeleine, Valjean becomes wealthy mayor of Montreuil"},
+  {"t": 0.18, "score": 6, "event": "Saves Fantine from arrest; promises to fetch Cosette"},
+  {"t": 0.20, "score": 2, "event": "Fantine dies as Javert arrests Valjean"},
+  {"t": 0.25, "score": 5, "event": "Sentenced to life; escapes after rescuing a sailor"},
+  {"t": 0.30, "score": 7, "event": "Ransoms Cosette from the Thénardiers on Christmas Eve"},
+  {"t": 0.35, "score": 6, "event": "Flee Javert to Petit-Picpus convent; safe for eight years"},
+  {"t": 0.45, "score": 6, "event": "Marius falls for grown Cosette at Luxembourg Garden"},
+  {"t": 0.55, "score": 4, "event": "Thénardiers' ambush on Valjean foiled by Javert"},
+  {"t": 0.65, "score": 6, "event": "Éponine leads Marius to Rue Plumet; lovers meet"},
+  {"t": 0.72, "score": 4, "event": "Valjean plans to leave for England, parting the lovers"},
+  {"t": 0.80, "score": 5, "event": "Valjean joins the barricade to save Marius"},
+  {"t": 0.83, "score": 6, "event": "Spares Javert's life at the barricade"},
+  {"t": 0.87, "score": 4, "event": "Carries wounded Marius through Paris sewers"},
+  {"t": 0.90, "score": 6, "event": "Javert, undone by mercy, drowns himself in the Seine"},
+  {"t": 0.94, "score": 7, "event": "Marius and Cosette marry; Valjean endows 600,000 francs"},
+  {"t": 0.96, "score": 3, "event": "Marius, learning Valjean's past, coldly banishes him"},
+  {"t": 0.99, "score": 7, "event": "Thénardier's blackmail reveals Valjean's heroism; Marius reconciles"},
+  {"t": 1.00, "score": 6, "event": "Valjean dies peacefully with Marius and Cosette beside him"}
+]}

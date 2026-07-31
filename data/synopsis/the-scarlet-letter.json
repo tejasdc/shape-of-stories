@@ -1,0 +1,18 @@
+{"id": "the-scarlet-letter", "title": "The Scarlet Letter", "author": "Nathaniel Hawthorne", "year": 1850, "region": "west", "protagonist": "Hester Prynne", "source": ["https://en.wikipedia.org/wiki/The_Scarlet_Letter"], "beats": [
+{"t": 0.05, "score": 1, "event": "Hester stands on the Boston scaffold wearing the scarlet A, refusing to name the father"},
+{"t": 0.12, "score": 2, "event": "In the crowd she spots her long-lost husband, disguised as Roger Chillingworth"},
+{"t": 0.18, "score": 2, "event": "Chillingworth vows privately to discover and punish her lover"},
+{"t": 0.24, "score": 3, "event": "Released from prison; settles in a cottage on the town's edge with baby Pearl"},
+{"t": 0.32, "score": 4, "event": "Earns a meagre living by her fine needlework in social exile"},
+{"t": 0.40, "score": 3, "event": "Wild little Pearl grows up shunned by the town's children"},
+{"t": 0.46, "score": 5, "event": "Hester pleads with the governor; Rev Dimmesdale intervenes and she keeps Pearl"},
+{"t": 0.55, "score": 4, "event": "Chillingworth lodges with the ailing Dimmesdale as his physician"},
+{"t": 0.62, "score": 3, "event": "Chillingworth glimpses a mark on Dimmesdale's chest; his revenge sharpens"},
+{"t": 0.70, "score": 3, "event": "Dimmesdale climbs the scaffold alone at midnight but cannot yet confess"},
+{"t": 0.78, "score": 5, "event": "In the forest Hester reveals her husband's identity and plans escape by ship"},
+{"t": 0.86, "score": 6, "event": "Dimmesdale, revived by hope, delivers a powerful Election Day sermon"},
+{"t": 0.90, "score": 2, "event": "He mounts the scaffold, confesses his sin, and dies in Hester's arms"},
+{"t": 0.94, "score": 4, "event": "Deprived of his victim, Chillingworth withers and dies within the year"},
+{"t": 0.97, "score": 5, "event": "Hester leaves for Europe with Pearl, who inherits Chillingworth's estate"},
+{"t": 1.00, "score": 5, "event": "Years later Hester returns alone, resumes the scarlet A as a badge of counsel"}
+]}

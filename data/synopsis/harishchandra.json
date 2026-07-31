@@ -1,0 +1,27 @@
+{
+  "id": "harishchandra",
+  "title": "The Legend of King Harishchandra",
+  "author": "traditional (Markandeya Purana)",
+  "year": 400,
+  "region": "india",
+  "protagonist": "Harishchandra",
+  "source": ["https://en.wikipedia.org/wiki/Harishchandra"],
+  "beats": [
+    {"t": 0.03, "score": 8, "event": "Harishchandra reigns as a beloved and prosperous truth-loving king"},
+    {"t": 0.08, "score": 6, "event": "A hunting illusion draws him into disrupting Vishvamitra's meditation"},
+    {"t": 0.13, "score": 5, "event": "He apologizes and promises the sage any boon he asks"},
+    {"t": 0.20, "score": 3, "event": "Vishvamitra claims the entire kingdom as dakshina"},
+    {"t": 0.26, "score": 2, "event": "He surrenders throne, wealth, even his royal clothes"},
+    {"t": 0.32, "score": 2, "event": "Cursed for the loyal subjects who follow him, he must leave alone"},
+    {"t": 0.40, "score": 2, "event": "Wanders with wife Shaivya and son Rohitashva to holy Kashi"},
+    {"t": 0.48, "score": 1, "event": "To pay the sage he sells his wife and son as slaves"},
+    {"t": 0.55, "score": 1, "event": "The sage still demands more; the sale money is not enough"},
+    {"t": 0.62, "score": 1, "event": "He sells himself to a chandala at the cremation ground"},
+    {"t": 0.70, "score": 2, "event": "Collects burning-fees among the dead as the chandala's slave"},
+    {"t": 0.78, "score": 1, "event": "His son Rohitashva dies of a snakebite in the forest"},
+    {"t": 0.85, "score": 1, "event": "His wife brings the body; he demands the cremation fee from her"},
+    {"t": 0.92, "score": 8, "event": "The gods appear with Vishvamitra; the whole ordeal was a test"},
+    {"t": 0.97, "score": 9, "event": "He refuses heaven without his people; Indra grants their ascent"},
+    {"t": 1.00, "score": 9, "event": "Harishchandra and his subjects rise together into heaven"}
+  ]
+}

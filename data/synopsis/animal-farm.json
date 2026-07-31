@@ -1,0 +1,19 @@
+{"id": "animal-farm", "title": "Animal Farm", "author": "George Orwell", "year": 1945, "region": "west", "protagonist": "The animals of Manor/Animal Farm (collective)", "source": ["https://en.wikipedia.org/wiki/Animal_Farm"], "beats": [
+  {"t": 0.05, "score": 3, "event": "Neglected under drunken Mr. Jones's rule at Manor Farm"},
+  {"t": 0.10, "score": 5, "event": "Old Major stirs the animals with a vision of revolution"},
+  {"t": 0.15, "score": 8, "event": "Snowball and Napoleon drive Jones out; the farm is theirs"},
+  {"t": 0.20, "score": 8, "event": "Adopt Seven Commandments of Animalism; all animals equal"},
+  {"t": 0.25, "score": 7, "event": "Snowball teaches reading; Napoleon takes puppies aside"},
+  {"t": 0.32, "score": 8, "event": "Animals repel Jones at the Battle of the Cowshed"},
+  {"t": 0.42, "score": 4, "event": "Napoleon's dogs chase Snowball off the farm"},
+  {"t": 0.48, "score": 3, "event": "Napoleon abolishes meetings; pigs alone govern"},
+  {"t": 0.55, "score": 3, "event": "Windmill collapses in a storm; Snowball blamed as saboteur"},
+  {"t": 0.60, "score": 2, "event": "Beasts of England banned; a hymn to Napoleon replaces it"},
+  {"t": 0.65, "score": 1, "event": "Second purge: dogs execute animals accused of aiding Snowball"},
+  {"t": 0.75, "score": 2, "event": "Frederick blasts the rebuilt windmill; animals win at great cost"},
+  {"t": 0.82, "score": 1, "event": "Boxer collapses at work; sold in secret to the knacker"},
+  {"t": 0.88, "score": 3, "event": "Two windmills now bring income the pigs pocket"},
+  {"t": 0.92, "score": 1, "event": "Commandments shrink to 'some animals are more equal'"},
+  {"t": 0.96, "score": 1, "event": "Pigs walk on two legs, drink, wear clothes"},
+  {"t": 1.00, "score": 1, "event": "At Napoleon's dinner, pigs and men are indistinguishable"}
+]}

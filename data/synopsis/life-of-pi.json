@@ -1,0 +1,27 @@
+{
+  "id": "life-of-pi",
+  "title": "Life of Pi",
+  "author": "Yann Martel",
+  "year": 2001,
+  "region": "west",
+  "protagonist": "Piscine 'Pi' Patel",
+  "source": ["https://en.wikipedia.org/wiki/Life_of_Pi"],
+  "beats": [
+    {"t": 0.05, "score": 6, "event": "Grows up in Pondicherry as the zoo manager's son"},
+    {"t": 0.08, "score": 5, "event": "Adopts the nickname Pi to escape schoolmates' mockery"},
+    {"t": 0.13, "score": 6, "event": "At 14 practices Hinduism, Christianity, and Islam at once"},
+    {"t": 0.20, "score": 5, "event": "Family decides to sell the zoo and emigrate to Canada"},
+    {"t": 0.25, "score": 5, "event": "July 1977: boards the Tsimtsum with the zoo animals"},
+    {"t": 0.30, "score": 1, "event": "Ship sinks in a storm; his whole family drowns"},
+    {"t": 0.33, "score": 2, "event": "Escapes onto lifeboat with hyena, zebra, and orangutan"},
+    {"t": 0.37, "score": 2, "event": "Hyena kills the wounded zebra and Orange Juice"},
+    {"t": 0.40, "score": 2, "event": "Bengal tiger Richard Parker emerges and kills the hyena"},
+    {"t": 0.48, "score": 3, "event": "Builds a raft; conditions Richard Parker with food and punishment"},
+    {"t": 0.58, "score": 2, "event": "Endures temporary blindness at sea"},
+    {"t": 0.65, "score": 2, "event": "Meets castaway who is killed by the tiger"},
+    {"t": 0.75, "score": 3, "event": "Discovers floating island of carnivorous algae"},
+    {"t": 0.85, "score": 5, "event": "After 227 days reaches Mexico; Richard Parker vanishes"},
+    {"t": 0.92, "score": 3, "event": "Tells Japanese officials the alternative human version"},
+    {"t": 0.98, "score": 5, "event": "Officials choose the animal story: 'so it goes with God'"}
+  ]
+}

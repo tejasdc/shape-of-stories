@@ -1,0 +1,25 @@
+{
+  "id": "atonement",
+  "title": "Atonement",
+  "author": "Ian McEwan",
+  "year": 2001,
+  "region": "west",
+  "protagonist": "Briony Tallis",
+  "source": ["https://en.wikipedia.org/wiki/Atonement_(novel)"],
+  "beats": [
+    {"t": 0.05, "score": 6, "event": "Age 13, aspiring writer at the family's country estate"},
+    {"t": 0.15, "score": 5, "event": "Intercepts Robbie's crude love letter meant for Cecilia"},
+    {"t": 0.22, "score": 3, "event": "Witnesses her cousin Lola being assaulted in the dark"},
+    {"t": 0.28, "score": 4, "event": "Wrongly identifies Robbie as Lola's attacker"},
+    {"t": 0.35, "score": 5, "event": "Robbie arrested; only Cecilia and his mother believe him"},
+    {"t": 0.50, "score": 2, "event": "Part Two: Robbie jailed then sent to war in France"},
+    {"t": 0.62, "score": 3, "event": "Part Three: now a trainee nurse, remorseful"},
+    {"t": 0.68, "score": 2, "event": "Realizes Paul Marshall was the real attacker"},
+    {"t": 0.75, "score": 2, "event": "Attends Paul and Lola's wedding; stays silent"},
+    {"t": 0.82, "score": 3, "event": "Visits Cecilia, finds Robbie there, and apologizes"},
+    {"t": 0.90, "score": 2, "event": "Postscript: elderly Briony reveals Robbie died at Dunkirk"},
+    {"t": 0.93, "score": 2, "event": "Reveals Cecilia was killed in the Blitz"},
+    {"t": 0.96, "score": 3, "event": "Their reunion existed only in her novel"},
+    {"t": 1.0, "score": 4, "event": "Her final novel becomes her lifelong act of atonement"}
+  ]
+}

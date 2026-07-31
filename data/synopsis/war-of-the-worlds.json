@@ -1,0 +1,27 @@
+{
+  "id": "war-of-the-worlds",
+  "title": "The War of the Worlds",
+  "author": "H. G. Wells",
+  "year": 1898,
+  "region": "west",
+  "protagonist": "the unnamed narrator",
+  "source": ["https://en.wikipedia.org/wiki/The_War_of_the_Worlds"],
+  "beats": [
+    {"t": 0.03, "score": 5, "event": "Martians on a dying planet plan an invasion of Earth"},
+    {"t": 0.08, "score": 5, "event": "A cylinder lands on Horsell Common near narrator's home"},
+    {"t": 0.13, "score": 2, "event": "Martians incinerate approaching delegation with heat ray"},
+    {"t": 0.20, "score": 2, "event": "Tripods devastate Woking; narrator hides in ruins"},
+    {"t": 0.28, "score": 2, "event": "Narrator finds his landlord dead, flees with an artilleryman"},
+    {"t": 0.36, "score": 5, "event": "Artillery destroys one tripod; Martians briefly retreat"},
+    {"t": 0.42, "score": 3, "event": "Narrator reaches Walton and takes shelter with a curate"},
+    {"t": 0.48, "score": 2, "event": "Black smoke chokes towns; London panics and evacuates"},
+    {"t": 0.55, "score": 4, "event": "HMS Thunder Child destroys three tripods before sinking"},
+    {"t": 0.63, "score": 1, "event": "Fifth cylinder buries narrator and curate under manor ruins"},
+    {"t": 0.68, "score": 1, "event": "Watches Martians drain blood from captured humans"},
+    {"t": 0.73, "score": 2, "event": "Curate goes mad; narrator knocks him out; tentacle takes him"},
+    {"t": 0.80, "score": 3, "event": "Escapes ruined house; wanders red-weed wasteland"},
+    {"t": 0.87, "score": 5, "event": "Enters deserted London; finds Martians dead of earth germs"},
+    {"t": 0.93, "score": 3, "event": "Suffers a nervous breakdown, cared for by strangers"},
+    {"t": 0.98, "score": 8, "event": "Returns to Woking and reunites with his wife"}
+  ]
+}

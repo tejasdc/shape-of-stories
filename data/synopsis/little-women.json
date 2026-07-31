@@ -1,0 +1,22 @@
+{"id": "little-women", "title": "Little Women", "author": "Louisa May Alcott", "year": 1868, "region": "west", "protagonist": "Jo March", "source": ["https://en.wikipedia.org/wiki/Little_Women"], "beats": [
+  {"t": 0.03, "score": 4, "event": "March sisters in genteel poverty; father is army chaplain"},
+  {"t": 0.10, "score": 6, "event": "Give away Christmas breakfast to Hummels; Laurence sends feast"},
+  {"t": 0.18, "score": 5, "event": "Meg tutors, Jo works for aunt; sisters befriend Laurie"},
+  {"t": 0.25, "score": 3, "event": "Mr. March falls ill; Marmee travels to Washington"},
+  {"t": 0.30, "score": 6, "event": "John Brooke confesses love for Meg to her parents"},
+  {"t": 0.35, "score": 3, "event": "Beth contracts scarlet fever; recovers but weakened"},
+  {"t": 0.40, "score": 7, "event": "Mr. March returns home on Christmas Day"},
+  {"t": 0.50, "score": 7, "event": "Three years later, Meg marries John Brooke"},
+  {"t": 0.55, "score": 6, "event": "Meg has twins and navigates married life"},
+  {"t": 0.60, "score": 4, "event": "Laurie proposes to Jo; she declines"},
+  {"t": 0.65, "score": 5, "event": "Jo goes to New York as governess"},
+  {"t": 0.70, "score": 6, "event": "Meets Professor Bhaer, who influences her writing"},
+  {"t": 0.78, "score": 2, "event": "Beth's health deteriorates permanently"},
+  {"t": 0.82, "score": 1, "event": "Beth dies; family devastated"},
+  {"t": 0.87, "score": 6, "event": "Laurie meets Amy in Europe and falls in love"},
+  {"t": 0.92, "score": 8, "event": "Friedrich proposes to Jo"},
+  {"t": 0.93, "score": 7, "event": "Amy and Laurie marry in Europe"},
+  {"t": 0.95, "score": 7, "event": "Aunt March dies, leaving Jo the Plumfield estate"},
+  {"t": 0.97, "score": 8, "event": "Jo and Friedrich marry, start a school for boys"},
+  {"t": 1.00, "score": 8, "event": "Marmee's 60th birthday surrounded by family"}
+]}

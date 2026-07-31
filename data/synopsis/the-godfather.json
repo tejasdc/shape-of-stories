@@ -1,0 +1,26 @@
+{
+  "id": "the-godfather",
+  "title": "The Godfather",
+  "author": "Mario Puzo",
+  "year": 1969,
+  "region": "west",
+  "protagonist": "Michael Corleone",
+  "source": ["https://en.wikipedia.org/wiki/The_Godfather_(novel)"],
+  "beats": [
+    {"t": 0.05, "score": 7, "event": "War hero home from combat, dating Kay, outside the family business"},
+    {"t": 0.15, "score": 3, "event": "Father Vito is shot in the street by Sollozzo's men"},
+    {"t": 0.25, "score": 3, "event": "Volunteers to kill Sollozzo and a corrupt police captain"},
+    {"t": 0.30, "score": 2, "event": "Murders both men in a Bronx restaurant"},
+    {"t": 0.40, "score": 3, "event": "Exiled to hide in Sicily, cut off from Kay and home"},
+    {"t": 0.48, "score": 6, "event": "Falls in love with and marries the Sicilian girl Apollonia"},
+    {"t": 0.55, "score": 1, "event": "Apollonia killed by a car bomb meant for him"},
+    {"t": 0.65, "score": 2, "event": "Learns brother Sonny was gunned down on the causeway"},
+    {"t": 0.72, "score": 4, "event": "Returns to America, hardened, to succeed his father"},
+    {"t": 0.78, "score": 5, "event": "Marries Kay to build a legitimate façade"},
+    {"t": 0.85, "score": 4, "event": "Takes over as Don after Vito's death in the garden"},
+    {"t": 0.90, "score": 3, "event": "Orders coordinated murders of all family enemies"},
+    {"t": 0.94, "score": 2, "event": "Has his brother-in-law Carlo strangled for betraying Sonny"},
+    {"t": 0.97, "score": 2, "event": "Lies to Kay's face about the killings"},
+    {"t": 1.0, "score": 2, "event": "Sits alone in power; the man he was is gone"}
+  ]
+}

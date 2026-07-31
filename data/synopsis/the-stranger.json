@@ -1,0 +1,27 @@
+{
+  "id": "the-stranger",
+  "title": "The Stranger",
+  "author": "Albert Camus",
+  "year": 1942,
+  "region": "west",
+  "protagonist": "Meursault",
+  "source": ["https://en.wikipedia.org/wiki/The_Stranger_(Camus_novel)"],
+  "beats": [
+    {"t": 0.05, "score": 4, "event": "Meursault learns of his mother's death"},
+    {"t": 0.10, "score": 4, "event": "Attends her funeral without visible grief"},
+    {"t": 0.16, "score": 6, "event": "Reconnects with Marie; they swim and begin an affair"},
+    {"t": 0.22, "score": 5, "event": "Befriends neighbour Raymond, rumoured pimp"},
+    {"t": 0.28, "score": 5, "event": "Writes a cruel letter to Raymond's mistress on his behalf"},
+    {"t": 0.34, "score": 4, "event": "Testifies for Raymond after he beats the mistress"},
+    {"t": 0.40, "score": 6, "event": "Boss offers Paris job; Marie proposes marriage"},
+    {"t": 0.46, "score": 5, "event": "Agrees to both with detached indifference"},
+    {"t": 0.52, "score": 6, "event": "Weekend at a beach cabin with Raymond and Marie"},
+    {"t": 0.56, "score": 3, "event": "Raymond wounded by the mistress's brother in a knife fight"},
+    {"t": 0.62, "score": 1, "event": "In dazed heat, Meursault shoots the Arab, fires four more times"},
+    {"t": 0.70, "score": 2, "event": "Arrested and imprisoned; adapts easily to confinement"},
+    {"t": 0.80, "score": 1, "event": "Trial fixates on his coldness at his mother's funeral"},
+    {"t": 0.88, "score": 1, "event": "Prosecutor demands death; the jury complies"},
+    {"t": 0.94, "score": 2, "event": "Meursault violently rejects the visiting chaplain's comfort"},
+    {"t": 1.00, "score": 5, "event": "Accepting life's meaninglessness, he feels happy before execution"}
+  ]
+}

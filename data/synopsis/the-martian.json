@@ -1,0 +1,26 @@
+{
+  "id": "the-martian",
+  "title": "The Martian",
+  "author": "Andy Weir",
+  "year": 2011,
+  "region": "west",
+  "protagonist": "Mark Watney",
+  "source": ["https://en.wikipedia.org/wiki/The_Martian_(Weir_novel)"],
+  "beats": [
+    {"t": 0.03, "score": 1, "event": "Sol 6: dust storm; a torn antenna impales him"},
+    {"t": 0.06, "score": 1, "event": "Ares 3 crew evacuates Mars presuming him dead"},
+    {"t": 0.10, "score": 3, "event": "Survives with minor injuries; begins mission log"},
+    {"t": 0.22, "score": 5, "event": "Cultivates potatoes in the Hab using hydrazine-made water"},
+    {"t": 0.32, "score": 5, "event": "NASA spots him alive on satellite imagery"},
+    {"t": 0.40, "score": 6, "event": "Recovers Pathfinder; restores two-way comms with Earth"},
+    {"t": 0.48, "score": 2, "event": "Hab airlock tears; depressurization destroys his crops"},
+    {"t": 0.55, "score": 2, "event": "NASA's emergency resupply rocket explodes at launch"},
+    {"t": 0.62, "score": 5, "event": "Purnell trajectory: Hermes crew defies NASA to return"},
+    {"t": 0.72, "score": 4, "event": "Modifies rover for 3,235-km trek to Schiaparelli crater"},
+    {"t": 0.80, "score": 3, "event": "Accidentally shorts Pathfinder; loses two-way comms"},
+    {"t": 0.88, "score": 4, "event": "Survives dust storm and rover rollover to reach the MAV"},
+    {"t": 0.93, "score": 2, "event": "Stripped MAV launches; canvas tears in mid-ascent"},
+    {"t": 0.97, "score": 4, "event": "Lewis improvises intercept with sugar-and-oxygen bomb"},
+    {"t": 1.0, "score": 8, "event": "Beck tethers him in; Watney is finally rescued"}
+  ]
+}

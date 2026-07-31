@@ -1,0 +1,15 @@
+{"id": "to-kill-a-mockingbird", "title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960, "region": "west", "protagonist": "Scout Finch", "source": ["https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird"], "beats": [
+  {"t": 0.05, "score": 6, "event": "Six-year-old Scout lives with brother Jem and father Atticus"},
+  {"t": 0.10, "score": 7, "event": "Befriends the visiting boy Dill each summer"},
+  {"t": 0.16, "score": 6, "event": "Fascinated and afraid of reclusive neighbor Boo Radley"},
+  {"t": 0.25, "score": 7, "event": "Small gifts appear for her and Jem in the Radleys' tree"},
+  {"t": 0.42, "score": 4, "event": "Other children taunt them for Atticus defending Tom"},
+  {"t": 0.48, "score": 4, "event": "Tempted to fight to defend her father's honor"},
+  {"t": 0.55, "score": 6, "event": "At the jail she shames the lynch mob into breaking up"},
+  {"t": 0.65, "score": 6, "event": "Rev. Sykes takes the children up to watch Tom's trial"},
+  {"t": 0.78, "score": 2, "event": "Jem's faith in justice is shattered by the guilty verdict"},
+  {"t": 0.88, "score": 1, "event": "Ewell attacks her and Jem walking home from the pageant"},
+  {"t": 0.93, "score": 6, "event": "Realizes the man carrying wounded Jem home is Boo Radley"},
+  {"t": 0.97, "score": 7, "event": "Walks Boo back to his porch"},
+  {"t": 1.00, "score": 7, "event": "Standing on Boo's porch, imagines the world from his side"}
+]}

@@ -1,0 +1,26 @@
+{
+  "id": "diary-of-a-young-girl",
+  "title": "The Diary of a Young Girl",
+  "author": "Anne Frank",
+  "year": 1947,
+  "region": "west",
+  "protagonist": "Anne Frank",
+  "source": ["https://en.wikipedia.org/wiki/The_Diary_of_a_Young_Girl"],
+  "beats": [
+    {"t": 0.03, "score": 6, "event": "Given a diary as a 13th-birthday present"},
+    {"t": 0.08, "score": 6, "event": "Begins writing about school, family and friends"},
+    {"t": 0.14, "score": 4, "event": "Notes tightening Nazi laws: yellow star, curfews"},
+    {"t": 0.20, "score": 2, "event": "Sister Margot receives a Nazi work-camp summons"},
+    {"t": 0.23, "score": 2, "event": "Family flees into hiding in the sealed annex"},
+    {"t": 0.30, "score": 3, "event": "Van Pels family joins them in the annex"},
+    {"t": 0.36, "score": 3, "event": "Dentist Fritz Pfeffer arrives to share her room"},
+    {"t": 0.43, "score": 4, "event": "Consolidates her letters into ones addressed to 'Kitty'"},
+    {"t": 0.52, "score": 3, "event": "Documents deportations and rumors of gassing"},
+    {"t": 0.60, "score": 4, "event": "Constant friction with her mother and the adults"},
+    {"t": 0.68, "score": 5, "event": "Radio broadcast inspires her to write for publication"},
+    {"t": 0.75, "score": 5, "event": "Begins revising her diary as a future book"},
+    {"t": 0.82, "score": 6, "event": "Grows close to Peter van Pels, hoping for a kindred spirit"},
+    {"t": 0.88, "score": 4, "event": "Concludes Peter cannot really be that kindred spirit"},
+    {"t": 0.92, "score": 4, "event": "Writes her final entry, still believing people are good"}
+  ]
+}

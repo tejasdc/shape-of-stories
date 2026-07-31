@@ -1,0 +1,22 @@
+{"id": "anna-karenina", "title": "Anna Karenina", "author": "Leo Tolstoy", "year": 1877, "region": "west", "protagonist": "Anna Karenina", "source": ["https://en.wikipedia.org/wiki/Anna_Karenina"], "beats": [
+  {"t": 0.04, "score": 4, "event": "Stiva's infidelity disrupts his household"},
+  {"t": 0.08, "score": 6, "event": "Anna arrives in Moscow to mediate for her brother"},
+  {"t": 0.12, "score": 5, "event": "Levin proposes to Kitty; she refuses, drawn to Vronsky"},
+  {"t": 0.15, "score": 6, "event": "At the ball, Vronsky dances with Anna, not Kitty"},
+  {"t": 0.17, "score": 3, "event": "Railway worker dies; Anna reads it as an omen"},
+  {"t": 0.25, "score": 5, "event": "Anna and Vronsky begin their affair"},
+  {"t": 0.30, "score": 4, "event": "Vronsky falls from his horse at the steeplechase"},
+  {"t": 0.33, "score": 3, "event": "Anna confesses everything to Karenin"},
+  {"t": 0.36, "score": 3, "event": "Karenin asks her to end the relationship"},
+  {"t": 0.45, "score": 2, "event": "Anna has a difficult childbirth"},
+  {"t": 0.48, "score": 3, "event": "Karenin forgives her; Vronsky's suicide attempt fails"},
+  {"t": 0.55, "score": 5, "event": "Anna and Vronsky flee to Italy"},
+  {"t": 0.58, "score": 8, "event": "Levin and Kitty become engaged"},
+  {"t": 0.65, "score": 7, "event": "Levin and Kitty marry, begin life on the estate"},
+  {"t": 0.68, "score": 3, "event": "In Italy Vronsky feels bored and unsatisfied"},
+  {"t": 0.75, "score": 2, "event": "Returning to Russia, Anna faces social rejection"},
+  {"t": 0.82, "score": 2, "event": "Anna becomes intensely jealous of Vronsky"},
+  {"t": 0.88, "score": 1, "event": "Morphine addiction; paranoid over Vronsky's fidelity"},
+  {"t": 0.92, "score": 1, "event": "Anna throws herself under a passing freight train"},
+  {"t": 1.00, "score": 7, "event": "Levin finds meaning through Christian faith"}
+]}

@@ -1,0 +1,28 @@
+{
+  "id": "wizard-of-oz",
+  "title": "The Wonderful Wizard of Oz",
+  "author": "L. Frank Baum",
+  "year": 1900,
+  "region": "west",
+  "protagonist": "Dorothy Gale",
+  "source": ["https://en.wikipedia.org/wiki/The_Wonderful_Wizard_of_Oz"],
+  "beats": [
+    {"t": 0.03, "score": 5, "event": "Dorothy lives with Aunt Em, Uncle Henry, and Toto in Kansas"},
+    {"t": 0.07, "score": 2, "event": "Cyclone sweeps house and Dorothy into the Land of Oz"},
+    {"t": 0.12, "score": 7, "event": "House kills Wicked Witch of the East; Munchkins celebrate"},
+    {"t": 0.17, "score": 6, "event": "Good Witch of the North gives her the silver shoes"},
+    {"t": 0.23, "score": 6, "event": "Dorothy rescues the Scarecrow from his pole"},
+    {"t": 0.28, "score": 6, "event": "Oils the rusted Tin Woodman, who joins her quest"},
+    {"t": 0.33, "score": 6, "event": "Meets the Cowardly Lion, who joins the group"},
+    {"t": 0.42, "score": 6, "event": "Party reaches the Emerald City; audience with the Wizard"},
+    {"t": 0.48, "score": 3, "event": "Wizard demands they kill the Wicked Witch of the West"},
+    {"t": 0.55, "score": 4, "event": "Companions repel wolves, crows, and bees sent by the witch"},
+    {"t": 0.62, "score": 2, "event": "Winged Monkeys capture Dorothy; the witch enslaves her"},
+    {"t": 0.70, "score": 8, "event": "Dorothy melts the witch with a bucket of water"},
+    {"t": 0.76, "score": 7, "event": "Wins the Golden Cap; frees companions; returns to Emerald City"},
+    {"t": 0.83, "score": 5, "event": "Wizard exposed as an ordinary man; gives symbolic gifts"},
+    {"t": 0.88, "score": 3, "event": "Wizard's balloon lifts off without her; she is stranded"},
+    {"t": 0.94, "score": 7, "event": "Glinda reveals her silver shoes can carry her home"},
+    {"t": 0.99, "score": 8, "event": "Dorothy clicks her heels three times; wakes safe in Kansas"}
+  ]
+}

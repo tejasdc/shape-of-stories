@@ -1,0 +1,17 @@
+{"id": "cinderella-perrault", "title": "Cinderella", "author": "Charles Perrault", "year": 1697, "region": "west", "protagonist": "Cinderella (Cendrillon)", "source": ["https://en.wikipedia.org/wiki/Cinderella"], "beats": [
+{"t": 0.05, "score": 4, "event": "Her wealthy father remarries a proud widow with two haughty daughters"},
+{"t": 0.15, "score": 2, "event": "Stepmother forces her into servitude, doing menial chores day and night"},
+{"t": 0.22, "score": 2, "event": "Sleeps by the ashes; nicknamed Cendrillon in mockery"},
+{"t": 0.30, "score": 3, "event": "Royal ball is announced; stepsisters taunt that maids are not invited"},
+{"t": 0.38, "score": 4, "event": "She helps her stepsisters dress for the ball and weeps when they leave"},
+{"t": 0.46, "score": 7, "event": "Fairy godmother appears, transforms pumpkin to coach, mice to horses"},
+{"t": 0.52, "score": 8, "event": "In glass slippers and a jeweled gown she enters the ball; prince entranced"},
+{"t": 0.58, "score": 7, "event": "She remembers the warning and leaves the palace before midnight"},
+{"t": 0.66, "score": 8, "event": "Attends a second ball the next evening; the prince cannot leave her side"},
+{"t": 0.72, "score": 3, "event": "Midnight strikes; fleeing, she loses one glass slipper on the palace steps"},
+{"t": 0.78, "score": 5, "event": "Prince vows to marry only the girl the slipper fits"},
+{"t": 0.85, "score": 4, "event": "Herald tries the slipper on every woman; stepsisters fail"},
+{"t": 0.92, "score": 8, "event": "Slipper fits Cinderella perfectly; she produces its mate from her pocket"},
+{"t": 0.97, "score": 9, "event": "She forgives the weeping stepsisters and marries the prince"},
+{"t": 1.00, "score": 9, "event": "As princess, she marries her stepsisters off to two wealthy noblemen"}
+]}

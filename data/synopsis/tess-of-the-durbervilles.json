@@ -1,0 +1,22 @@
+{"id": "tess-of-the-durbervilles", "title": "Tess of the d'Urbervilles", "author": "Thomas Hardy", "year": 1891, "region": "west", "protagonist": "Tess Durbeyfield", "source": ["https://en.wikipedia.org/wiki/Tess_of_the_d%27Urbervilles"], "beats": [
+  {"t": 0.04, "score": 5, "event": "Tess, 16, learns her family has noble d'Urberville ancestry"},
+  {"t": 0.08, "score": 3, "event": "Falls asleep driving; wagon crash kills the family horse"},
+  {"t": 0.14, "score": 4, "event": "Visits Mrs. d'Urberville; Alec employs her as poultry keeper"},
+  {"t": 0.20, "score": 1, "event": "Alec rapes her at a remote spot"},
+  {"t": 0.30, "score": 2, "event": "Bears sickly child Sorrow; christens him herself as he dies"},
+  {"t": 0.42, "score": 6, "event": "Years later works as milkmaid at Talbothays Dairy"},
+  {"t": 0.50, "score": 7, "event": "Grows close to apprentice farmer Angel Clare"},
+  {"t": 0.55, "score": 6, "event": "Angel proposes; Tess reluctantly accepts"},
+  {"t": 0.60, "score": 4, "event": "Attempts to confess her past, defers repeatedly"},
+  {"t": 0.65, "score": 2, "event": "Wedding night: Angel confesses affair, Tess reveals hers"},
+  {"t": 0.68, "score": 1, "event": "Angel feels betrayed, separates, leaves for Brazil"},
+  {"t": 0.75, "score": 2, "event": "Destitute Tess labors at harsh Flintcomb-Ash farm"},
+  {"t": 0.80, "score": 2, "event": "Alec persistently pursues her despite the marriage"},
+  {"t": 0.83, "score": 2, "event": "Her father dies; family faces eviction"},
+  {"t": 0.87, "score": 2, "event": "Alec offers shelter; Tess submits"},
+  {"t": 0.90, "score": 3, "event": "Angel repents, returns, finds her as 'Mrs d'Urberville'"},
+  {"t": 0.92, "score": 2, "event": "She tells him he has arrived too late"},
+  {"t": 0.94, "score": 2, "event": "Tess stabs Alec to death"},
+  {"t": 0.97, "score": 3, "event": "Five days with Angel; arrested at Stonehenge at dawn"},
+  {"t": 1.00, "score": 1, "event": "Black flag over prison signals her execution"}
+]}

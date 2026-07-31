@@ -1,0 +1,18 @@
+{"id": "lord-of-the-flies", "title": "Lord of the Flies", "author": "William Golding", "year": 1954, "region": "west", "protagonist": "Ralph", "source": ["https://en.wikipedia.org/wiki/Lord_of_the_Flies"], "beats": [
+  {"t": 0.03, "score": 5, "event": "Ralph meets Piggy on the beach after the crash"},
+  {"t": 0.08, "score": 6, "event": "Blows the conch to gather the surviving boys"},
+  {"t": 0.13, "score": 7, "event": "Elected chief; commands authority"},
+  {"t": 0.18, "score": 6, "event": "Sets goals: fun, survival, and a constant signal fire"},
+  {"t": 0.25, "score": 6, "event": "Signal fire lit using Piggy's glasses"},
+  {"t": 0.38, "score": 4, "event": "Boys grow lazy; order deteriorates"},
+  {"t": 0.48, "score": 3, "event": "Can't dispel the beast rumor; Jack gains sway"},
+  {"t": 0.55, "score": 4, "event": "Nearly resigns; Piggy talks him out of it"},
+  {"t": 0.62, "score": 3, "event": "Jack breaks away to form his own tribe"},
+  {"t": 0.70, "score": 3, "event": "Visits Jack's painted, dancing tribe with Piggy"},
+  {"t": 0.78, "score": 2, "event": "Tells himself Simon's killing was not his fault"},
+  {"t": 0.85, "score": 2, "event": "Confronts Jack to retrieve Piggy's stolen glasses"},
+  {"t": 0.90, "score": 1, "event": "He escapes but Sam and Eric are captured"},
+  {"t": 0.95, "score": 1, "event": "Hunted through the burning forest"},
+  {"t": 0.98, "score": 6, "event": "Falls at the feet of a British naval officer, rescued"},
+  {"t": 1.00, "score": 4, "event": "Weeps for the end of innocence"}
+]}

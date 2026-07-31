@@ -1,0 +1,20 @@
+{"id": "journey-to-the-west", "title": "Journey to the West", "author": "Wu Cheng'en", "year": 1592, "region": "china", "protagonist": "Sun Wukong (the Monkey King)", "source": ["https://en.wikipedia.org/wiki/Journey_to_the_West"], "beats": [
+  {"t": 0.02, "score": 6, "event": "Born from a stone on Flower Fruit Mountain, becomes Handsome Monkey King"},
+  {"t": 0.05, "score": 5, "event": "Sees a monkey die of old age; sets off to seek immortality"},
+  {"t": 0.08, "score": 7, "event": "Trained by Grand Master Bodhi; learns 72 transformations, cloud flight"},
+  {"t": 0.12, "score": 5, "event": "Jade Emperor gives him minor post as Keeper of the Horses"},
+  {"t": 0.15, "score": 8, "event": "Rejects the rank; declares himself Great Sage Equal to Heaven"},
+  {"t": 0.18, "score": 8, "event": "Guards immortal peaches, eats nearly all the ripe ones himself"},
+  {"t": 0.20, "score": 8, "event": "Steals heavenly wine and Laozi's immortality pills"},
+  {"t": 0.22, "score": 9, "event": "Defeats a celestial army of 100,000 sent against him"},
+  {"t": 0.25, "score": 3, "event": "Loses the Buddha's wager, cannot leap out of his palm"},
+  {"t": 0.28, "score": 1, "event": "Buried under Five Elements Mountain for 500 years"},
+  {"t": 0.32, "score": 6, "event": "Tang Sanzang finds and frees him to escort the scripture pilgrimage"},
+  {"t": 0.34, "score": 3, "event": "Guanyin locks a gold ring on his head; mantra brings agony"},
+  {"t": 0.40, "score": 6, "event": "Becomes first disciple; subdues Zhu Bajie and Sha Wujing en route"},
+  {"t": 0.55, "score": 6, "event": "Fights demons across the journey with his Ruyi Jingu Bang staff"},
+  {"t": 0.72, "score": 6, "event": "Twenty-plus demon episodes; repeatedly saves his master"},
+  {"t": 0.90, "score": 6, "event": "Climactic supernatural trials as pilgrims approach India"},
+  {"t": 0.97, "score": 8, "event": "Party reaches Vulture Peak and receives the Buddhist scriptures"},
+  {"t": 1.00, "score": 9, "event": "Ascends as the Victorious Fighting Buddha"}
+]}

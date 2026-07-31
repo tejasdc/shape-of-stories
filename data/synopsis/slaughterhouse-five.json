@@ -1,0 +1,21 @@
+{"id": "slaughterhouse-five", "title": "Slaughterhouse-Five", "author": "Kurt Vonnegut", "year": 1969, "region": "west", "protagonist": "Billy Pilgrim", "source": ["https://en.wikipedia.org/wiki/Slaughterhouse-Five"], "beats": [
+  {"t": 0.03, "score": 5, "event": "Narrator opens: All this happened, more or less"},
+  {"t": 0.07, "score": 4, "event": "Narrator recounts his Dresden research, the Children's Crusade angle"},
+  {"t": 0.12, "score": 4, "event": "Billy Pilgrim of Ilium introduced; claims to have been abducted by Tralfamadorians"},
+  {"t": 0.20, "score": 4, "event": "An ill-trained chaplain's assistant in the U.S. Army"},
+  {"t": 0.26, "score": 3, "event": "Shipped from South Carolina to the Battle of the Bulge"},
+  {"t": 0.32, "score": 3, "event": "Meets the sadistic bully Roland Weary in the retreat"},
+  {"t": 0.38, "score": 2, "event": "Captured by the Germans in 1944"},
+  {"t": 0.44, "score": 4, "event": "Comes unstuck in time, jumping through his life"},
+  {"t": 0.55, "score": 2, "event": "In Slaughterhouse Five as Dresden is firebombed above him"},
+  {"t": 0.62, "score": 3, "event": "Postwar, hospitalized with PTSD-like symptoms at Lake Placid"},
+  {"t": 0.68, "score": 7, "event": "Marries Valencia; becomes a wealthy optometrist"},
+  {"t": 0.72, "score": 6, "event": "On his daughter's wedding night, taken to Tralfamadore with Montana Wildhack"},
+  {"t": 0.78, "score": 4, "event": "Snapped back through time to old moments of his life"},
+  {"t": 0.83, "score": 2, "event": "1968: survives a plane crash in Vermont; Valencia dies driving to him"},
+  {"t": 0.87, "score": 4, "event": "Shares a hospital room with Rumfoord, discussing Dresden"},
+  {"t": 0.91, "score": 4, "event": "Escapes to Times Square, finds Kilgore Trout novels"},
+  {"t": 0.94, "score": 3, "event": "On a talk show about Tralfamadore; ejected from the studio"},
+  {"t": 0.97, "score": 3, "event": "Back in ruined Dresden, watches Edgar Derby executed for a teapot"},
+  {"t": 1.00, "score": 2, "event": "Killed by an assassin in Chicago as he had foreseen"}
+]}

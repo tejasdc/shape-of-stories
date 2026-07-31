@@ -1,0 +1,25 @@
+{
+  "id": "the-handmaids-tale",
+  "title": "The Handmaid's Tale",
+  "author": "Margaret Atwood",
+  "year": 1985,
+  "region": "west",
+  "protagonist": "Offred",
+  "source": ["https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale"],
+  "beats": [
+    {"t": 0.03, "score": 5, "event": "Pre-Gilead: ordinary life with husband and young daughter"},
+    {"t": 0.08, "score": 2, "event": "Sons of Jacob seize U.S. government; Gilead strips women's rights"},
+    {"t": 0.13, "score": 1, "event": "Captured fleeing to Canada; deemed adulteress under Gilead law"},
+    {"t": 0.18, "score": 2, "event": "Accepts Handmaid training rather than the toxic Colonies"},
+    {"t": 0.28, "score": 2, "event": "Third posting; endures the Ceremony with the Commander"},
+    {"t": 0.40, "score": 4, "event": "Commander secretly summons her to library; Scrabble games"},
+    {"t": 0.55, "score": 5, "event": "Serena arranges her with Nick; genuine connection forms"},
+    {"t": 0.62, "score": 6, "event": "Offred believes herself pregnant"},
+    {"t": 0.70, "score": 5, "event": "Learns shopping partner Ofglen is Mayday resistance"},
+    {"t": 0.78, "score": 3, "event": "Ofglen disappears, reportedly by suicide"},
+    {"t": 0.85, "score": 2, "event": "Serena discovers evidence of Commander-Offred affair"},
+    {"t": 0.92, "score": 3, "event": "Eyes come for her; Nick tells her to trust him"},
+    {"t": 0.96, "score": 4, "event": "Van drives away; her fate left uncertain"},
+    {"t": 1.0, "score": 5, "event": "2195 scholars debate her surviving cassette-tape testimony"}
+  ]
+}

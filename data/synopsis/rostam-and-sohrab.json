@@ -1,0 +1,26 @@
+{
+  "id": "rostam-and-sohrab",
+  "title": "Rostam and Sohrab (from the Shahnameh)",
+  "author": "Ferdowsi",
+  "year": 1010,
+  "region": "persia",
+  "protagonist": "Rostam",
+  "source": ["https://en.wikipedia.org/wiki/Rostam_and_Sohrab"],
+  "beats": [
+    {"t": 0.05, "score": 5, "event": "Rostam loses his horse Rakhsh, hunts alone in Samangan"},
+    {"t": 0.10, "score": 6, "event": "Welcomed as guest by the king of Samangan"},
+    {"t": 0.14, "score": 7, "event": "Princess Tahmina declares her love; they marry that night"},
+    {"t": 0.18, "score": 5, "event": "Rostam departs, leaving a seal to identify any future son"},
+    {"t": 0.24, "score": 5, "event": "Sohrab is born; Tahmina hides the father's identity from him"},
+    {"t": 0.35, "score": 5, "event": "Sohrab grows into the greatest warrior in the Turanian army"},
+    {"t": 0.45, "score": 5, "event": "Sohrab leads an army against Iran, hoping to install Rostam"},
+    {"t": 0.55, "score": 4, "event": "Rostam and Sohrab meet on the battlefield, neither knowing"},
+    {"t": 0.65, "score": 3, "event": "In the first duel, Sohrab pins the exhausted Rostam"},
+    {"t": 0.70, "score": 4, "event": "Rostam tricks Sohrab with the 'two falls' custom and is spared"},
+    {"t": 0.78, "score": 4, "event": "Rostam prays to Yazdan for renewed strength"},
+    {"t": 0.87, "score": 4, "event": "In the second duel Rostam breaks Sohrab's back and stabs him"},
+    {"t": 0.92, "score": 1, "event": "Dying Sohrab reveals the arm-seal; Rostam knows his son"},
+    {"t": 0.97, "score": 1, "event": "The antidote arrives too late; Sohrab dies in his father's arms"},
+    {"t": 1.00, "score": 1, "event": "Tahmina burns Sohrab's house and dies of grief"}
+  ]
+}

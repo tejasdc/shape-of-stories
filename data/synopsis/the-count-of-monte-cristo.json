@@ -1,0 +1,19 @@
+{"id": "the-count-of-monte-cristo", "title": "The Count of Monte Cristo", "author": "Alexandre Dumas", "year": 1844, "region": "west", "protagonist": "Edmond Dantès", "source": ["https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo"], "beats": [
+{"t": 0.03, "score": 7, "event": "Sailor Dantès returns to Marseille and is to be made captain of the Pharaon"},
+{"t": 0.06, "score": 8, "event": "Engaged to Mercédès; the wedding feast begins"},
+{"t": 0.10, "score": 3, "event": "Danglars and Fernand write an anonymous denunciation of Dantès as a Bonapartist"},
+{"t": 0.13, "score": 1, "event": "Dantès is arrested at his own wedding table"},
+{"t": 0.17, "score": 1, "event": "Villefort burns the letter and locks him for life in the Château d'If"},
+{"t": 0.24, "score": 1, "event": "Fourteen years of solitary; near suicide from despair"},
+{"t": 0.30, "score": 4, "event": "Abbé Faria digs into his cell; educates him for eight years"},
+{"t": 0.36, "score": 5, "event": "Dying Faria reveals a vast treasure hidden on the isle of Monte Cristo"},
+{"t": 0.40, "score": 6, "event": "Dantès swaps himself for Faria's corpse; is flung into the sea and escapes"},
+{"t": 0.46, "score": 8, "event": "He digs up the Spada treasure on Monte Cristo; buys the title of Count"},
+{"t": 0.55, "score": 7, "event": "As the mysterious Count he enters Paris society through young Albert de Morcerf"},
+{"t": 0.65, "score": 6, "event": "Meets Mercédès after twenty-three years; she recognizes him but keeps silent"},
+{"t": 0.75, "score": 7, "event": "Exposes Fernand's betrayal of Ali Pasha; Fernand shoots himself in disgrace"},
+{"t": 0.82, "score": 7, "event": "Manipulates the Villefort household; Villefort goes mad discovering his wife's poisonings"},
+{"t": 0.89, "score": 7, "event": "Danglars is stripped of his fortune by bandits and reduced to beggary"},
+{"t": 0.94, "score": 5, "event": "Sickened by the collateral suffering, Dantès forgives Danglars and stops"},
+{"t": 1.00, "score": 7, "event": "The Count sails away with Haydée, leaving 'Wait and Hope' behind him"}
+]}

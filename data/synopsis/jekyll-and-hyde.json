@@ -1,0 +1,18 @@
+{"id": "jekyll-and-hyde", "title": "Strange Case of Dr Jekyll and Mr Hyde", "author": "Robert Louis Stevenson", "year": 1886, "region": "west", "protagonist": "Dr. Henry Jekyll", "source": ["https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde"], "beats": [
+  {"t": 0.05, "score": 3, "event": "Enfield witnesses Hyde trample a young girl in the street"},
+  {"t": 0.08, "score": 3, "event": "Hyde compensates the family via a cheque signed by Jekyll"},
+  {"t": 0.18, "score": 3, "event": "Utterson finds Jekyll's will names Hyde as sole heir"},
+  {"t": 0.32, "score": 1, "event": "Servant sees Hyde beat Sir Danvers Carew to death"},
+  {"t": 0.36, "score": 2, "event": "Cane at scene traced to Jekyll"},
+  {"t": 0.42, "score": 2, "event": "Police search Hyde's abandoned apartment"},
+  {"t": 0.52, "score": 6, "event": "Jekyll appears rejuvenated and sociable for two months"},
+  {"t": 0.62, "score": 3, "event": "Jekyll abruptly turns reclusive, refusing all visitors"},
+  {"t": 0.72, "score": 2, "event": "Lanyon dies after witnessing Hyde transform into Jekyll"},
+  {"t": 0.76, "score": 3, "event": "Lanyon leaves sealed instructions for Utterson"},
+  {"t": 0.85, "score": 2, "event": "Utterson and Poole break into Jekyll's laboratory"},
+  {"t": 0.88, "score": 1, "event": "Find Hyde's body in Jekyll's clothes, apparent suicide"},
+  {"t": 0.92, "score": 2, "event": "Letters reveal the experiment separating good from evil"},
+  {"t": 0.95, "score": 1, "event": "Hyde emerged involuntarily and killed Carew"},
+  {"t": 0.98, "score": 1, "event": "Serum failing; Jekyll cannot reverse the transformation"},
+  {"t": 1.00, "score": 1, "event": "Jekyll ends his account as Hyde takes over permanently"}
+]}

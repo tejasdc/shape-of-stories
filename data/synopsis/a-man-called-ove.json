@@ -1,0 +1,30 @@
+{
+  "id": "a-man-called-ove",
+  "title": "A Man Called Ove",
+  "author": "Fredrik Backman",
+  "year": 2012,
+  "region": "west",
+  "protagonist": "Ove",
+  "source": ["https://en.wikipedia.org/wiki/A_Man_Called_Ove_(film)"],
+  "beats": [
+    {"t": 0.03, "score": 3, "event": "59-year-old widower; visits Sonja's grave and enforces neighborhood rules"},
+    {"t": 0.08, "score": 2, "event": "Sorts out his affairs and tries to hang himself"},
+    {"t": 0.12, "score": 3, "event": "Flashbacks: mother dies, father killed by a train"},
+    {"t": 0.18, "score": 4, "event": "Iranian neighbor Parvaneh interrupts his suicide"},
+    {"t": 0.22, "score": 3, "event": "Attempts carbon monoxide; interrupted again by Parvaneh's needs"},
+    {"t": 0.28, "score": 3, "event": "Memories of fighting to save his childhood home from demolition"},
+    {"t": 0.35, "score": 6, "event": "Meets Sonja on a train and begins to court her"},
+    {"t": 0.42, "score": 7, "event": "Becomes an engineer with Sonja's encouragement"},
+    {"t": 0.50, "score": 5, "event": "Instead of dying on the tracks, saves a fainting man"},
+    {"t": 0.55, "score": 6, "event": "Teaches Parvaneh to drive; friendship deepens"},
+    {"t": 0.60, "score": 6, "event": "Adopts a stray cat at Parvaneh's insistence"},
+    {"t": 0.65, "score": 6, "event": "Repairs a confiscated bike for a local teen"},
+    {"t": 0.70, "score": 6, "event": "Takes in Mirsad after he is disowned for being gay"},
+    {"t": 0.75, "score": 5, "event": "Fights to keep old friend Rune out of a nursing home"},
+    {"t": 0.80, "score": 3, "event": "Reveals Sonja became paraplegic in a bus crash abroad"},
+    {"t": 0.85, "score": 7, "event": "Journalist exposes the Whiteshirts; Rune stays home"},
+    {"t": 0.90, "score": 6, "event": "Reconciles with Rune"},
+    {"t": 0.94, "score": 6, "event": "Grows close to Parvaneh's family despite an enlarged heart"},
+    {"t": 1.0, "score": 7, "event": "Dies at peace; wakes to find Sonja on a train"}
+  ]
+}

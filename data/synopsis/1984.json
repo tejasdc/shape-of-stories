@@ -1,0 +1,16 @@
+{"id": "1984", "title": "1984", "author": "George Orwell", "year": 1949, "region": "west", "protagonist": "Winston Smith", "source": ["https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"], "beats": [
+  {"t": 0.05, "score": 4, "event": "Winston rewrites history at the Ministry of Truth"},
+  {"t": 0.10, "score": 3, "event": "Secretly hates the Party; knows he is already a thought-criminal"},
+  {"t": 0.15, "score": 4, "event": "Buys a diary from Charrington and writes forbidden thoughts"},
+  {"t": 0.22, "score": 3, "event": "Suspects Julia is a spy watching him at the ministry"},
+  {"t": 0.32, "score": 6, "event": "Julia slips him a love note; they begin a secret affair"},
+  {"t": 0.42, "score": 7, "event": "They meet in the rented room above Charrington's shop"},
+  {"t": 0.52, "score": 6, "event": "O'Brien invites him in, presents himself as the Brotherhood"},
+  {"t": 0.60, "score": 6, "event": "He and Julia read Goldstein's forbidden book together"},
+  {"t": 0.68, "score": 1, "event": "Thought Police storm the room; Charrington was their agent"},
+  {"t": 0.80, "score": 1, "event": "In the Ministry of Love, starved and tortured for months"},
+  {"t": 0.88, "score": 1, "event": "In Room 101 begs the rats be used on Julia instead"},
+  {"t": 0.94, "score": 2, "event": "Released, drinking alone at the Chestnut Tree Café"},
+  {"t": 0.98, "score": 2, "event": "Meets Julia; each admits betraying the other"},
+  {"t": 1.00, "score": 1, "event": "He finally accepts that he loves Big Brother"}
+]}

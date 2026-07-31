@@ -1,0 +1,27 @@
+{
+  "id": "and-then-there-were-none",
+  "title": "And Then There Were None",
+  "author": "Agatha Christie",
+  "year": 1939,
+  "region": "west",
+  "protagonist": "Vera Claythorne",
+  "source": ["https://en.wikipedia.org/wiki/And_Then_There_Were_None"],
+  "beats": [
+    {"t": 0.05, "score": 5, "event": "Ten guests invited to a lonely island off the Devon coast"},
+    {"t": 0.10, "score": 3, "event": "Gramophone plays voice accusing each guest of a killing"},
+    {"t": 0.15, "score": 3, "event": "Anthony Marston collapses dead from cyanide-laced drink"},
+    {"t": 0.22, "score": 3, "event": "Mrs Rogers found dead in her bed next morning"},
+    {"t": 0.28, "score": 2, "event": "General MacArthur killed by a blow to the head"},
+    {"t": 0.35, "score": 2, "event": "Guests conclude one of the seven survivors is the killer"},
+    {"t": 0.42, "score": 2, "event": "Mr Rogers axed at the woodpile; Emily Brent poisoned"},
+    {"t": 0.50, "score": 3, "event": "Wargrave orders drugs and firearms locked away"},
+    {"t": 0.56, "score": 3, "event": "Vera screams at seaweed dangling in her bedroom"},
+    {"t": 0.60, "score": 2, "event": "Wargrave found shot in a mock judge's wig and robe"},
+    {"t": 0.68, "score": 2, "event": "Blore sees a figure in the night; Armstrong vanishes"},
+    {"t": 0.74, "score": 1, "event": "A marble bear clock falls from Vera's window sill, kills Blore"},
+    {"t": 0.82, "score": 2, "event": "Vera and Lombard find Armstrong's drowned body on beach"},
+    {"t": 0.88, "score": 3, "event": "Vera grabs Lombard's gun and shoots him dead"},
+    {"t": 0.94, "score": 1, "event": "Alone, mind unravelling, Vera hangs herself from a noose"},
+    {"t": 0.99, "score": 1, "event": "Bottled confession later reveals Wargrave staged everything"}
+  ]
+}

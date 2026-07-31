@@ -1,0 +1,29 @@
+{
+  "id": "age-of-innocence",
+  "title": "The Age of Innocence",
+  "author": "Edith Wharton",
+  "year": 1920,
+  "region": "west",
+  "protagonist": "Newland Archer",
+  "source": ["https://en.wikipedia.org/wiki/The_Age_of_Innocence"],
+  "beats": [
+    {"t": 0.03, "score": 6, "event": "Newland engaged to lovely, conventional May Welland"},
+    {"t": 0.08, "score": 5, "event": "Countess Ellen Olenska returns to New York, trailing scandal"},
+    {"t": 0.15, "score": 5, "event": "Newland grows intrigued by Ellen's independence"},
+    {"t": 0.22, "score": 4, "event": "Ellen's plans to divorce cause a family crisis"},
+    {"t": 0.28, "score": 4, "event": "Newland persuades Ellen to abandon the divorce"},
+    {"t": 0.34, "score": 4, "event": "Newland begs May to accelerate the wedding; she refuses"},
+    {"t": 0.42, "score": 3, "event": "Confesses love to Ellen; she reciprocates but resists"},
+    {"t": 0.48, "score": 5, "event": "May's telegram consents to an early wedding"},
+    {"t": 0.55, "score": 4, "event": "Newland and May marry; his enthusiasm quietly fades"},
+    {"t": 0.62, "score": 3, "event": "Marriage feels empty; he still yearns for Ellen"},
+    {"t": 0.68, "score": 4, "event": "Meets Ellen in Newport; her family cuts her allowance"},
+    {"t": 0.74, "score": 3, "event": "Ellen refuses to elope with him"},
+    {"t": 0.80, "score": 3, "event": "Ellen returns to New York to nurse dying grandmother"},
+    {"t": 0.85, "score": 5, "event": "Ellen agrees to meet Newland secretly"},
+    {"t": 0.89, "score": 2, "event": "Discovers Ellen has decided to sail back to Europe"},
+    {"t": 0.93, "score": 2, "event": "At farewell party, May reveals pregnancy, trapping him"},
+    {"t": 0.96, "score": 3, "event": "Newland surrenders his love and stays with May"},
+    {"t": 1.00, "score": 4, "event": "Twenty-six years later in Paris, he declines to see Ellen"}
+  ]
+}

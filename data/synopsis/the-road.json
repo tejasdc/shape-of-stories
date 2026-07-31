@@ -1,0 +1,27 @@
+{
+  "id": "the-road",
+  "title": "The Road",
+  "author": "Cormac McCarthy",
+  "year": 2006,
+  "region": "west",
+  "protagonist": "the father",
+  "source": ["https://en.wikipedia.org/wiki/The_Road"],
+  "beats": [
+    {"t": 0.05, "score": 2, "event": "Father and son cross devastated post-cataclysm landscape"},
+    {"t": 0.10, "score": 3, "event": "Reassures the boy they are good guys 'carrying the fire'"},
+    {"t": 0.18, "score": 2, "event": "A marauder seizes the boy; father shoots him dead"},
+    {"t": 0.28, "score": 1, "event": "Discover a cellar of people kept for cannibalism"},
+    {"t": 0.32, "score": 2, "event": "They flee in horror"},
+    {"t": 0.40, "score": 5, "event": "Find a stocked bunker; rest and regain strength"},
+    {"t": 0.48, "score": 5, "event": "Boy insists they share food with an elderly stranger"},
+    {"t": 0.55, "score": 1, "event": "Come upon an abandoned campsite with a roasted infant"},
+    {"t": 0.62, "score": 3, "event": "Near starvation, they reach the coast"},
+    {"t": 0.68, "score": 4, "event": "Locate a drifting boat and salvage supplies"},
+    {"t": 0.75, "score": 2, "event": "A thief steals their cart on the beach"},
+    {"t": 0.80, "score": 3, "event": "Father strips the thief at gunpoint to reclaim their goods"},
+    {"t": 0.88, "score": 2, "event": "Archer shoots father in the leg; he kills attacker with flare"},
+    {"t": 0.93, "score": 1, "event": "Father's health collapses; he accepts he is dying"},
+    {"t": 0.97, "score": 1, "event": "Father dies; boy stays beside the body three days"},
+    {"t": 1.0, "score": 4, "event": "A man with a shotgun claims to be good and takes the boy"}
+  ]
+}

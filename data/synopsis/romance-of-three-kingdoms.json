@@ -1,0 +1,21 @@
+{"id": "romance-of-three-kingdoms", "title": "Romance of the Three Kingdoms", "author": "Luo Guanzhong", "year": 1400, "region": "china", "protagonist": "Liu Bei and the Shu-Han cause", "source": ["https://en.wikipedia.org/wiki/Romance_of_the_Three_Kingdoms"], "beats": [
+  {"t": 0.03, "score": 7, "event": "Peach Garden Oath binds Liu Bei, Guan Yu, and Zhang Fei as brothers"},
+  {"t": 0.08, "score": 4, "event": "Help crush the Yellow Turban Rebellion but receive scant reward"},
+  {"t": 0.16, "score": 3, "event": "Loses Xu Province to Cao Cao and is forced to flee"},
+  {"t": 0.22, "score": 4, "event": "Takes refuge under governor Liu Biao in Jing Province"},
+  {"t": 0.30, "score": 7, "event": "Visits Zhuge Liang thrice and recruits him as chief strategist"},
+  {"t": 0.36, "score": 2, "event": "Cao Cao's southern campaign routs Liu Bei's forces at Changban"},
+  {"t": 0.38, "score": 3, "event": "Zhao Yun rescues infant Liu Shan as Zhang Fei holds the bridge"},
+  {"t": 0.42, "score": 8, "event": "Sun-Liu alliance wins the decisive Battle of Red Cliffs"},
+  {"t": 0.48, "score": 7, "event": "Gains southern Jing Province in the aftermath"},
+  {"t": 0.55, "score": 8, "event": "Seizes Yi Province from Liu Zhang per the Longzhong Plan"},
+  {"t": 0.62, "score": 9, "event": "Defeats Cao Cao at Hanzhong; declares himself King of Hanzhong"},
+  {"t": 0.68, "score": 9, "event": "Founds Shu Han and proclaims himself emperor of a restored Han"},
+  {"t": 0.72, "score": 2, "event": "Guan Yu ambushed by Sun Quan's forces and executed"},
+  {"t": 0.74, "score": 1, "event": "Zhang Fei assassinated in his sleep by his own subordinates"},
+  {"t": 0.78, "score": 1, "event": "Lu Xun burns Liu Bei's revenge army at the Battle of Yiling"},
+  {"t": 0.80, "score": 1, "event": "Liu Bei dies of illness at Baidicheng, entrusting Shu to Zhuge Liang"},
+  {"t": 0.90, "score": 3, "event": "Zhuge Liang's five Northern Expeditions fail; he dies at Wuzhang Plains"},
+  {"t": 0.95, "score": 3, "event": "Jiang Wei's nine follow-up campaigns yield no lasting gain"},
+  {"t": 1.00, "score": 1, "event": "Under Liu Shan, Shu is conquered by Wei and the Han cause ends"}
+]}

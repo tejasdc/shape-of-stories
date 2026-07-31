@@ -1,0 +1,21 @@
+{"id": "tale-of-the-heike", "title": "The Tale of the Heike", "author": "anonymous", "year": 1330, "region": "japan", "protagonist": "The Taira (Heike) clan collectively", "source": ["https://en.wikipedia.org/wiki/The_Tale_of_the_Heike"], "beats": [
+  {"t": 0.02, "score": 6, "event": "Taira no Tadamori wins access to the Imperial court"},
+  {"t": 0.08, "score": 8, "event": "Kiyomori helps crush the Hōgen and Heiji rebellions"},
+  {"t": 0.15, "score": 9, "event": "Kiyomori's daughter marries the Emperor; half of Japan is Taira"},
+  {"t": 0.22, "score": 7, "event": "Kiyomori's arrogance grows: he dismisses Giō, cows the regents"},
+  {"t": 0.28, "score": 5, "event": "Shishigatani conspiracy plots against Kiyomori at the retired emperor's villa"},
+  {"t": 0.32, "score": 6, "event": "Kiyomori uncovers the plot and exiles or executes the conspirators"},
+  {"t": 0.38, "score": 4, "event": "Temple fires and omens are read as signs of Taira decline"},
+  {"t": 0.46, "score": 2, "event": "Kiyomori dies burning with supernatural fever no water can cool"},
+  {"t": 0.52, "score": 3, "event": "Munemori takes over; rebellions ignite across the provinces"},
+  {"t": 0.58, "score": 2, "event": "Minamoto no Yoshinaka smashes Taira forces at Yokotagawara"},
+  {"t": 0.64, "score": 2, "event": "Munemori flees the capital with Emperor Antoku and the regalia"},
+  {"t": 0.70, "score": 3, "event": "Yoshinaka briefly and arrogantly rules Kyoto"},
+  {"t": 0.78, "score": 1, "event": "Yoshitsune routs the Taira at Ichi-no-Tani; Shigehira captured"},
+  {"t": 0.86, "score": 1, "event": "Minamoto's 3,000 vessels close on the Taira's 1,000"},
+  {"t": 0.92, "score": 1, "event": "Battle of Dan-no-ura destroys the Taira fleet"},
+  {"t": 0.94, "score": 1, "event": "Kiyomori's widow drowns holding the child emperor Antoku"},
+  {"t": 0.96, "score": 1, "event": "Surviving Taira are paraded through the capital"},
+  {"t": 0.98, "score": 3, "event": "Kenreimon-in takes the tonsure and retires to Jakkō-in"},
+  {"t": 1.00, "score": 4, "event": "Kenreimon-in dies invoking Amitābha, sole spiritual consolation"}
+]}

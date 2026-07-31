@@ -1,0 +1,17 @@
+{"id": "the-lord-of-the-rings", "title": "The Lord of the Rings", "author": "J.R.R. Tolkien", "year": 1954, "region": "west", "protagonist": "Frodo Baggins", "source": ["https://en.wikipedia.org/wiki/The_Lord_of_the_Rings"], "beats": [
+  {"t": 0.03, "score": 6, "event": "Frodo inherits the Ring at Bilbo's birthday party"},
+  {"t": 0.08, "score": 4, "event": "Gandalf reveals it is the One Ring; Frodo must flee the Shire"},
+  {"t": 0.15, "score": 5, "event": "Sets out on foot with Sam and Pippin"},
+  {"t": 0.25, "score": 6, "event": "Elrond forms the Fellowship of the Ring around him"},
+  {"t": 0.32, "score": 4, "event": "Turned back by Caradhras; risks the Mines of Moria"},
+  {"t": 0.38, "score": 2, "event": "Gandalf falls with the Balrog into the abyss"},
+  {"t": 0.42, "score": 5, "event": "Rests in Lothlórien under Galadriel's protection"},
+  {"t": 0.50, "score": 4, "event": "Fellowship breaks; sets out for Mordor with only Sam"},
+  {"t": 0.58, "score": 4, "event": "Captures Gollum and binds him to serve as guide"},
+  {"t": 0.75, "score": 2, "event": "Gollum lures him into Shelob's lair; the spider's venom fells him"},
+  {"t": 0.80, "score": 2, "event": "Orcs carry him off; Sam sets out to rescue him"},
+  {"t": 0.92, "score": 1, "event": "At Mount Doom he claims the Ring for himself"},
+  {"t": 0.95, "score": 6, "event": "Gollum bites off his finger and falls into the Fire; Ring destroyed"},
+  {"t": 0.97, "score": 6, "event": "Eagles rescue him and Sam from the ruin"},
+  {"t": 1.00, "score": 4, "event": "Broken by the quest, sails from the Grey Havens"}
+]}

@@ -1,0 +1,18 @@
+{"id": "moby-dick", "title": "Moby-Dick", "author": "Herman Melville", "year": 1851, "region": "west", "protagonist": "Ishmael (with Ahab as the whaling fortune carrier)", "source": ["https://en.wikipedia.org/wiki/Moby-Dick"], "beats": [
+{"t": 0.03, "score": 5, "event": "Call me Ishmael; he leaves Manhattan seeking a whaling berth"},
+{"t": 0.08, "score": 5, "event": "At New Bedford's Spouter-Inn he beds down with the harpooner Queequeg"},
+{"t": 0.12, "score": 5, "event": "The two hear Father Mapple preach on Jonah"},
+{"t": 0.18, "score": 6, "event": "On Nantucket they sign aboard the whaler Pequod together"},
+{"t": 0.24, "score": 6, "event": "Peleg describes Captain Ahab as a grand, ungodly, god-like man"},
+{"t": 0.28, "score": 5, "event": "The Pequod sails on Christmas Day; shadowy stowaways glimpsed below"},
+{"t": 0.36, "score": 4, "event": "Ahab appears on deck, nails a doubloon to the mast for the whale's spotter"},
+{"t": 0.40, "score": 4, "event": "Ahab makes the crew swear vengeance on the white whale Moby Dick"},
+{"t": 0.55, "score": 5, "event": "The Pequod hails other whalers, each maimed by Moby Dick"},
+{"t": 0.65, "score": 5, "event": "Normal whales are hunted, killed and tried out for oil"},
+{"t": 0.75, "score": 3, "event": "Parsee Fedallah foretells Ahab's manner of death"},
+{"t": 0.82, "score": 3, "event": "A Pacific typhoon strikes; the compasses are reversed"},
+{"t": 0.88, "score": 2, "event": "First day of the chase: Moby Dick bites Ahab's boat in two"},
+{"t": 0.93, "score": 2, "event": "Second day: three boats smashed and Fedallah is killed"},
+{"t": 0.97, "score": 1, "event": "Third day: Moby Dick stoves the Pequod; Ahab drags to his death by his own line"},
+{"t": 1.00, "score": 3, "event": "Ishmael, sole survivor, floats on Queequeg's coffin until the Rachel picks him up"}
+]}

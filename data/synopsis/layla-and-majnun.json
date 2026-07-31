@@ -1,0 +1,30 @@
+{
+  "id": "layla-and-majnun",
+  "title": "Layla and Majnun",
+  "author": "Nizami Ganjavi",
+  "year": 1188,
+  "region": "persia",
+  "protagonist": "Majnun (Qays)",
+  "source": [
+    "https://en.wikipedia.org/wiki/Layla_and_Majnun_(Nizami_Ganjavi_poem)",
+    "https://brians.wsu.edu/2016/10/17/nizami-layla-and-majnun-1188/"
+  ],
+  "beats": [
+    {"t": 0.05, "score": 7, "event": "Qays meets Layla at school; they fall in scandalous love"},
+    {"t": 0.12, "score": 5, "event": "He sings love poems in public and is nicknamed Majnun, the mad"},
+    {"t": 0.18, "score": 4, "event": "Layla's family sequester her; his father seeks her hand"},
+    {"t": 0.24, "score": 2, "event": "Layla's father refuses, unwilling to wed her to a madman"},
+    {"t": 0.32, "score": 2, "event": "Majnun rends his clothes and flees to the desert"},
+    {"t": 0.40, "score": 2, "event": "His father takes him to the Kaaba; he prays only for more love"},
+    {"t": 0.48, "score": 1, "event": "Layla is forced into marriage with the wealthy Ibn Salam"},
+    {"t": 0.56, "score": 2, "event": "Majnun lives among wild animals in the wilderness"},
+    {"t": 0.64, "score": 3, "event": "The Bedouin prince Nawfal wages battle to win Layla for him, and fails"},
+    {"t": 0.70, "score": 3, "event": "The lovers exchange poems and letters through messengers"},
+    {"t": 0.78, "score": 2, "event": "Majnun's parents die while he remains estranged in the desert"},
+    {"t": 0.85, "score": 3, "event": "Ibn Salam dies of grief, having never consummated the marriage"},
+    {"t": 0.91, "score": 4, "event": "The lovers briefly reunite through song, not touch"},
+    {"t": 0.95, "score": 1, "event": "Layla sickens and dies, buried in her wedding dress"},
+    {"t": 0.99, "score": 1, "event": "Majnun comes to her grave and dies upon it"},
+    {"t": 1.00, "score": 2, "event": "The two are buried together, united in death"}
+  ]
+}

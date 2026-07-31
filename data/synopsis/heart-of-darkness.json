@@ -1,0 +1,28 @@
+{
+  "id": "heart-of-darkness",
+  "title": "Heart of Darkness",
+  "author": "Joseph Conrad",
+  "year": 1899,
+  "region": "west",
+  "protagonist": "Marlow",
+  "source": ["https://en.wikipedia.org/wiki/Heart_of_Darkness"],
+  "beats": [
+    {"t": 0.03, "score": 6, "event": "Marlow on the Thames begins telling his African tale"},
+    {"t": 0.08, "score": 6, "event": "Hired as riverboat captain for an ivory trading company"},
+    {"t": 0.16, "score": 4, "event": "Reaches Outer Station; sees dying African railway workers"},
+    {"t": 0.22, "score": 5, "event": "Hears of Mr Kurtz, the company's star trader"},
+    {"t": 0.30, "score": 3, "event": "Marches sixty men overland to the Central Station"},
+    {"t": 0.36, "score": 2, "event": "Finds his assigned steamboat wrecked on the riverbank"},
+    {"t": 0.44, "score": 3, "event": "Spends months painstakingly repairing the steamboat"},
+    {"t": 0.52, "score": 4, "event": "Two-month steamboat journey up river toward Kurtz"},
+    {"t": 0.60, "score": 2, "event": "Ambushed by arrows near the Inner Station; helmsman killed"},
+    {"t": 0.66, "score": 4, "event": "Russian trader boards; explains natives worship Kurtz"},
+    {"t": 0.72, "score": 2, "event": "Sees a row of severed heads on posts around the station"},
+    {"t": 0.77, "score": 3, "event": "Emaciated Kurtz appears carried on a stretcher"},
+    {"t": 0.82, "score": 3, "event": "Kurtz crawls back ashore at midnight; Marlow drags him back"},
+    {"t": 0.88, "score": 2, "event": "Kurtz's health collapses on the return down river"},
+    {"t": 0.92, "score": 1, "event": "Kurtz dies whispering 'The horror! The horror!'"},
+    {"t": 0.96, "score": 3, "event": "Marlow returns to Europe, embittered, withholds papers"},
+    {"t": 0.99, "score": 3, "event": "Tells Kurtz's fiancee her name was his final word"}
+  ]
+}

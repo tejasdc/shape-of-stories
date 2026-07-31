@@ -1,0 +1,21 @@
+{"id": "tom-sawyer", "title": "The Adventures of Tom Sawyer", "author": "Mark Twain", "year": 1876, "region": "west", "protagonist": "Tom Sawyer", "source": ["https://en.wikipedia.org/wiki/The_Adventures_of_Tom_Sawyer"], "beats": [
+  {"t": 0.03, "score": 3, "event": "Aunt Polly punishes Tom to whitewash the fence"},
+  {"t": 0.06, "score": 7, "event": "Tom cons neighbor kids into paying to do his work"},
+  {"t": 0.12, "score": 7, "event": "Trades trinkets for tickets, wins the Bible prize"},
+  {"t": 0.20, "score": 7, "event": "Pursues and wins Becky Thatcher with a kiss"},
+  {"t": 0.25, "score": 3, "event": "Becky learns of Amy Lawrence; relationship collapses"},
+  {"t": 0.32, "score": 3, "event": "Midnight graveyard: Tom and Huck witness body-snatchers"},
+  {"t": 0.35, "score": 2, "event": "Injun Joe murders Dr. Robinson and frames Muff Potter"},
+  {"t": 0.38, "score": 3, "event": "Boys swear a blood oath to say nothing"},
+  {"t": 0.45, "score": 7, "event": "Tom, Joe and Huck run away to Jackson's Island as pirates"},
+  {"t": 0.52, "score": 8, "event": "Town believes them drowned; boys attend their own funeral"},
+  {"t": 0.62, "score": 6, "event": "Tom breaks his oath and testifies against Injun Joe"},
+  {"t": 0.65, "score": 6, "event": "Injun Joe flees; Muff Potter acquitted"},
+  {"t": 0.75, "score": 1, "event": "Tom and Becky are lost in the cave for three days"},
+  {"t": 0.80, "score": 3, "event": "Tom encounters Injun Joe in the cave but escapes"},
+  {"t": 0.82, "score": 7, "event": "Tom and Becky find their way out"},
+  {"t": 0.87, "score": 6, "event": "Judge Thatcher locks the cave entrance"},
+  {"t": 0.90, "score": 6, "event": "Injun Joe found starved to death inside"},
+  {"t": 0.95, "score": 9, "event": "Tom and Huck find buried treasure worth $12,000"},
+  {"t": 1.00, "score": 8, "event": "Widow Douglas adopts Huck; Tom pitches a robber gang"}
+]}

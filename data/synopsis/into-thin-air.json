@@ -1,0 +1,27 @@
+{
+  "id": "into-thin-air",
+  "title": "Into Thin Air",
+  "author": "Jon Krakauer",
+  "year": 1997,
+  "region": "west",
+  "protagonist": "Jon Krakauer",
+  "source": [
+    "https://en.wikipedia.org/wiki/Into_Thin_Air",
+    "https://en.wikipedia.org/wiki/1996_Mount_Everest_disaster"
+  ],
+  "beats": [
+    {"t": 0.05, "score": 5, "event": "On Outside assignment, joins Rob Hall's Adventure Consultants team"},
+    {"t": 0.18, "score": 5, "event": "Trains and acclimatizes; ascends through the Everest camps"},
+    {"t": 0.32, "score": 6, "event": "Departs Camp IV after midnight for the summit push"},
+    {"t": 0.42, "score": 4, "event": "Bottlenecks at the Balcony and Hillary Step cost nearly two hours"},
+    {"t": 0.52, "score": 7, "event": "Reaches the summit; already notes weather turning"},
+    {"t": 0.60, "score": 4, "event": "Begins descent as snow starts falling and light fades"},
+    {"t": 0.68, "score": 2, "event": "Blizzard intensifies to 70-knot gusts; visibility near zero"},
+    {"t": 0.75, "score": 1, "event": "Becomes lost, wandering near Kangshung Face precipice"},
+    {"t": 0.82, "score": 2, "event": "Waits through the night with stranded, dying climbers"},
+    {"t": 0.88, "score": 4, "event": "Visibility clears near midnight; some reach Camp IV alive"},
+    {"t": 0.92, "score": 2, "event": "Learns guide Rob Hall and others died on the mountain"},
+    {"t": 0.95, "score": 2, "event": "Eight recorded deaths from a single summit day"},
+    {"t": 0.99, "score": 5, "event": "Returns home; publishes Into Thin Air in 1997"}
+  ]
+}

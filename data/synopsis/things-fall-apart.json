@@ -1,0 +1,20 @@
+{"id": "things-fall-apart", "title": "Things Fall Apart", "author": "Chinua Achebe", "year": 1958, "region": "west", "protagonist": "Okonkwo", "source": ["https://en.wikipedia.org/wiki/Things_Fall_Apart"], "beats": [
+  {"t": 0.03, "score": 7, "event": "A famous wrestler and leader in Umuofia"},
+  {"t": 0.08, "score": 6, "event": "Built his wealth to escape the shadow of his indolent father"},
+  {"t": 0.13, "score": 5, "event": "Rules his household with beatings; obsessed with manliness"},
+  {"t": 0.20, "score": 6, "event": "Elders make him guardian of the boy Ikemefuna"},
+  {"t": 0.26, "score": 6, "event": "Ikemefuna comes to see him as a second father"},
+  {"t": 0.32, "score": 3, "event": "Oracle decrees the boy must die; he strikes the blow himself"},
+  {"t": 0.38, "score": 3, "event": "Haunted by nightmares after killing Ikemefuna"},
+  {"t": 0.48, "score": 2, "event": "His gun bursts at a funeral, killing Ezeudu's son"},
+  {"t": 0.52, "score": 2, "event": "Exiled with his family for seven years to Mbanta"},
+  {"t": 0.62, "score": 4, "event": "Hears in exile that White men are bringing Christianity"},
+  {"t": 0.68, "score": 3, "event": "His son Nwoye leaves the family for the missionaries"},
+  {"t": 0.78, "score": 3, "event": "Returns to find Umuofia transformed by the White men"},
+  {"t": 0.85, "score": 4, "event": "Village burns a church after a convert unmasks an elder"},
+  {"t": 0.90, "score": 2, "event": "District Commissioner jails the leaders, demands a heavy fine"},
+  {"t": 0.93, "score": 2, "event": "Court messengers humiliate the imprisoned men"},
+  {"t": 0.95, "score": 3, "event": "Calls a meeting to decide how to answer the foreigners"},
+  {"t": 0.98, "score": 1, "event": "Beheads the head messenger who tries to stop the meeting"},
+  {"t": 1.00, "score": 1, "event": "Realizing the village won't fight, he hangs himself"}
+]}

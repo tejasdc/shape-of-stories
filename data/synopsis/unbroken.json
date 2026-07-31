@@ -1,0 +1,27 @@
+{
+  "id": "unbroken",
+  "title": "Unbroken",
+  "author": "Laura Hillenbrand",
+  "year": 2010,
+  "region": "west",
+  "protagonist": "Louis Zamperini",
+  "source": ["https://en.wikipedia.org/wiki/Unbroken:_A_World_War_II_Story_of_Survival,_Resilience,_and_Redemption"],
+  "beats": [
+    {"t": 0.03, "score": 4, "event": "Grows up in Torrance, California, a troublemaking boy"},
+    {"t": 0.10, "score": 6, "event": "Brother Pete coaches him; becomes the 'Torrance Tornado'"},
+    {"t": 0.18, "score": 7, "event": "Runs the 5,000m at 1936 Berlin Olympics, placing eighth"},
+    {"t": 0.25, "score": 5, "event": "Enlists as a bombardier in the Pacific Theater"},
+    {"t": 0.30, "score": 4, "event": "Survives a heavily damaged bomber's crash landing"},
+    {"t": 0.35, "score": 2, "event": "Green Hornet crashes; eight of eleven crew are killed"},
+    {"t": 0.42, "score": 2, "event": "Adrift on a life raft with Phil and Mac"},
+    {"t": 0.48, "score": 2, "event": "Day 18: prays and promises God his life if rescued"},
+    {"t": 0.55, "score": 1, "event": "Mac dies at sea"},
+    {"t": 0.60, "score": 2, "event": "Survives 46 days at sea; captured by the Japanese"},
+    {"t": 0.68, "score": 1, "event": "Ofuna: guard 'The Bird' tortures him relentlessly"},
+    {"t": 0.78, "score": 2, "event": "Refuses to record enemy propaganda broadcasts"},
+    {"t": 0.85, "score": 3, "event": "War ends; freed and comes home traumatized"},
+    {"t": 0.90, "score": 3, "event": "Marries Cynthia; battles alcoholism and nightmares"},
+    {"t": 0.95, "score": 6, "event": "A Billy Graham crusade sparks his spiritual reawakening"},
+    {"t": 1.0, "score": 8, "event": "Forgives his tormentors; carries Olympic torch in 1998 Nagano"}
+  ]
+}

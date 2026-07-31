@@ -1,0 +1,26 @@
+{
+  "id": "beloved",
+  "title": "Beloved",
+  "author": "Toni Morrison",
+  "year": 1987,
+  "region": "west",
+  "protagonist": "Sethe",
+  "source": ["https://en.wikipedia.org/wiki/Beloved_(novel)"],
+  "beats": [
+    {"t": 0.05, "score": 3, "event": "1873: Sethe and Denver live in ghost-haunted 124 Bluestone"},
+    {"t": 0.12, "score": 5, "event": "Paul D arrives from Sweet Home and dispels the haunting"},
+    {"t": 0.18, "score": 6, "event": "The three of them go together to a carnival"},
+    {"t": 0.22, "score": 4, "event": "A mysterious young woman named Beloved appears outside"},
+    {"t": 0.28, "score": 4, "event": "Household takes her in; Denver believes she is her sister"},
+    {"t": 0.38, "score": 3, "event": "Paul D uneasy; Beloved encounter unlocks buried trauma"},
+    {"t": 0.45, "score": 2, "event": "Coworker shows Paul D newspaper clippings on the killing"},
+    {"t": 0.52, "score": 1, "event": "Sethe confesses she killed her daughter to spare her slavery"},
+    {"t": 0.58, "score": 2, "event": "Paul D leaves, saying her love is too thick"},
+    {"t": 0.68, "score": 3, "event": "Sethe fixates on Beloved as her returned murdered daughter"},
+    {"t": 0.78, "score": 2, "event": "Beloved grows demanding and pregnant-like; consumes Sethe"},
+    {"t": 0.85, "score": 4, "event": "Denver breaks isolation and asks the community for help"},
+    {"t": 0.92, "score": 3, "event": "Women exorcise Beloved; Sethe attacks landlord with ice pick"},
+    {"t": 0.96, "score": 5, "event": "Beloved vanishes; Denver integrates into the community"},
+    {"t": 0.99, "score": 6, "event": "Paul D returns; tells Sethe she is her own best thing"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "the-murder-of-roger-ackroyd",
+  "title": "The Murder of Roger Ackroyd",
+  "author": "Agatha Christie",
+  "year": 1926,
+  "region": "west",
+  "protagonist": "Dr. James Sheppard",
+  "source": ["https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd"],
+  "beats": [
+    {"t": 0.03, "score": 5, "event": "Called to certify wealthy Mrs. Ferrars's suicide"},
+    {"t": 0.08, "score": 5, "event": "Sister Caroline suspects Ferrars poisoned her husband"},
+    {"t": 0.14, "score": 6, "event": "Ackroyd invites him to dinner to discuss something urgent"},
+    {"t": 0.22, "score": 5, "event": "Ackroyd says Ferrars confessed and named a blackmailer"},
+    {"t": 0.28, "score": 6, "event": "Leaves before Ackroyd opens Ferrars's damning letter"},
+    {"t": 0.35, "score": 5, "event": "Called back; Parker reports Ackroyd is dead"},
+    {"t": 0.40, "score": 6, "event": "Helps break down the door to Ackroyd's study"},
+    {"t": 0.45, "score": 5, "event": "Ackroyd found stabbed; the incriminating letter missing"},
+    {"t": 0.52, "score": 6, "event": "Stepson Ralph Paton disappears and becomes prime suspect"},
+    {"t": 0.60, "score": 6, "event": "Flora asks the retired Poirot to investigate"},
+    {"t": 0.66, "score": 6, "event": "Poirot invites Sheppard along as his companion"},
+    {"t": 0.75, "score": 5, "event": "Poirot uncovers Ralph's secret marriage to Ursula"},
+    {"t": 0.90, "score": 1, "event": "Poirot reveals Sheppard is the blackmailer and killer"},
+    {"t": 0.96, "score": 1, "event": "Told the police will be informed in the morning"},
+    {"t": 1.0, "score": 1, "event": "Left alone to take his own life"}
+  ]
+}

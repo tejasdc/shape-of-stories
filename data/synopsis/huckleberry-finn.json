@@ -1,0 +1,20 @@
+{"id": "huckleberry-finn", "title": "Adventures of Huckleberry Finn", "author": "Mark Twain", "year": 1884, "region": "west", "protagonist": "Huckleberry Finn", "source": ["https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn"], "beats": [
+  {"t": 0.03, "score": 5, "event": "Huck, ward of Widow Douglas, chafes at civilized life"},
+  {"t": 0.10, "score": 2, "event": "Abusive Pap imprisons him in a cabin"},
+  {"t": 0.15, "score": 6, "event": "Huck stages his own murder and flees to Jackson's Island"},
+  {"t": 0.20, "score": 6, "event": "Reunites with runaway slave Jim on the island"},
+  {"t": 0.25, "score": 6, "event": "They raft down the Mississippi bound for free Cairo"},
+  {"t": 0.32, "score": 4, "event": "Encounter a floating house with a dead man inside"},
+  {"t": 0.38, "score": 3, "event": "Board a grounded steamboat crawling with thieves"},
+  {"t": 0.42, "score": 3, "event": "Fog separates Huck from Jim on the river"},
+  {"t": 0.50, "score": 3, "event": "Lands with Grangerfords, a family locked in blood feud"},
+  {"t": 0.55, "score": 2, "event": "Feud erupts in slaughter; Huck escapes back to Jim"},
+  {"t": 0.60, "score": 3, "event": "The King and Duke board the raft as con men"},
+  {"t": 0.68, "score": 3, "event": "The con men run scams through river towns"},
+  {"t": 0.78, "score": 2, "event": "Swindlers sell Jim to the Phelps family"},
+  {"t": 0.82, "score": 5, "event": "Huck vows to rescue Jim, choosing friendship over 'sin'"},
+  {"t": 0.88, "score": 5, "event": "Tom Sawyer arrives with an elaborate escape plan"},
+  {"t": 0.93, "score": 3, "event": "Jim stays to help wounded Tom, is recaptured"},
+  {"t": 0.97, "score": 7, "event": "Miss Watson's will has already set Jim free"},
+  {"t": 1.00, "score": 6, "event": "Huck resolves to light out for the western territory"}
+]}

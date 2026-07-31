@@ -1,0 +1,22 @@
+{"id": "crime-and-punishment", "title": "Crime and Punishment", "author": "Fyodor Dostoevsky", "year": 1866, "region": "west", "protagonist": "Rodion Raskolnikov", "source": ["https://en.wikipedia.org/wiki/Crime_and_Punishment"], "beats": [
+  {"t": 0.03, "score": 3, "event": "Impoverished ex-student obsesses over murdering a pawnbroker"},
+  {"t": 0.07, "score": 4, "event": "Meets drunk Marmeladov; learns of his daughter Sonya"},
+  {"t": 0.10, "score": 3, "event": "Letter describes sister Dunya's plight with Luzhin"},
+  {"t": 0.16, "score": 1, "event": "Steals axe; kills pawnbroker Alyona and her sister Lizaveta"},
+  {"t": 0.22, "score": 2, "event": "Falls into fever and delirium"},
+  {"t": 0.28, "score": 2, "event": "Faints when police mention the murders"},
+  {"t": 0.34, "score": 5, "event": "Laborer Mikolka takes the blame, diverting suspicion"},
+  {"t": 0.40, "score": 3, "event": "Helps the dying Marmeladov in the street"},
+  {"t": 0.45, "score": 4, "event": "Mother and sister arrive in Petersburg"},
+  {"t": 0.52, "score": 3, "event": "Porfiry probes him about the 'extraordinary man' article"},
+  {"t": 0.57, "score": 3, "event": "Svidrigailov appears suddenly at his room"},
+  {"t": 0.62, "score": 5, "event": "Dunya breaks her engagement with Luzhin"},
+  {"t": 0.67, "score": 3, "event": "Raskolnikov confesses the murders to Sonya"},
+  {"t": 0.73, "score": 5, "event": "Luzhin frames Sonya for theft; Lebezyatnikov exposes him"},
+  {"t": 0.76, "score": 2, "event": "Katerina Ivanovna unravels and dies"},
+  {"t": 0.83, "score": 3, "event": "Porfiry declares certainty of his guilt, urges confession"},
+  {"t": 0.87, "score": 3, "event": "Svidrigailov tries to coerce Dunya; she shoots at him"},
+  {"t": 0.90, "score": 4, "event": "Svidrigailov commits suicide"},
+  {"t": 0.94, "score": 3, "event": "Raskolnikov confesses to police after seeing Sonya's despair"},
+  {"t": 1.00, "score": 4, "event": "Eight years in Siberia; Sonya follows; redemption begins"}
+]}

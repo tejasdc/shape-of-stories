@@ -1,0 +1,18 @@
+{"id": "the-iliad", "title": "The Iliad", "author": "Homer", "year": -750, "region": "west", "protagonist": "Achilles", "source": ["https://en.wikipedia.org/wiki/Iliad"], "beats": [
+{"t": 0.03, "score": 5, "event": "Ninth year of the Trojan War; Achaean camp; plague from Apollo"},
+{"t": 0.08, "score": 3, "event": "Agamemnon seizes Briseis from Achilles as compensation"},
+{"t": 0.14, "score": 4, "event": "Achilles withdraws; Thetis begs Zeus to favor the Trojans"},
+{"t": 0.22, "score": 5, "event": "Duel of Paris and Menelaus decides nothing; truce is broken"},
+{"t": 0.32, "score": 5, "event": "Diomedes rages across the field, even wounds Aphrodite"},
+{"t": 0.42, "score": 5, "event": "Embassy offers Briseis and gifts back; Achilles refuses"},
+{"t": 0.52, "score": 4, "event": "Trojans drive the Achaeans back to their ships"},
+{"t": 0.60, "score": 4, "event": "Patroclus dons Achilles's armor and leads the Myrmidons out"},
+{"t": 0.66, "score": 1, "event": "Hector kills Patroclus outside the walls of Troy"},
+{"t": 0.72, "score": 3, "event": "Achilles hears the news; grief overwhelms him; he vows vengeance"},
+{"t": 0.78, "score": 5, "event": "Hephaestus forges Achilles's new armor and shield"},
+{"t": 0.84, "score": 7, "event": "Achilles rejoins the battle, clogs the Scamander with dead"},
+{"t": 0.90, "score": 8, "event": "Achilles kills Hector in single combat before Troy"},
+{"t": 0.94, "score": 6, "event": "Achilles drags Hector's body around the walls of Troy"},
+{"t": 0.97, "score": 5, "event": "Funeral games for Patroclus; Achilles distributes the prizes"},
+{"t": 1.00, "score": 5, "event": "Priam ransoms Hector's body; Achilles weeps and relents"}
+]}

@@ -1,0 +1,18 @@
+{"id": "wuthering-heights", "title": "Wuthering Heights", "author": "Emily Brontë", "year": 1847, "region": "west", "protagonist": "Heathcliff", "source": ["https://en.wikipedia.org/wiki/Wuthering_Heights"], "beats": [
+{"t": 0.05, "score": 5, "event": "Mr Earnshaw brings the foundling Heathcliff home from Liverpool"},
+{"t": 0.10, "score": 4, "event": "Hindley resents the favoured intruder and beats him"},
+{"t": 0.15, "score": 6, "event": "Heathcliff and Catherine roam the moors as inseparable companions"},
+{"t": 0.22, "score": 2, "event": "Mr Earnshaw dies; Hindley returns as master and reduces him to a farm hand"},
+{"t": 0.30, "score": 4, "event": "The Lintons take in the injured Catherine at Thrushcross Grange"},
+{"t": 0.38, "score": 5, "event": "Catherine accepts Edgar Linton's proposal of marriage"},
+{"t": 0.44, "score": 1, "event": "Heathcliff overhears her say marrying him would degrade her; vanishes"},
+{"t": 0.52, "score": 7, "event": "Three years later he returns to Wuthering Heights, wealthy and refined"},
+{"t": 0.60, "score": 6, "event": "He elopes with Edgar's sister Isabella to spite the Lintons"},
+{"t": 0.66, "score": 5, "event": "Buys Hindley out; the drunkard Hindley soon dies and Heathcliff owns the Heights"},
+{"t": 0.72, "score": 2, "event": "Catherine dies giving birth to young Cathy; Heathcliff begs her ghost to haunt him"},
+{"t": 0.80, "score": 5, "event": "Isabella flees south and bears his sickly son Linton Heathcliff"},
+{"t": 0.86, "score": 5, "event": "He forces young Cathy to marry the dying Linton to seize the Grange"},
+{"t": 0.90, "score": 5, "event": "Linton dies; Cathy is left trapped and mistreated at the Heights"},
+{"t": 0.95, "score": 3, "event": "Young Cathy and Hareton grow close; his grip on the next generation slips"},
+{"t": 1.00, "score": 2, "event": "Obsessed with the dead Catherine, he stops eating and dies in her old room"}
+]}

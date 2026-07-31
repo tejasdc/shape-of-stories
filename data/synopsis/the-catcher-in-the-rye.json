@@ -1,0 +1,14 @@
+{"id": "the-catcher-in-the-rye", "title": "The Catcher in the Rye", "author": "J. D. Salinger", "year": 1951, "region": "west", "protagonist": "Holden Caulfield", "source": ["https://en.wikipedia.org/wiki/The_Catcher_in_the_Rye"], "beats": [
+  {"t": 0.05, "score": 4, "event": "Failing every class but English; expelled from Pencey Prep"},
+  {"t": 0.12, "score": 4, "event": "Writes a composition for roommate Stradlater"},
+  {"t": 0.18, "score": 3, "event": "Learns Stradlater's date is Jane, whom he adores"},
+  {"t": 0.22, "score": 2, "event": "Fights Stradlater and is easily beaten"},
+  {"t": 0.30, "score": 4, "event": "Fed up with the phonies, catches a train to New York alone"},
+  {"t": 0.48, "score": 2, "event": "Bad night with the prostitute Sunny and pimp Maurice"},
+  {"t": 0.62, "score": 6, "event": "Sneaks home and wakes his little sister Phoebe"},
+  {"t": 0.68, "score": 6, "event": "Shares his catcher-in-the-rye fantasy with Phoebe"},
+  {"t": 0.78, "score": 3, "event": "Wakes at Mr. Antolini's to find him patting his head; flees"},
+  {"t": 0.86, "score": 4, "event": "Arranges to meet Phoebe to say goodbye before leaving"},
+  {"t": 0.95, "score": 6, "event": "Watches Phoebe on the carousel; they reconcile"},
+  {"t": 1.00, "score": 3, "event": "Alludes to getting sick and being sent to a sanatorium"}
+]}

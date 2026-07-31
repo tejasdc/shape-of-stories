@@ -1,0 +1,27 @@
+{
+  "id": "the-fault-in-our-stars",
+  "title": "The Fault in Our Stars",
+  "author": "John Green",
+  "year": 2012,
+  "region": "west",
+  "protagonist": "Hazel Grace Lancaster",
+  "source": ["https://en.wikipedia.org/wiki/The_Fault_in_Our_Stars"],
+  "beats": [
+    {"t": 0.05, "score": 3, "event": "Age 16 with terminal thyroid cancer; forced into support group"},
+    {"t": 0.12, "score": 5, "event": "Meets Augustus Waters, in remission from osteosarcoma"},
+    {"t": 0.18, "score": 6, "event": "They bond instantly and swap favorite novels"},
+    {"t": 0.25, "score": 5, "event": "Frustrated her favorite novel ends mid-sentence"},
+    {"t": 0.35, "score": 6, "event": "Augustus arranges correspondence with author van Houten"},
+    {"t": 0.45, "score": 7, "event": "Uses Genie Foundation wish for Amsterdam trip together"},
+    {"t": 0.55, "score": 3, "event": "In Amsterdam van Houten proves a mean-spirited drunk"},
+    {"t": 0.62, "score": 7, "event": "Lidewij takes them to Anne Frank House; first kiss there"},
+    {"t": 0.68, "score": 8, "event": "That evening they become intimate and confess love"},
+    {"t": 0.75, "score": 2, "event": "Augustus reveals his cancer has returned"},
+    {"t": 0.82, "score": 2, "event": "His health rapidly deteriorates"},
+    {"t": 0.88, "score": 3, "event": "He organizes a 'pre-funeral' where friends eulogize him"},
+    {"t": 0.93, "score": 1, "event": "Augustus dies shortly after"},
+    {"t": 0.96, "score": 3, "event": "Van Houten shows up at funeral to apologize"},
+    {"t": 0.98, "score": 4, "event": "She reads the eulogy Augustus secretly wrote for her"},
+    {"t": 1.0, "score": 5, "event": "Hazel is satisfied with the choices she made"}
+  ]
+}

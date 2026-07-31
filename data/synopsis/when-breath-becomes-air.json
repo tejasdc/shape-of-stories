@@ -1,0 +1,27 @@
+{
+  "id": "when-breath-becomes-air",
+  "title": "When Breath Becomes Air",
+  "author": "Paul Kalanithi",
+  "year": 2016,
+  "region": "west",
+  "protagonist": "Paul Kalanithi",
+  "source": ["https://en.wikipedia.org/wiki/When_Breath_Becomes_Air"],
+  "beats": [
+    {"t": 0.05, "score": 4, "event": "Age 10, family relocates from Bronxville to Kingman, Arizona"},
+    {"t": 0.10, "score": 5, "event": "Mother cultivates a love of literature via college reading lists"},
+    {"t": 0.18, "score": 7, "event": "Earns degrees in English literature and biology at Stanford"},
+    {"t": 0.25, "score": 7, "event": "Studies history and philosophy of science at Cambridge"},
+    {"t": 0.32, "score": 7, "event": "Enters Yale Medical School; meets future wife Lucy"},
+    {"t": 0.40, "score": 5, "event": "Obstetrics rotation: witnesses first birth and death together"},
+    {"t": 0.48, "score": 6, "event": "Begins neurosurgery residency at Stanford"},
+    {"t": 0.55, "score": 7, "event": "Adapts to the field; joins a neuroscience lab"},
+    {"t": 0.65, "score": 8, "event": "Sixth year: professional recognition; found his place"},
+    {"t": 0.72, "score": 1, "event": "Diagnosed with metastatic lung cancer"},
+    {"t": 0.78, "score": 4, "event": "EGFR mutation found; Tarceva offers a treatment option"},
+    {"t": 0.82, "score": 5, "event": "Initial improvement lets him return to the operating room"},
+    {"t": 0.87, "score": 2, "event": "New scans reveal tumor growth; chemo proves ineffective"},
+    {"t": 0.90, "score": 2, "event": "Indefinitely retires from surgery"},
+    {"t": 0.95, "score": 6, "event": "Daughter Cady is born on July 4, 2014"},
+    {"t": 1.0, "score": 1, "event": "Dies in intensive care; Lucy writes the epilogue"}
+  ]
+}

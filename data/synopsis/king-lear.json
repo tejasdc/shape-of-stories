@@ -1,0 +1,18 @@
+{"id": "king-lear", "title": "King Lear", "author": "William Shakespeare", "year": 1606, "region": "west", "protagonist": "Lear", "source": ["https://en.wikipedia.org/wiki/King_Lear"], "beats": [
+{"t": 0.04, "score": 6, "event": "Lear announces he will divide the kingdom among his daughters"},
+{"t": 0.09, "score": 5, "event": "Goneril and Regan flatter; Cordelia will not compete"},
+{"t": 0.14, "score": 5, "event": "Enraged, Lear disowns Cordelia and splits her share"},
+{"t": 0.18, "score": 5, "event": "Kent, defending Cordelia, is banished on the spot"},
+{"t": 0.24, "score": 5, "event": "Edmund forges the letter that turns Gloucester against Edgar"},
+{"t": 0.32, "score": 4, "event": "Goneril demands Lear dismiss half his hundred knights"},
+{"t": 0.38, "score": 3, "event": "Regan joins her; together they strip him of all his knights"},
+{"t": 0.46, "score": 1, "event": "Lear rages out into the storm on the heath, unhoused"},
+{"t": 0.52, "score": 1, "event": "On the heath he meets Edgar disguised as mad Poor Tom"},
+{"t": 0.60, "score": 1, "event": "Cornwall gouges out Gloucester's eyes at his own hearth"},
+{"t": 0.68, "score": 2, "event": "Blinded Gloucester is turned out; led toward Dover by Edgar"},
+{"t": 0.78, "score": 6, "event": "Cordelia's French army reaches Britain; father and daughter reconcile"},
+{"t": 0.85, "score": 2, "event": "British forces defeat the French; Lear and Cordelia captured"},
+{"t": 0.90, "score": 3, "event": "Goneril poisons Regan; Edgar kills Edmund in trial by combat"},
+{"t": 0.96, "score": 1, "event": "Edmund's reprieve comes too late; Cordelia is hanged in prison"},
+{"t": 1.00, "score": 1, "event": "Lear enters carrying Cordelia's body and dies of grief"}
+]}

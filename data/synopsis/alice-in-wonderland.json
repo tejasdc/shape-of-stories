@@ -1,0 +1,19 @@
+{"id": "alice-in-wonderland", "title": "Alice's Adventures in Wonderland", "author": "Lewis Carroll", "year": 1865, "region": "west", "protagonist": "Alice", "source": ["https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland"], "beats": [
+  {"t": 0.03, "score": 5, "event": "Bored Alice spots a White Rabbit with a pocket watch"},
+  {"t": 0.08, "score": 5, "event": "Follows the Rabbit down the hole into a long fall"},
+  {"t": 0.15, "score": 4, "event": "Drinks 'Drink me' and shrinks in the room of doors"},
+  {"t": 0.20, "score": 3, "event": "Eats 'Eat me' cake and grows enormous, then cries"},
+  {"t": 0.25, "score": 3, "event": "Shrinks and swims in a pool of her own tears"},
+  {"t": 0.30, "score": 5, "event": "Joins animals in the absurd Caucus Race"},
+  {"t": 0.38, "score": 4, "event": "Rabbit mistakes her for maid; sends her for gloves"},
+  {"t": 0.42, "score": 3, "event": "Grows huge in Rabbit's house, gets stuck, escapes"},
+  {"t": 0.50, "score": 5, "event": "Caterpillar on mushroom explains size-changing sides"},
+  {"t": 0.55, "score": 4, "event": "Visits Duchess; baby transforms into a piglet"},
+  {"t": 0.60, "score": 5, "event": "Meets the grinning Cheshire Cat"},
+  {"t": 0.68, "score": 5, "event": "Endless tea party with Hatter, March Hare, Dormouse"},
+  {"t": 0.75, "score": 4, "event": "Queen's croquet: flamingos as mallets, hedgehogs as balls"},
+  {"t": 0.85, "score": 5, "event": "Attends trial of the Knave for stealing tarts"},
+  {"t": 0.92, "score": 7, "event": "Alice grows in size and defies the court's logic"},
+  {"t": 0.97, "score": 7, "event": "Dismisses the guards as merely playing cards"},
+  {"t": 1.00, "score": 6, "event": "Wakes with her sister; runs off for tea"}
+]}

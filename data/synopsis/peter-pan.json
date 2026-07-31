@@ -1,0 +1,29 @@
+{
+  "id": "peter-pan",
+  "title": "Peter Pan",
+  "author": "J. M. Barrie",
+  "year": 1911,
+  "region": "west",
+  "protagonist": "Wendy Darling",
+  "source": ["https://en.wikipedia.org/wiki/Peter_and_Wendy"],
+  "beats": [
+    {"t": 0.03, "score": 5, "event": "Peter Pan listens at the Darling nursery, loses his shadow"},
+    {"t": 0.08, "score": 6, "event": "Peter returns; Wendy sews his shadow back on"},
+    {"t": 0.13, "score": 7, "event": "Peter invites Wendy to Neverland to mother the Lost Boys"},
+    {"t": 0.18, "score": 7, "event": "Wendy and her brothers fly with Peter to Neverland"},
+    {"t": 0.23, "score": 2, "event": "Pirate cannon fires; Tootles nearly kills Wendy with arrow"},
+    {"t": 0.28, "score": 6, "event": "Acorn pendant deflects the arrow; Wendy survives"},
+    {"t": 0.33, "score": 7, "event": "Lost Boys build a little house for Wendy in the trees"},
+    {"t": 0.42, "score": 7, "event": "Adventures; Peter rescues Tiger Lily at Mermaids' Lagoon"},
+    {"t": 0.50, "score": 5, "event": "Wendy asks Peter's feelings; he says 'devoted son'"},
+    {"t": 0.58, "score": 3, "event": "Homesick Wendy and the boys are captured by Captain Hook"},
+    {"t": 0.63, "score": 2, "event": "Hook poisons Peter's medicine while he sleeps"},
+    {"t": 0.68, "score": 3, "event": "Tinker Bell drinks the poison to save Peter"},
+    {"t": 0.72, "score": 6, "event": "Children's belief in fairies revives Tinker Bell"},
+    {"t": 0.78, "score": 6, "event": "Peter boards Hook's ship mimicking the crocodile's tick"},
+    {"t": 0.86, "score": 8, "event": "Peter kicks Hook to the waiting crocodile; pirates defeated"},
+    {"t": 0.92, "score": 8, "event": "Wendy and brothers sail the captured ship back to London"},
+    {"t": 0.97, "score": 8, "event": "Mrs Darling adopts the Lost Boys; Peter refuses to stay"},
+    {"t": 1.00, "score": 4, "event": "A year later Peter has forgotten Tinker Bell and Hook"}
+  ]
+}

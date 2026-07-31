@@ -1,0 +1,20 @@
+{"id": "tale-of-the-bamboo-cutter", "title": "The Tale of the Bamboo Cutter", "author": "anonymous", "year": 900, "region": "japan", "protagonist": "Kaguya-hime", "source": ["https://en.wikipedia.org/wiki/The_Tale_of_the_Bamboo_Cutter"], "beats": [
+  {"t": 0.03, "score": 7, "event": "Bamboo cutter finds an infant the size of his thumb inside a glowing stalk"},
+  {"t": 0.06, "score": 8, "event": "Childless couple joyfully adopt her as Nayotake-no-Kaguya-hime"},
+  {"t": 0.12, "score": 7, "event": "Within three months she grows into a woman of extraordinary beauty"},
+  {"t": 0.18, "score": 6, "event": "Word of her beauty draws marriage proposals from many nobles"},
+  {"t": 0.24, "score": 5, "event": "Five high-ranking suitors petition for her hand"},
+  {"t": 0.30, "score": 6, "event": "She sets each an impossible legendary quest to earn her"},
+  {"t": 0.38, "score": 5, "event": "First suitor's fake stone bowl is exposed for lacking holy light"},
+  {"t": 0.45, "score": 5, "event": "Second suitor's fabricated jeweled branch is exposed by craftsmen demanding pay"},
+  {"t": 0.52, "score": 5, "event": "Third suitor's supposedly fireproof robe burns in testing"},
+  {"t": 0.58, "score": 5, "event": "Fourth suitor gives up after a storm at sea"},
+  {"t": 0.64, "score": 5, "event": "Fifth suitor falls reaching into a swallow's nest"},
+  {"t": 0.72, "score": 5, "event": "The Emperor courts her; she declines, citing her earthly origin"},
+  {"t": 0.80, "score": 4, "event": "Three years of letters pass without her consent"},
+  {"t": 0.86, "score": 3, "event": "Full moonlight brings her tears and inexplicable grief"},
+  {"t": 0.90, "score": 2, "event": "She reveals she is a Moon dweller who must return home"},
+  {"t": 0.94, "score": 3, "event": "Heavenly beings descend and escort her back to the Moon"},
+  {"t": 0.98, "score": 4, "event": "She leaves an elixir of immortality with the Emperor"},
+  {"t": 1.00, "score": 3, "event": "The Emperor has the elixir burned atop Mount Fuji"}
+]}

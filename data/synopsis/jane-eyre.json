@@ -1,0 +1,21 @@
+{"id": "jane-eyre", "title": "Jane Eyre", "author": "Charlotte Brontë", "year": 1847, "region": "west", "protagonist": "Jane Eyre", "source": ["https://en.wikipedia.org/wiki/Jane_Eyre"], "beats": [
+{"t": 0.03, "score": 2, "event": "Orphaned Jane lives at Gateshead under a cruel aunt and bullying cousin"},
+{"t": 0.06, "score": 1, "event": "Locked in the red room where her uncle died; faints in terror"},
+{"t": 0.12, "score": 2, "event": "Sent to Lowood School; cold rooms, poor food, harsh discipline"},
+{"t": 0.18, "score": 2, "event": "Her friend Helen Burns dies of consumption in her arms"},
+{"t": 0.24, "score": 4, "event": "Six years a pupil, two a teacher; she advertises for a new post"},
+{"t": 0.30, "score": 5, "event": "Becomes governess at Thornfield Hall to Adèle Varens"},
+{"t": 0.36, "score": 6, "event": "On an icy lane she helps a fallen horseman; her master Mr Rochester"},
+{"t": 0.44, "score": 6, "event": "Saves Rochester from a mysterious fire in his bedroom at night"},
+{"t": 0.50, "score": 4, "event": "The beautiful Blanche Ingram arrives; Jane feels invisible"},
+{"t": 0.58, "score": 8, "event": "Rochester proposes marriage; Jane accepts"},
+{"t": 0.66, "score": 1, "event": "At the altar the wedding is stopped: he already has a mad wife, Bertha, in the attic"},
+{"t": 0.72, "score": 2, "event": "Jane flees Thornfield at dawn with almost nothing"},
+{"t": 0.76, "score": 1, "event": "Wanders the moors, loses her bundle, collapses starving on a doorstep"},
+{"t": 0.82, "score": 5, "event": "St John Rivers takes her in; finds her a village-school post"},
+{"t": 0.87, "score": 7, "event": "Learns her uncle has left her twenty thousand pounds; the Rivers are her cousins"},
+{"t": 0.91, "score": 4, "event": "Refuses St John's loveless missionary marriage proposal"},
+{"t": 0.94, "score": 5, "event": "Seems to hear Rochester's voice calling her name; sets out for Thornfield"},
+{"t": 0.97, "score": 4, "event": "Finds Thornfield burned; Bertha dead; Rochester blind and maimed"},
+{"t": 1.00, "score": 8, "event": "Reunited at Ferndean; Reader, I married him"}
+]}

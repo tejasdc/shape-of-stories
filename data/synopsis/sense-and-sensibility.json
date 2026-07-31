@@ -1,0 +1,19 @@
+{"id": "sense-and-sensibility", "title": "Sense and Sensibility", "author": "Jane Austen", "year": 1811, "region": "west", "protagonist": "Elinor Dashwood", "source": ["https://en.wikipedia.org/wiki/Sense_and_Sensibility"], "beats": [
+{"t": 0.04, "score": 3, "event": "Henry Dashwood dies; his son John reneges on supporting the sisters"},
+{"t": 0.10, "score": 4, "event": "Widow and daughters move from Norland to modest Barton Cottage"},
+{"t": 0.16, "score": 6, "event": "Edward Ferrars visits Norland; grows close to Elinor before she leaves"},
+{"t": 0.24, "score": 5, "event": "Colonel Brandon becomes attached to sixteen-year-old Marianne"},
+{"t": 0.30, "score": 6, "event": "John Willoughby carries the injured Marianne home in the rain"},
+{"t": 0.38, "score": 3, "event": "Willoughby abruptly leaves for London; Marianne is distraught"},
+{"t": 0.46, "score": 2, "event": "Lucy Steele confides to Elinor her secret engagement to Edward Ferrars"},
+{"t": 0.54, "score": 4, "event": "Mrs Jennings takes the sisters to London for the winter season"},
+{"t": 0.60, "score": 2, "event": "At a ball Willoughby cuts Marianne, announces engagement to Miss Grey"},
+{"t": 0.66, "score": 3, "event": "Brandon tells Elinor of Willoughby's earlier seduction of his young ward"},
+{"t": 0.72, "score": 3, "event": "Ferrars family disinherits Edward for honouring his engagement to Lucy"},
+{"t": 0.78, "score": 4, "event": "Brandon gives Edward a parsonage so he can marry Lucy"},
+{"t": 0.84, "score": 2, "event": "Marianne contracts putrid fever at Cleveland and nearly dies"},
+{"t": 0.90, "score": 4, "event": "Willoughby arrives at night, confesses to Elinor he truly loved Marianne"},
+{"t": 0.95, "score": 7, "event": "Word arrives that Lucy has married Robert Ferrars, not Edward"},
+{"t": 0.98, "score": 8, "event": "Edward, freed, proposes to Elinor and she accepts"},
+{"t": 1.00, "score": 8, "event": "Marianne marries Colonel Brandon; the sisters settle as neighbours"}
+]}

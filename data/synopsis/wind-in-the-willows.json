@@ -1,0 +1,27 @@
+{
+  "id": "wind-in-the-willows",
+  "title": "The Wind in the Willows",
+  "author": "Kenneth Grahame",
+  "year": 1908,
+  "region": "west",
+  "protagonist": "Toad (with the four friends)",
+  "source": ["https://en.wikipedia.org/wiki/The_Wind_in_the_Willows"],
+  "beats": [
+    {"t": 0.05, "score": 6, "event": "Mole meets Water Rat by the river; they become fast friends"},
+    {"t": 0.12, "score": 6, "event": "Rat and Mole visit Toad Hall; find Toad craze for caravans"},
+    {"t": 0.18, "score": 3, "event": "Passing motorcar wrecks Toad's caravan in a ditch"},
+    {"t": 0.22, "score": 6, "event": "Toad's obsession pivots to fast motorcars"},
+    {"t": 0.30, "score": 4, "event": "Mole lost in the Wild Wood at night; Rat finds him in snow"},
+    {"t": 0.34, "score": 6, "event": "Badger welcomes them to his cosy underground home"},
+    {"t": 0.40, "score": 4, "event": "Badger learns Toad has crashed seven cars, run up huge fines"},
+    {"t": 0.46, "score": 5, "event": "Friends place Toad under house arrest to break his mania"},
+    {"t": 0.52, "score": 6, "event": "Toad feigns illness, tricks Rat, and escapes"},
+    {"t": 0.58, "score": 6, "event": "Steals a motorcar from an inn courtyard and drives recklessly"},
+    {"t": 0.64, "score": 1, "event": "Caught by police; sentenced to twenty years in prison"},
+    {"t": 0.72, "score": 6, "event": "Gaoler's daughter helps him escape as a washerwoman"},
+    {"t": 0.80, "score": 3, "event": "Returns to find Toad Hall seized by weasels and stoats"},
+    {"t": 0.87, "score": 7, "event": "Badger leads secret tunnel raid on the Wild-Wooders"},
+    {"t": 0.94, "score": 8, "event": "Friends rout the invaders and reclaim Toad Hall"},
+    {"t": 0.99, "score": 7, "event": "Toad, humbled, holds a modest banquet and mends his ways"}
+  ]
+}

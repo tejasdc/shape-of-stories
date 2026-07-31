@@ -1,0 +1,30 @@
+{
+  "id": "hamlet",
+  "title": "Hamlet",
+  "author": "William Shakespeare",
+  "year": 1601,
+  "region": "west",
+  "protagonist": "Prince Hamlet",
+  "source": ["https://en.wikipedia.org/wiki/Hamlet"],
+  "beats": [
+    {"t": 0.02, "score": 3, "event": "Father dead; uncle Claudius is now king and married to his mother"},
+    {"t": 0.07, "score": 3, "event": "Claudius reproaches Hamlet for prolonged grief"},
+    {"t": 0.12, "score": 4, "event": "Ghost of King Hamlet reveals he was murdered by Claudius"},
+    {"t": 0.16, "score": 4, "event": "Hamlet vows revenge; plans to feign madness"},
+    {"t": 0.22, "score": 4, "event": "Ophelia rejects him on her father's orders"},
+    {"t": 0.28, "score": 4, "event": "Rosencrantz and Guildenstern arrive to spy on him"},
+    {"t": 0.35, "score": 5, "event": "Hamlet commissions play to expose Claudius's guilt"},
+    {"t": 0.42, "score": 3, "event": "Cruelly denounces Ophelia in a staged encounter"},
+    {"t": 0.48, "score": 6, "event": "Play succeeds; Claudius flees, confirming guilt"},
+    {"t": 0.52, "score": 5, "event": "Spares Claudius at prayer to deny him heaven"},
+    {"t": 0.58, "score": 3, "event": "Accidentally stabs Polonius behind the curtain"},
+    {"t": 0.63, "score": 2, "event": "Claudius ships him to England for execution"},
+    {"t": 0.70, "score": 2, "event": "Ophelia goes mad after her father's death"},
+    {"t": 0.76, "score": 3, "event": "Laertes returns enraged; Claudius plots a poisoned duel"},
+    {"t": 0.82, "score": 2, "event": "Ophelia drowns"},
+    {"t": 0.88, "score": 3, "event": "Fights Laertes at Ophelia's grave"},
+    {"t": 0.94, "score": 2, "event": "Gertrude drinks poisoned wine meant for Hamlet"},
+    {"t": 0.97, "score": 2, "event": "Poisoned by Laertes's blade; finally kills Claudius"},
+    {"t": 1.0, "score": 1, "event": "Dies in Horatio's arms, naming Fortinbras his successor"}
+  ]
+}

@@ -1,0 +1,19 @@
+{"id": "one-hundred-years-of-solitude", "title": "One Hundred Years of Solitude", "author": "Gabriel García Márquez", "year": 1967, "region": "west", "protagonist": "The Buendía family (collective, across seven generations)", "source": ["https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude"], "beats": [
+  {"t": 0.03, "score": 3, "event": "José Arcadio kills Prudencio Aguilar after a cockfight"},
+  {"t": 0.06, "score": 5, "event": "Dreams of Macondo, a city of mirrors"},
+  {"t": 0.10, "score": 6, "event": "Founds Macondo by the river after wandering the jungle"},
+  {"t": 0.18, "score": 6, "event": "Macondo grows into a town of marvels"},
+  {"t": 0.22, "score": 7, "event": "Gypsies visit each year with new wonders"},
+  {"t": 0.30, "score": 5, "event": "Melquíades befriends José Arcadio, who withdraws into obsession"},
+  {"t": 0.36, "score": 3, "event": "José Arcadio goes mad, is tied to a chestnut tree"},
+  {"t": 0.44, "score": 5, "event": "A rigged election drives Aureliano Buendía into civil war"},
+  {"t": 0.52, "score": 6, "event": "Aureliano becomes an iconic revolutionary, fighting for years"},
+  {"t": 0.62, "score": 6, "event": "The railroad arrives with new technology and foreigners"},
+  {"t": 0.70, "score": 5, "event": "American fruit company plants its banana plantation"},
+  {"t": 0.78, "score": 1, "event": "Colombian army massacres thousands of striking workers"},
+  {"t": 0.82, "score": 2, "event": "José Arcadio Segundo, the only survivor, finds all evidence erased"},
+  {"t": 0.90, "score": 4, "event": "Amaranta Úrsula and her nephew Aureliano begin their incest"},
+  {"t": 0.95, "score": 1, "event": "Their child is born with the tail of a pig"},
+  {"t": 0.98, "score": 3, "event": "Aureliano deciphers Melquíades's prophetic manuscript"},
+  {"t": 1.00, "score": 1, "event": "Macondo is scoured from the earth"}
+]}

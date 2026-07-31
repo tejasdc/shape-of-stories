@@ -1,0 +1,17 @@
+{"id": "the-old-man-and-the-sea", "title": "The Old Man and the Sea", "author": "Ernest Hemingway", "year": 1952, "region": "west", "protagonist": "Santiago", "source": ["https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea"], "beats": [
+  {"t": 0.05, "score": 3, "event": "Considered salao — 84 days without a fish"},
+  {"t": 0.10, "score": 4, "event": "Manolin, forced onto a luckier boat, still tends his gear"},
+  {"t": 0.15, "score": 5, "event": "Rows out early on the 85th day into the Gulf Stream"},
+  {"t": 0.22, "score": 6, "event": "Catches an albacore, then hooks a huge marlin"},
+  {"t": 0.30, "score": 4, "event": "Marlin too heavy to haul; it tows his skiff out to sea"},
+  {"t": 0.45, "score": 5, "event": "First sight of the marlin — longer than his boat"},
+  {"t": 0.55, "score": 6, "event": "Comes to love and respect his adversary"},
+  {"t": 0.65, "score": 6, "event": "Third morning: the marlin begins to circle"},
+  {"t": 0.72, "score": 8, "event": "Harpoons the marlin; lashes it alongside the boat"},
+  {"t": 0.78, "score": 3, "event": "A mako shark tears a 40-pound bite from the marlin"},
+  {"t": 0.85, "score": 3, "event": "Kills more sharks with a knife lashed to an oar"},
+  {"t": 0.92, "score": 1, "event": "Sharks in a pack leave only bones behind"},
+  {"t": 0.96, "score": 3, "event": "Reaches shore and staggers to his shack to sleep"},
+  {"t": 0.98, "score": 4, "event": "Manolin weeps at the sight of him in the morning"},
+  {"t": 1.00, "score": 5, "event": "A fisherman measures the skeleton at eighteen feet"}
+]}

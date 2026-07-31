@@ -1,0 +1,21 @@
+{"id": "water-margin", "title": "Water Margin (Outlaws of the Marsh)", "author": "Shi Nai'an", "year": 1370, "region": "china", "protagonist": "The 108 outlaws collectively (Song Jiang as their face)", "source": ["https://en.wikipedia.org/wiki/Water_Margin"], "beats": [
+  {"t": 0.02, "score": 5, "event": "The 108 spirits are released from beneath an ancient stele-bearing tortoise"},
+  {"t": 0.05, "score": 3, "event": "Grand Marshal Gao Qiu abuses power and oppresses commoners"},
+  {"t": 0.10, "score": 3, "event": "Persecution drives Shi Jin, Lu Zhishen, and Lin Chong toward rebellion"},
+  {"t": 0.15, "score": 3, "event": "Lin Chong, framed by Gao Qiu, flees to Liangshan Marsh"},
+  {"t": 0.20, "score": 7, "event": "Chao Gai's seven rob a birthday convoy meant for Cai Jing"},
+  {"t": 0.25, "score": 7, "event": "Chao Gai becomes first chief of the outlaws at Mount Liang"},
+  {"t": 0.38, "score": 5, "event": "Song Jiang's own arc unfolds separately from the band"},
+  {"t": 0.45, "score": 5, "event": "Wu Song's extended story runs toward the marsh"},
+  {"t": 0.52, "score": 6, "event": "Soldiers, officials, and specialists keep converging on Liangshan"},
+  {"t": 0.58, "score": 2, "event": "Chao Gai is killed attacking the Zeng Family Fortress"},
+  {"t": 0.60, "score": 6, "event": "Song Jiang succeeds Chao Gai as leader of the band"},
+  {"t": 0.65, "score": 8, "event": "The full complement of 108 heroes is finally assembled"},
+  {"t": 0.72, "score": 8, "event": "Great victory over the imperial army sent against Liangshan Marsh"},
+  {"t": 0.75, "score": 8, "event": "Emperor Huizong grants the outlaws amnesty and imperial service"},
+  {"t": 0.82, "score": 6, "event": "Conscripted to campaign against Liao invaders in the north"},
+  {"t": 0.88, "score": 2, "event": "Campaign against Fang La grinds the band down heavily"},
+  {"t": 0.94, "score": 1, "event": "At least two-thirds of the 108 die across the campaigns"},
+  {"t": 0.97, "score": 4, "event": "Survivors take imperial honors or retire quietly as commoners"},
+  {"t": 1.00, "score": 1, "event": "Song Jiang is poisoned by the Four Treacherous Ministers"}
+]}

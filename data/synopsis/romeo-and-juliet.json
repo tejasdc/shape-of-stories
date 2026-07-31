@@ -1,0 +1,18 @@
+{"id": "romeo-and-juliet", "title": "Romeo and Juliet", "author": "William Shakespeare", "year": 1597, "region": "west", "protagonist": "Romeo", "source": ["https://en.wikipedia.org/wiki/Romeo_and_Juliet"], "beats": [
+{"t": 0.04, "score": 4, "event": "Verona street brawl; Prince threatens death for further breach of peace"},
+{"t": 0.09, "score": 4, "event": "Romeo mopes over unrequited love for Rosaline"},
+{"t": 0.15, "score": 6, "event": "At the Capulet ball Romeo sees Juliet; both fall in love"},
+{"t": 0.22, "score": 7, "event": "Balcony scene in the Capulet orchard; vows exchanged"},
+{"t": 0.30, "score": 8, "event": "Friar Laurence secretly marries Romeo and Juliet"},
+{"t": 0.42, "score": 2, "event": "Mercutio killed by Tybalt while Romeo tries to keep peace"},
+{"t": 0.48, "score": 3, "event": "Enraged, Romeo kills Tybalt in the street"},
+{"t": 0.52, "score": 2, "event": "Prince banishes Romeo from Verona on pain of death"},
+{"t": 0.58, "score": 6, "event": "Romeo and Juliet share a secret wedding night, then he flees"},
+{"t": 0.64, "score": 3, "event": "Capulet orders Juliet to marry Count Paris in three days"},
+{"t": 0.72, "score": 4, "event": "Friar gives Juliet the potion that mimics death for 42 hours"},
+{"t": 0.80, "score": 3, "event": "Juliet takes the potion; is laid in the Capulet crypt"},
+{"t": 0.86, "score": 2, "event": "Friar's message fails; Balthasar tells Romeo Juliet is dead"},
+{"t": 0.92, "score": 1, "event": "Romeo kills Paris at the tomb, drinks poison beside Juliet"},
+{"t": 0.97, "score": 1, "event": "Juliet wakes, finds Romeo dead, stabs herself with his dagger"},
+{"t": 1.00, "score": 1, "event": "Montagues and Capulets reconciled over the bodies of their children"}
+]}

@@ -1,0 +1,24 @@
+{
+  "id": "thousand-and-one-nights",
+  "title": "One Thousand and One Nights (the frame story)",
+  "author": "anonymous (Arabic tradition)",
+  "year": 800,
+  "region": "arabia",
+  "protagonist": "Scheherazade",
+  "source": ["https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights"],
+  "beats": [
+    {"t": 0.03, "score": 3, "event": "King Shahryar, betrayed, vows to marry then execute a virgin each dawn"},
+    {"t": 0.08, "score": 2, "event": "The vizier has exhausted the kingdom's supply of brides"},
+    {"t": 0.14, "score": 2, "event": "Scheherazade volunteers herself over her father's protest"},
+    {"t": 0.20, "score": 2, "event": "She is married to Shahryar; execution set for dawn"},
+    {"t": 0.26, "score": 3, "event": "She arranges with her sister Dunyazad to prompt a tale"},
+    {"t": 0.32, "score": 5, "event": "Wedding night: she begins a story but leaves it unfinished"},
+    {"t": 0.38, "score": 6, "event": "Curious, the king postpones her execution to hear the ending"},
+    {"t": 0.50, "score": 6, "event": "Each night she ends a tale on a hook and begins another"},
+    {"t": 0.65, "score": 6, "event": "The pattern holds through hundreds of nights of storytelling"},
+    {"t": 0.78, "score": 7, "event": "Over the nights she bears the king children"},
+    {"t": 0.90, "score": 6, "event": "After a thousand and one nights the tales run out"},
+    {"t": 0.95, "score": 8, "event": "She asks for pardon; the king sees their children"},
+    {"t": 1.00, "score": 9, "event": "Shahryar spares her, makes her queen, and ends the terror"}
+  ]
+}

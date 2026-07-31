@@ -1,0 +1,26 @@
+{
+  "id": "cilappatikaram",
+  "title": "Cilappatikaram (The Tale of an Anklet)",
+  "author": "Ilango Adigal",
+  "year": 500,
+  "region": "india",
+  "protagonist": "Kannagi",
+  "source": ["https://en.wikipedia.org/wiki/Cilappatikaram"],
+  "beats": [
+    {"t": 0.05, "score": 8, "event": "Kannagi marries Kovalan; they live in bliss in wealthy Puhar"},
+    {"t": 0.12, "score": 2, "event": "Kovalan meets the courtesan Madhavi and abandons Kannagi"},
+    {"t": 0.20, "score": 2, "event": "He squanders his wealth on Madhavi while Kannagi waits chastely"},
+    {"t": 0.28, "score": 3, "event": "At Indra's festival a sung poem breeds mutual suspicion"},
+    {"t": 0.34, "score": 6, "event": "Kovalan returns; Kannagi forgives and welcomes him"},
+    {"t": 0.40, "score": 4, "event": "Impoverished, the couple journeys to Madurai"},
+    {"t": 0.48, "score": 4, "event": "Kannagi gives Kovalan an anklet to sell for starting capital"},
+    {"t": 0.56, "score": 2, "event": "A jeweller frames Kovalan as thief of the queen's anklet"},
+    {"t": 0.62, "score": 1, "event": "The Pandya king executes Kovalan without proper trial"},
+    {"t": 0.70, "score": 1, "event": "Kannagi hears of her husband's death"},
+    {"t": 0.76, "score": 5, "event": "In court she splits her anklet: rubies, not the queen's pearls"},
+    {"t": 0.82, "score": 6, "event": "The king recognizes his error and dies of shame"},
+    {"t": 0.88, "score": 5, "event": "She tears off her breast; a curse burns Madurai to the ground"},
+    {"t": 0.94, "score": 8, "event": "She wanders to Chera country; Indra receives her to heaven"},
+    {"t": 1.00, "score": 9, "event": "King Cheran Chenkuttuvan enthrones her as the goddess Pattini"}
+  ]
+}

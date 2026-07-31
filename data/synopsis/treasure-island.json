@@ -1,0 +1,22 @@
+{"id": "treasure-island", "title": "Treasure Island", "author": "Robert Louis Stevenson", "year": 1883, "region": "west", "protagonist": "Jim Hawkins", "source": ["https://en.wikipedia.org/wiki/Treasure_Island"], "beats": [
+  {"t": 0.03, "score": 5, "event": "Billy Bones lodges at the Admiral Benbow Inn"},
+  {"t": 0.08, "score": 3, "event": "Black Dog confronts Bones about a mysterious chart"},
+  {"t": 0.12, "score": 2, "event": "Bones suffers a stroke; Jim's father dies"},
+  {"t": 0.16, "score": 2, "event": "Pew delivers the 'black spot'; Bones dies"},
+  {"t": 0.20, "score": 5, "event": "Pew and pirates attack inn; routed by excise officers"},
+  {"t": 0.25, "score": 6, "event": "Jim and mother escape with the treasure map"},
+  {"t": 0.32, "score": 7, "event": "Livesey and Trelawney fit out the Hispaniola"},
+  {"t": 0.42, "score": 3, "event": "Jim overhears Silver plotting mutiny"},
+  {"t": 0.46, "score": 5, "event": "Jim alerts the captain and loyal crew"},
+  {"t": 0.55, "score": 3, "event": "On the island Jim sees Silver murder a sailor"},
+  {"t": 0.60, "score": 5, "event": "Flees into the jungle; meets marooned Ben Gunn"},
+  {"t": 0.65, "score": 4, "event": "Loyalists take refuge in the abandoned stockade"},
+  {"t": 0.70, "score": 4, "event": "Stockade battle with casualties on both sides"},
+  {"t": 0.78, "score": 6, "event": "Jim boards the Hispaniola and cuts it loose"},
+  {"t": 0.82, "score": 6, "event": "Encounters Israel Hands; shoots him in self-defense"},
+  {"t": 0.88, "score": 7, "event": "Silver's crew finds the treasure cache empty"},
+  {"t": 0.90, "score": 7, "event": "Ben Gunn scares them mimicking Flint's ghost"},
+  {"t": 0.93, "score": 8, "event": "Livesey's party drives off the mutineers"},
+  {"t": 0.96, "score": 8, "event": "Gunn reveals he moved the treasure to his cave"},
+  {"t": 1.00, "score": 8, "event": "Crew departs with treasure; Silver escapes with a bag"}
+]}

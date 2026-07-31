@@ -1,0 +1,26 @@
+{
+  "id": "the-trial",
+  "title": "The Trial",
+  "author": "Franz Kafka",
+  "year": 1925,
+  "region": "west",
+  "protagonist": "Josef K.",
+  "source": ["https://en.wikipedia.org/wiki/The_Trial"],
+  "beats": [
+    {"t": 0.03, "score": 3, "event": "Arrested on his 30th birthday for an unspecified crime"},
+    {"t": 0.08, "score": 4, "event": "Told he remains free to work; landlady tries to console him"},
+    {"t": 0.14, "score": 3, "event": "Harasses Fräulein Bürstner with an unwanted kiss"},
+    {"t": 0.20, "score": 3, "event": "Summoned to court without time or location given"},
+    {"t": 0.26, "score": 3, "event": "Court sits in a slum attic; mistaken for a painter"},
+    {"t": 0.32, "score": 2, "event": "His plea against the trial's absurdity draws hostility"},
+    {"t": 0.38, "score": 3, "event": "Returns; court not in session; usher's wife seduces him"},
+    {"t": 0.44, "score": 3, "event": "Finds the arresting agents whipped in his own bank"},
+    {"t": 0.50, "score": 4, "event": "Uncle brings him to Herr Huld, a bedridden lawyer"},
+    {"t": 0.56, "score": 4, "event": "Begins secret trysts with Huld's servant Leni"},
+    {"t": 0.64, "score": 3, "event": "Painter Titorelli: only postponement or partial acquittal exist"},
+    {"t": 0.72, "score": 3, "event": "Dismisses Huld; meets the ruined merchant Block"},
+    {"t": 0.82, "score": 2, "event": "Priest tells him the parable Before the Law"},
+    {"t": 0.96, "score": 1, "event": "Two men come at midnight and stab him in a quarry"},
+    {"t": 1.0, "score": 1, "event": "Dies saying 'Like a dog!'"}
+  ]
+}

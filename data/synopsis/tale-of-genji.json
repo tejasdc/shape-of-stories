@@ -1,0 +1,22 @@
+{"id": "tale-of-genji", "title": "The Tale of Genji", "author": "Murasaki Shikibu", "year": 1010, "region": "japan", "protagonist": "Genji (Hikaru Genji)", "source": ["https://en.wikipedia.org/wiki/The_Tale_of_Genji"], "beats": [
+  {"t": 0.02, "score": 7, "event": "Born to Emperor Kiritsubo and a low-ranking, beloved consort"},
+  {"t": 0.05, "score": 2, "event": "His mother dies when Genji is three years old"},
+  {"t": 0.08, "score": 5, "event": "Emperor takes Fujitsubo as consort; she resembles Genji's late mother"},
+  {"t": 0.10, "score": 4, "event": "Removed from succession, demoted to commoner with Minamoto surname"},
+  {"t": 0.15, "score": 4, "event": "Forbidden love awakens for stepmother Lady Fujitsubo"},
+  {"t": 0.20, "score": 5, "event": "Marries Aoi no Ue in a troubled, unfaithful union"},
+  {"t": 0.25, "score": 6, "event": "Discovers ten-year-old Murasaki, Fujitsubo's niece, in Kitayama"},
+  {"t": 0.28, "score": 6, "event": "Takes Murasaki into his palace and raises her as his ideal"},
+  {"t": 0.32, "score": 5, "event": "Secret night with Fujitsubo; she conceives Reizei, paternity hidden"},
+  {"t": 0.38, "score": 3, "event": "Aoi bears him a son but dies shortly after"},
+  {"t": 0.42, "score": 7, "event": "Finds consolation and marries the grown Murasaki"},
+  {"t": 0.46, "score": 3, "event": "Father Emperor Kiritsubo dies; court power shifts against him"},
+  {"t": 0.55, "score": 2, "event": "Affair with Oborozukiyo exposed; exiled to Suma"},
+  {"t": 0.60, "score": 5, "event": "Akashi affair fathers a daughter, his only child and future empress"},
+  {"t": 0.68, "score": 8, "event": "Pardoned and recalled; his hidden son Reizei ascends the throne"},
+  {"t": 0.72, "score": 9, "event": "Reizei, knowing the truth, raises Genji to the highest possible rank"},
+  {"t": 0.85, "score": 4, "event": "At forty, his life begins to decline despite political height"},
+  {"t": 0.90, "score": 3, "event": "Third Princess is assaulted by Kashiwagi and bears Kaoru"},
+  {"t": 0.95, "score": 1, "event": "His beloved Murasaki dies, breaking him"},
+  {"t": 1.00, "score": 3, "event": "Genji vanishes into the clouds (Kumogakure), his death implied"}
+]}

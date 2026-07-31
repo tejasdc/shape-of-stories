@@ -1,0 +1,27 @@
+{
+  "id": "never-let-me-go",
+  "title": "Never Let Me Go",
+  "author": "Kazuo Ishiguro",
+  "year": 2005,
+  "region": "west",
+  "protagonist": "Kathy H.",
+  "source": ["https://en.wikipedia.org/wiki/Never_Let_Me_Go_(novel)"],
+  "beats": [
+    {"t": 0.02, "score": 4, "event": "Age 31, a longtime carer, learns her role will soon end"},
+    {"t": 0.10, "score": 5, "event": "Recalls childhood at Hailsham boarding school"},
+    {"t": 0.15, "score": 5, "event": "Guardians stress health and artistic expression"},
+    {"t": 0.20, "score": 5, "event": "Madame periodically collects student artwork"},
+    {"t": 0.25, "score": 4, "event": "Loses her cassette tape; jokes it went to Norfolk"},
+    {"t": 0.32, "score": 4, "event": "Best friends Ruth and Tommy become romantically involved"},
+    {"t": 0.38, "score": 2, "event": "Miss Lucy reveals they exist to donate vital organs"},
+    {"t": 0.48, "score": 4, "event": "At 16 they move to the Cottages halfway-house"},
+    {"t": 0.55, "score": 3, "event": "Norfolk trip: Ruth's supposed original is a superficial match"},
+    {"t": 0.62, "score": 3, "event": "Ruth maliciously prevents Kathy and Tommy pairing off"},
+    {"t": 0.70, "score": 3, "event": "Kathy trains as a carer; separated from them a decade"},
+    {"t": 0.80, "score": 3, "event": "Cares for Ruth after a bad donation; Ruth apologizes"},
+    {"t": 0.85, "score": 4, "event": "Ruth completes; Kathy and Tommy finally become partners"},
+    {"t": 0.92, "score": 2, "event": "Visit Madame: deferrals were a myth; Hailsham was closed"},
+    {"t": 0.97, "score": 1, "event": "Tommy completes his fourth donation and dies"},
+    {"t": 1.0, "score": 3, "event": "Kathy drives to Norfolk, imagining the windswept fence"}
+  ]
+}

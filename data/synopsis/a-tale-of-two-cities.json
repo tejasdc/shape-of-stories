@@ -1,0 +1,21 @@
+{"id": "a-tale-of-two-cities", "title": "A Tale of Two Cities", "author": "Charles Dickens", "year": 1859, "region": "west", "protagonist": "Charles Darnay", "source": ["https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities"], "beats": [
+  {"t": 0.05, "score": 5, "event": "Dr. Manette recalled to life after 18 years in the Bastille"},
+  {"t": 0.10, "score": 6, "event": "Manette brought back to England by Lucie and Lorry"},
+  {"t": 0.15, "score": 2, "event": "Charles Darnay tried for treason in London"},
+  {"t": 0.18, "score": 7, "event": "Carton's resemblance undermines the case; Darnay acquitted"},
+  {"t": 0.25, "score": 4, "event": "Marquis St. Evrémonde kills a child and is assassinated"},
+  {"t": 0.30, "score": 6, "event": "Carton confesses love to Lucie; she prefers Darnay"},
+  {"t": 0.35, "score": 7, "event": "Darnay reveals his identity to Manette and marries Lucie"},
+  {"t": 0.40, "score": 6, "event": "Manette briefly relapses to shoemaking, then recovers"},
+  {"t": 0.50, "score": 6, "event": "Years pass in peace; Bastille stormed in July 1789"},
+  {"t": 0.60, "score": 4, "event": "Gabelle's letter draws Darnay secretly back to France"},
+  {"t": 0.62, "score": 2, "event": "Darnay arrested as émigré, imprisoned at La Force"},
+  {"t": 0.70, "score": 7, "event": "Manette's testimony wins his acquittal fifteen months later"},
+  {"t": 0.72, "score": 2, "event": "Darnay immediately re-arrested"},
+  {"t": 0.78, "score": 1, "event": "Defarges present Manette's manuscript denouncing Evrémondes"},
+  {"t": 0.80, "score": 1, "event": "Darnay condemned to the guillotine"},
+  {"t": 0.85, "score": 4, "event": "Carton blackmails Barsad and readies a swap"},
+  {"t": 0.92, "score": 8, "event": "Carton drugs Darnay, takes his place; family flees to England"},
+  {"t": 0.95, "score": 8, "event": "Madame Defarge killed struggling with Miss Pross"},
+  {"t": 1.00, "score": 8, "event": "Carton dies for Darnay; family lives on redeemed"}
+]}

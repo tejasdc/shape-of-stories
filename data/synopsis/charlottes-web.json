@@ -1,0 +1,20 @@
+{"id": "charlottes-web", "title": "Charlotte’s Web", "author": "E. B. White", "year": 1952, "region": "west", "protagonist": "Wilbur", "source": ["https://en.wikipedia.org/wiki/Charlotte%27s_Web"], "beats": [
+  {"t": 0.03, "score": 2, "event": "Runt of the litter; John Arable comes to slaughter him"},
+  {"t": 0.06, "score": 7, "event": "Fern saves his life and raises him as a pet"},
+  {"t": 0.15, "score": 4, "event": "Sold on to Fern's uncle Homer Zuckerman"},
+  {"t": 0.22, "score": 3, "event": "Lonely in the barn, missing Fern"},
+  {"t": 0.30, "score": 1, "event": "Ram tells him Zuckerman is fattening him for slaughter"},
+  {"t": 0.35, "score": 5, "event": "Charlotte the spider promises to save his life"},
+  {"t": 0.45, "score": 7, "event": "Charlotte weaves SOME PIG above his pen"},
+  {"t": 0.52, "score": 8, "event": "Crowds flock to the barn to see the miracle web"},
+  {"t": 0.58, "score": 7, "event": "Charlotte weaves TERRIFIC into the web"},
+  {"t": 0.64, "score": 8, "event": "Charlotte weaves RADIANT into the web"},
+  {"t": 0.72, "score": 7, "event": "Zuckerman enters him in the county fair"},
+  {"t": 0.80, "score": 8, "event": "At the fair Charlotte spins HUMBLE above his stall"},
+  {"t": 0.86, "score": 8, "event": "Judges award him a special prize"},
+  {"t": 0.88, "score": 9, "event": "The prize means Zuckerman will never slaughter him"},
+  {"t": 0.90, "score": 3, "event": "Charlotte, exhausted and dying, entrusts him with her egg sac"},
+  {"t": 0.93, "score": 2, "event": "Charlotte dies alone at the fairgrounds"},
+  {"t": 0.97, "score": 6, "event": "Winter passes; Charlotte's babies hatch in the barn"},
+  {"t": 1.00, "score": 7, "event": "Three spiderlings stay; he has friends for years"}
+]}

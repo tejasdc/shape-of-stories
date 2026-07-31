@@ -1,0 +1,20 @@
+{"id": "shawshank-redemption", "title": "Rita Hayworth and Shawshank Redemption", "author": "Stephen King", "year": 1982, "region": "west", "protagonist": "Andy Dufresne", "source": ["https://en.wikipedia.org/wiki/Rita_Hayworth_and_Shawshank_Redemption"], "beats": [
+  {"t": 0.03, "score": 1, "event": "Convicted of murdering his wife and her lover; life in Shawshank"},
+  {"t": 0.10, "score": 3, "event": "1948: asks Red for a rock hammer, claims mineral hobby"},
+  {"t": 0.15, "score": 3, "event": "Requests a poster of Rita Hayworth for his cell"},
+  {"t": 0.20, "score": 2, "event": "Repeatedly attacked by the Sisters, led by Bogs Diamond"},
+  {"t": 0.25, "score": 4, "event": "Bogs is beaten near-dead by guards, allegedly at Andy's bribe"},
+  {"t": 0.32, "score": 5, "event": "Overhears Hadley grousing about inheritance tax and offers help"},
+  {"t": 0.36, "score": 6, "event": "Inmates get beers on the roof as Hadley's thanks"},
+  {"t": 0.45, "score": 6, "event": "Becomes the prison's accountant; transferred to the library"},
+  {"t": 0.52, "score": 7, "event": "Wins Maine Senate funding to expand the library"},
+  {"t": 0.60, "score": 6, "event": "Tommy Williams says another inmate confessed to the murders"},
+  {"t": 0.66, "score": 2, "event": "Warden Norton refuses to reopen the case; transfers Tommy away"},
+  {"t": 0.70, "score": 1, "event": "Twenty days in solitary to break his spirit"},
+  {"t": 0.75, "score": 3, "event": "Resumes laundering money to save the library"},
+  {"t": 0.85, "score": 5, "event": "1967: tells Red of alias Peter Stevens and a hotel in Zihuatanejo"},
+  {"t": 0.92, "score": 9, "event": "March 1975: escapes through a tunnel behind the poster"},
+  {"t": 0.94, "score": 7, "event": "Norton resigns; Red gets a blank postcard from the Mexican border"},
+  {"t": 0.97, "score": 4, "event": "1977: Red is paroled but can't settle to life outside"},
+  {"t": 1.00, "score": 8, "event": "Red finds Andy's letter and $1,000; sets off to join him"}
+]}

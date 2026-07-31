@@ -1,0 +1,26 @@
+{
+  "id": "savitri-and-satyavan",
+  "title": "Savitri and Satyavan",
+  "author": "traditional (Mahabharata, Vana Parva)",
+  "year": -400,
+  "region": "india",
+  "protagonist": "Savitri",
+  "source": ["https://en.wikipedia.org/wiki/Savitri_and_Satyavan"],
+  "beats": [
+    {"t": 0.05, "score": 8, "event": "Ashvapati wins a daughter by long penance; Savitri is born"},
+    {"t": 0.14, "score": 5, "event": "She grows so radiant that no suitor dares approach her"},
+    {"t": 0.20, "score": 6, "event": "Her father tells her to travel and choose her own husband"},
+    {"t": 0.28, "score": 7, "event": "She chooses Satyavan, exiled son of blind King Dyumatsena"},
+    {"t": 0.34, "score": 3, "event": "Sage Narada warns Satyavan will die in exactly one year"},
+    {"t": 0.40, "score": 6, "event": "She marries him anyway and takes the hermit garb of the forest"},
+    {"t": 0.48, "score": 5, "event": "Serves her parents-in-law faithfully as the year runs down"},
+    {"t": 0.62, "score": 4, "event": "Three days from the fated hour she keeps a vow of fast and standing"},
+    {"t": 0.72, "score": 4, "event": "On the day, she follows Satyavan into the forest to gather wood"},
+    {"t": 0.78, "score": 1, "event": "Satyavan collapses; he dies with his head in her lap"},
+    {"t": 0.83, "score": 2, "event": "Yama himself arrives; she follows him and Satyavan's soul"},
+    {"t": 0.88, "score": 6, "event": "Her dharma-talk wins boons: her father-in-law's sight and kingdom"},
+    {"t": 0.93, "score": 8, "event": "She asks for sons by Satyavan, trapping Yama in his own boon"},
+    {"t": 0.97, "score": 9, "event": "Yama restores Satyavan to life and blesses them both"},
+    {"t": 1.00, "score": 9, "event": "Kingdom restored; in time she bears a hundred sons"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "harry-potter-sorcerers-stone",
+  "title": "Harry Potter and the Sorcerer's Stone",
+  "author": "J.K. Rowling",
+  "year": 1997,
+  "region": "west",
+  "protagonist": "Harry Potter",
+  "source": ["https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone"],
+  "beats": [
+    {"t": 0.02, "score": 3, "event": "Lives miserably with the Dursleys in Little Whinging"},
+    {"t": 0.06, "score": 7, "event": "On his 11th birthday Hagrid arrives; he learns he is a wizard"},
+    {"t": 0.10, "score": 4, "event": "Hagrid reveals Voldemort murdered his parents"},
+    {"t": 0.15, "score": 7, "event": "Diagon Alley: buys wand and Hedwig; discovers his fame"},
+    {"t": 0.20, "score": 7, "event": "On Hogwarts Express befriends Ron and meets Hermione"},
+    {"t": 0.25, "score": 7, "event": "Sorting Hat places all three in Gryffindor"},
+    {"t": 0.42, "score": 6, "event": "First Quidditch match: broom sabotaged but he wins"},
+    {"t": 0.55, "score": 7, "event": "Christmas: receives the invisibility cloak"},
+    {"t": 0.62, "score": 5, "event": "Discovers Mirror of Erised; sees his lost family"},
+    {"t": 0.72, "score": 6, "event": "Learns Fluffy guards the Philosopher's Stone"},
+    {"t": 0.85, "score": 5, "event": "Trio descends through trapdoor to defend the Stone"},
+    {"t": 0.90, "score": 6, "event": "Confronts Quirrell/Voldemort; Stone appears in his pocket"},
+    {"t": 0.94, "score": 7, "event": "Voldemort abandons Quirrell; Harry's touch burns Quirrell"},
+    {"t": 0.97, "score": 7, "event": "Wakes in infirmary; Dumbledore explains mother's protection"},
+    {"t": 1.0, "score": 7, "event": "Gryffindor wins House Cup; Harry heads home for summer"}
+  ]
+}

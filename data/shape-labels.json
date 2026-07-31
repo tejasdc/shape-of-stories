@@ -1,0 +1,458 @@
+{
+  "epic-of-gilgamesh": {
+    "shape": "icarus",
+    "why": "Peak 0.75 mid, plunges to -1.0, ends middling near 0."
+  },
+  "the-iliad": {
+    "shape": "hole",
+    "why": "Middling start, valley -1.0, climbs to 0.75, ends near start."
+  },
+  "the-odyssey": {
+    "shape": "hole",
+    "why": "Long low, one deep valley, then steady climb to top."
+  },
+  "ramayana": {
+    "shape": "complex",
+    "why": "Four+ genuine reversals; peaks 1.0 and troughs -0.75 alternate."
+  },
+  "oedipus-rex": {
+    "shape": "tragedy",
+    "why": "Monotonic decline to -1.0 and stays there."
+  },
+  "nala-damayanti": {
+    "shape": "cinderella",
+    "why": "Early peak 1.0, crashes to -1.0, climbs back to 1.0 ending."
+  },
+  "mahabharata": {
+    "shape": "complex",
+    "why": "Up-down-up-down-up: multiple setbacks and recoveries."
+  },
+  "savitri-and-satyavan": {
+    "shape": "hole",
+    "why": "Starts high, one dominant valley -1.0, ends at 1.0."
+  },
+  "buddhacarita": {
+    "shape": "hole",
+    "why": "High start, valley -0.75, jumps to and holds at 1.0."
+  },
+  "shakuntala": {
+    "shape": "hole",
+    "why": "Middling with one dip -0.75, then rises to 1.0."
+  },
+  "harishchandra": {
+    "shape": "hole",
+    "why": "High start, long deep valley at -1.0, snaps back to 1.0."
+  },
+  "cilappatikaram": {
+    "shape": "hole",
+    "why": "High start, long valley -1.0, ends at 1.0."
+  },
+  "thousand-and-one-nights": {
+    "shape": "rise",
+    "why": "Steady climb from -0.75 to 1.0; no major collapse."
+  },
+  "tale-of-the-bamboo-cutter": {
+    "shape": "icarus",
+    "why": "Early peak 0.75, long slow decline ending at -0.5."
+  },
+  "rostam-and-sohrab": {
+    "shape": "tragedy",
+    "why": "Small early bump then long decline to -1.0."
+  },
+  "tale-of-genji": {
+    "shape": "icarus",
+    "why": "Late peak 1.0 followed by crash to -1.0."
+  },
+  "conference-of-the-birds": {
+    "shape": "hole",
+    "why": "Middling start, long valley -0.75, ends at 1.0."
+  },
+  "layla-and-majnun": {
+    "shape": "tragedy",
+    "why": "Steady decline from 0.5 to -1.0 with no real recovery."
+  },
+  "tale-of-the-heike": {
+    "shape": "icarus",
+    "why": "Early peak 1.0, long decline to -1.0, tiny end recovery."
+  },
+  "water-margin": {
+    "shape": "icarus",
+    "why": "Mid-late peak 0.75, then crashes to -1.0."
+  },
+  "romance-of-three-kingdoms": {
+    "shape": "icarus",
+    "why": "Builds to 1.0 mid, then crashes to -1.0 by end."
+  },
+  "journey-to-the-west": {
+    "shape": "cinderella",
+    "why": "Rise to 1.0, valley -1.0, back to 1.0; ends near top."
+  },
+  "romeo-and-juliet": {
+    "shape": "icarus",
+    "why": "Early peak 0.75, then steady decline to -1.0."
+  },
+  "hamlet": {
+    "shape": "tragedy",
+    "why": "Wobbles low then declines to -1.0."
+  },
+  "king-lear": {
+    "shape": "tragedy",
+    "why": "Steady fall to -1.0 with tiny mid-story bump."
+  },
+  "macbeth": {
+    "shape": "tragedy",
+    "why": "Starts high 0.5, monotonic decline to -1.0."
+  },
+  "don-quixote": {
+    "shape": "tragedy",
+    "why": "Middling wobble then decline to -0.75."
+  },
+  "cinderella-perrault": {
+    "shape": "cinderella",
+    "why": "Low start, rises to 0.75, real dip -0.5, rises to 1.0."
+  },
+  "tale-of-chunhyang": {
+    "shape": "cinderella",
+    "why": "Early peak 1.0, deep valley -1.0, back up to 1.0."
+  },
+  "dream-of-the-red-chamber": {
+    "shape": "icarus",
+    "why": "Peak 1.0 mid-story, long decline to -1.0."
+  },
+  "sense-and-sensibility": {
+    "shape": "hole",
+    "why": "Low-middling start, valley -0.75, rises to 0.75 ending."
+  },
+  "pride-and-prejudice": {
+    "shape": "hole",
+    "why": "Middling wobble, dominant valley -1.0, ends at 1.0."
+  },
+  "emma": {
+    "shape": "cinderella",
+    "why": "Rises, dips -0.5, rises, dips -0.75, ends at 1.0."
+  },
+  "frankenstein": {
+    "shape": "tragedy",
+    "why": "Small early bump, otherwise steady decline to -1.0."
+  },
+  "tale-of-kieu": {
+    "shape": "complex",
+    "why": "Repeated 1.0/-1.0 swings; no single dominant arc."
+  },
+  "a-christmas-carol": {
+    "shape": "hole",
+    "why": "Low-middling start, dominant valley -1.0, ends at 1.0."
+  },
+  "the-count-of-monte-cristo": {
+    "shape": "hole",
+    "why": "Starts high 0.75, valley -1.0, recovers to 0.5 near start."
+  },
+  "jane-eyre": {
+    "shape": "complex",
+    "why": "Multiple deep valleys and rises of comparable size."
+  },
+  "wuthering-heights": {
+    "shape": "complex",
+    "why": "Down-up-down-up-down sawtooth ending negative."
+  },
+  "the-scarlet-letter": {
+    "shape": "rise",
+    "why": "Gradual rise from -1.0 to 0; ends higher than start."
+  },
+  "moby-dick": {
+    "shape": "tragedy",
+    "why": "Middling start, steady decline to -1.0."
+  },
+  "a-tale-of-two-cities": {
+    "shape": "complex",
+    "why": "Many big swings between 0.75 and -1.0 across arc."
+  },
+  "great-expectations": {
+    "shape": "icarus",
+    "why": "Mid peak 0.75, long decline ending near 0."
+  },
+  "les-miserables": {
+    "shape": "complex",
+    "why": "Many oscillations in a middling range; no single arc."
+  },
+  "alice-in-wonderland": {
+    "shape": "flatline",
+    "why": "Oscillates in narrow band -0.5 to 0.5 throughout."
+  },
+  "crime-and-punishment": {
+    "shape": "flatline",
+    "why": "Stays in narrow negative band; refuses to commit."
+  },
+  "little-women": {
+    "shape": "complex",
+    "why": "Multiple genuine reversals; deep valley plus recoveries."
+  },
+  "middlemarch": {
+    "shape": "hole",
+    "why": "Middling start, valley -0.75, partial recovery to 0."
+  },
+  "tom-sawyer": {
+    "shape": "complex",
+    "why": "Four+ reversals of comparable size across the story."
+  },
+  "anna-karenina": {
+    "shape": "tragedy",
+    "why": "Mid peak 0.75 then plunge to -1.0; final blip aside."
+  },
+  "treasure-island": {
+    "shape": "rise",
+    "why": "Early dip -0.75 then steady climb to 0.75."
+  },
+  "huckleberry-finn": {
+    "shape": "hole",
+    "why": "Middling start, long valley -0.75, mild recovery."
+  },
+  "jekyll-and-hyde": {
+    "shape": "tragedy",
+    "why": "Only tiny mid-bump; ends firmly at -1.0."
+  },
+  "dorian-gray": {
+    "shape": "icarus",
+    "why": "Early peak 0.5, long decline to -1.0."
+  },
+  "tess-of-the-durbervilles": {
+    "shape": "tragedy",
+    "why": "Small mid-story bump; ends at -1.0."
+  },
+  "the-time-machine": {
+    "shape": "complex",
+    "why": "Multiple wobbles of comparable size; no dominant arc."
+  },
+  "dracula": {
+    "shape": "hole",
+    "why": "Middling start, dominant valley -1.0, ends at 0.75."
+  },
+  "war-of-the-worlds": {
+    "shape": "hole",
+    "why": "Middling start, valley -1.0, ends at 0.75."
+  },
+  "heart-of-darkness": {
+    "shape": "tragedy",
+    "why": "Middling start, steady decline to -1.0."
+  },
+  "wizard-of-oz": {
+    "shape": "complex",
+    "why": "Multiple genuine reversals of comparable size; ends high."
+  },
+  "hound-of-the-baskervilles": {
+    "shape": "rise",
+    "why": "Wobbles then climbs to 0.75; no major collapse."
+  },
+  "call-of-the-wild": {
+    "shape": "complex",
+    "why": "Repeated -1.0 troughs and 0.75 peaks; sawtooth arc."
+  },
+  "wind-in-the-willows": {
+    "shape": "hole",
+    "why": "Middling wobbly start, valley -1.0, ends above start."
+  },
+  "peter-pan": {
+    "shape": "complex",
+    "why": "Multiple up-down cycles of comparable size."
+  },
+  "the-secret-garden": {
+    "shape": "rise",
+    "why": "Low start -1.0, steady climb to 1.0."
+  },
+  "the-metamorphosis": {
+    "shape": "flatline",
+    "why": "Very narrow band -1.0 to -0.5 throughout; no arc."
+  },
+  "age-of-innocence": {
+    "shape": "tragedy",
+    "why": "Middling start, broadly downward to -0.75."
+  },
+  "the-great-gatsby": {
+    "shape": "icarus",
+    "why": "Mid peak 0.75 then crash to -1.0, ends -0.5."
+  },
+  "the-trial": {
+    "shape": "tragedy",
+    "why": "Mild decline from -0.25 ending at -1.0."
+  },
+  "the-murder-of-roger-ackroyd": {
+    "shape": "icarus",
+    "why": "Flat around 0.25 then cliff-drop to -1.0 at end."
+  },
+  "of-mice-and-men": {
+    "shape": "icarus",
+    "why": "Mid bump 0.5 then plunge to -1.0 and stays."
+  },
+  "the-hobbit": {
+    "shape": "complex",
+    "why": "Many small reversals across -0.75 to 0.5 range."
+  },
+  "rebecca": {
+    "shape": "icarus",
+    "why": "Early peak 0.5, valley -1.0, weak recovery, ends -0.5."
+  },
+  "and-then-there-were-none": {
+    "shape": "tragedy",
+    "why": "Steady decline from 0 to -1.0."
+  },
+  "the-grapes-of-wrath": {
+    "shape": "tragedy",
+    "why": "Middling start, decline to -1.0."
+  },
+  "the-stranger": {
+    "shape": "hole",
+    "why": "Middling start, valley -1.0, ends 0 near start."
+  },
+  "animal-farm": {
+    "shape": "icarus",
+    "why": "Peak 0.75 (revolution), then crash to -1.0 (betrayal)."
+  },
+  "diary-of-a-young-girl": {
+    "shape": "tragedy",
+    "why": "Broadly downward with tiny recovery; ends negative."
+  },
+  "1984": {
+    "shape": "icarus",
+    "why": "Mid peak 0.5 (romance), then crash to -1.0."
+  },
+  "the-catcher-in-the-rye": {
+    "shape": "flatline",
+    "why": "Narrow band, no arc; stuck in negative mood."
+  },
+  "charlottes-web": {
+    "shape": "complex",
+    "why": "Multiple reversals: rise, deep dip, high peak, dip, rise."
+  },
+  "the-old-man-and-the-sea": {
+    "shape": "icarus",
+    "why": "Peak 0.75 (catch), plunge to -1.0 (sharks), ends 0."
+  },
+  "waiting-for-godot": {
+    "shape": "flatline",
+    "why": "Stays within narrow band -0.75 to 0; refuses to commit."
+  },
+  "lord-of-the-flies": {
+    "shape": "icarus",
+    "why": "Early peak 0.5, then steady decline to -1.0."
+  },
+  "the-lord-of-the-rings": {
+    "shape": "complex",
+    "why": "Multiple reversals; ends slightly negative -0.25."
+  },
+  "things-fall-apart": {
+    "shape": "tragedy",
+    "why": "Middling-high start, steady decline to -1.0."
+  },
+  "to-kill-a-mockingbird": {
+    "shape": "hole",
+    "why": "Middling start, valley -1.0, ends at 0.5 above start."
+  },
+  "flowers-for-algernon": {
+    "shape": "icarus",
+    "why": "Mid peak 0.5, then steady decline to -1.0."
+  },
+  "one-hundred-years-of-solitude": {
+    "shape": "icarus",
+    "why": "Early rise to 0.5, long decline to -1.0."
+  },
+  "slaughterhouse-five": {
+    "shape": "oedipus",
+    "why": "Down, mid recovery 0.5, then down again ending -0.75."
+  },
+  "the-godfather": {
+    "shape": "tragedy",
+    "why": "High start 0.5, broadly downward to -0.75."
+  },
+  "shawshank-redemption": {
+    "shape": "cinderella",
+    "why": "Rise from -1.0 to 0.5, setback -1.0, rises to 0.75."
+  },
+  "the-color-purple": {
+    "shape": "cinderella",
+    "why": "Rise to 0.75, mid setback -0.5, rises to 1.0."
+  },
+  "the-handmaids-tale": {
+    "shape": "hole",
+    "why": "Middling start, dominant valley -1.0, ends near start."
+  },
+  "beloved": {
+    "shape": "hole",
+    "why": "Small early bump, dominant valley -1.0, ends slightly above."
+  },
+  "fight-club": {
+    "shape": "icarus",
+    "why": "Small mid peak 0.25, then plunge to -1.0."
+  },
+  "harry-potter-sorcerers-stone": {
+    "shape": "rise",
+    "why": "Low start -0.5, jumps to 0.5 and holds through top ending."
+  },
+  "into-thin-air": {
+    "shape": "hole",
+    "why": "Middling start, peak 0.5, valley -1.0, ends 0 near start."
+  },
+  "atonement": {
+    "shape": "tragedy",
+    "why": "Middling start, broadly downward."
+  },
+  "life-of-pi": {
+    "shape": "hole",
+    "why": "Middling start, valley -1.0, ends 0 near start."
+  },
+  "the-da-vinci-code": {
+    "shape": "rise",
+    "why": "Broadly upward from -0.25 to 0.5; brief dip only."
+  },
+  "the-kite-runner": {
+    "shape": "complex",
+    "why": "Multiple reversals: peaks and valleys of comparable size."
+  },
+  "never-let-me-go": {
+    "shape": "tragedy",
+    "why": "Middling start, steady decline to -1.0."
+  },
+  "the-road": {
+    "shape": "tragedy",
+    "why": "Bleak throughout; wobbles low, ends -0.25."
+  },
+  "the-hunger-games": {
+    "shape": "complex",
+    "why": "Many oscillations of comparable size across arc."
+  },
+  "unbroken": {
+    "shape": "cinderella",
+    "why": "Early rise to 0.5, valley -1.0, rises to 0.75 ending."
+  },
+  "the-martian": {
+    "shape": "complex",
+    "why": "Many rises and setbacks; classic problem-then-fix cycle."
+  },
+  "a-man-called-ove": {
+    "shape": "rise",
+    "why": "Low start, broadly upward with one mild dip, ends 0.5."
+  },
+  "gone-girl": {
+    "shape": "flatline",
+    "why": "Consistently in narrow negative band -1.0 to -0.25."
+  },
+  "the-fault-in-our-stars": {
+    "shape": "icarus",
+    "why": "Mid peak 0.75, then plunge to -1.0, ends 0."
+  },
+  "when-breath-becomes-air": {
+    "shape": "icarus",
+    "why": "Peak 0.75 (career), then plunge to -1.0 (diagnosis)."
+  },
+  "eleanor-oliphant": {
+    "shape": "complex",
+    "why": "Multiple genuine reversals of comparable size."
+  },
+  "educated": {
+    "shape": "complex",
+    "why": "Many rises and setbacks; no single dominant arc."
+  },
+  "normal-people": {
+    "shape": "complex",
+    "why": "Multiple dips of similar depth; on/off arc pattern."
+  }
+}

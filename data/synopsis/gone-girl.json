@@ -1,0 +1,27 @@
+{
+  "id": "gone-girl",
+  "title": "Gone Girl",
+  "author": "Gillian Flynn",
+  "year": 2012,
+  "region": "west",
+  "protagonist": "Nick Dunne",
+  "source": ["https://en.wikipedia.org/wiki/Gone_Girl_(novel)"],
+  "beats": [
+    {"t": 0.03, "score": 2, "event": "Comes home on fifth anniversary; Amy is missing"},
+    {"t": 0.08, "score": 2, "event": "Signs of struggle; police make him primary suspect"},
+    {"t": 0.15, "score": 2, "event": "Media savages his flat, guilty-seeming demeanor"},
+    {"t": 0.22, "score": 2, "event": "Debt and Amy's raised life-insurance policy surface"},
+    {"t": 0.30, "score": 2, "event": "Admits affair with student Andie and divorce plans"},
+    {"t": 0.38, "score": 3, "event": "Works Amy's anniversary treasure-hunt clues"},
+    {"t": 0.45, "score": 3, "event": "Realizes Amy staged the whole thing to frame him"},
+    {"t": 0.55, "score": 2, "event": "Finds planted evidence in his sister Go's woodshed"},
+    {"t": 0.65, "score": 4, "event": "Hires Tanner Bolt; contrite TV interview sways public"},
+    {"t": 0.72, "score": 1, "event": "Police arrest him after finding the woodshed evidence"},
+    {"t": 0.80, "score": 3, "event": "Amy returns with a fabricated kidnapping story"},
+    {"t": 0.85, "score": 2, "event": "Nick, Boney and Go know she is lying but have no proof"},
+    {"t": 0.90, "score": 3, "event": "Starts writing a tell-all exposé of Amy"},
+    {"t": 0.94, "score": 2, "event": "Amy uses preserved sperm pregnancy to trap him"},
+    {"t": 0.97, "score": 2, "event": "Accepts a lifelong performance as the ideal husband"},
+    {"t": 1.0, "score": 3, "event": "Eve of due date: drops the act; feels pity for her"}
+  ]
+}

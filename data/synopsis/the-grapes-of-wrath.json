@@ -1,0 +1,28 @@
+{
+  "id": "the-grapes-of-wrath",
+  "title": "The Grapes of Wrath",
+  "author": "John Steinbeck",
+  "year": 1939,
+  "region": "west",
+  "protagonist": "Tom Joad",
+  "source": ["https://en.wikipedia.org/wiki/The_Grapes_of_Wrath"],
+  "beats": [
+    {"t": 0.03, "score": 5, "event": "Tom Joad paroled from McAlester prison for homicide"},
+    {"t": 0.08, "score": 5, "event": "Meets former preacher Jim Casy while hitchhiking home"},
+    {"t": 0.13, "score": 3, "event": "Finds the Joad farm deserted, family evicted by the bank"},
+    {"t": 0.18, "score": 4, "event": "Reunited with family at Uncle John's; they plan westward move"},
+    {"t": 0.25, "score": 4, "event": "Joads pack a converted Hudson truck, set out on Route 66"},
+    {"t": 0.33, "score": 3, "event": "Grampa dies of a stroke; buried in a field"},
+    {"t": 0.42, "score": 3, "event": "Granma dies of illness near the California line"},
+    {"t": 0.50, "score": 3, "event": "Noah and Connie abandon the family"},
+    {"t": 0.58, "score": 2, "event": "In California find wages low, workers starved and exploited"},
+    {"t": 0.64, "score": 3, "event": "Casy arrested at a Hooverville for shielding a fleeing worker"},
+    {"t": 0.70, "score": 5, "event": "Family finds cleaner shelter at federal Weedpatch Camp"},
+    {"t": 0.76, "score": 3, "event": "Joads work as strikebreakers in a peach orchard"},
+    {"t": 0.82, "score": 1, "event": "Deputies kill Casy with a pickaxe; Tom kills a deputy back"},
+    {"t": 0.88, "score": 2, "event": "Wounded Tom hides in the woods, a fugitive again"},
+    {"t": 0.92, "score": 2, "event": "Tom bids Ma farewell, vowing to work for the oppressed"},
+    {"t": 0.96, "score": 1, "event": "Rose of Sharon's baby stillborn; floods swamp their camp"},
+    {"t": 1.00, "score": 3, "event": "Rose of Sharon nurses a starving stranger in the barn"}
+  ]
+}

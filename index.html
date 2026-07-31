@@ -126,7 +126,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <header id="hero">
   <div>
-    <div class="kicker">After Kurt Vonnegut · 84 books · one line each</div>
+    <div class="kicker">After Kurt Vonnegut · 114 stories, East and West · one line each</div>
     <h1>The Shape of<br>Stories</h1>
     <p class="lede">Track how well things are going for a story’s hero, moment by moment, and draw it
       as a line: beginning on the left, end on the right, up is good luck, down is bad.
@@ -152,7 +152,8 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <h2>Seven shapes cover nearly everything</h2>
   <p class="lede">Six were confirmed by the Vermont team across 1,327 novels — three basic moves, each
     also possible upside down. The seventh is Vonnegut’s own exception: the story whose line refuses to
-    be drawn. Counts are from this atlas’s 84 books.</p>
+    be drawn. The eighth is a braid — stories whose line genuinely reverses again and again.
+    Counts are from this atlas’s 114 stories.</p>
   <div class="cardGrid" id="shapeGrid"></div>
 </section>
 
@@ -172,15 +173,15 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <section id="atlas">
   <div class="kicker">Part IV — The atlas</div>
-  <h2>Eighty-four books, one line each</h2>
-  <p class="lede">Every line answers one question: <em>how well are things going?</em> Three kinds of line,
-    told apart in plain words on each book: <b>computed from the words</b> (the Vermont method, applied to the
-    original texts), <b>drawn from a reading</b> (by hand, the way Vonnegut did it), or <b>scored by a
-    reader</b> (a machine reader that worked through the whole book in twenty slices, judging events — our
-    best instrument).</p>
+  <h2>114 stories, one line each</h2>
+  <p class="lede">Every line answers one question — <em>how well are things going for the protagonist?</em> —
+    and every line was scored the same way: an AI agent judged the story’s events beat by beat.
+    For nine works the agent read the entire text; for the rest it worked from the book’s published plot
+    synopsis, which is open, citable information anyone can check. Each book’s page says which, and links
+    the source. Hover any line for the event behind a point.</p>
   <div class="filters" id="filters">
     <input id="search" type="search" placeholder="Search title or author…">
-    <span id="shapeChips"></span><span id="howChips"></span>
+    <span id="shapeChips"></span><span id="regionChips"></span>
     <span id="atlasCount"></span>
   </div>
   <div class="cardGrid" id="atlasGrid"></div>
@@ -189,11 +190,12 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <section id="reader">
   <div class="kicker">Part V — A better reader</div>
   <h2>What happens when the reader actually understands the book</h2>
-  <p class="lede">We took five books and scored them twice: once with the word-mood method, once with a
-    machine reader that read all twenty slices of each book and judged the <em>events</em>. On four of the
-    five, the two lines barely relate — and the failures cluster at <b>endings</b>, where weddings and
-    redemptions are brief in words but enormous in meaning. The word-counter hears A Christmas Carol’s
-    party scenes; it cannot hear that the last page is the whole point.</p>
+  <p class="lede">We took five books and scored them twice: once with the word-mood method, once with an
+    AI agent that read the full text and judged the <em>events</em>. On four of the five, the two lines
+    barely relate — and the failures cluster at <b>endings</b>, where weddings and redemptions are brief
+    in words but enormous in meaning. The word-counter hears A Christmas Carol’s party scenes; it cannot
+    hear that the last page is the whole point. (Thirty-seven books in the atlas carry their word-mood
+    line as a toggle, so you can check the disagreement yourself on any of them.)</p>
   <div class="keyRow">
     <span><span class="sw" style="background:var(--reader)"></span>hero’s fortune, scored by reading events</span>
     <span><span class="sw" style="background:var(--line)"></span>mood of the words (2016 method)</span>
@@ -206,17 +208,18 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <section id="east">
   <div class="kicker">Part VI — East and West</div>
-  <h2>The oldest stories draw the same valley</h2>
-  <p class="lede">We pointed the same reader at four Indian classics — two epics (condensed by Romesh
-    Dutt in the 1890s), one Sanskrit play, one episode-tale. Same alphabet: deep valleys, falls and
-    recoveries. Different signatures: the trapdoor is a <b>dice game</b> in both epics; battlefield
-    victories score as <em>misfortune</em> (winning at Kurukshetra is a grief); and the Ramayana keeps
-    filming after the happy ending — coronation at the peak, then Sita swallowed by the Earth. Where
-    Western tellings stop the camera at the wedding, the epic lets the wheel keep turning.</p>
+  <h2>Twenty-two Eastern classics, same alphabet, different accents</h2>
+  <p class="lede">From Gilgamesh — the oldest story we have — through the Sanskrit epics, the Persian
+    romances, China’s four classic novels, Genji, the Heike, Chunhyang and the Tale of Kieu: the same
+    basic shapes appear everywhere. The accents differ. The trapdoor in both Indian epics is a
+    <b>dice game</b>; battlefield victory scores as <em>grief</em> at Kurukshetra; the Ramayana and the
+    Heike keep going past the moment a Western telling would stop the camera — triumph is followed by the
+    wheel turning; and Vietnam’s Tale of Kieu is the truest sawtooth in the whole atlas, catastrophe and
+    rescue over and over.</p>
   <div class="panelGrid" id="eastGrid"></div>
-  <p class="lede" style="margin-top:16px">One caveat we owe the material: Sanskrit dramaturgy consciously
-    composes a <em>sequence of emotions</em> (the rasas), not one hero’s luck — so where an Indian text looks
-    odd under this lens, part of that is the lens.</p>
+  <p class="lede" style="margin-top:16px">One caveat we owe the material: several of these traditions
+    compose a <em>sequence of emotions</em> (Sanskrit rasa theory) or a cyclical cosmology rather than one
+    hero’s luck — where an Eastern text looks odd under this lens, part of that is the lens.</p>
 </section>
 
 <section id="map">
@@ -232,18 +235,22 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <h2>Method &amp; sources</h2>
   <div class="cols">
     <div>
-      <h3>The three kinds of line</h3>
-      <p><b>Computed from the words</b> (31 books): per-book sentiment series from Reagan, Mitchell, Kiley,
-        Danforth &amp; Dodds, <i>“The emotional arcs of stories are dominated by six basic shapes”</i>
-        (EPJ Data Science, 2016), via their public <code>core-stories</code> data; labMT word-happiness
-        lexicon (Dodds et&nbsp;al. 2011); smoothed, each book normalized to its own range. Orientation
-        independently verified by re-deriving five books from raw Gutenberg text (all correlate positively).</p>
-      <p><b>Drawn from a reading</b> (44 books): hand-scored fortune arcs against a shared calibration
-        rubric — readings, not measurements, exactly what Vonnegut did at the board.</p>
-      <p><b>Scored by a reader</b> (9 books): a machine reader split each full text into equal slices —
-        twenty for novels and epics, sixteen for the two shorter works — read each slice, and scored the
-        protagonist’s situation 1–9 from events, never from prose mood, recording the justifying event
-        for every point (visible on hover).</p>
+      <h3>How every line was made</h3>
+      <p>Every fortune line in the atlas was scored by an AI agent judging the story’s <b>events</b> against
+        one shared rubric (1 = catastrophic, 5 = ordinary life, 9 = triumphant; prose mood never counts).
+        The difference between books is the <b>evidence</b> the agent worked from:</p>
+      <p><b>Full text</b> (9 works): the agent read the entire book in equal slices — twenty for novels and
+        epics, sixteen for the two shorter works — scoring each slice as it went.</p>
+      <p><b>Published synopsis</b> (105 works): the agent scored beat-by-beat from the book’s public plot
+        synopsis (linked on each book’s page), so every score is checkable against the same source. Event
+        positions along the book are approximate — synopses compress unevenly. Known wrinkles, kept visible:
+        one book (A Man Called Ove) was scored from its faithful film adaptation’s synopsis because the
+        novel’s page lacks one; Into Thin Air’s thin plot section was supplemented with the 1996 Everest
+        disaster article; The Hunger Games was re-scored after a first pass accidentally covered the whole
+        trilogy — the validation gates exist because these things happen.</p>
+      <p><b>Word-mood lines</b> (the 2016 method — average happiness of a moving chunk of vocabulary,
+        Reagan et&nbsp;al., EPJ Data Science 2016, labMT lexicon) appear only as toggleable overlays on
+        37 pre-1923 books, for comparison: they are the book’s soundtrack, not its plot.</p>
     </div>
     <div>
       <h3>What we verified ourselves</h3>
@@ -304,11 +311,11 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   </div>
 </div>
 
-<script src="data/stories2.js"></script>
+<script src="data/stories3.js"></script>
 <script>
 'use strict';
 const S = window.STORIES, BOOKS = S.books, SHAPES = S.shapes;
-const SHAPE_ORDER = ['rise', 'cinderella', 'hole', 'icarus', 'oedipus', 'tragedy', 'flatline'];
+const SHAPE_ORDER = ['rise', 'cinderella', 'hole', 'icarus', 'oedipus', 'tragedy', 'complex', 'flatline'];
 const SHAPE_SKETCH = {
   rise: [[0,-.7],[.25,-.35],[.5,.05],[.75,.45],[1,.8]],
   tragedy: [[0,.35],[.25,.1],[.5,-.2],[.75,-.55],[1,-.85]],
@@ -317,6 +324,7 @@ const SHAPE_SKETCH = {
   cinderella: [[0,-.7],[.25,.3],[.45,.6],[.6,-.6],[.8,-.2],[1,.9]],
   oedipus: [[0,.3],[.25,-.35],[.5,.25],[.7,.45],[1,-.9]],
   flatline: [[0,0],[.2,.06],[.4,-.08],[.6,.04],[.8,-.05],[1,0]],
+  complex: [[0,-.2],[.15,.55],[.3,-.6],[.45,.4],[.6,-.5],[.75,.5],[.9,-.3],[1,.3]],
 };
 const SHAPE_DESC = {
   rise: 'Things keep getting better. Rarer in great books than optimism predicts — pure ascent is hard to sustain for 300 pages.',
@@ -325,18 +333,15 @@ const SHAPE_DESC = {
   icarus: 'The climb that earns the crash. The higher the middle, the harder the ending lands.',
   cinderella: 'Up, a midnight, up again. Vonnegut noticed this is also the shape of the New Testament.',
   oedipus: 'The cruelest one: a recovery that turns out to be a trapdoor.',
-  flatline: 'Hamlet’s shape: nobody — hero or reader — can tell the good news from the bad, so the line can’t commit. Not shapelessness; honesty.',
-};
-const HOW_TEXT = {
-  computed: 'computed from the words',
-  drawn: 'drawn from a reading',
-  read: 'scored by a reader',
+  flatline: 'The line that refuses to commit — it stays in a narrow band the whole way. Vonnegut’s point about Hamlet: sometimes that refusal is the honesty.',
+  complex: 'A true sawtooth: the story reverses again and again with no single dominant valley or peak. Not a new basic shape — a braid of the six, and some traditions braid far more than others.',
 };
 const HOW_PROV = {
-  computed: 'This line was computed from the book’s words by the 2016 method: average happiness of a moving chunk of text. It hears the mood of the vocabulary, not the luck of the hero — treat it as the book’s soundtrack, not its plot.',
-  drawn: 'This line was drawn by hand from a reading of the plot — a judgment, not a measurement; the same thing Vonnegut was doing at the chalkboard.',
-  read: 'This line was scored by a machine reader that worked through the entire text in twenty slices, judging the hero’s situation from events. Hover the line to see the event behind every point.',
+  fulltext: 'This line was scored by an AI agent that read the entire text in equal slices, judging the protagonist’s situation from events — never from prose mood. Hover the line to see the event behind every point.',
+  synopsis: 'This line was scored by an AI agent from the book’s published plot synopsis — open, citable public information (source below). Event positions along the book are approximate; every score is checkable against the same synopsis.',
 };
+const REGION_NAME = { west: 'Western', india: 'India', china: 'China', japan: 'Japan', korea: 'Korea',
+  vietnam: 'Vietnam', persia: 'Persia', arabia: 'Arabic tradition', mesopotamia: 'Mesopotamia' };
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 let PAL = {};
@@ -353,19 +358,14 @@ function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h
 
 /* line of a book: [[t, v]] in [-1,1] */
 function lineOf(b) {
-  if (b.reader) {
-    // pilot points are slice centers; pad so the line truly spans beginning to end
-    const p = b.reader.pts;
-    const padded = [[0, p[0][1]], ...p, [1, p[p.length - 1][1]]];
-    return catmull(padded);
-  }
-  if (b.pts) return catmull(b.pts);
-  const s = b.mood_primary, out = [];
-  for (let i = 0; i < s.length; i++) out.push([i / (s.length - 1), s[i]]);
-  return out;
+  let p = b.pts;
+  // beat/slice positions may not touch the edges; pad so the line spans beginning to end
+  if (p[0][0] > 0.005) p = [[0, p[0][1]], ...p];
+  if (p[p.length - 1][0] < 0.955 && b.id !== 'diary-of-a-young-girl') p = [...p, [1, p[p.length - 1][1]]];
+  return catmull(p);
 }
 function moodLineOf(b) {
-  const s = b.mood || b.mood_primary;
+  const s = b.mood;
   if (!s) return null;
   return s.map((v, i) => [i / (s.length - 1), v]);
 }
@@ -458,7 +458,7 @@ function wrapLabel(ctx, txt, x, y, w, color) {
 /* annotated single line, Figure-2 style: label the extremes with events */
 function annotatedBeats(b) {
   // choose up to 4 labels: global min, global max, final point, plus first big drop
-  const src = b.reader ? b.reader.whys : (b.beats || []);
+  const src = b.whys || [];
   if (!src.length) return [];
   const line = lineOf(b);
   const withV = src.map(([t, txt]) => ({ t, txt, v: valueAt(line, t) }));
@@ -478,7 +478,7 @@ function annotatedBeats(b) {
 function drawBook(ctx, W, H, b, p, opts = {}) {
   const f = frame(ctx, W, H, opts);
   const pts = lineOf(b);
-  const color = b.reader ? PAL.reader : PAL.line;
+  const color = PAL.reader;
   const tip = strokeLine(ctx, pts, f.X, f.Y, p, color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
   if (!opts.mini && W >= 480) {
     for (const beat of annotatedBeats(b)) {
@@ -586,7 +586,7 @@ if (!REDUCED) setInterval(() => { if (!document.hidden && machineChart.p >= 1 &&
 function isVisible(el) { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
 
 /* ===== atlas ===== */
-const state = { shape: null, how: null, q: '' };
+const state = { shape: null, region: null, q: '' };
 const atlasGrid = document.getElementById('atlasGrid');
 const cardsById = {};
 BOOKS.forEach(b => {
@@ -596,29 +596,30 @@ BOOKS.forEach(b => {
   card.innerHTML = `<div class="cvWrap"><canvas></canvas></div><h3>${b.title}</h3>
     <div class="meta">${b.author} · ${year}</div>
     <div><span class="shapeTag">${SHAPES[b.shape].name}</span>
-    <span class="shapeTag">${HOW_TEXT[b.how]}</span></div>`;
+    ${b.region !== 'west' ? `<span class="shapeTag">${REGION_NAME[b.region]}</span>` : ''}</div>`;
   atlasGrid.appendChild(card);
   cardsById[b.id] = card;
   attach(card.querySelector('canvas'), (ctx, W, H, p) => {
     const f = frame(ctx, W, H, { mini: true });
-    strokeLine(ctx, lineOf(b), f.X, f.Y, p, b.reader ? PAL.reader : PAL.line, 1.9, hashStr(b.id));
+    strokeLine(ctx, lineOf(b), f.X, f.Y, p, PAL.reader, 1.9, hashStr(b.id));
   }, 1700);
   card.addEventListener('click', () => openDetail(b));
   card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(b); } });
 });
-const shapeChips = document.getElementById('shapeChips'), howChips = document.getElementById('howChips');
+const shapeChips = document.getElementById('shapeChips'), regionChips = document.getElementById('regionChips');
 SHAPE_ORDER.forEach(k => {
   const c = document.createElement('button'); c.className = 'chip'; c.textContent = SHAPES[k].name; c.dataset.k = k;
   c.onclick = () => { state.shape = state.shape === k ? null : k; syncFilters(); }; shapeChips.appendChild(c);
 });
-Object.entries(HOW_TEXT).forEach(([k, label]) => {
+[['west', 'Western'], ['east', 'Eastern']].forEach(([k, label]) => {
   const c = document.createElement('button'); c.className = 'chip'; c.textContent = label; c.dataset.k = k;
-  c.onclick = () => { state.how = state.how === k ? null : k; syncFilters(); }; howChips.appendChild(c);
+  c.onclick = () => { state.region = state.region === k ? null : k; syncFilters(); }; regionChips.appendChild(c);
 });
 document.getElementById('search').addEventListener('input', e => { state.q = e.target.value.toLowerCase(); syncFilters(); });
 function bookMatches(b) {
   if (state.shape && b.shape !== state.shape) return false;
-  if (state.how && b.how !== state.how) return false;
+  if (state.region === 'west' && b.region !== 'west') return false;
+  if (state.region === 'east' && b.region === 'west') return false;
   if (state.q && !(b.title + ' ' + b.author).toLowerCase().includes(state.q)) return false;
   return true;
 }
@@ -627,7 +628,7 @@ function syncFilters() {
   BOOKS.forEach(b => { const on = bookMatches(b); cardsById[b.id].style.display = on ? '' : 'none'; if (on) n++; });
   document.getElementById('atlasCount').textContent = n + ' of ' + BOOKS.length;
   shapeChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.shape));
-  howChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.how));
+  regionChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.k === state.region));
 }
 syncFilters();
 
@@ -647,7 +648,7 @@ const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
   if (!detailBook) return;
   const f = drawBook(ctx, W, H, detailBook, p);
   const mood = moodLineOf(detailBook);
-  if (mood && detailBook.reader && showMood) {
+  if (mood && showMood) {
     ctx.globalAlpha = .75;
     strokeLine(ctx, mood, f.X, f.Y, p, PAL.line, 1.8, hashStr(detailBook.id) + 5);
     ctx.globalAlpha = 1;
@@ -663,15 +664,21 @@ function openDetail(b) {
   document.getElementById('detailTitle').textContent = b.title;
   const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
   document.getElementById('detailMeta').textContent =
-    `${b.author} · ${year} · shape: ${SHAPES[b.shape].name} (${SHAPES[b.shape].aka})`;
-  document.getElementById('detailProv').textContent = HOW_PROV[b.how];
+    `${b.author} · ${year}${b.region !== 'west' ? ' · ' + REGION_NAME[b.region] : ''} · shape: ${SHAPES[b.shape].name} (${SHAPES[b.shape].aka})`;
+  const prov = document.getElementById('detailProv');
+  prov.textContent = HOW_PROV[b.how] + (b.protagonist ? ` Protagonist scored: ${b.protagonist}.` : '');
+  if (b.how === 'synopsis' && b.source && b.source.length) {
+    const a = document.createElement('a');
+    a.href = b.source[0]; a.target = '_blank'; a.rel = 'noopener'; a.textContent = ' View the synopsis ↗';
+    prov.appendChild(a);
+  }
   document.getElementById('detailNote').textContent = b.note || '';
   const mt = document.getElementById('moodToggle');
-  const hasBoth = !!(b.reader && (b.mood || b.mood_primary));
+  const hasBoth = !!b.mood;
   mt.style.display = hasBoth ? '' : 'none';
   if (hasBoth) {
-    const r = corr(b.reader.pts.map(q => q[1]),
-      b.reader.pts.map(q => valueAt(moodLineOf(b), q[0])));
+    const r = corr(b.pts.map(q => q[1]),
+      b.pts.map(q => valueAt(moodLineOf(b), q[0])));
     mt.textContent = `Word-mood line (agreement r = ${r >= 0 ? '+' : ''}${r.toFixed(2)})`;
     mt.setAttribute('aria-pressed', 'true');
   }
@@ -706,7 +713,7 @@ detailCv.addEventListener('pointermove', e => {
   if (!detailBook) { tipEl.style.opacity = 0; return; }
   const r = detailCv.getBoundingClientRect();
   const t = Math.max(0, Math.min(1, (e.clientX - r.left - 14) / (r.width - 28)));
-  const whys = detailBook.reader ? detailBook.reader.whys : (detailBook.beats || []);
+  const whys = detailBook.whys || [];
   let best = null, bd = .06;
   for (const [wt, txt] of whys) { const d = Math.abs(wt - t); if (d < bd) { bd = d; best = [wt, txt]; } }
   if (best) {
@@ -725,7 +732,7 @@ const READER_FIVE = ['the-metamorphosis', 'a-christmas-carol', 'emma', 'the-odys
 const readerGrid = document.getElementById('readerGrid');
 READER_FIVE.forEach(id => {
   const b = BOOKS.find(x => x.id === id);
-  const r = corr(b.reader.pts.map(q => q[1]), b.reader.pts.map(q => valueAt(moodLineOf(b), q[0])));
+  const r = corr(b.pts.map(q => q[1]), b.pts.map(q => valueAt(moodLineOf(b), q[0])));
   const verdict = r > .5 ? 'the methods agree' : (r < -.3 ? 'the word-line is upside down' : 'no relation');
   const el = document.createElement('div'); el.className = 'panel';
   el.innerHTML = `<h3>${b.title}</h3><div class="sub">agreement r = ${r >= 0 ? '+' : ''}${r.toFixed(2)} — ${verdict}</div>
@@ -749,20 +756,22 @@ function makePanelClickable(el, b) {
 
 /* ===== east & west ===== */
 const eastGrid = document.getElementById('eastGrid');
-BOOKS.filter(b => b.region === 'indian').forEach(b => {
-  const el = document.createElement('div'); el.className = 'panel';
-  el.innerHTML = `<h3>${b.title}</h3><div class="sub">${b.author} · ${SHAPES[b.shape].name}</div>
-    <div class="cvWrap"><canvas></canvas></div>`;
-  eastGrid.appendChild(el);
-  attach(el.querySelector('canvas'), (ctx, W, H, p) => {
-    drawBook(ctx, W, H, b, p, { mini: false, m: { l: 12, r: 12, t: 24, b: 24 } });
-  }, 2600);
-  makePanelClickable(el, b);
-});
+const EAST_ORDER = ['mesopotamia', 'india', 'persia', 'arabia', 'china', 'japan', 'korea', 'vietnam'];
+EAST_ORDER.forEach(region => BOOKS.filter(b => b.region === region)
+  .forEach(b => {
+    const el = document.createElement('div'); el.className = 'panel';
+    el.innerHTML = `<h3>${b.title}</h3><div class="sub">${REGION_NAME[region]} · ${b.author} · ${SHAPES[b.shape].name}</div>
+      <div class="cvWrap"><canvas></canvas></div>`;
+    eastGrid.appendChild(el);
+    attach(el.querySelector('canvas'), (ctx, W, H, p) => {
+      drawBook(ctx, W, H, b, p, { mini: false, m: { l: 12, r: 12, t: 24, b: 24 } });
+    }, 2600);
+    makePanelClickable(el, b);
+  }));
 
 /* ===== map ===== */
 const SHAPE_COLORS = { rise: '#2a78d6', cinderella: '#e87ba4', hole: '#1baf7a', icarus: '#eda100',
-  oedipus: '#4a3aa7', tragedy: '#e34948', flatline: '#898781' };
+  oedipus: '#4a3aa7', tragedy: '#e34948', complex: '#008300', flatline: '#898781' };
 const mapCv = document.getElementById('mapCv');
 let mapDots = [];
 attach(mapCv, (ctx, W, H, p) => {

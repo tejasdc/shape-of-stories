@@ -1,0 +1,20 @@
+{"id": "dream-of-the-red-chamber", "title": "Dream of the Red Chamber", "author": "Cao Xueqin", "year": 1760, "region": "china", "protagonist": "Jia Baoyu", "source": ["https://en.wikipedia.org/wiki/Dream_of_the_Red_Chamber"], "beats": [
+  {"t": 0.02, "score": 3, "event": "Sentient Stone left over from Nüwa mending heaven longs for the red dust"},
+  {"t": 0.05, "score": 5, "event": "A Taoist and a Buddhist monk carry the Stone into the mortal world"},
+  {"t": 0.07, "score": 8, "event": "Reborn as Jia Baoyu, heir apparent of the Rongguo House"},
+  {"t": 0.09, "score": 8, "event": "Born with a luminescent jade in his mouth"},
+  {"t": 0.16, "score": 4, "event": "Strict father Jia Zheng disapproves of his unorthodox reading"},
+  {"t": 0.22, "score": 9, "event": "A Jia daughter is made Imperial Consort; family prestige peaks"},
+  {"t": 0.28, "score": 9, "event": "The Daguanyuan garden is built to receive the Imperial Consort's visit"},
+  {"t": 0.36, "score": 7, "event": "Forms a special poetic bond with his sickly cousin Lin Daiyu"},
+  {"t": 0.44, "score": 6, "event": "Predestined match with cousin Xue Baochai shadows the household"},
+  {"t": 0.55, "score": 7, "event": "Long garden days of poetry, music, and cousinly society"},
+  {"t": 0.68, "score": 3, "event": "Daiyu's fragile health deteriorates as the family strains"},
+  {"t": 0.74, "score": 3, "event": "Political pressure and mismanagement erode the family fortunes"},
+  {"t": 0.80, "score": 2, "event": "Tricked into marrying Baochai via a veiled bride substitution"},
+  {"t": 0.82, "score": 1, "event": "Daiyu dies grieving; the marriage to Baochai is emotionally empty"},
+  {"t": 0.88, "score": 1, "event": "Government seizes Jia assets; the household collapses in disgrace"},
+  {"t": 0.92, "score": 1, "event": "Xifeng's loan-shark schemes accelerate the downfall"},
+  {"t": 0.96, "score": 6, "event": "Baoyu passes the imperial examination before vanishing"},
+  {"t": 1.00, "score": 4, "event": "Renounces the world and becomes a monk; the Stone returns to origin"}
+]}

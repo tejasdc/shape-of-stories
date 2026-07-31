@@ -1,0 +1,28 @@
+{
+  "id": "conference-of-the-birds",
+  "title": "The Conference of the Birds",
+  "author": "Attar of Nishapur",
+  "year": 1177,
+  "region": "persia",
+  "protagonist": "the hoopoe and the flock",
+  "source": ["https://en.wikipedia.org/wiki/The_Conference_of_the_Birds"],
+  "beats": [
+    {"t": 0.03, "score": 5, "event": "The world's birds gather to choose a sovereign"},
+    {"t": 0.08, "score": 6, "event": "The hoopoe proposes they seek the hidden Simorgh"},
+    {"t": 0.14, "score": 5, "event": "The hoopoe names the seven valleys that lie ahead"},
+    {"t": 0.20, "score": 3, "event": "The flock bows in distress; some birds die of fright"},
+    {"t": 0.26, "score": 4, "event": "Nightingale, parrot, peacock, and duck each plead excuses"},
+    {"t": 0.32, "score": 5, "event": "The hoopoe answers every objection; the flock resolves to fly"},
+    {"t": 0.42, "score": 5, "event": "They set out on the arduous journey together"},
+    {"t": 0.50, "score": 4, "event": "Valley of the Quest: dogma and unbelief are shed"},
+    {"t": 0.56, "score": 4, "event": "Valley of Love: reason is forsaken for pure longing"},
+    {"t": 0.62, "score": 4, "event": "Valley of Knowledge: worldly learning is exposed as useless"},
+    {"t": 0.68, "score": 3, "event": "Valley of Detachment: desires fall away and reality dissolves"},
+    {"t": 0.74, "score": 2, "event": "Many die of thirst, heat, illness, or wild beasts on the way"},
+    {"t": 0.80, "score": 3, "event": "Valley of Unity: all seeming multiplicity resolves into one"},
+    {"t": 0.86, "score": 3, "event": "Valley of Wonderment: bewilderment before divine beauty"},
+    {"t": 0.92, "score": 3, "event": "Valley of Poverty and Annihilation: the ego dissolves entirely"},
+    {"t": 0.97, "score": 6, "event": "Only thirty birds survive to reach the Simorgh's court"},
+    {"t": 1.00, "score": 9, "event": "They see: 'si morgh' means 'thirty birds'; they are what they sought"}
+  ]
+}

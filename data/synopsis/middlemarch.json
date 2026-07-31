@@ -1,0 +1,22 @@
+{"id": "middlemarch", "title": "Middlemarch", "author": "George Eliot", "year": 1872, "region": "west", "protagonist": "Dorothea Brooke", "source": ["https://en.wikipedia.org/wiki/Middlemarch"], "beats": [
+  {"t": 0.08, "score": 6, "event": "Idealistic Dorothea Brooke plans to marry Casaubon"},
+  {"t": 0.14, "score": 5, "event": "Dorothea marries elderly clergyman Edward Casaubon"},
+  {"t": 0.20, "score": 6, "event": "Dr. Lydgate arrives seeking to reform medical practice"},
+  {"t": 0.26, "score": 6, "event": "Fred Vincy expects to inherit from uncle Featherstone"},
+  {"t": 0.32, "score": 3, "event": "In Rome, Dorothea discovers the marriage's emptiness"},
+  {"t": 0.36, "score": 4, "event": "Befriends Will Ladislaw, arousing Casaubon's jealousy"},
+  {"t": 0.42, "score": 6, "event": "Lydgate takes Bulstrode's funding; courts Rosamond"},
+  {"t": 0.48, "score": 2, "event": "Featherstone dies leaving Fred nothing"},
+  {"t": 0.52, "score": 5, "event": "Lydgate marries the vain, extravagant Rosamond"},
+  {"t": 0.58, "score": 5, "event": "Casaubon dies"},
+  {"t": 0.60, "score": 3, "event": "Casaubon's will disinherits Dorothea if she marries Ladislaw"},
+  {"t": 0.65, "score": 4, "event": "Mary Garth refuses Fred until he matures"},
+  {"t": 0.70, "score": 3, "event": "Lydgate's marriage strains under Rosamond's extravagance"},
+  {"t": 0.78, "score": 3, "event": "Raffles arrives, exposing Bulstrode's sordid past"},
+  {"t": 0.82, "score": 3, "event": "Bulstrode hastens Raffles's death"},
+  {"t": 0.85, "score": 2, "event": "Bulstrode's disgrace damages Lydgate's reputation"},
+  {"t": 0.88, "score": 2, "event": "Lydgate must leave town, reform ambitions destroyed"},
+  {"t": 0.92, "score": 7, "event": "Fred trains as land agent and wins Mary through reform"},
+  {"t": 0.96, "score": 7, "event": "Dorothea marries Ladislaw despite family disapproval"},
+  {"t": 1.00, "score": 5, "event": "Finale: characters' later lives — compromise, limited idealism"}
+]}

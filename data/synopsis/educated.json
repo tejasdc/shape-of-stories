@@ -1,0 +1,29 @@
+{
+  "id": "educated",
+  "title": "Educated",
+  "author": "Tara Westover",
+  "year": 2018,
+  "region": "west",
+  "protagonist": "Tara Westover",
+  "source": ["https://en.wikipedia.org/wiki/Educated_(memoir)"],
+  "beats": [
+    {"t": 0.03, "score": 3, "event": "Grows up on Buck's Peak with a paranoid, anti-school father"},
+    {"t": 0.08, "score": 3, "event": "Homeschooled loosely; no formal education"},
+    {"t": 0.15, "score": 2, "event": "Brother Shawn begins physically and emotionally abusing her"},
+    {"t": 0.22, "score": 4, "event": "Finds first friendship and romance with Charles through theater"},
+    {"t": 0.28, "score": 5, "event": "Tyler urges her to study for the ACT"},
+    {"t": 0.35, "score": 6, "event": "Admitted to BYU at 17 on scholarship"},
+    {"t": 0.42, "score": 3, "event": "College life alienates her; feels culturally lost"},
+    {"t": 0.50, "score": 4, "event": "Distances from Charles under the weight of Shawn's abuse"},
+    {"t": 0.58, "score": 6, "event": "Professors urge her toward graduate study abroad"},
+    {"t": 0.65, "score": 7, "event": "Studies at King's College, Cambridge, under Steinberg"},
+    {"t": 0.70, "score": 5, "event": "Gets vaccinated, breaking with her family's ideology"},
+    {"t": 0.75, "score": 3, "event": "Learns Shawn is abusing his wife; parents deny it"},
+    {"t": 0.80, "score": 2, "event": "Realizes her mother has never taken her side"},
+    {"t": 0.83, "score": 2, "event": "Shawn threatens her life; family closes ranks against her"},
+    {"t": 0.88, "score": 6, "event": "Begins graduate work at Harvard"},
+    {"t": 0.92, "score": 3, "event": "Panic attacks; a year of no contact with her parents"},
+    {"t": 0.97, "score": 7, "event": "Completes her PhD in history at Cambridge"},
+    {"t": 1.0, "score": 5, "event": "Accepts permanent estrangement to live as herself"}
+  ]
+}

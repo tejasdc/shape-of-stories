@@ -1,0 +1,30 @@
+{
+  "id": "eleanor-oliphant",
+  "title": "Eleanor Oliphant Is Completely Fine",
+  "author": "Gail Honeyman",
+  "year": 2017,
+  "region": "west",
+  "protagonist": "Eleanor Oliphant",
+  "source": ["https://en.wikipedia.org/wiki/Eleanor_Oliphant_Is_Completely_Fine"],
+  "beats": [
+    {"t": 0.03, "score": 3, "event": "Lives alone in Glasgow; two bottles of vodka every weekend"},
+    {"t": 0.08, "score": 3, "event": "Calls herself 'completely fine'; mocked by coworkers"},
+    {"t": 0.14, "score": 3, "event": "Wednesday-night calls with a cruel, controlling 'mother'"},
+    {"t": 0.20, "score": 5, "event": "Wins raffle tickets to see singer Johnnie Lomond"},
+    {"t": 0.26, "score": 4, "event": "Fixates on Johnnie as her destined future husband"},
+    {"t": 0.32, "score": 5, "event": "Begins grooming herself: haircut, wax, new clothes"},
+    {"t": 0.40, "score": 6, "event": "With coworker Raymond she saves elderly Sammy on the street"},
+    {"t": 0.48, "score": 6, "event": "A warm friendship grows through Sammy's family"},
+    {"t": 0.55, "score": 3, "event": "At the concert she is invisible; Johnnie moons the crowd"},
+    {"t": 0.60, "score": 2, "event": "Dry ice triggers memories of a childhood house fire"},
+    {"t": 0.65, "score": 1, "event": "Three-day drinking binge; assembles suicide materials"},
+    {"t": 0.70, "score": 3, "event": "Raymond finds her and helps her recover"},
+    {"t": 0.75, "score": 5, "event": "Sees GP; referred to a mental-health counselor"},
+    {"t": 0.80, "score": 5, "event": "Returns to work; welcomed warmly by colleagues"},
+    {"t": 0.85, "score": 5, "event": "With support, ends contact with 'her mother'"},
+    {"t": 0.90, "score": 2, "event": "Truth surfaces: at 10 her mother set the fire to kill them"},
+    {"t": 0.94, "score": 2, "event": "Her little sister Marianne died in that fire"},
+    {"t": 0.97, "score": 4, "event": "'Eleanor Oliphant' is a protective new legal name"},
+    {"t": 1.0, "score": 6, "event": "The mother phone calls were her own invention; she moves on"}
+  ]
+}

@@ -1,0 +1,22 @@
+{"id": "great-expectations", "title": "Great Expectations", "author": "Charles Dickens", "year": 1861, "region": "west", "protagonist": "Pip", "source": ["https://en.wikipedia.org/wiki/Great_Expectations"], "beats": [
+  {"t": 0.03, "score": 3, "event": "Seven-year-old Pip meets an escaped convict in the graveyard"},
+  {"t": 0.06, "score": 3, "event": "Pip steals food and a file to help the convict"},
+  {"t": 0.10, "score": 5, "event": "Soldiers recapture the convict"},
+  {"t": 0.15, "score": 5, "event": "Miss Havisham summons Pip to her decaying mansion"},
+  {"t": 0.20, "score": 5, "event": "Pip meets Estella and falls in love with her"},
+  {"t": 0.28, "score": 3, "event": "Orlick attacks Pip's sister in a jealous rage"},
+  {"t": 0.33, "score": 8, "event": "Jaggers reveals an anonymous benefactor has made Pip a gentleman"},
+  {"t": 0.40, "score": 7, "event": "Pip moves to London, lodging with Herbert Pocket"},
+  {"t": 0.45, "score": 4, "event": "Joe visits London; Pip is ashamed of him"},
+  {"t": 0.50, "score": 6, "event": "Pip meets Estella in society and grows infatuated"},
+  {"t": 0.55, "score": 4, "event": "Pip and Herbert accumulate debts"},
+  {"t": 0.62, "score": 2, "event": "Pip learns the convict Magwitch is his true benefactor"},
+  {"t": 0.68, "score": 4, "event": "Pip devises an escape plan for Magwitch"},
+  {"t": 0.72, "score": 4, "event": "Magwitch reveals Compeyson defrauded Miss Havisham"},
+  {"t": 0.78, "score": 4, "event": "Pip confronts Miss Havisham about the misleading expectations"},
+  {"t": 0.82, "score": 3, "event": "Orlick lures Pip to the marshes; Herbert rescues him"},
+  {"t": 0.87, "score": 3, "event": "Magwitch's escape fails on the Thames; Compeyson drowns"},
+  {"t": 0.92, "score": 3, "event": "Magwitch dies after trial; Joe nurses Pip through illness"},
+  {"t": 0.96, "score": 3, "event": "Pip returns to marry Biddy but finds she has married Joe"},
+  {"t": 1.00, "score": 5, "event": "Years later Pip meets widowed Estella in Satis House ruins"}
+]}

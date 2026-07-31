@@ -1,0 +1,27 @@
+{
+  "id": "of-mice-and-men",
+  "title": "Of Mice and Men",
+  "author": "John Steinbeck",
+  "year": 1937,
+  "region": "west",
+  "protagonist": "George Milton",
+  "source": ["https://en.wikipedia.org/wiki/Of_Mice_and_Men"],
+  "beats": [
+    {"t": 0.05, "score": 4, "event": "George and Lennie travel toward Soledad after fleeing Weed"},
+    {"t": 0.12, "score": 5, "event": "Share a dream of owning their own farm with rabbits"},
+    {"t": 0.20, "score": 5, "event": "Hired at a Salinas ranch as field hands"},
+    {"t": 0.26, "score": 4, "event": "Curley, the owner's aggressive son, targets Lennie"},
+    {"t": 0.32, "score": 4, "event": "Curley's flirtatious wife catches Lennie's eye"},
+    {"t": 0.40, "score": 5, "event": "Slim gifts Lennie a puppy from his dog's litter"},
+    {"t": 0.46, "score": 3, "event": "Candy's old dog is shot by Carlson; Candy grieves"},
+    {"t": 0.55, "score": 7, "event": "Candy offers $350; the farm dream leaps toward reality"},
+    {"t": 0.62, "score": 6, "event": "Lennie crushes Curley's hand in a one-sided fight"},
+    {"t": 0.70, "score": 4, "event": "Lennie visits Crooks; the wife bursts in and threatens him"},
+    {"t": 0.78, "score": 3, "event": "Lennie accidentally kills his puppy while stroking it"},
+    {"t": 0.83, "score": 1, "event": "Panicked, Lennie breaks Curley's wife's neck and flees"},
+    {"t": 0.88, "score": 1, "event": "Ranch hands find her body; a lynch mob forms"},
+    {"t": 0.93, "score": 1, "event": "George realises the dream is dead; races to the meeting spot"},
+    {"t": 0.98, "score": 1, "event": "George shoots Lennie mid-story, sparing him the mob"},
+    {"t": 1.00, "score": 1, "event": "Slim leads a broken George away; the others uncomprehending"}
+  ]
+}

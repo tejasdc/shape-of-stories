@@ -1,0 +1,30 @@
+{
+  "id": "rebecca",
+  "title": "Rebecca",
+  "author": "Daphne du Maurier",
+  "year": 1938,
+  "region": "west",
+  "protagonist": "The second Mrs. de Winter (unnamed narrator)",
+  "source": ["https://en.wikipedia.org/wiki/Rebecca_(novel)"],
+  "beats": [
+    {"t": 0.04, "score": 4, "event": "Working as paid companion to a rich American in Monte Carlo"},
+    {"t": 0.10, "score": 6, "event": "Meets widower Maxim de Winter socially"},
+    {"t": 0.15, "score": 7, "event": "Impulsively agrees to marry him after two weeks"},
+    {"t": 0.20, "score": 6, "event": "Arrives at Manderley as the second Mrs. de Winter"},
+    {"t": 0.26, "score": 3, "event": "Meets Mrs. Danvers, Rebecca's devoted former maid"},
+    {"t": 0.34, "score": 3, "event": "Danvers taunts her that she can never match Rebecca"},
+    {"t": 0.42, "score": 3, "event": "Shown Rebecca's preserved bedroom, kept as a shrine"},
+    {"t": 0.48, "score": 3, "event": "Convinced Maxim still loves Rebecca and regrets marrying her"},
+    {"t": 0.55, "score": 4, "event": "Costume ball is planned; Danvers picks her dress"},
+    {"t": 0.60, "score": 2, "event": "Dress matches Rebecca's costume; Maxim recoils in fury"},
+    {"t": 0.65, "score": 1, "event": "Danvers urges her to jump from Rebecca's window"},
+    {"t": 0.70, "score": 4, "event": "A shipwreck offshore interrupts the moment"},
+    {"t": 0.76, "score": 5, "event": "Divers find Rebecca's sunken sailboat with her body inside"},
+    {"t": 0.80, "score": 5, "event": "Maxim confesses he shot Rebecca and never loved her"},
+    {"t": 0.85, "score": 6, "event": "Inquest rules Rebecca's death a suicide"},
+    {"t": 0.90, "score": 4, "event": "Favell tries to blackmail Maxim over the ruling"},
+    {"t": 0.94, "score": 6, "event": "Doctor reveals Rebecca had terminal cancer"},
+    {"t": 0.97, "score": 5, "event": "Mrs. Danvers vanishes from Manderley"},
+    {"t": 1.0, "score": 3, "event": "They race home to find Manderley in flames"}
+  ]
+}

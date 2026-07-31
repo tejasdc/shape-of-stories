@@ -1,0 +1,20 @@
+{"id": "waiting-for-godot", "title": "Waiting for Godot", "author": "Samuel Beckett", "year": 1953, "region": "west", "protagonist": "Vladimir and Estragon", "source": ["https://en.wikipedia.org/wiki/Waiting_for_Godot"], "beats": [
+  {"t": 0.03, "score": 4, "event": "Vladimir and Estragon meet by a leafless tree, waiting"},
+  {"t": 0.08, "score": 3, "event": "Estragon reports another night in a ditch, beaten"},
+  {"t": 0.14, "score": 4, "event": "It emerges they are waiting for a man named Godot"},
+  {"t": 0.20, "score": 4, "event": "They cannot recall if they have ever met Godot"},
+  {"t": 0.28, "score": 5, "event": "Pozzo arrives leading Lucky on a rope"},
+  {"t": 0.32, "score": 3, "event": "Watch Pozzo drive Lucky as a beast of burden"},
+  {"t": 0.38, "score": 4, "event": "Pozzo is on his way to sell Lucky at the market"},
+  {"t": 0.42, "score": 5, "event": "Lucky performs his manic monologue on command"},
+  {"t": 0.46, "score": 4, "event": "Pozzo and Lucky depart; the two go on waiting"},
+  {"t": 0.50, "score": 3, "event": "A boy: Godot won't come tonight, surely tomorrow"},
+  {"t": 0.55, "score": 4, "event": "They agree to leave, but do not move"},
+  {"t": 0.60, "score": 4, "event": "Act II: same tree, now with a few leaves; waiting again"},
+  {"t": 0.72, "score": 3, "event": "Pozzo returns blind; Lucky wholly mute"},
+  {"t": 0.78, "score": 3, "event": "Pozzo has no memory of ever meeting them"},
+  {"t": 0.85, "score": 3, "event": "Boy returns: Godot again won't come tonight"},
+  {"t": 0.90, "score": 3, "event": "Boy denies ever having met them before"},
+  {"t": 0.95, "score": 2, "event": "They consider hanging themselves but have no rope"},
+  {"t": 1.00, "score": 3, "event": "Agree to return with a rope; remain motionless"}
+]}

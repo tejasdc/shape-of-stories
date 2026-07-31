@@ -1,0 +1,28 @@
+{
+  "id": "call-of-the-wild",
+  "title": "The Call of the Wild",
+  "author": "Jack London",
+  "year": 1903,
+  "region": "west",
+  "protagonist": "Buck",
+  "source": ["https://en.wikipedia.org/wiki/The_Call_of_the_Wild"],
+  "beats": [
+    {"t": 0.03, "score": 7, "event": "Buck lives comfortably at Judge Miller's California estate"},
+    {"t": 0.08, "score": 2, "event": "Kidnapped by a gardener and sold into the sled-dog trade"},
+    {"t": 0.13, "score": 1, "event": "Transported to Seattle; beaten by man in red sweater"},
+    {"t": 0.18, "score": 3, "event": "Learns 'the law of club and fang' the hard way"},
+    {"t": 0.25, "score": 5, "event": "Trained as sled dog by Francois and Perrault"},
+    {"t": 0.35, "score": 4, "event": "Rivalry with the lead dog Spitz builds on the trail"},
+    {"t": 0.43, "score": 6, "event": "Buck kills Spitz in combat and becomes lead dog"},
+    {"t": 0.50, "score": 5, "event": "Sold to a mail carrier; overworked on long routes"},
+    {"t": 0.57, "score": 2, "event": "Sold to inexperienced stampeders Charles, Hal and Mercedes"},
+    {"t": 0.63, "score": 1, "event": "Starving team collapses; most of the dogs die on the trail"},
+    {"t": 0.70, "score": 7, "event": "John Thornton rescues Buck from Hal's beating"},
+    {"t": 0.75, "score": 8, "event": "Thornton nurses him back to health; a deep bond forms"},
+    {"t": 0.80, "score": 8, "event": "Buck wins bets for Thornton with feats of strength"},
+    {"t": 0.86, "score": 7, "event": "Prospecting for gold together deep in the wilderness"},
+    {"t": 0.90, "score": 6, "event": "Hears wolves calling; ventures out, but returns to camp"},
+    {"t": 0.95, "score": 1, "event": "Returns to camp to find Thornton murdered by Yeehats"},
+    {"t": 0.99, "score": 7, "event": "Joins the wolf pack; becomes the legendary Ghost Dog"}
+  ]
+}

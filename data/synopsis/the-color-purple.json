@@ -1,0 +1,20 @@
+{"id": "the-color-purple", "title": "The Color Purple", "author": "Alice Walker", "year": 1982, "region": "west", "protagonist": "Celie", "source": ["https://en.wikipedia.org/wiki/The_Color_Purple"], "beats": [
+  {"t": 0.03, "score": 1, "event": "Alphonso beats and rapes teenage Celie; she writes to God"},
+  {"t": 0.08, "score": 2, "event": "Alphonso gives her to Mister instead of her sister Nettie"},
+  {"t": 0.14, "score": 2, "event": "Beaten by Mister; abused by his prior children"},
+  {"t": 0.22, "score": 3, "event": "Nettie runs to her; is driven off by Mister"},
+  {"t": 0.28, "score": 2, "event": "Nettie's letters never come; concludes she is dead"},
+  {"t": 0.38, "score": 4, "event": "Watches Sofia's fierce self-esteem with awe"},
+  {"t": 0.48, "score": 5, "event": "Mister's mistress Shug arrives ill; Celie nurses her"},
+  {"t": 0.55, "score": 6, "event": "She and Shug become friends despite Shug's rudeness"},
+  {"t": 0.60, "score": 7, "event": "Shug helps her love her own body"},
+  {"t": 0.65, "score": 5, "event": "They find Nettie's letters hidden by Mister for years"},
+  {"t": 0.70, "score": 5, "event": "Learns Nettie is alive, a missionary in Africa"},
+  {"t": 0.75, "score": 6, "event": "Learns Alphonso was only her stepfather"},
+  {"t": 0.82, "score": 7, "event": "Curses Mister and leaves with Shug for Memphis"},
+  {"t": 0.86, "score": 8, "event": "Starts a successful pants-making business"},
+  {"t": 0.88, "score": 8, "event": "Alphonso dies; she inherits the family land"},
+  {"t": 0.92, "score": 3, "event": "Crushed when Shug falls in love with Germaine"},
+  {"t": 0.96, "score": 7, "event": "Content on her own; Shug returns, having ended it"},
+  {"t": 1.00, "score": 9, "event": "Reunited with Nettie, Samuel, and her children after 30 years"}
+]}

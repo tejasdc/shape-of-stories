@@ -1,0 +1,29 @@
+{
+  "id": "normal-people",
+  "title": "Normal People",
+  "author": "Sally Rooney",
+  "year": 2018,
+  "region": "west",
+  "protagonist": "Marianne Sheridan and Connell Waldron (jointly)",
+  "source": ["https://en.wikipedia.org/wiki/Normal_People"],
+  "beats": [
+    {"t": 0.05, "score": 5, "event": "Meet in school through Marianne's mother employing Connell's mother"},
+    {"t": 0.10, "score": 6, "event": "Begin a secret sexual relationship, bonding over books and politics"},
+    {"t": 0.16, "score": 2, "event": "Connell takes another girl to the Debs; Marianne is devastated"},
+    {"t": 0.24, "score": 6, "event": "Reconnect at Trinity; friendship rebuilds"},
+    {"t": 0.30, "score": 7, "event": "Resume intimacy; Marianne blossoms at university"},
+    {"t": 0.36, "score": 3, "event": "Connell's ambiguous summer question breaks them up again"},
+    {"t": 0.42, "score": 4, "event": "Marianne dates the wealthy, sadistic Jamie"},
+    {"t": 0.48, "score": 4, "event": "Connell dates fellow Trinity student Helen"},
+    {"t": 0.55, "score": 3, "event": "Marianne breaks with Jamie; her social circle drops her"},
+    {"t": 0.60, "score": 4, "event": "Marianne spends a year in Sweden; they stay in email touch"},
+    {"t": 0.68, "score": 2, "event": "Connell falls into depression after a friend's suicide"},
+    {"t": 0.72, "score": 3, "event": "At the funeral, Helen ends things with Connell"},
+    {"t": 0.80, "score": 6, "event": "They grow close again over the following summer"},
+    {"t": 0.85, "score": 4, "event": "Sex resumes but he refuses her request for violence"},
+    {"t": 0.90, "score": 3, "event": "Marianne's brother injures her; Connell takes her to safety"},
+    {"t": 0.94, "score": 7, "event": "Move in together at Trinity as partners"},
+    {"t": 0.98, "score": 6, "event": "Connell is accepted to an MFA program in New York"},
+    {"t": 1.0, "score": 6, "event": "Marianne urges him to go; promises she'll always be there"}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "flowers-for-algernon",
+  "title": "Flowers for Algernon",
+  "author": "Daniel Keyes",
+  "year": 1966,
+  "region": "west",
+  "protagonist": "Charlie Gordon",
+  "source": ["https://en.wikipedia.org/wiki/Flowers_for_Algernon"],
+  "beats": [
+    {"t": 0.03, "score": 4, "event": "Janitor with IQ 68; attends Alice Kinnian's literacy classes"},
+    {"t": 0.08, "score": 5, "event": "Selected as the first human subject for IQ surgery"},
+    {"t": 0.15, "score": 6, "event": "Surgery succeeds; his mind begins to sharpen"},
+    {"t": 0.22, "score": 7, "event": "IQ triples; he outpaces his teachers and doctors"},
+    {"t": 0.30, "score": 5, "event": "Realizes coworkers only befriended him to mock him"},
+    {"t": 0.38, "score": 4, "event": "Sees Professor Nemur is exploiting him for career"},
+    {"t": 0.45, "score": 6, "event": "Falls in love with Alice as an intellectual equal"},
+    {"t": 0.53, "score": 5, "event": "Shames himself mocking a disabled dishwasher, then defends him"},
+    {"t": 0.62, "score": 4, "event": "Confronts painful childhood memories of his mother"},
+    {"t": 0.70, "score": 3, "event": "Algernon the mouse's intelligence begins to decline"},
+    {"t": 0.75, "score": 2, "event": "Algernon dies; Charlie buries him in the yard"},
+    {"t": 0.80, "score": 2, "event": "Identifies the Algernon-Gordon Effect in himself"},
+    {"t": 0.85, "score": 2, "event": "His own mind begins to unravel"},
+    {"t": 0.90, "score": 2, "event": "Returns to the old job but cannot bear the pity"},
+    {"t": 0.95, "score": 1, "event": "Ends things with Alice; regressed beyond her reach"},
+    {"t": 1.0, "score": 2, "event": "Enters state home; asks flowers be left on Algernon's grave"}
+  ]
+}

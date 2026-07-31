@@ -1,0 +1,33 @@
+{
+  "id": "the-hunger-games",
+  "title": "The Hunger Games",
+  "author": "Suzanne Collins",
+  "year": 2008,
+  "region": "west",
+  "protagonist": "Katniss Everdeen",
+  "source": ["https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)"],
+  "beats": [
+    {"t": 0.03, "score": 3, "event": "Reaping day in District 12; Prim's name is drawn"},
+    {"t": 0.06, "score": 3, "event": "Katniss volunteers as tribute in Prim's place"},
+    {"t": 0.09, "score": 3, "event": "Peeta Mellark chosen as District 12's male tribute"},
+    {"t": 0.14, "score": 4, "event": "Whisked to Capitol; meets Haymitch, Effie, Cinna"},
+    {"t": 0.20, "score": 6, "event": "Cinna's flaming costume makes her 'the Girl on Fire'"},
+    {"t": 0.26, "score": 7, "event": "Earns the top private training score from Gamemakers"},
+    {"t": 0.30, "score": 6, "event": "Peeta declares love on TV; framed as 'star-crossed lovers'"},
+    {"t": 0.35, "score": 3, "event": "Cornucopia bloodbath; Katniss flees into the woods"},
+    {"t": 0.42, "score": 2, "event": "Gamemakers' wall of fire drives her toward the Careers"},
+    {"t": 0.48, "score": 7, "event": "Drops tracker jacker nest on Careers; wins a bow"},
+    {"t": 0.54, "score": 6, "event": "Allies with Rue, the young tribute from District 11"},
+    {"t": 0.58, "score": 7, "event": "She and Rue destroy the Careers' stockpile of supplies"},
+    {"t": 0.63, "score": 2, "event": "Rue is speared; Katniss covers her body in flowers"},
+    {"t": 0.67, "score": 5, "event": "District 11 sends her bread in gratitude"},
+    {"t": 0.70, "score": 7, "event": "Rule change: two tributes from one district may win together"},
+    {"t": 0.75, "score": 6, "event": "Finds Peeta camouflaged by the stream; hides and nurses him"},
+    {"t": 0.82, "score": 4, "event": "Feast: Clove attacks her, Thresh spares her for Rue's sake"},
+    {"t": 0.86, "score": 7, "event": "Sponsor medicine reaches Peeta and saves his life"},
+    {"t": 0.92, "score": 4, "event": "Mutt wolves chase them; Katniss mercy-kills mauled Cato"},
+    {"t": 0.96, "score": 3, "event": "Rule reversed; she and Peeta ready nightlock berries to die together"},
+    {"t": 0.98, "score": 8, "event": "Gamemakers relent and declare both joint victors"},
+    {"t": 1.00, "score": 6, "event": "Return to District 12 as victors; Haymitch warns Capitol is furious"}
+  ]
+}

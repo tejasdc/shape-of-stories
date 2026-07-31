@@ -1,0 +1,20 @@
+{"id": "dracula", "title": "Dracula", "author": "Bram Stoker", "year": 1897, "region": "west", "protagonist": "Jonathan Harker (with Mina and the hunters)", "source": ["https://en.wikipedia.org/wiki/Dracula"], "beats": [
+  {"t": 0.05, "score": 5, "event": "Harker travels to Dracula's castle in Transylvania"},
+  {"t": 0.10, "score": 2, "event": "Encounters three vampire women; learns Dracula's true nature"},
+  {"t": 0.15, "score": 4, "event": "Harker escapes and reaches Budapest"},
+  {"t": 0.22, "score": 3, "event": "Dracula sails to England aboard the Demeter"},
+  {"t": 0.26, "score": 2, "event": "Crew vanishes; ship runs aground at Whitby with dead captain"},
+  {"t": 0.35, "score": 2, "event": "Lucy sleepwalks and becomes gravely ill"},
+  {"t": 0.42, "score": 4, "event": "Van Helsing diagnoses blood loss; transfusions and garlic"},
+  {"t": 0.55, "score": 1, "event": "Despite protections, Lucy dies"},
+  {"t": 0.60, "score": 1, "event": "Lucy rises as vampire, stalking children as 'bloofer lady'"},
+  {"t": 0.65, "score": 4, "event": "Hunters stake her, behead her, fill her mouth with garlic"},
+  {"t": 0.72, "score": 1, "event": "Dracula attacks Mina, drinking her blood"},
+  {"t": 0.75, "score": 1, "event": "Forces Mina to drink his blood, cursing her"},
+  {"t": 0.80, "score": 4, "event": "Group discovers Dracula's boxes of earth across London"},
+  {"t": 0.85, "score": 4, "event": "Sterilize most boxes; fail to trap him at Piccadilly"},
+  {"t": 0.90, "score": 5, "event": "Use Mina's psychic link under hypnosis to track him"},
+  {"t": 0.94, "score": 5, "event": "Pursue Dracula back to Transylvania"},
+  {"t": 0.98, "score": 8, "event": "Harker decapitates him; Morris stakes the heart"},
+  {"t": 1.00, "score": 8, "event": "Dracula destroyed; Mina freed from the curse"}
+]}
