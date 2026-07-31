@@ -1,0 +1,27 @@
+{
+  "book": "A Christmas Carol",
+  "gutenberg_id": 46,
+  "protagonist": "Ebenezer Scrooge",
+  "chunks": [
+    {"i": 1, "t": 0.025, "score": 3, "why": "Rich but hated miser; rejects nephew's invitation with 'Bah! Humbug' on cold Christmas Eve."},
+    {"i": 2, "t": 0.075, "score": 3, "why": "Rebuffs charity gentlemen with 'surplus population'; drives caroler from door; deepens isolation."},
+    {"i": 3, "t": 0.125, "score": 3, "why": "Melancholy solitary dinner; sees Marley's face in knocker; ghost's chains approach through gloomy house."},
+    {"i": 4, "t": 0.175, "score": 2, "why": "Marley's fettered ghost confronts him with damnation; Scrooge falls terrified to his knees."},
+    {"i": 5, "t": 0.225, "score": 3, "why": "Marley warns of three haunting spirits; Scrooge quaking, dreads visits, first spirit arrives."},
+    {"i": 6, "t": 0.275, "score": 4, "why": "Ghost of Past shows lonely boyhood; Scrooge weeps for forgotten self, regret stirs beneath pain."},
+    {"i": 7, "t": 0.325, "score": 5, "why": "Sister Fan brings him home; Fezziwig's warm ball; reliving loved memories with unfamiliar joy."},
+    {"i": 8, "t": 0.375, "score": 3, "why": "Belle releases him; his younger self already ruled by Gain; love lost to golden idol."},
+    {"i": 9, "t": 0.425, "score": 2, "why": "Sees Belle's happy family that could have been his; begs 'I cannot bear it,' flees spirit."},
+    {"i": 10, "t": 0.475, "score": 5, "why": "Ghost of Present arrives jovial; Scrooge submissively learns amid Christmas abundance and street cheer."},
+    {"i": 11, "t": 0.525, "score": 5, "why": "Witnesses Cratchit household's warmth despite poverty; first sees Tiny Tim with crutch."},
+    {"i": 12, "t": 0.575, "score": 4, "why": "Told Tim will die; his 'surplus population' words thrown back; Mrs. Cratchit calls him odious."},
+    {"i": 13, "t": 0.625, "score": 6, "why": "Sees miners, lighthouse, ship keeping Christmas; nephew's laughing party; heart softens further."},
+    {"i": 14, "t": 0.675, "score": 6, "why": "Nephew toasts him with pity not anger; Scrooge caught up in games, begging to stay."},
+    {"i": 15, "t": 0.725, "score": 4, "why": "Named 'disagreeable animal' Uncle Scrooge; Ignorance and Want revealed; silent Phantom of Future looms."},
+    {"i": 16, "t": 0.775, "score": 2, "why": "Businessmen speak of an unnamed dead man with indifferent jokes; thieves gather at Old Joe's."},
+    {"i": 17, "t": 0.825, "score": 1, "why": "Watches scavengers barter his own bed-curtains and shirt stripped from his corpse; unmourned death."},
+    {"i": 18, "t": 0.875, "score": 2, "why": "Debtors relieved by his death; Tiny Tim has died; Cratchits grieve while Scrooge sees consequence."},
+    {"i": 19, "t": 0.925, "score": 8, "why": "Reads own name on grave, vows change; wakes reprieved in his own bed, laughing and weeping."},
+    {"i": 20, "t": 0.975, "score": 9, "why": "Sends turkey to Cratchits, gives generously, welcomed at nephew's, raises Bob's wages; Tim lives; redeemed."}
+  ]
+}

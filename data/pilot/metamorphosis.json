@@ -1,0 +1,27 @@
+{
+  "book": "The Metamorphosis",
+  "gutenberg_id": 5200,
+  "protagonist": "Gregor Samsa",
+  "chunks": [
+    {"i": 1, "t": 0.025, "score": 2, "why": "Wakes transformed into vermin; unable to rise; late for train; family knocking."},
+    {"i": 2, "t": 0.075, "score": 2, "why": "Voice unrecognizable; trapped in bed; body uncontrollable; fears losing his job."},
+    {"i": 3, "t": 0.125, "score": 2, "why": "Chief clerk arrives to investigate; Gregor crashes off bed; sister crying."},
+    {"i": 4, "t": 0.175, "score": 2, "why": "Clerk publicly threatens his job; mother declares him ill; locksmith summoned."},
+    {"i": 5, "t": 0.225, "score": 2, "why": "Opens door with jaws, bleeding; mother collapses; father clenches fists in horror."},
+    {"i": 6, "t": 0.275, "score": 1, "why": "Clerk flees in panic; mother screams and runs; father seizes stick against him."},
+    {"i": 7, "t": 0.325, "score": 1, "why": "Father drives him back with stick; stuck in doorway; injured, bleeding, slammed inside."},
+    {"i": 8, "t": 0.375, "score": 2, "why": "Wakes injured, lame, isolated; milk repellent; sister brings scraps with kindness."},
+    {"i": 9, "t": 0.425, "score": 3, "why": "Learns family has hidden savings; recalls providing for them; feels shame but relief."},
+    {"i": 10, "t": 0.475, "score": 3, "why": "Adapts to climbing walls and ceiling; sister still tends him; small physical freedoms."},
+    {"i": 11, "t": 0.525, "score": 3, "why": "Mother finally visits; wants his room kept intact; hope she still sees him as son."},
+    {"i": 12, "t": 0.575, "score": 2, "why": "Furniture stripped away; last human keepsakes lost; mother faints seeing him on picture."},
+    {"i": 13, "t": 0.625, "score": 2, "why": "Father returns transformed, uniformed and hostile; chases Gregor around the room."},
+    {"i": 14, "t": 0.675, "score": 1, "why": "Father bombards him with apples; one lodges in back, grievously wounding him."},
+    {"i": 15, "t": 0.725, "score": 2, "why": "Chronic pain from lodged apple; family exhausted; sister's care turns to neglect."},
+    {"i": 16, "t": 0.775, "score": 2, "why": "Charwoman mocks him as dung-beetle; room becomes storage dump; stops eating."},
+    {"i": 17, "t": 0.825, "score": 3, "why": "Crept out to hear sister's violin; briefly moved by beauty; longs for connection."},
+    {"i": 18, "t": 0.875, "score": 1, "why": "Lodgers give notice; sister declares he must go; family renounces him as brother."},
+    {"i": 19, "t": 0.925, "score": 1, "why": "Crawls back locked in; broken and hungry; dies peacefully at dawn thinking of family."},
+    {"i": 20, "t": 0.975, "score": 1, "why": "Dead; charwoman sweeps corpse aside; family thanks God, plans bright new life."}
+  ]
+}

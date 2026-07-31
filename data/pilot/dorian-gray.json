@@ -1,0 +1,22 @@
+{"book": "The Picture of Dorian Gray", "gutenberg_id": 174, "protagonist": "Dorian Gray", "chunks": [
+  {"i": 1,  "t": 0.025, "score": 6, "why": "Preface plus Basil painting the portrait; Dorian offstage but exalted as adored, beautiful youth."},
+  {"i": 2,  "t": 0.075, "score": 6, "why": "Dorian meets Lord Henry; charmed but unsettled by his hedonist creed. Still innocent."},
+  {"i": 3,  "t": 0.125, "score": 5, "why": "Fatal wish before the finished portrait; learns his tragic parentage. Outwardly fine, soul now mortgaged."},
+  {"i": 4,  "t": 0.175, "score": 6, "why": "Lord Henry welcomes him into fashionable society; Dorian is the toast of the circle."},
+  {"i": 5,  "t": 0.225, "score": 7, "why": "Rapturously in love with Sibyl Vane; euphoric, planning to rescue her from the theatre."},
+  {"i": 6,  "t": 0.275, "score": 7, "why": "Engaged to Sibyl; she is joyful, though Jim's murderous jealousy shadows the scene."},
+  {"i": 7,  "t": 0.325, "score": 7, "why": "Dorian announces engagement to Basil and Harry, radiant with pleasure; Jim swears vengeance."},
+  {"i": 8,  "t": 0.375, "score": 3, "why": "Sibyl acts badly; Dorian brutally casts her off; portrait acquires first cruel line."},
+  {"i": 9,  "t": 0.425, "score": 3, "why": "Sibyl kills herself; Dorian shrugs it off under Harry's influence, chooses eternal youth."},
+  {"i": 10, "t": 0.475, "score": 3, "why": "Aestheticizes Sibyl's death, goes to opera; portrait alone bears his shame."},
+  {"i": 11, "t": 0.525, "score": 4, "why": "Panics that Basil may see the picture; locks portrait in the old schoolroom to conceal his soul."},
+  {"i": 12, "t": 0.575, "score": 4, "why": "Reads the inquest coldly; is poisoned by the yellow book that will shape his life."},
+  {"i": 13, "t": 0.625, "score": 4, "why": "Years of decadent connoisseurship; rumors of vice spread; men shun him though wealth shields him."},
+  {"i": 14, "t": 0.675, "score": 3, "why": "Broods on ancestors' evil; Basil confronts him with the terrible whispers about his ruined friends."},
+  {"i": 15, "t": 0.725, "score": 1, "why": "Shows Basil the corrupted portrait, then stabs him to death in the schoolroom."},
+  {"i": 16, "t": 0.775, "score": 2, "why": "Blackmails Alan Campbell into dissolving the body; dines at Lady Narborough's, wildly acting the part."},
+  {"i": 17, "t": 0.825, "score": 2, "why": "Burns Basil's coat and bag; opium den; his old name Prince Charming is flung back at him."},
+  {"i": 18, "t": 0.875, "score": 2, "why": "James Vane corners him with a pistol; he escapes by his mask of youth but is now hunted."},
+  {"i": 19, "t": 0.925, "score": 3, "why": "James Vane shot dead by accident in the coverts; Dorian, terrified then relieved, feels safe."},
+  {"i": 20, "t": 0.975, "score": 1, "why": "Stabs the portrait; found dead on the floor, withered and loathsome, knife in his heart."}
+]}

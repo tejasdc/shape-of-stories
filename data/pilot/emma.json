@@ -1,0 +1,22 @@
+{"book": "Emma", "gutenberg_id": 158, "protagonist": "Emma Woodhouse", "chunks": [
+  {"i": 1,  "t": 0.025, "score": 7, "why": "Wealthy, clever, adored; only gentle sorrow at Miss Taylor's marriage; takes up Harriet."},
+  {"i": 2,  "t": 0.075, "score": 7, "why": "Manipulates Harriet away from Robert Martin toward Elton; her scheming feels effortless."},
+  {"i": 3,  "t": 0.125, "score": 6, "why": "Harriet refuses Martin at Emma's prompt; Knightley angrily rebukes her, first real friction."},
+  {"i": 4,  "t": 0.175, "score": 7, "why": "Elton's charade delights Emma; sister visits; reconciled with Knightley over the baby."},
+  {"i": 5,  "t": 0.225, "score": 6, "why": "Christmas party goes well; but John Knightley warns Elton likes her, ignored; snow rising."},
+  {"i": 6,  "t": 0.275, "score": 3, "why": "Elton proposes to HER in the carriage; humiliating rupture; Harriet's hopes destroyed by her folly."},
+  {"i": 7,  "t": 0.325, "score": 4, "why": "Emma confesses blunder to Harriet; Elton engaged to Miss Hawkins; shame lingers."},
+  {"i": 8,  "t": 0.375, "score": 6, "why": "Elton returns married; Harriet flutters; Frank Churchill arrives, promising distraction."},
+  {"i": 9,  "t": 0.425, "score": 7, "why": "Frank charms; Emma and he gossip about Jane; Coles invite her; ball talk."},
+  {"i": 10, "t": 0.475, "score": 7, "why": "Cole's dinner: Emma made much of, dances with Frank, sings, back on top socially."},
+  {"i": 11, "t": 0.525, "score": 6, "why": "Ball planned then cancelled: Frank recalled by aunt; Emma imagines herself a little in love."},
+  {"i": 12, "t": 0.575, "score": 6, "why": "Mrs. Elton insufferable; Emma coolly dislikes her; Knightley denies Jane rumor, comfort."},
+  {"i": 13, "t": 0.625, "score": 6, "why": "Hartfield dinner strained by Mrs. Elton; Frank returning, nearby at Richmond."},
+  {"i": 14, "t": 0.675, "score": 7, "why": "Crown ball triumph: Knightley rescues Harriet from Elton snub, dances with Emma; gypsies incident."},
+  {"i": 15, "t": 0.725, "score": 6, "why": "Emma encourages Harriet toward Frank (as she thinks); Knightley suspicious; Donwell strawberries fine."},
+  {"i": 16, "t": 0.775, "score": 3, "why": "Box Hill: Emma insults Miss Bates; Knightley's stinging rebuke reduces her to tears; Jane taking governess post."},
+  {"i": 17, "t": 0.825, "score": 2, "why": "Frank-Jane secret engagement revealed; Harriet declares she loves Knightley; Emma realizes she does too. Nadir."},
+  {"i": 18, "t": 0.875, "score": 8, "why": "Knightley proposes and Emma accepts; Frank's contrite letter arrives; ecstatic reversal."},
+  {"i": 19, "t": 0.925, "score": 8, "why": "Plan for Knightley to move to Hartfield; Emma reconciles warmly with Jane; only Harriet clouds her joy."},
+  {"i": 20, "t": 0.975, "score": 9, "why": "Harriet engaged to Robert Martin (relief!); father consents; Emma marries Knightley. Perfect happiness."}
+]}
