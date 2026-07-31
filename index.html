@@ -412,7 +412,7 @@ function fit(cv) {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   return { ctx, W: r.width, H: r.height };
 }
-function strokeLine(ctx, pts, X, Y, progress, color, width = 2.2, seed = 1) {
+function strokeLine(ctx, pts, X, Y, progress, color, width = 2.2, seed = 1, alpha = 1) {
   const upto = Math.max(2, Math.ceil(pts.length * progress));
   const rng = mulberry(seed);
   const passes = PAL.wobble ? 2 : 1;
@@ -424,7 +424,7 @@ function strokeLine(ctx, pts, X, Y, progress, color, width = 2.2, seed = 1) {
       i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
     }
     ctx.strokeStyle = color; ctx.lineWidth = PAL.wobble ? width * (pass ? .7 : 1.15) : width;
-    ctx.globalAlpha = PAL.wobble ? (pass ? .45 : .8) : 1;
+    ctx.globalAlpha = (PAL.wobble ? (pass ? .45 : .8) : 1) * alpha;
     ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.stroke();
   }
   ctx.globalAlpha = 1;
@@ -559,16 +559,14 @@ SHAPE_ORDER.forEach(key => {
   const members = BOOKS.filter(b => b.shape === key);
   attach(card.querySelector('canvas'), (ctx, W, H, p) => {
     const f = frame(ctx, W, H, { mini: true });
-    ctx.globalAlpha = .16;
     members.forEach(b => {
       const raw = lineOf(b).map(q => q[1]);
       const sm = raw.map((_, i) => { const lo = Math.max(0, i - 6), hi = Math.min(raw.length, i + 7);
         return raw.slice(lo, hi).reduce((a, v) => a + v, 0) / (hi - lo); });
       const mn = Math.min(...sm), mx = Math.max(...sm), rng = (mx - mn) || 1;
       const norm = sm.map(v => ((v - mn) / rng) * 1.7 - .85);
-      strokeLine(ctx, norm.map((v, i) => [i / (norm.length - 1), v]), f.X, f.Y, p, PAL.sh[key], 1.1, hashStr(b.id));
+      strokeLine(ctx, norm.map((v, i) => [i / (norm.length - 1), v]), f.X, f.Y, p, PAL.sh[key], 1.1, hashStr(b.id), .22);
     });
-    ctx.globalAlpha = 1;
     strokeLine(ctx, catmull(SHAPE_SKETCH[key], 90), f.X, f.Y, p, PAL.sh[key], 3, hashStr(key));
   }, 2200);
 });
