@@ -720,9 +720,10 @@ const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
     ctx.setLineDash([6, 5]); ctx.globalAlpha = .8;
     strokeLine(ctx, mood, f.X, f.Y, p, PAL.muted, 1.7, hashStr(detailBook.id) + 5);
     ctx.setLineDash([]); ctx.globalAlpha = 1;
-    // name each line near its first quarter, clear of the ending annotations
+    // name each line at a spot clear of both the ending and any annotation labels
     const hero = lineOf(detailBook);
-    const q = 0.22;
+    const anns = annotatedBeats(detailBook);
+    const q = [0.3, 0.14, 0.44, 0.58].find(c => anns.every(a => Math.abs(a.t - c) > 0.12)) ?? 0.36;
     labelText(ctx, 'mood of the words (2016 method, scaled to match)', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.muted, 'left');
     labelText(ctx, 'the hero’s events', f.X(q), f.Y(valueAt(hero, q)) + 18, shapeColor(detailBook), 'left');
   }
