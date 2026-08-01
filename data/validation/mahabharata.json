@@ -1,0 +1,22 @@
+{"id": "mahabharata", "title": "The Mahabharata", "author": "Vyasa", "year": -400, "region": "india", "protagonist": "Yudhishthira and the Pandavas", "source": ["https://en.wikipedia.org/wiki/Mahabharata", "https://en.wikipedia.org/wiki/Kurukshetra_War"], "beats": [
+  {"t": 0.03, "score": 5, "event": "Pandavas born of divine boons to Kunti and Madri; Pandu soon dies"},
+  {"t": 0.08, "score": 3, "event": "Kauravas plot; lacquer house built of lac and ghee to burn them alive"},
+  {"t": 0.12, "score": 5, "event": "Escape by tunnel; hide as brahmins; Bhima weds Hidimbi"},
+  {"t": 0.18, "score": 8, "event": "Arjuna strings the great bow and wins Draupadi at her swayamvara"},
+  {"t": 0.22, "score": 7, "event": "By Kunti's command all five brothers wed Draupadi"},
+  {"t": 0.30, "score": 4, "event": "Kingdom split; Pandavas given a wild forest ruled by snakes"},
+  {"t": 0.36, "score": 9, "event": "Build Indraprastha; Yudhishthira's Rajasuya crowns him foremost of kings"},
+  {"t": 0.42, "score": 1, "event": "Shakuni's loaded dice: Yudhishthira loses wealth, brothers, self, Draupadi"},
+  {"t": 0.45, "score": 2, "event": "Draupadi dragged into court; disrobing halted only by Krishna"},
+  {"t": 0.50, "score": 3, "event": "Sentenced to twelve years' exile plus a thirteenth in hiding"},
+  {"t": 0.62, "score": 5, "event": "Serve in disguise at King Virata's court through the hidden year"},
+  {"t": 0.70, "score": 4, "event": "Peace talks fail; armies muster on the field of Kurukshetra"},
+  {"t": 0.75, "score": 6, "event": "Bhishma falls on day ten as Shikhandi shields Arjuna's arrows"},
+  {"t": 0.79, "score": 6, "event": "Drona lays down arms at false news of Ashwatthama's death and is beheaded"},
+  {"t": 0.83, "score": 7, "event": "Karna's chariot wheel sinks in mud; Arjuna decapitates him"},
+  {"t": 0.87, "score": 8, "event": "Bhima fells Duryodhana with an illegal blow; Kaurava army destroyed"},
+  {"t": 0.90, "score": 2, "event": "Ashwatthama's night raid slaughters Pandava sons and remaining allies"},
+  {"t": 0.93, "score": 7, "event": "Yudhishthira crowned king; performs the Ashvamedha horse sacrifice"},
+  {"t": 0.97, "score": 3, "event": "Krishna dies; the Yadava clan destroys itself in drunken infighting"},
+  {"t": 1.00, "score": 6, "event": "Brothers fall one by one on the Himalayan march; Yudhishthira ascends alone"}
+]}

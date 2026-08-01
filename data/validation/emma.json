@@ -1,0 +1,29 @@
+{
+  "id": "emma",
+  "title": "Emma",
+  "author": "Jane Austen",
+  "year": 1815,
+  "region": "west",
+  "protagonist": "Emma Woodhouse",
+  "source": ["https://en.wikipedia.org/wiki/Emma_(novel)"],
+  "beats": [
+    {"t": 0.03, "score": 6, "event": "Miss Taylor marries Mr Weston; Emma takes credit for the match"},
+    {"t": 0.09, "score": 6, "event": "Emma befriends Harriet Smith and appoints herself her matchmaker"},
+    {"t": 0.16, "score": 6, "event": "Emma persuades Harriet to refuse farmer Robert Martin's proposal"},
+    {"t": 0.22, "score": 6, "event": "Emma steers Mr Elton toward Harriet, sure the match is working"},
+    {"t": 0.30, "score": 3, "event": "Mr Elton proposes to Emma, not Harriet; the scheme collapses"},
+    {"t": 0.35, "score": 3, "event": "Elton returns from Bath with a vulgar new wife; Emma is ashamed"},
+    {"t": 0.42, "score": 6, "event": "Frank Churchill arrives at Highbury and flatters Emma"},
+    {"t": 0.48, "score": 5, "event": "Jane Fairfax arrives; Emma grows envious and invents a Dixon rumor"},
+    {"t": 0.55, "score": 6, "event": "A mystery piano arrives for Jane; Emma toys with loving Frank"},
+    {"t": 0.60, "score": 4, "event": "Mrs Elton snubs Harriet at the ball; Knightley rescues her to dance"},
+    {"t": 0.64, "score": 5, "event": "Frank saves Harriet from gypsies; Emma misreads Harriet's feelings"},
+    {"t": 0.72, "score": 2, "event": "At Box Hill Emma insults Miss Bates; Knightley rebukes her sharply"},
+    {"t": 0.76, "score": 4, "event": "Emma visits Miss Bates in penitence and hears Jane will be a governess"},
+    {"t": 0.82, "score": 4, "event": "Frank's aunt dies; his secret engagement to Jane Fairfax is revealed"},
+    {"t": 0.86, "score": 3, "event": "Emma learns Harriet loves Knightley and realises she loves him herself"},
+    {"t": 0.92, "score": 9, "event": "Knightley proposes to Emma; she accepts, overwhelmed with happiness"},
+    {"t": 0.97, "score": 8, "event": "Harriet accepts Robert Martin; Emma reconciles with Jane"},
+    {"t": 1.00, "score": 9, "event": "Emma marries Knightley; they will live at Hartfield with her father"}
+  ]
+}

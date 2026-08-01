@@ -1,0 +1,31 @@
+{
+  "id": "shakuntala",
+  "title": "Shakuntala",
+  "author": "Kalidasa",
+  "year": 400,
+  "region": "india",
+  "protagonist": "Shakuntala",
+  "source": [
+    "https://en.wikipedia.org/wiki/Abhijnanashakuntalam",
+    "https://en.wikipedia.org/wiki/Shakuntala",
+    "https://unacademy.com/content/upsc/study-material/general-awareness/overview-on-avigyan-sakuntalam/",
+    "https://literopedia.com/kalidasa-abhijnana-shakuntalam-summary-themes"
+  ],
+  "beats": [
+    {"t": 0.05, "score": 5, "event": "Act 1: Shakuntala tends the hermitage garden with her friends Anasuya and Priyamvada"},
+    {"t": 0.12, "score": 6, "event": "Act 1: King Dushyanta, hunting, enters the hermitage and is smitten watching her"},
+    {"t": 0.22, "score": 7, "event": "Act 2: The king lingers; Shakuntala secretly falls in love with him"},
+    {"t": 0.35, "score": 8, "event": "Act 3: Dushyanta and Shakuntala wed by Gandharva rite in the grove"},
+    {"t": 0.42, "score": 6, "event": "Act 3: The king departs for his capital, giving her his signet ring as pledge"},
+    {"t": 0.50, "score": 3, "event": "Act 4: Distracted by longing, she slights sage Durvasa, who curses the king to forget her"},
+    {"t": 0.54, "score": 4, "event": "Act 4: Reprieve granted: memory will return if she shows the ring"},
+    {"t": 0.58, "score": 4, "event": "Act 4: Pregnant, she leaves Kanva's hermitage for the king's court amid tearful farewells"},
+    {"t": 0.66, "score": 2, "event": "Act 5: At court, Dushyanta does not know her; the ring has slipped off in the river"},
+    {"t": 0.70, "score": 1, "event": "Act 5: Publicly disowned and shamed as a fraud before the assembled court"},
+    {"t": 0.73, "score": 3, "event": "Act 5: A flash of light carries her to her mother Menaka's celestial refuge"},
+    {"t": 0.82, "score": 4, "event": "Act 6: A fisherman finds the ring in a fish; the king recalls all and grieves bitterly"},
+    {"t": 0.88, "score": 5, "event": "Act 7: She lives at Maricha's celestial hermitage, raising their son Bharata"},
+    {"t": 0.94, "score": 7, "event": "Act 7: Dushyanta, passing through heaven, meets young Bharata wrestling a lion cub"},
+    {"t": 0.98, "score": 9, "event": "Act 7: Curse explained, husband repentant; Shakuntala reunited and blessed as queen"}
+  ]
+}

@@ -1,0 +1,21 @@
+{"id": "ramayana", "title": "The Ramayana", "author": "Valmiki", "year": -500, "region": "india", "protagonist": "Rama", "source": ["https://en.wikipedia.org/wiki/Ramayana"], "beats": [
+  {"t": 0.03, "score": 7, "event": "Born prince of Ayodhya, incarnation of Vishnu"},
+  {"t": 0.08, "score": 7, "event": "Aids sage Vishwamitra, slays demoness Tataka"},
+  {"t": 0.12, "score": 8, "event": "Strings Janaka's bow and marries Sita"},
+  {"t": 0.17, "score": 8, "event": "Named heir; Ayodhya prepares his coronation"},
+  {"t": 0.20, "score": 3, "event": "Kaikeyi's boons: Rama exiled 14 years to forest"},
+  {"t": 0.26, "score": 5, "event": "Peaceful hermitage life with Sita and Lakshmana"},
+  {"t": 0.32, "score": 6, "event": "Defeats Khara and Dushan after Shurpanakha attack"},
+  {"t": 0.36, "score": 2, "event": "Sita abducted by Ravana; Jatayu slain"},
+  {"t": 0.44, "score": 6, "event": "Allies with Sugriva; kills Vali, gains vanara army"},
+  {"t": 0.52, "score": 6, "event": "Hanuman finds Sita in Lanka, returns with her comb"},
+  {"t": 0.60, "score": 6, "event": "Vanaras build Rama Setu; army crosses to Lanka"},
+  {"t": 0.68, "score": 4, "event": "Lakshmana felled by Meghnada; sanjeevani revives him"},
+  {"t": 0.76, "score": 8, "event": "Rama slays Ravana; Vibhishana crowned in Lanka"},
+  {"t": 0.80, "score": 7, "event": "Sita's agni pariksha; Agni restores her, gods glorify Rama"},
+  {"t": 0.85, "score": 9, "event": "Coronation in Ayodhya; Rama Rajya begins"},
+  {"t": 0.90, "score": 3, "event": "Gossip about Sita; Rama banishes her to Valmiki's ashram"},
+  {"t": 0.94, "score": 6, "event": "Twins Lava and Kusha reunited with Rama at Ashvamedha"},
+  {"t": 0.97, "score": 2, "event": "Sita calls on Earth Mother; ground opens, she departs"},
+  {"t": 1.00, "score": 5, "event": "Rama walks into Sarayu, merges with Vishnu"}
+]}

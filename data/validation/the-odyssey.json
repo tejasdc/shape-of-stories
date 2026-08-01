@@ -1,0 +1,23 @@
+{"id": "the-odyssey", "title": "The Odyssey", "author": "Homer", "year": -700, "region": "west", "protagonist": "Odysseus", "source": ["https://en.wikipedia.org/wiki/Odyssey"], "beats": [
+  {"t": 0.04, "score": 3, "event": "Athena rouses Telemachus; Odysseus still held captive by Calypso."},
+  {"t": 0.13, "score": 3, "event": "Telemachus at Nestor; hears of Agamemnon's fatal homecoming."},
+  {"t": 0.17, "score": 3, "event": "Menelaus confirms Odysseus alive but Calypso's prisoner."},
+  {"t": 0.21, "score": 5, "event": "Zeus orders release; Odysseus builds raft, leaves Ogygia."},
+  {"t": 0.23, "score": 2, "event": "Poseidon wrecks raft; Ino saves him; washed naked to Scheria."},
+  {"t": 0.27, "score": 6, "event": "Nausicaa finds him; welcomed at Alcinous's palace."},
+  {"t": 0.33, "score": 6, "event": "Honored at Phaeacian games; weeps at bard's Troy songs."},
+  {"t": 0.38, "score": 4, "event": "Flashback: blinds Polyphemus the Cyclops; crew escapes."},
+  {"t": 0.42, "score": 2, "event": "Aeolus's wind-bag opened by crew; blown back to sea."},
+  {"t": 0.44, "score": 1, "event": "Laestrygonian giants sink all ships but his own."},
+  {"t": 0.46, "score": 5, "event": "Circe turns men to pigs; moly saves them; year on Aeaea."},
+  {"t": 0.48, "score": 3, "event": "Underworld: Tiresias's grim prophecy; meets mother's shade."},
+  {"t": 0.50, "score": 1, "event": "Scylla eats six; men slay Helios's cattle; Zeus sinks last ship."},
+  {"t": 0.55, "score": 7, "event": "Phaeacians ferry him home; wakes on Ithaca's shore."},
+  {"t": 0.60, "score": 5, "event": "Disguised as beggar; sheltered by loyal swineherd Eumaeus."},
+  {"t": 0.67, "score": 6, "event": "Reveals himself to Telemachus; they plot revenge."},
+  {"t": 0.71, "score": 4, "event": "Mocked by suitors in his hall; old dog Argos dies knowing him."},
+  {"t": 0.87, "score": 7, "event": "Strings the great bow no suitor could bend."},
+  {"t": 0.92, "score": 8, "event": "Slaughters the suitors; reclaims his household."},
+  {"t": 0.96, "score": 9, "event": "Reunites with Penelope via the olive-tree bed test."},
+  {"t": 1.00, "score": 8, "event": "Reveals himself to Laertes; Athena imposes peace."}
+]}

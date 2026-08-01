@@ -1,0 +1,18 @@
+{"id": "the-metamorphosis", "title": "The Metamorphosis", "author": "Franz Kafka", "year": 1915, "region": "west", "protagonist": "Gregor Samsa", "source": ["https://en.wikipedia.org/wiki/The_Metamorphosis", "https://www.gradesaver.com/the-metamorphosis/study-guide/summary"], "beats": [
+  {"t": 0.03, "score": 2, "event": "Gregor wakes transformed into a monstrous vermin"},
+  {"t": 0.08, "score": 3, "event": "Frets about missing his salesman train, hopes it is temporary"},
+  {"t": 0.15, "score": 3, "event": "Office manager arrives to investigate his absence"},
+  {"t": 0.22, "score": 2, "event": "Manager sees his insect form and flees in horror"},
+  {"t": 0.30, "score": 2, "event": "Father drives him back into his room, injuring him"},
+  {"t": 0.38, "score": 3, "event": "Family loses income; parents and Grete must take jobs"},
+  {"t": 0.45, "score": 4, "event": "Grete cares for him, learns he prefers spoiled food"},
+  {"t": 0.55, "score": 3, "event": "Grete and mother begin clearing furniture from his room"},
+  {"t": 0.62, "score": 3, "event": "Gregor emerges to protect a cherished wall portrait"},
+  {"t": 0.66, "score": 1, "event": "Father pelts him with apples; one lodges in his back"},
+  {"t": 0.72, "score": 2, "event": "Family neglects him; take in lodgers to survive"},
+  {"t": 0.80, "score": 3, "event": "Drawn out by Grete's violin, he crawls into the parlor"},
+  {"t": 0.85, "score": 2, "event": "Lodgers see him, recoil, and threaten to leave without pay"},
+  {"t": 0.90, "score": 1, "event": "Grete declares the family must get rid of him"},
+  {"t": 0.95, "score": 1, "event": "Gregor retreats to his room and dies of starvation"},
+  {"t": 0.98, "score": 1, "event": "Charwoman finds his corpse; family takes a relieved outing"}
+]}

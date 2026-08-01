@@ -1,0 +1,29 @@
+{
+  "id": "dorian-gray",
+  "title": "The Picture of Dorian Gray",
+  "author": "Oscar Wilde",
+  "year": 1890,
+  "region": "west",
+  "protagonist": "Dorian Gray",
+  "source": ["https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray"],
+  "beats": [
+    {"t": 0.05, "score": 6, "event": "Basil paints Dorian's portrait; Lord Henry meets and captivates him"},
+    {"t": 0.10, "score": 6, "event": "Under Henry's influence, Dorian wishes the portrait would age in his place"},
+    {"t": 0.20, "score": 7, "event": "Dorian discovers actress Sibyl Vane, courts her, and proposes marriage"},
+    {"t": 0.25, "score": 7, "event": "Sibyl calls him 'Prince Charming'; brother James vows vengeance if harmed"},
+    {"t": 0.35, "score": 4, "event": "Sibyl performs poorly onstage; Dorian cruelly rejects her"},
+    {"t": 0.38, "score": 4, "event": "Dorian sees a subtle sneer of cruelty appear on the portrait"},
+    {"t": 0.42, "score": 3, "event": "Lord Henry brings news that Sibyl has killed herself"},
+    {"t": 0.50, "score": 6, "event": "Dorian locks portrait away; enjoys 18 years of ageless vice"},
+    {"t": 0.62, "score": 4, "event": "Basil confronts Dorian about rumors; is shown the hideous portrait"},
+    {"t": 0.65, "score": 2, "event": "Enraged, Dorian stabs Basil to death in the locked room"},
+    {"t": 0.70, "score": 3, "event": "Dorian blackmails Alan Campbell to destroy body; Alan later kills himself"},
+    {"t": 0.75, "score": 3, "event": "Fleeing guilt to an opium den, Dorian is accosted by James Vane"},
+    {"t": 0.78, "score": 4, "event": "Dorian's young face deceives James, who releases him"},
+    {"t": 0.80, "score": 3, "event": "A woman confirms Dorian's identity; James begins stalking him"},
+    {"t": 0.86, "score": 5, "event": "At a shooting party a hunter accidentally kills James Vane"},
+    {"t": 0.92, "score": 5, "event": "Dorian resolves to reform and spares Hetty Merton's heart"},
+    {"t": 0.96, "score": 3, "event": "Portrait grows uglier still, revealing his motives are vanity, not remorse"},
+    {"t": 1.00, "score": 1, "event": "Dorian stabs the portrait; found as a withered corpse, painting restored"}
+  ]
+}

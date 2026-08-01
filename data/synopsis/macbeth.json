@@ -1,18 +1,1 @@
-{"id": "macbeth", "title": "Macbeth", "author": "William Shakespeare", "year": 1606, "region": "west", "protagonist": "Macbeth", "source": ["https://en.wikipedia.org/wiki/Macbeth"], "beats": [
-{"t": 0.05, "score": 7, "event": "Victorious in battle, Macbeth meets three witches on the heath"},
-{"t": 0.10, "score": 7, "event": "Witches prophesy: Thane of Cawdor, then king hereafter"},
-{"t": 0.14, "score": 7, "event": "Duncan names Macbeth Thane of Cawdor; first prophecy fulfilled"},
-{"t": 0.20, "score": 6, "event": "Lady Macbeth reads the letter; goads him to murder Duncan"},
-{"t": 0.28, "score": 5, "event": "Macbeth stabs the sleeping Duncan at Inverness"},
-{"t": 0.35, "score": 5, "event": "Duncan's sons flee; Macbeth is crowned king of Scotland"},
-{"t": 0.45, "score": 5, "event": "Macbeth hires assassins to kill Banquo and Fleance"},
-{"t": 0.50, "score": 4, "event": "Banquo is killed but Fleance escapes into the darkness"},
-{"t": 0.55, "score": 2, "event": "Banquo's ghost appears at the royal banquet, terrifying Macbeth"},
-{"t": 0.65, "score": 5, "event": "Witches show three apparitions; he feels safe from any man born of woman"},
-{"t": 0.72, "score": 3, "event": "Macbeth orders the massacre of Macduff's wife and children"},
-{"t": 0.80, "score": 3, "event": "Macduff joins Malcolm; English army marches on Scotland"},
-{"t": 0.88, "score": 2, "event": "Lady Macbeth, mad with guilt, sleepwalks and then dies"},
-{"t": 0.93, "score": 2, "event": "Birnam Wood advances on Dunsinane; branches conceal Malcolm's army"},
-{"t": 0.97, "score": 1, "event": "Macduff reveals he was not of woman born; kills Macbeth in combat"},
-{"t": 1.00, "score": 1, "event": "Malcolm proclaimed king; Macbeth's severed head brought before him"}
-]}
+{"id": "macbeth", "title": "Macbeth", "author": "William Shakespeare", "year": 1606, "region": "west", "protagonist": "Macbeth", "source": ["https://en.wikipedia.org/wiki/Macbeth"], "beats": [{"t": 0.05, "score": 7, "event": "Victorious in battle, Macbeth meets three witches on the heath"}, {"t": 0.1, "score": 7, "event": "Witches prophesy: Thane of Cawdor, then king hereafter"}, {"t": 0.14, "score": 7, "event": "Duncan names Macbeth Thane of Cawdor; first prophecy fulfilled"}, {"t": 0.2, "score": 6, "event": "Lady Macbeth reads the letter; goads him to murder Duncan"}, {"t": 0.28, "score": 5, "event": "Macbeth stabs the sleeping Duncan at Inverness"}, {"t": 0.35, "score": 5, "event": "Duncan's sons flee; Macbeth is crowned king of Scotland"}, {"t": 0.45, "score": 5, "event": "Macbeth hires assassins to kill Banquo and Fleance"}, {"t": 0.5, "score": 4, "event": "Banquo is killed but Fleance escapes into the darkness"}, {"t": 0.55, "score": 2, "event": "Banquo's ghost appears at the royal banquet, terrifying Macbeth"}, {"t": 0.65, "score": 5, "event": "Witches show three apparitions; he feels safe from any man born of woman"}, {"t": 0.72, "score": 3, "event": "Macbeth orders the massacre of Macduff's wife and children"}, {"t": 0.8, "score": 3, "event": "Macduff joins Malcolm; English army marches on Scotland"}, {"t": 0.88, "score": 2, "event": "Lady Macbeth, mad with guilt, sleepwalks and then dies"}, {"t": 0.93, "score": 2, "event": "Birnam Wood advances on Dunsinane; branches conceal Malcolm's army"}, {"t": 0.97, "score": 1, "event": "Macduff reveals he was not of woman born; slays Macbeth; his severed head is brought forth"}, {"t": 1.0, "score": 1, "event": "Malcolm proclaimed king; Macbeth's severed head brought before him"}]}

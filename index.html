@@ -261,9 +261,24 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
         trilogy — the validation gates exist because these things happen.</p>
       <p><b>Word-mood lines</b> (the 2016 method — average happiness of a moving chunk of vocabulary,
         Reagan et&nbsp;al., EPJ Data Science 2016, labMT lexicon) appear only as toggleable overlays on
-        37 pre-1923 books, for comparison: they are the book’s soundtrack, not its plot.</p>
+        37 pre-1923 books, for comparison: they are the book’s soundtrack, not its plot. A scale note:
+        event scores use absolute anchors (1 = catastrophic anywhere in literature, 9 = fairy-tale peak;
+        across all 1,771 scored beats only 2% are 9s), while the 2016 lines have no absolute units — each
+        book is normalized to its own range — so overlays are rescaled to the book’s event range and
+        compare <em>shape only</em>.</p>
     </div>
     <div>
+      <h3>Validation of the synopsis method</h3>
+      <p>Before trusting synopsis-scored lines, we tested them against ground truth: nine works that had
+        been scored from their <em>full texts</em> were independently re-scored from synopses alone.
+        Seven of nine reproduce the full-text shape (r = +0.61 to +0.87, median +0.68). The two
+        failures are the two epics — whose synopses summarize a different selection of episodes than the
+        condensed translations the full-text reader used — so epic-scale works are the method’s known
+        weak spot, and the two epics in this atlas display their full-text lines, not synopsis lines.
+        Separately, adversarial audits re-checked 199 beats across 12 random books against their cited
+        synopses: one fabricated event (corrected), no order errors beyond one, and a tail of
+        embellished details beyond the synopsis text (corrected). Treat the lines as careful readings
+        with known error bars — not ground truth.</p>
       <h3>What we verified ourselves</h3>
       <ul>
         <li>Re-ran the 2016 decomposition on the corpus: three basic curves ± their mirrors explain ~84%
@@ -699,15 +714,22 @@ function corr(a, b) {
 const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
   if (!detailBook) return;
   const f = drawBook(ctx, W, H, detailBook, p);
-  const mood = moodLineOf(detailBook);
+  let mood = moodLineOf(detailBook);
   if (mood && showMood) {
+    // the 2016 line has no absolute units (each book normalized to its own range);
+    // rescale it into this book's event range so only SHAPE is being compared
+    const ev = detailBook.pts.map(q => q[1]);
+    const eMin = Math.min(...ev), eMax = Math.max(...ev);
+    const mv = mood.map(q => q[1]);
+    const mMin = Math.min(...mv), mMax = Math.max(...mv), mR = (mMax - mMin) || 1;
+    mood = mood.map(([t, v]) => [t, eMin + (v - mMin) / mR * (eMax - eMin)]);
     ctx.setLineDash([6, 5]); ctx.globalAlpha = .8;
     strokeLine(ctx, mood, f.X, f.Y, p, PAL.muted, 1.7, hashStr(detailBook.id) + 5);
     ctx.setLineDash([]); ctx.globalAlpha = 1;
     // name each line near its first quarter, clear of the ending annotations
     const hero = lineOf(detailBook);
     const q = 0.22;
-    labelText(ctx, 'mood of the words (2016 method)', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.muted, 'left');
+    labelText(ctx, 'mood of the words (2016 method, scaled to match)', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.muted, 'left');
     labelText(ctx, 'the hero’s events', f.X(q), f.Y(valueAt(hero, q)) + 18, shapeColor(detailBook), 'left');
   }
 }, 2800);
@@ -731,6 +753,8 @@ function openDetail(b) {
   const mt = document.getElementById('moodToggle');
   const hasBoth = !!b.mood;
   mt.style.display = hasBoth ? '' : 'none';
+  if (!hasBoth) prov.appendChild(Object.assign(document.createElement('span'),
+    { textContent: ' No word-mood comparison exists for this book — it is not in the 2016 study’s public-domain corpus.' }));
   if (hasBoth) {
     const r = corr(b.pts.map(q => q[1]),
       b.pts.map(q => valueAt(moodLineOf(b), q[0])));
@@ -796,8 +820,13 @@ READER_FIVE.forEach(id => {
   readerGrid.appendChild(el);
   attach(el.querySelector('canvas'), (ctx, W, H, p) => {
     const f = frame(ctx, W, H, { mini: true });
+    const ev = b.pts.map(q => q[1]);
+    const eMin = Math.min(...ev), eMax = Math.max(...ev);
+    const m0 = moodLineOf(b), mv = m0.map(q => q[1]);
+    const mMin = Math.min(...mv), mR = (Math.max(...mv) - mMin) || 1;
+    const mood = m0.map(([t, v]) => [t, eMin + (v - mMin) / mR * (eMax - eMin)]);
     ctx.setLineDash([5, 4]); ctx.globalAlpha = .8;
-    strokeLine(ctx, moodLineOf(b), f.X, f.Y, p, PAL.muted, 1.6, hashStr(b.id) + 5);
+    strokeLine(ctx, mood, f.X, f.Y, p, PAL.muted, 1.6, hashStr(b.id) + 5);
     ctx.setLineDash([]); ctx.globalAlpha = 1;
     strokeLine(ctx, lineOf(b), f.X, f.Y, p, shapeColor(b), 2.3, hashStr(b.id));
   }, 2300);

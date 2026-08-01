@@ -1,0 +1,19 @@
+{"id": "a-christmas-carol", "title": "A Christmas Carol", "author": "Charles Dickens", "year": 1843, "region": "west", "protagonist": "Ebenezer Scrooge", "source": ["https://en.wikipedia.org/wiki/A_Christmas_Carol"], "beats": [
+{"t": 0.04, "score": 3, "event": "Rich but bitter Scrooge rebuffs nephew Fred and dismisses charity solicitors"},
+{"t": 0.09, "score": 3, "event": "Grudgingly grants clerk Bob Cratchit Christmas Day off"},
+{"t": 0.16, "score": 2, "event": "Marley's chained ghost warns him to change or share his fate"},
+{"t": 0.24, "score": 3, "event": "Ghost of Past shows lonely boyhood at boarding school"},
+{"t": 0.30, "score": 6, "event": "Revisits beloved sister Fan and Fezziwig's joyful Christmas party"},
+{"t": 0.36, "score": 2, "event": "Watches fiancee Belle leave him over his obsession with money"},
+{"t": 0.40, "score": 2, "event": "Sees Belle now happy with another family, without him"},
+{"t": 0.48, "score": 5, "event": "Ghost of Present shows warm Christmas revels and Fred's party"},
+{"t": 0.55, "score": 4, "event": "Witnesses Cratchit feast; meets fragile, cheerful Tiny Tim"},
+{"t": 0.60, "score": 3, "event": "Warned Tiny Tim will die unless circumstances change"},
+{"t": 0.64, "score": 2, "event": "Ghost reveals wretched children Ignorance and Want"},
+{"t": 0.72, "score": 2, "event": "Future: a disliked man's funeral; servants pilfer his possessions"},
+{"t": 0.78, "score": 1, "event": "Witnesses the Cratchits grieving over Tiny Tim's death"},
+{"t": 0.84, "score": 1, "event": "Sees his own name on the tombstone; pledges desperately to change"},
+{"t": 0.91, "score": 8, "event": "Wakes transformed on Christmas morning; donates generously to charity"},
+{"t": 0.96, "score": 9, "event": "Sends a turkey to the Cratchits and celebrates at Fred's party"},
+{"t": 1.00, "score": 9, "event": "Raises Cratchit's wages; becomes a second father to Tiny Tim"}
+]}

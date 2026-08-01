@@ -1,0 +1,19 @@
+{"id": "nala-damayanti", "title": "Nala and Damayanti", "author": "Mahabharata episode", "year": -400, "region": "india", "protagonist": "Nala (and Damayanti jointly)", "source": ["https://en.wikipedia.org/wiki/Nala_and_Damayanti"], "beats": [
+  {"t": 0.05, "score": 6, "event": "Nala and Damayanti fall in love via a magical swan messenger"},
+  {"t": 0.12, "score": 5, "event": "Four gods arrive at Damayanti's svayamvara intending to woo her"},
+  {"t": 0.18, "score": 8, "event": "Damayanti chooses Nala; the gods bless the couple with boons"},
+  {"t": 0.24, "score": 8, "event": "They marry, have twin children, and reign happily for twelve years"},
+  {"t": 0.32, "score": 3, "event": "Kali, angered at losing Damayanti, possesses Nala"},
+  {"t": 0.40, "score": 2, "event": "Pushkara challenges Nala to dice; Nala loses his entire kingdom"},
+  {"t": 0.46, "score": 2, "event": "Stripped of possessions, the couple flees into the forest"},
+  {"t": 0.52, "score": 1, "event": "Enchanted birds steal Nala's last garment, leaving him naked"},
+  {"t": 0.57, "score": 1, "event": "Guilt-stricken Nala abandons Damayanti asleep in the night"},
+  {"t": 0.63, "score": 1, "event": "Damayanti endures python, hunter's assault, and elephant stampede"},
+  {"t": 0.69, "score": 3, "event": "Damayanti taken in as chambermaid by the Chedi queen mother"},
+  {"t": 0.75, "score": 4, "event": "Nala saves snake-king Karkotaka; turned hunchback, Kali expelled"},
+  {"t": 0.80, "score": 4, "event": "Disguised as Bahuka, Nala serves King Rituparna of Ayodhya"},
+  {"t": 0.86, "score": 6, "event": "Brahmins locate Nala; Damayanti stages a false svayamvara to lure him"},
+  {"t": 0.91, "score": 7, "event": "On the rushed chariot ride, Nala masters numbers; Kali fully departs"},
+  {"t": 0.96, "score": 8, "event": "Divine signs confirm Nala's identity and Damayanti's chastity; reunited"},
+  {"t": 1.00, "score": 9, "event": "Nala defeats Pushkara, forgives him, and reclaims his kingdom"}
+]}
