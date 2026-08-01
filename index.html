@@ -119,16 +119,23 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <section id="shapes">
   <h2>It turns out he was right</h2>
-  <p class="lede">Decades later, researchers actually tried it. They plotted the arcs of more than a
-    thousand novels, and the shapes were there. Nearly every story is built from the same few
-    moves: a rise, a fall, a valley, a peak. Here they are, each drawn over the real stories
-    that take its shape.</p>
+  <p class="lede">Decades later, a research team at the University of Vermont actually tried it.
+    They fed more than a thousand English-language novels through a computer, plotted each one’s
+    arc, and the shapes were there: six of them, three basic moves and their mirror images.
+    Vonnegut himself drew a seventh, the line that refuses to commit either way; that was his
+    Hamlet. And our own data demanded an eighth: stories that reverse so many times the line
+    becomes a braid. Below, each shape is drawn bold, with the stories from this page that follow
+    it traced faintly behind it.</p>
   <div class="cardGrid" id="shapeGrid"></div>
 </section>
 
 <section id="atlas">
-  <h2>Now look at the stories themselves</h2>
-  <p class="lede">Click any book to watch its line draw itself.</p>
+  <h2>The stories themselves</h2>
+  <p class="lede">Now let’s draw the stories. Every book below gets one line, tracing its hero’s
+    fortunes from the first page to the last: the line climbs when things go well and dives when
+    they don’t. Click a book to watch its line draw itself. The turning points are written on the
+    line, and hovering or tapping along it shows what happens at that moment in the story. The
+    shape buttons gather every book that shares a shape.</p>
   <div class="filters" id="filters">
     <input id="search" type="search" placeholder="Search title or author…">
     <span id="shapeChips"></span>
@@ -138,15 +145,19 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </section>
 
 <section id="east">
-  <h2>The oldest stories draw the same lines</h2>
-  <p class="lede">Gilgamesh, the Sanskrit epics, the Persian romances, China’s classic novels, Genji,
-    the Tale of Kieu: the same shapes appear everywhere, each with its own accent. In both Indian epics
-    the trapdoor is a dice game. The Ramayana keeps going past the moment a Western telling would
-    roll credits; after the triumph, the wheel keeps turning.</p>
+  <h2>What about the rest of the world?</h2>
+  <p class="lede">Vonnegut drew Western stories, and the Vermont team tested Western novels. So we
+    asked the obvious next question: do the oldest stories from the rest of the world take the same
+    shapes? We drew twenty-two classics from eight traditions: Gilgamesh from Mesopotamia, the
+    Ramayana and the Mahabharata from India, the Persian romances, China’s four great novels, the
+    court tales of Japan, Korea’s Chunhyang, Vietnam’s Tale of Kieu. They do: the falls, the
+    recoveries, and the rises are all here, and most of these stories would sit comfortably among
+    the shapes above. The differences live in the endings. Several of these epics keep going past
+    the moment a Western telling would stop; the Ramayana reaches its triumphant coronation and
+    then continues into loss, which you can see in its chart below. And Gilgamesh, the oldest story
+    we have, ends where almost no Western story chooses to end: not in triumph, not in ruin, but in
+    acceptance.</p>
   <div class="panelGrid" id="eastGrid"></div>
-  <p class="lede" style="margin-top:16px">One caveat we owe the material: several of these traditions
-    compose a <em>sequence of emotions</em> (Sanskrit rasa theory) or a cyclical cosmology rather than one
-    hero’s luck. Where an Eastern text looks odd under this lens, part of that is the lens.</p>
 </section>
 
 <section id="map">
@@ -157,15 +168,28 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </section>
 
 <section id="machine">
-  <h2>How a computer read a thousand books it couldn’t understand</h2>
-  <p class="lede">A computer can’t follow a plot. But ten thousand common words have been rated for
-    happiness by human readers: “laughter” scores 8.5 out of 9, “terrorist” 1.3. Take a moving chunk of
-    a book, average the ratings of its words, slide forward, average again: the line below draws itself
-    from vocabulary alone. Watch the window slide:</p>
+  <h2>How these lines were made</h2>
+  <p class="lede">The Vermont team’s trick was crude and clever. A computer cannot follow a plot,
+    but it can look up words: thousands of common English words have been scored for how pleasant
+    they feel, by panels of human readers. Slide a window through a book, average the scores of the
+    words inside it, and the book traces a curve out of its own vocabulary. Watch the window slide:</p>
   <div class="bigCv" style="max-width:900px"><canvas id="machineCv"></canvas></div>
-  <p class="lede" style="margin-top:16px">The fine print that matters: that line hears the <b>mood of the
-    words</b>, not the <b>luck of the hero</b>. So the lines in this atlas were made a stronger way,
-    by a reader that follows the events. How, and how we checked it, is in the
+  <p class="lede" style="margin-top:16px">That trick has a blind spot: it hears the mood of the
+    language, not the luck of the hero. A Christmas Carol is the clearest casualty. Its merriest
+    vocabulary crowds the middle of the book, at Fezziwig’s party and the Cratchits’ dinner, so a
+    word-counter draws a line that peaks in the middle and sags at the end, when every reader knows
+    the book bottoms out at Scrooge’s own grave and ends at its absolute peak.</p>
+  <p class="lede">So the lines on this page were made differently. An AI reader worked through each
+    story, the full text where it is freely available and the published plot synopsis where the book
+    is still under copyright, and scored the hero’s situation event by event: safety, freedom, love,
+    prospects. The mood of the prose never enters into it; a beautifully written murder scores as a
+    murder.</p>
+  <p class="lede">The difference is not subtle. Under event-scoring, The Hound of the Baskervilles
+    flips from a decline into the triumphant rise any reader remembers. The Secret Garden stops
+    looking like a tragedy and becomes the steady bloom it is. The Road stops wavering and commits
+    to its long fall. And to check ourselves, we scored nine books twice, once from the full text
+    and once from the synopsis alone: seven of the nine traced nearly the same line, the two
+    sprawling epics being the exception. The fine print on all of it is in the
     <a href="#method">method notes</a>.</p>
 </section>
 <section id="method">
