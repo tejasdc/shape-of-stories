@@ -94,44 +94,33 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <nav>
   <span class="brand">The Shape of Stories</span>
-  <a href="#machine">The machine</a><a href="#shapes">The shapes</a>
-  <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#method">Method</a>
+  <a href="#shapes">The shapes</a>
+  <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#machine">How it was measured</a><a href="#method">Method</a>
   <span class="spacer"></span>
 </nav>
 
 <header id="hero">
   <div>
     <h1>The Shape of<br>Stories</h1>
-    <p class="lede">Ever noticed that Cinderella and Harry Potter are basically the same story?
-      A mistreated orphan, a sudden door into a magical world, a devastating reversal, a triumphant
-      ending. Different centuries — same shape.</p>
-    <p class="lede">In a short lecture, Kurt Vonnegut breaks down the hidden geometry of
-      storytelling. With one simple chalk graph — a character’s ups and downs over time — he shows
-      that whether it’s Boy Gets Girl or Man Gets into Trouble, almost every famous story shares the
-      same basic, predictable shape. And he ends on a dare: the shapes are so simple, he says,
-      <em>“there is no reason why they can’t be fed into computers.”</em>
+    <p class="lede">Ever noticed that Hamlet and The Lion King are the same story? A king murdered
+      by his brother, a haunted heir who runs from it, a reckoning. Once you see it there, you start
+      seeing it everywhere — a lot of stories follow the same few arcs.</p>
+    <p class="lede">In a short lecture, Kurt Vonnegut broke down the hidden geometry of
+      storytelling. With one simple chalk graph — a character’s ups and downs over time — he drew
+      story after story as a shape: Boy Gets Girl, Man Gets into Trouble, Cinderella. His claim:
+      there are only a handful of these shapes. And he ended on a dare — they’re so simple,
+      he said, <em>“there is no reason why they can’t be fed into computers.”</em>
       <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">watch the lecture</a></p>
   </div>
   <div class="bigCv"><canvas id="heroCv"></canvas></div>
 </header>
 
-<section id="machine">
-  <h2>How a computer read a thousand books it couldn’t understand</h2>
-  <p class="lede">In 2016, a research team took the dare. A computer can’t follow a plot — but ten thousand common words have been rated for
-    happiness by human readers — “laughter” scores 8.5 out of 9, “terrorist” 1.3. Take a moving chunk of
-    a book, average the ratings of its words, slide forward, average again: the line below draws itself
-    from vocabulary alone. Watch the window slide:</p>
-  <div class="bigCv" style="max-width:900px"><canvas id="machineCv"></canvas></div>
-  <p class="lede" style="margin-top:16px">The fine print that matters: that line hears the <b>mood of the
-    words</b>, not the <b>luck of the hero</b> — so the lines in this atlas were made a stronger way:
-    a reader that follows the events. How, and how we checked it, is in the
-    <a href="#method">method notes</a>.</p>
-</section>
 <section id="shapes">
   <h2>It turns out he was right</h2>
-  <p class="lede">Across more than a thousand novels, the claim held: nearly every story is built
-    from the same few moves — a rise, a fall, a valley, a peak. Here they are, each drawn over the
-    real stories that take its shape.</p>
+  <p class="lede">In 2016, a research team took the dare. They plotted the arcs of more than a
+    thousand novels — and the shapes were there. Nearly every story is built from the same few
+    moves: a rise, a fall, a valley, a peak. Here they are, each drawn over the real stories
+    that take its shape.</p>
   <div class="cardGrid" id="shapeGrid"></div>
 </section>
 
@@ -165,6 +154,18 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <div id="mapWrap"><canvas id="mapCv"></canvas><div class="hoverTip" id="mapTip"></div></div>
 </section>
 
+<section id="machine">
+  <h2>How a computer read a thousand books it couldn’t understand</h2>
+  <p class="lede">A computer can’t follow a plot — but ten thousand common words have been rated for
+    happiness by human readers — “laughter” scores 8.5 out of 9, “terrorist” 1.3. Take a moving chunk of
+    a book, average the ratings of its words, slide forward, average again: the line below draws itself
+    from vocabulary alone. Watch the window slide:</p>
+  <div class="bigCv" style="max-width:900px"><canvas id="machineCv"></canvas></div>
+  <p class="lede" style="margin-top:16px">The fine print that matters: that line hears the <b>mood of the
+    words</b>, not the <b>luck of the hero</b> — so the lines in this atlas were made a stronger way:
+    a reader that follows the events. How, and how we checked it, is in the
+    <a href="#method">method notes</a>.</p>
+</section>
 <section id="method">
   <h2>Method &amp; sources</h2>
   <div class="cols">
