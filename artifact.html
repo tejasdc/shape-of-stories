@@ -842,7 +842,8 @@ attach(mapCv, (ctx, W, H, p) => {
   mapDots = [];
   BOOKS.forEach((b, i) => {
     const s = lineOf(b);
-    const start = s[0][1], end = s[s.length - 1][1];
+    // endpoints are facts — use the raw scored beats; the middle is a tendency — use the envelope
+    const start = b.pts[0][1], end = b.pts[b.pts.length - 1][1];
     const mid = s.slice(Math.floor(s.length * .3), Math.floor(s.length * .7)).reduce((a, q) => a + q[1], 0) / (Math.floor(s.length * .7) - Math.floor(s.length * .3));
     const reveal = Math.max(0, Math.min(1, p * BOOKS.length * .12 - i * .1));
     if (reveal <= 0) return;
