@@ -88,9 +88,9 @@ nav .spacer { flex: 1; }
 .navBtns { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
 #mapWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
 @media (max-width: 700px) { #mapWrap { aspect-ratio: 1/1; } }
-#method { border-top: 1px solid var(--ring); }
-#method p, #method li { font-size: 14.5px; color: var(--ink2); }
-#method .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; }
+#machine { border-top: 1px solid var(--ring); }
+#machine .cols p, #machine .cols li { font-size: 14.5px; color: var(--ink2); }
+#machine .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; }
 footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-family: var(--sans); font-size: 12.5px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
@@ -98,7 +98,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <nav>
   <span class="brand">The Shape of Stories</span>
   <a href="#shapes">The shapes</a>
-  <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#machine">How it was measured</a><a href="#method">Method</a>
+  <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#machine">Method</a>
   <span class="spacer"></span>
 </nav>
 
@@ -174,25 +174,28 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
     vocabulary. Watch the window slide:</p>
   <div class="bigCv" style="max-width:900px"><canvas id="machineCv"></canvas></div>
   <p class="lede" style="margin-top:16px">That trick has a blind spot: it hears the mood of the
-    language, not the luck of the hero. A Christmas Carol is the clearest casualty. Its merriest
-    vocabulary crowds the middle of the book, at Fezziwig’s party and the Cratchits’ dinner, so a
-    word-counter draws a line that peaks in the middle and sags at the end, when every reader knows
-    the book bottoms out at Scrooge’s own grave and ends at its absolute peak.</p>
-  <p class="lede">So the lines on this page were made differently. An AI reader worked through each
-    story, the full text where it is freely available and the published plot synopsis where the book
-    is still under copyright, and scored the hero’s situation event by event: safety, freedom, love,
-    prospects. The mood of the prose never enters into it; a beautifully written murder scores as a
+    language, not the luck of the hero. So the lines on this page were made differently: from the
+    plot, not the prose. For each book we took the published plot synopsis (or the full text, where
+    it is freely available), broke the story into its events, and scored each event for how things
+    stand for the hero: safety, freedom, love, prospects. A beautifully written murder scores as a
     murder.</p>
-  <p class="lede">The difference is not subtle. Under event-scoring, The Hound of the Baskervilles
-    flips from a decline into the triumphant rise any reader remembers. The Secret Garden stops
-    looking like a tragedy and becomes the steady bloom it is. The Road stops wavering and commits
-    to its long fall. And to check ourselves, we scored nine books twice, once from the full text
-    and once from the synopsis alone: seven of the nine traced nearly the same line, the two
-    sprawling epics being the exception. The fine print on all of it is in the
-    <a href="#method">method notes</a>.</p>
-</section>
-<section id="method">
-  <h2>Method &amp; sources</h2>
+  <p class="lede">The difference is not subtle, and you can see it. Below, each book carries two
+    lines: dashed for what the words sound like, solid for what actually happens. A Christmas
+    Carol is the clearest case. Its merriest vocabulary crowds the middle of the book, at
+    Fezziwig’s party and the Cratchits’ dinner, so the word line peaks in the middle and sags at
+    the end, while the story itself bottoms out at Scrooge’s own grave and ends at its absolute
+    peak. Emma’s word line sinks through the gossip and dread of her final chapters and misses the
+    weddings entirely. The Hound of the Baskervilles reads to a word-counter like a decline; the
+    events rise to the solution any reader remembers. The Secret Garden sounds like a tragedy and
+    blooms anyway.</p>
+  <div class="keyRow">
+    <span><span class="sw" style="background:repeating-linear-gradient(90deg,var(--muted) 0 6px,transparent 6px 11px)"></span>what the words sound like</span>
+    <span><span class="sw" style="background:var(--ink)"></span>what actually happens (colored by shape)</span>
+  </div>
+  <div class="panelGrid" id="compareGrid"></div>
+  <p class="lede" style="margin-top:16px">And to check ourselves, we scored nine books twice, once
+    from the full text and once from the synopsis alone: seven of the nine traced nearly the same
+    line, the two sprawling epics being the exception. The full fine print follows.</p>
   <div class="cols">
     <div>
       <h3>How every line was made</h3>
@@ -253,6 +256,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
       </ul>
     </div>
   </div>
+  
 </section>
 
 <footer>“The truth is, we know so little about life, we don’t really know what the good news is and what the bad news is.” — K.V.</footer>
@@ -760,6 +764,36 @@ EAST_ORDER.forEach(region => BOOKS.filter(b => b.region === region)
     }, 2600);
     makePanelClickable(el, b);
   }));
+
+/* ===== method comparison: words vs events ===== */
+const COMPARE = [
+  ['a-christmas-carol', 'the words peak at the parties; the story ends at its peak'],
+  ['emma', 'the words sink past the weddings; the events rise to them'],
+  ['hound-of-the-baskervilles', 'the words decline; the case rises to its solution'],
+  ['the-secret-garden', 'the words sound mournful; the garden blooms'],
+];
+const compareGrid = document.getElementById('compareGrid');
+COMPARE.forEach(([id, sub]) => {
+  const b = BOOKS.find(x => x.id === id);
+  if (!b || !b.mood) return;
+  const el = document.createElement('div'); el.className = 'panel';
+  el.innerHTML = `<h3>${b.title}</h3><div class="sub">${sub}</div><div class="cvWrap"><canvas></canvas></div>`;
+  compareGrid.appendChild(el);
+  attach(el.querySelector('canvas'), (ctx, W, H, p) => {
+    const f2 = frame(ctx, W, H, { mini: true });
+    const ev = b.pts.map(q => q[1]);
+    const eMin = Math.min(...ev), eMax = Math.max(...ev);
+    const m0 = b.mood.map((v, i) => [i / (b.mood.length - 1), v]);
+    const mv = m0.map(q => q[1]);
+    const mMin = Math.min(...mv), mR = (Math.max(...mv) - mMin) || 1;
+    const mood = m0.map(([t, v]) => [t, eMin + (v - mMin) / mR * (eMax - eMin)]);
+    ctx.setLineDash([5, 4]); ctx.globalAlpha = .8;
+    strokeLine(ctx, mood, f2.X, f2.Y, p, PAL.muted, 1.6, hashStr(b.id) + 5);
+    ctx.setLineDash([]); ctx.globalAlpha = 1;
+    strokeLine(ctx, lineOf(b), f2.X, f2.Y, p, shapeColor(b), 2.3, hashStr(b.id));
+  }, 2300);
+  makePanelClickable(el, b);
+});
 
 /* ===== map ===== */
 const mapCv = document.getElementById('mapCv');
