@@ -248,7 +248,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
       <p>Every fortune line in the atlas was scored by an AI agent judging the story’s <b>events</b> against
         one shared rubric (1 = catastrophic, 5 = ordinary life, 9 = triumphant; prose mood never counts).
         Lines are drawn as a gently smoothed envelope of those scores — beat scoring exaggerates each event
-        into a full swing — with the raw scored beats shown as small dots on the line.
+        into a full swing — and every raw beat score is available on hover.
         The difference between books is the <b>evidence</b> the agent worked from:</p>
       <p><b>Full text</b> (9 works): the agent read the entire book in equal slices — twenty for novels and
         epics, sixteen for the two shorter works — scoring each slice as it went.</p>
@@ -517,7 +517,8 @@ function annotatedBeats(b) {
   // choose up to 4 labels: global min, global max, final point, plus first big drop
   const src = b.whys || [];
   if (!src.length) return [];
-  const withV = src.map(([t, txt]) => ({ t, txt, v: rawBeatValue(b, t) }));
+  const line = lineOf(b);
+  const withV = src.map(([t, txt]) => ({ t, txt, v: valueAt(line, t) }));
   const chosen = [];
   const byV = [...withV].sort((a, c) => a.v - c.v);
   chosen.push(byV[0]);                                  // lowest point
@@ -537,13 +538,6 @@ function drawBook(ctx, W, H, b, p, opts = {}) {
   const color = shapeColor(b);
   const tip = strokeLine(ctx, pts, f.X, f.Y, p, opts.color || color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
   if (!opts.mini && W >= 480) {
-    // raw beat scores as small dots riding the envelope
-    ctx.fillStyle = opts.color || color; ctx.globalAlpha = .5;
-    for (const [bt, bv] of b.pts) {
-      if (bt > tip[0] + .002) continue;
-      ctx.beginPath(); ctx.arc(f.X(bt), f.Y(bv), 2.4, 0, 7); ctx.fill();
-    }
-    ctx.globalAlpha = 1;
     for (const beat of annotatedBeats(b)) {
       if (beat.t > tip[0] + .002) continue;
       ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(f.X(beat.t), f.Y(beat.v), 3, 0, 7); ctx.fill();
@@ -797,7 +791,8 @@ detailCv.addEventListener('pointermove', e => {
   let best = null, bd = .06;
   for (const [wt, txt] of whys) { const d = Math.abs(wt - t); if (d < bd) { bd = d; best = [wt, txt]; } }
   if (best) {
-    tipEl.textContent = Math.round(best[0] * 100) + '% — ' + best[1];
+    const score = Math.round(rawBeatValue(detailBook, best[0]) * 4 + 5);
+    tipEl.textContent = Math.round(best[0] * 100) + '% — ' + best[1] + ` (scored ${score}/9)`;
     tipEl.style.left = (e.clientX - r.left) + 'px'; tipEl.style.top = (e.clientY - r.top) + 'px'; tipEl.style.opacity = 1;
   } else {
     const v = valueAt(lineOf(detailBook), t);
