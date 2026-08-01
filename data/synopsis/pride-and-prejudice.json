@@ -2,18 +2,18 @@
 {"t": 0.04, "score": 5, "event": "Wealthy bachelor Bingley rents Netherfield next to the Bennets"},
 {"t": 0.09, "score": 4, "event": "At the Meryton assembly Darcy calls Elizabeth 'not handsome enough'"},
 {"t": 0.15, "score": 5, "event": "Bingley courts Jane; Darcy quietly finds himself drawn to Elizabeth"},
-{"t": 0.22, "score": 4, "event": "Officer Wickham tells Elizabeth Darcy cheated him of a living"},
+{"t": 0.22, "score": 4, "event": "Officer Wickham tells Elizabeth that Darcy treated him badly"},
 {"t": 0.28, "score": 5, "event": "Elizabeth refuses Mr Collins; Charlotte Lucas accepts him instead"},
 {"t": 0.36, "score": 3, "event": "Bingley leaves Netherfield; Jane's hopes collapse"},
 {"t": 0.44, "score": 5, "event": "Elizabeth visits Charlotte at Hunsford; meets Lady Catherine"},
 {"t": 0.52, "score": 3, "event": "At Hunsford Darcy proposes; she angrily rejects him"},
 {"t": 0.58, "score": 4, "event": "Darcy's letter explains Wickham's true character and his role separating Bingley from Jane"},
 {"t": 0.64, "score": 5, "event": "Elizabeth reconsiders; grows ashamed of her prejudice"},
-{"t": 0.72, "score": 6, "event": "Touring Pemberley she meets Darcy again; his manners have softened"},
+{"t": 0.72, "score": 6, "event": "Touring Pemberley she meets Darcy again"},
 {"t": 0.78, "score": 1, "event": "News: Lydia has eloped with Wickham; the family faces ruin"},
 {"t": 0.84, "score": 5, "event": "The pair are married in London; the scandal contained"},
-{"t": 0.88, "score": 6, "event": "Aunt Gardiner reveals Darcy secretly paid Wickham off to save Lydia"},
+{"t": 0.88, "score": 6, "event": "Elizabeth learns Darcy secretly paid Wickham off to save Lydia"},
 {"t": 0.93, "score": 5, "event": "Lady Catherine demands Elizabeth promise never to marry Darcy; she refuses"},
 {"t": 0.97, "score": 8, "event": "Darcy proposes again at Longbourn; Elizabeth accepts"},
-{"t": 1.00, "score": 9, "event": "Double wedding of Jane to Bingley and Elizabeth to Darcy"}
+{"t": 1.00, "score": 9, "event": "Jane weds Bingley and Elizabeth weds Darcy; both happy endings"}
 ]}

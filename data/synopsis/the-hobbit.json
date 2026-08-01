@@ -7,8 +7,7 @@
   "protagonist": "Bilbo Baggins",
   "source": ["https://en.wikipedia.org/wiki/The_Hobbit"],
   "beats": [
-    {"t": 0.03, "score": 6, "event": "Bilbo enjoys quiet life in his hobbit-hole"},
-    {"t": 0.07, "score": 4, "event": "Gandalf arranges the dwarves' invasion of Bilbo's home"},
+    {"t": 0.05, "score": 4, "event": "Gandalf arranges the dwarves' invasion of Bilbo's home"},
     {"t": 0.12, "score": 4, "event": "Thorin recruits Bilbo as burglar for the Lonely Mountain"},
     {"t": 0.20, "score": 3, "event": "Trolls capture the party; Gandalf tricks them into daylight"},
     {"t": 0.27, "score": 6, "event": "Rest at Rivendell; Elrond deciphers moon-runes on the map"},
@@ -16,14 +15,14 @@
     {"t": 0.42, "score": 5, "event": "Bilbo finds a mysterious ring in the dark tunnels"},
     {"t": 0.48, "score": 6, "event": "Wins a riddle contest with Gollum; escapes with the ring"},
     {"t": 0.55, "score": 5, "event": "In Mirkwood Bilbo rescues dwarves from giant spiders"},
-    {"t": 0.62, "score": 5, "event": "Frees the dwarves from Wood-elf dungeons in barrels"},
+    {"t": 0.62, "score": 5, "event": "Frees the dwarves from Wood-elf dungeons"},
     {"t": 0.68, "score": 6, "event": "Lake-town welcomes them as prophesied dragon-slayers"},
     {"t": 0.75, "score": 5, "event": "Bilbo scouts Smaug's lair; steals cup, finds bare patch"},
     {"t": 0.80, "score": 2, "event": "Enraged Smaug flies out and attacks Lake-town"},
-    {"t": 0.84, "score": 7, "event": "Bard the Bowman kills Smaug with an arrow to the bare patch"},
+    {"t": 0.84, "score": 7, "event": "Bard the Bowman kills Smaug through the bare patch"},
     {"t": 0.88, "score": 4, "event": "Bilbo secretly gives Arkenstone to besiegers to force peace"},
     {"t": 0.93, "score": 3, "event": "Goblin and Warg armies arrive; Battle of Five Armies begins"},
     {"t": 0.97, "score": 6, "event": "Eagles and Beorn turn the tide; Thorin dies reconciled"},
-    {"t": 1.00, "score": 7, "event": "Bilbo returns home a year later with modest wealth"}
+    {"t": 1.00, "score": 7, "event": "Bilbo returns to the Shire, wealthy but humble"}
   ]
 }
