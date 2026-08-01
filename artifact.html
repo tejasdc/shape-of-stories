@@ -247,6 +247,8 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
       <h3>How every line was made</h3>
       <p>Every fortune line in the atlas was scored by an AI agent judging the story’s <b>events</b> against
         one shared rubric (1 = catastrophic, 5 = ordinary life, 9 = triumphant; prose mood never counts).
+        Lines are drawn as a gently smoothed envelope of those scores — beat scoring exaggerates each event
+        into a full swing — with the raw scored beats shown as small dots on the line.
         The difference between books is the <b>evidence</b> the agent worked from:</p>
       <p><b>Full text</b> (9 works): the agent read the entire book in equal slices — twenty for novels and
         epics, sixteen for the two shorter works — scoring each slice as it went.</p>
@@ -378,7 +380,20 @@ function lineOf(b) {
   // beat/slice positions may not touch the edges; pad so the line spans beginning to end
   if (p[0][0] > 0.005) p = [[0, p[0][1]], ...p];
   if (p[p.length - 1][0] < 0.995 && b.id !== 'diary-of-a-young-girl') p = [...p, [1, p[p.length - 1][1]]];
-  return catmull(p);
+  // the drawn line is the story's envelope: beat scores exaggerate every event into a
+  // full swing, so smooth gently for reading — the raw beats stay visible as dots
+  const cm = catmull(p), w = 5;
+  return cm.map(([t, v], i) => {
+    const lo = Math.max(0, i - w), hi = Math.min(cm.length, i + w + 1);
+    let s = 0; for (let k = lo; k < hi; k++) s += cm[k][1];
+    return [t, s / (hi - lo)];
+  });
+}
+function rawBeatValue(b, t) {
+  const p = b.pts;
+  let k = 0; while (k < p.length - 1 && p[k + 1][0] < t) k++;
+  const a = p[k], c = p[Math.min(k + 1, p.length - 1)], span = (c[0] - a[0]) || 1;
+  return a[1] + (c[1] - a[1]) * Math.max(0, Math.min(1, (t - a[0]) / span));
 }
 function moodLineOf(b) {
   const s = b.mood;
@@ -418,10 +433,23 @@ function strokeLine(ctx, pts, X, Y, progress, color, width = 2.2, seed = 1, alph
   const upto = Math.max(2, Math.ceil(pts.length * progress));
   const rng = mulberry(seed);
   const passes = PAL.wobble ? 2 : 1;
+  // chalk wobble is a slow hand-tremor, not per-sample noise: interpolate between
+  // sparse wobble knots (~every 14 samples) so the line drifts instead of buzzing
+  let knots = null;
+  if (PAL.wobble) {
+    const KE = 14, n = Math.ceil(pts.length / KE) + 2;
+    knots = Array.from({ length: n }, () => [(rng() - .5) * 3.4, (rng() - .5) * 3.4]);
+  }
+  const jitter = i => {
+    if (!knots) return [0, 0];
+    const f = i / 14, k = Math.floor(f), t = f - k;
+    const a = knots[Math.min(k, knots.length - 1)], b2 = knots[Math.min(k + 1, knots.length - 1)];
+    return [a[0] + (b2[0] - a[0]) * t, a[1] + (b2[1] - a[1]) * t];
+  };
   for (let pass = 0; pass < passes; pass++) {
     ctx.beginPath();
     for (let i = 0; i < upto; i++) {
-      const jx = PAL.wobble ? (rng() - .5) * 2.2 : 0, jy = PAL.wobble ? (rng() - .5) * 2.2 : 0;
+      const [jx, jy] = jitter(i + pass * 5);
       const x = X(pts[i][0]) + jx, y = Y(pts[i][1]) + jy;
       i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
     }
@@ -476,8 +504,7 @@ function annotatedBeats(b) {
   // choose up to 4 labels: global min, global max, final point, plus first big drop
   const src = b.whys || [];
   if (!src.length) return [];
-  const line = lineOf(b);
-  const withV = src.map(([t, txt]) => ({ t, txt, v: valueAt(line, t) }));
+  const withV = src.map(([t, txt]) => ({ t, txt, v: rawBeatValue(b, t) }));
   const chosen = [];
   const byV = [...withV].sort((a, c) => a.v - c.v);
   chosen.push(byV[0]);                                  // lowest point
@@ -497,6 +524,13 @@ function drawBook(ctx, W, H, b, p, opts = {}) {
   const color = shapeColor(b);
   const tip = strokeLine(ctx, pts, f.X, f.Y, p, opts.color || color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
   if (!opts.mini && W >= 480) {
+    // raw beat scores as small dots riding the envelope
+    ctx.fillStyle = opts.color || color; ctx.globalAlpha = .5;
+    for (const [bt, bv] of b.pts) {
+      if (bt > tip[0] + .002) continue;
+      ctx.beginPath(); ctx.arc(f.X(bt), f.Y(bv), 2.4, 0, 7); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
     for (const beat of annotatedBeats(b)) {
       if (beat.t > tip[0] + .002) continue;
       ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(f.X(beat.t), f.Y(beat.v), 3, 0, 7); ctx.fill();
