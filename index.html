@@ -80,11 +80,14 @@ nav .spacer { flex: 1; }
 .quietLink:hover { color: var(--ink2); }
 .sheet .note { color: var(--ink2); font-size: 15px; max-width: 72ch; }
 #detailCvWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 12px; overflow: hidden; position: relative; background: var(--surface); margin-top: 14px; }
-.hoverTip { position: absolute; pointer-events: none; background: var(--ink); color: var(--page); font-family: var(--sans);
-  font-size: 12px; padding: 5px 9px; border-radius: 7px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
+.hoverTip { position: absolute; pointer-events: none; font-family: var(--sans);
+  background: color-mix(in srgb, var(--page) 82%, black); border: 1px solid var(--ring);
+  color: var(--ink); box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  font-size: 12px; padding: 6px 10px; border-radius: 8px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
   opacity: 0; transition: opacity .12s; z-index: 3; }
 .navBtns { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
-#mapWrap { aspect-ratio: 16/9; min-height: 380px; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
+#mapWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
+@media (max-width: 700px) { #mapWrap { aspect-ratio: 1/1; } }
 #method { border-top: 1px solid var(--ring); }
 #method p, #method li { font-size: 14.5px; color: var(--ink2); }
 #method .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; }
@@ -657,17 +660,17 @@ function stepDetail(d) {
   const i = vis.indexOf(detailBook);
   openDetail(vis[(i + d + vis.length) % vis.length]);
 }
-/* hover: snap to the nearest beat ON the line — only when the cursor is actually near it */
-detailCv.addEventListener('pointermove', e => {
+/* snap to the nearest beat ON the line — hover on desktop, tap on touch */
+function showBeatAt(clientX, clientY, radius) {
   const tipEl = document.getElementById('detailTip');
   if (!detailBook) { tipEl.style.opacity = 0; return; }
   const r = detailCv.getBoundingClientRect();
   const m = { l: 14, r: 14, t: 26, b: 26 };
-  const px = e.clientX - r.left, py = e.clientY - r.top;
+  const px = clientX - r.left, py = clientY - r.top;
   const line = lineOf(detailBook);
   const X = t => m.l + t * (r.width - m.l - m.r);
   const Y = v => m.t + (1 - (v + 1) / 2) * (r.height - m.t - m.b);
-  let best = null, bd = 34 * 34;
+  let best = null, bd = radius * radius;
   for (const [wt, txt] of (detailBook.whys || [])) {
     const bx = X(wt), by = Y(valueAt(line, wt));
     const d = (bx - px) ** 2 + (by - py) ** 2;
@@ -680,8 +683,10 @@ detailCv.addEventListener('pointermove', e => {
   } else {
     tipEl.style.opacity = 0;
   }
-});
-detailCv.addEventListener('pointerleave', () => document.getElementById('detailTip').style.opacity = 0);
+}
+detailCv.addEventListener('pointermove', e => { if (e.pointerType !== 'touch') showBeatAt(e.clientX, e.clientY, 34); });
+detailCv.addEventListener('pointerdown', e => showBeatAt(e.clientX, e.clientY, e.pointerType === 'touch' ? 52 : 34));
+detailCv.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') document.getElementById('detailTip').style.opacity = 0; });
 
 function makePanelClickable(el, b) {
   el.style.cursor = 'pointer';
