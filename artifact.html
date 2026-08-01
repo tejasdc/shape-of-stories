@@ -80,11 +80,14 @@ nav .spacer { flex: 1; }
 .quietLink:hover { color: var(--ink2); }
 .sheet .note { color: var(--ink2); font-size: 15px; max-width: 72ch; }
 #detailCvWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 12px; overflow: hidden; position: relative; background: var(--surface); margin-top: 14px; }
-.hoverTip { position: absolute; pointer-events: none; background: var(--ink); color: var(--page); font-family: var(--sans);
-  font-size: 12px; padding: 5px 9px; border-radius: 7px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
+.hoverTip { position: absolute; pointer-events: none; font-family: var(--sans);
+  background: color-mix(in srgb, var(--page) 82%, black); border: 1px solid var(--ring);
+  color: var(--ink); box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  font-size: 12px; padding: 6px 10px; border-radius: 8px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
   opacity: 0; transition: opacity .12s; z-index: 3; }
 .navBtns { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
-#mapWrap { aspect-ratio: 16/9; min-height: 380px; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
+#mapWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
+@media (max-width: 700px) { #mapWrap { aspect-ratio: 1/1; } }
 #method { border-top: 1px solid var(--ring); }
 #method p, #method li { font-size: 14.5px; color: var(--ink2); }
 #method .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; }
@@ -488,18 +491,44 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 function attach(cv, draw, dur) { const c = makeChart(cv, draw, dur); cv._chart = c; io.observe(cv); c.render(); return c; }
 function redrawAll() { refreshPal(); for (const c of charts) c.render(); }
 
-/* ===== hero: the curves Vonnegut draws in the lecture ===== */
-const LECTURE_CURVES = [
+/* ===== hero: Vonnegut's eight shapes, his punchline, then the books ===== */
+const CINDERELLA_PTS = [[0, -.7], [.12, -.7], [.16, -.45], [.3, -.45], [.34, -.2], [.48, -.2], [.52, .1], [.58, .1], [.62, -.85], [.8, -.85], [.88, .15], [1, .95]];
+const NT_PTS = [[0, -.5], [.14, -.5], [.18, -.25], [.32, -.25], [.36, 0], [.5, 0], [.55, -.8], [.75, -.8], [.85, .25], [1, .98]];
+const HERO_SEQ = [
   { name: 'Man in a hole', pts: [[0, .3], [.2, .15], [.45, -.65], [.7, -.25], [1, .6]] },
   { name: 'Boy meets girl', pts: [[0, 0], [.1, .05], [.35, .65], [.6, -.6], [.8, -.3], [1, .8]] },
-  { name: 'Cinderella', pts: [[0, -.7], [.12, -.55], [.22, -.55], [.32, -.35], [.42, -.35], [.52, .35], [.58, .55], [.62, -.8], [.85, -.6], [1, .95]] },
+  { name: 'From bad to worse', pts: [[0, -.1], [.3, -.35], [.6, -.6], [1, -.9]] },
+  { name: 'Which way is up?', pts: [[0, 0], [.15, .1], [.3, -.12], [.45, .06], [.6, -.08], [.75, .1], [.9, -.06], [1, 0]] },
+  { name: 'The creation story', pts: [[0, -.6], [.14, -.6], [.18, -.35], [.32, -.35], [.36, -.1], [.5, -.1], [.54, .15], [.68, .15], [.72, .4], [.86, .4], [.9, .65], [1, .65]] },
+  { name: 'The Old Testament', pts: [[0, -.5], [.15, -.5], [.2, -.25], [.35, -.25], [.4, 0], [.55, 0], [.6, .25], [.72, .25], [.78, -.85], [1, -.85]] },
+  { name: 'The New Testament', pts: NT_PTS },
+  { name: 'Cinderella', pts: CINDERELLA_PTS },
+  { punchline: true },
+  { book: 'a-christmas-carol' }, { book: 'dorian-gray' }, { book: 'the-great-gatsby' }, { book: 'emma' },
 ];
 let heroIdx = 0;
 const heroChart = attach(document.getElementById('heroCv'), (ctx, W, H, p) => {
-  const c = LECTURE_CURVES[heroIdx % LECTURE_CURVES.length];
+  const item = HERO_SEQ[heroIdx % HERO_SEQ.length];
+  if (item.book) {
+    const b = BOOKS.find(x => x.id === item.book);
+    drawBook(ctx, W, H, b, p);
+    if (p > .05) labelText(ctx, b.title, 14, 50, PAL.ink, 'left');
+    return;
+  }
   const f = frame(ctx, W, H, {});
-  strokeLine(ctx, catmull(c.pts, 130), f.X, f.Y, p, PAL.line, 3, hashStr(c.name));
-  if (p > .05) labelText(ctx, c.name, 14, 34 + 16, PAL.ink, 'left');
+  if (item.punchline) {
+    strokeLine(ctx, catmull(CINDERELLA_PTS, 130), f.X, f.Y, Math.min(1, p * 2), PAL.sh.cinderella, 3, hashStr('cinderella'));
+    if (p > .5) {
+      ctx.setLineDash([7, 6]);
+      strokeLine(ctx, catmull(NT_PTS, 130), f.X, f.Y, (p - .5) * 2, PAL.ink, 2.4, hashStr('nt'));
+      ctx.setLineDash([]);
+    }
+    labelText(ctx, 'Cinderella', 14, 50, PAL.sh.cinderella, 'left');
+    if (p > .6) labelText(ctx, 'the New Testament, drawn on top', 14, 68, PAL.ink, 'left');
+    return;
+  }
+  strokeLine(ctx, catmull(item.pts, 130), f.X, f.Y, p, PAL.line, 3, hashStr(item.name));
+  if (p > .05) labelText(ctx, item.name, 14, 50, PAL.ink, 'left');
 }, 3000);
 if (!REDUCED) setInterval(() => { if (!document.hidden && heroChart.p >= 1) { heroIdx++; heroChart.play(); } }, 5200);
 
@@ -659,17 +688,17 @@ function stepDetail(d) {
   const i = vis.indexOf(detailBook);
   openDetail(vis[(i + d + vis.length) % vis.length]);
 }
-/* hover: snap to the nearest beat ON the line — only when the cursor is actually near it */
-detailCv.addEventListener('pointermove', e => {
+/* snap to the nearest beat ON the line — hover on desktop, tap on touch */
+function showBeatAt(clientX, clientY, radius) {
   const tipEl = document.getElementById('detailTip');
   if (!detailBook) { tipEl.style.opacity = 0; return; }
   const r = detailCv.getBoundingClientRect();
   const m = { l: 14, r: 14, t: 26, b: 26 };
-  const px = e.clientX - r.left, py = e.clientY - r.top;
+  const px = clientX - r.left, py = clientY - r.top;
   const line = lineOf(detailBook);
   const X = t => m.l + t * (r.width - m.l - m.r);
   const Y = v => m.t + (1 - (v + 1) / 2) * (r.height - m.t - m.b);
-  let best = null, bd = 34 * 34;
+  let best = null, bd = radius * radius;
   for (const [wt, txt] of (detailBook.whys || [])) {
     const bx = X(wt), by = Y(valueAt(line, wt));
     const d = (bx - px) ** 2 + (by - py) ** 2;
@@ -682,8 +711,10 @@ detailCv.addEventListener('pointermove', e => {
   } else {
     tipEl.style.opacity = 0;
   }
-});
-detailCv.addEventListener('pointerleave', () => document.getElementById('detailTip').style.opacity = 0);
+}
+detailCv.addEventListener('pointermove', e => { if (e.pointerType !== 'touch') showBeatAt(e.clientX, e.clientY, 34); });
+detailCv.addEventListener('pointerdown', e => showBeatAt(e.clientX, e.clientY, e.pointerType === 'touch' ? 52 : 34));
+detailCv.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') document.getElementById('detailTip').style.opacity = 0; });
 
 function makePanelClickable(el, b) {
   el.style.cursor = 'pointer';
