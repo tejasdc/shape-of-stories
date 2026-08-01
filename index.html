@@ -86,8 +86,6 @@ nav .spacer { flex: 1; }
   font-size: 12px; padding: 6px 10px; border-radius: 8px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
   opacity: 0; transition: opacity .12s; z-index: 3; }
 .navBtns { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
-#mapWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
-@media (max-width: 700px) { #mapWrap { aspect-ratio: 1/1; } }
 #machine { border-top: 1px solid var(--ring); }
 #machine .cols p, #machine .cols li { font-size: 14.5px; color: var(--ink2); }
 #machine .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; }
@@ -98,17 +96,17 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <nav>
   <span class="brand">The Shape of Stories</span>
   <a href="#shapes">The shapes</a>
-  <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#machine">Method</a>
+  <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#machine">Method</a>
   <span class="spacer"></span>
 </nav>
 
 <header id="hero">
   <div>
     <h1>The Shape of<br>Stories</h1>
-    <p class="lede">Ever noticed that Hamlet and The Lion King are the same story? A king murdered
-      by his brother, a haunted heir who runs from it, a reckoning. Once you see it there, you start
-      seeing it everywhere. A lot of stories follow the same few arcs.</p>
-    <p class="lede">Kurt Vonnegut noticed this back in the 1980s. In <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">a short lecture</a>,
+    <p class="lede">Cinderella and the New Testament have the same shape. Trace Cinderella’s
+      fortunes from the ashes to the wedding, then trace the New Testament’s over it, and the two
+      lines match almost exactly. You can watch it happen on the chalkboard beside this.</p>
+    <p class="lede">That discovery is Kurt Vonnegut’s. In <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">a short lecture</a>,
       he put it on a chalkboard: track a character’s fortunes from the beginning of the story to the
       end, and you get a curve. He graphed a few famous stories this way, and every one came out as a
       strikingly simple line. So simple, he joked, that <em>“there is no reason why they can’t be
@@ -157,12 +155,6 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <div class="panelGrid" id="eastGrid"></div>
 </section>
 
-<section id="map">
-  <h2>Every book in shape-space</h2>
-  <p class="lede">Left–right: does the story end worse or better than it began? Up–down: is its middle a
-    peak or a pit? The shape families fall out as neighborhoods.</p>
-  <div id="mapWrap"><canvas id="mapCv"></canvas><div class="hoverTip" id="mapTip"></div></div>
-</section>
 
 <section id="machine">
   <h2>How these lines were made</h2>
@@ -528,9 +520,9 @@ const HERO_SEQ = [
   { name: 'The Old Testament', pts: [[0, -.5], [.15, -.5], [.2, -.25], [.35, -.25], [.4, 0], [.55, 0], [.6, .25], [.72, .25], [.78, -.85], [1, -.85]] },
   { name: 'The New Testament', pts: NT_PTS },
   { name: 'Cinderella', pts: CINDERELLA_PTS },
-  { punchline: true },
   { book: 'a-christmas-carol' }, { book: 'dorian-gray' }, { book: 'the-great-gatsby' }, { book: 'emma' },
 ];
+HERO_SEQ.unshift({ punchline: true });
 let heroIdx = 0;
 const heroChart = attach(document.getElementById('heroCv'), (ctx, W, H, p) => {
   const item = HERO_SEQ[heroIdx % HERO_SEQ.length];
@@ -791,95 +783,6 @@ COMPARE.forEach(([id, sub]) => {
     strokeLine(ctx, lineOf(b), f2.X, f2.Y, p, shapeColor(b), 2.3, hashStr(b.id));
   }, 2300);
   makePanelClickable(el, b);
-});
-
-/* ===== map ===== */
-const mapCv = document.getElementById('mapCv');
-let mapDots = [];
-attach(mapCv, (ctx, W, H, p) => {
-  ctx.clearRect(0, 0, W, H);
-  const m = 54;
-  const X = v => m + (v + 1.6) / 3.2 * (W - 2 * m), Y = v => m + (1 - (v + 1.1) / 2.2) * (H - 2 * m);
-  ctx.strokeStyle = PAL.grid; ctx.lineWidth = 1;
-  ctx.beginPath(); ctx.moveTo(X(-1.6), Y(0)); ctx.lineTo(X(1.6), Y(0)); ctx.moveTo(X(0), Y(-1.1)); ctx.lineTo(X(0), Y(1.1)); ctx.stroke();
-  ctx.fillStyle = PAL.muted; ctx.font = '11px ' + css('--sans'); ctx.textAlign = 'center';
-  ctx.fillText('ends worse than it began ←', X(-1), Y(0) - 8); ctx.fillText('→ ends better than it began', X(1), Y(0) - 8);
-  ctx.fillText('middle is a peak ↑', X(0) + 70, Y(.95)); ctx.fillText('middle is a pit ↓', X(0) + 66, Y(-.98));
-  mapDots = [];
-  BOOKS.forEach((b, i) => {
-    const s = lineOf(b);
-    // endpoints are facts — use the raw scored beats; the middle is a tendency — use the envelope
-    const start = b.pts[0][1], end = b.pts[b.pts.length - 1][1];
-    const mid = s.slice(Math.floor(s.length * .3), Math.floor(s.length * .7)).reduce((a, q) => a + q[1], 0) / (Math.floor(s.length * .7) - Math.floor(s.length * .3));
-    const reveal = Math.max(0, Math.min(1, p * BOOKS.length * .12 - i * .1));
-    if (reveal <= 0) return;
-    const x = X(end - start), y = Y(mid - (start + end) / 2);
-    ctx.globalAlpha = reveal;
-    ctx.fillStyle = PAL.sh[b.shape];
-    ctx.strokeStyle = PAL.surface; ctx.lineWidth = 2;
-    ctx.beginPath();
-    if (b.region === 'west') { ctx.arc(x, y, 7, 0, 7); }
-    else { ctx.moveTo(x, y - 9); ctx.lineTo(x + 9, y); ctx.lineTo(x, y + 9); ctx.lineTo(x - 9, y); ctx.closePath(); }
-    ctx.fill(); ctx.stroke();
-    ctx.globalAlpha = 1;
-    mapDots.push({ x, y, b });
-  });
-  let lx = m; const ly = H - 20;
-  ctx.textAlign = 'left'; ctx.font = '11px ' + css('--sans');
-  SHAPE_ORDER.forEach(k => {
-    ctx.fillStyle = PAL.sh[k]; ctx.beginPath(); ctx.arc(lx + 5, ly - 3, 5, 0, 7); ctx.fill();
-    ctx.fillStyle = PAL.ink2; ctx.fillText(SHAPES[k].name, lx + 14, ly);
-    lx += 24 + ctx.measureText(SHAPES[k].name).width;
-  });
-  ctx.fillStyle = PAL.ink2; ctx.beginPath();
-  ctx.moveTo(lx + 5, ly - 9); ctx.lineTo(lx + 10, ly - 3); ctx.lineTo(lx + 5, ly + 3); ctx.lineTo(lx, ly - 3); ctx.closePath(); ctx.fill();
-  ctx.fillText('= Eastern', lx + 15, ly);
-}, 3200);
-mapCv.addEventListener('pointermove', e => {
-  const r = mapCv.getBoundingClientRect(); const px = e.clientX - r.left, py = e.clientY - r.top;
-  let best = null, bd = 14 * 14;
-  for (const d of mapDots) { const q = (d.x - px) ** 2 + (d.y - py) ** 2; if (q < bd) { bd = q; best = d; } }
-  const tip = document.getElementById('mapTip');
-  if (best) { tip.textContent = best.b.title; tip.style.left = best.x + 'px'; tip.style.top = best.y + 'px'; tip.style.opacity = 1; mapCv.style.cursor = 'pointer'; mapCv._hover = best.b; }
-  else { tip.style.opacity = 0; mapCv.style.cursor = ''; mapCv._hover = null; }
-});
-mapCv.addEventListener('click', () => { if (mapCv._hover) openDetail(mapCv._hover); });
-/* keyboard access for the map: arrows cycle books, Enter opens */
-mapCv.tabIndex = 0; mapCv.setAttribute('role', 'application');
-mapCv.setAttribute('aria-label', 'Map of books in shape-space; use arrow keys to cycle books, Enter to open');
-let mapKbIdx = -1;
-mapCv.addEventListener('keydown', e => {
-  if (!mapDots.length) return;
-  const sorted = [...mapDots].sort((a, b) => a.x - b.x);
-  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-    e.preventDefault();
-    mapKbIdx = (mapKbIdx + (e.key === 'ArrowRight' ? 1 : -1) + sorted.length) % sorted.length;
-    const d = sorted[mapKbIdx];
-    const tip = document.getElementById('mapTip');
-    tip.textContent = d.b.title; tip.style.left = d.x + 'px'; tip.style.top = d.y + 'px'; tip.style.opacity = 1;
-    mapCv._hover = d.b;
-  }
-  if (e.key === 'Enter' && mapCv._hover) openDetail(mapCv._hover);
-});
-
-/* keep Tab inside whichever overlay is open */
-addEventListener('keydown', e => {
-  if (e.key !== 'Tab') return;
-  const openOv = detail.classList.contains('open') ? detail : null;
-  if (!openOv) return;
-  const focusables = [...openOv.querySelectorAll('button, select, [tabindex]')].filter(el => el.offsetParent);
-  if (!focusables.length) return;
-  const first = focusables[0], last = focusables[focusables.length - 1];
-  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-  else if (!openOv.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
-});
-addEventListener('keydown', e => {
-  if (detail.classList.contains('open')) {
-    if (e.key === 'Escape') closeDetail();
-    if (e.key === 'ArrowRight') stepDetail(1);
-    if (e.key === 'ArrowLeft') stepDetail(-1);
-  }
 });
 
 /* ===== theme & skin ===== */
