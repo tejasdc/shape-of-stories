@@ -105,19 +105,18 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
     <p class="lede">Ever noticed that Hamlet and The Lion King are the same story? A king murdered
       by his brother, a haunted heir who runs from it, a reckoning. Once you see it there, you start
       seeing it everywhere. A lot of stories follow the same few arcs.</p>
-    <p class="lede">Kurt Vonnegut noticed this back in the 1980s. In <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">a short lecture</a>, with four minutes
-      and one chalkboard, he broke down the hidden geometry of storytelling: a character’s ups and
-      downs, drawn as a graph over time. He drew the man who gets into trouble and out of it, and the
-      boy who meets a girl, loses her, and wins her back. Then he drew Cinderella, whose shape turned
-      out to match a story nobody in the room expected. He ended on a dare: the shapes are so
-      simple, he said, <em>“there is no reason why they can’t be fed into computers.”</em></p>
+    <p class="lede">Kurt Vonnegut noticed this back in the 1980s. In <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">a short lecture</a>,
+      he put it on a chalkboard: track a character’s fortunes from the beginning of the story to the
+      end, and you get a curve. He graphed a few famous stories this way, and every one came out as a
+      strikingly simple line. So simple, he joked, that <em>“there is no reason why they can’t be
+      fed into computers.”</em></p>
   </div>
   <div class="bigCv"><canvas id="heroCv"></canvas></div>
 </header>
 
 <section id="shapes">
   <h2>It turns out he was right</h2>
-  <p class="lede">In 2016, a research team took the dare. They plotted the arcs of more than a
+  <p class="lede">Decades later, researchers actually tried it. They plotted the arcs of more than a
     thousand novels, and the shapes were there. Nearly every story is built from the same few
     moves: a rise, a fall, a valley, a peak. Here they are, each drawn over the real stories
     that take its shape.</p>
@@ -487,13 +486,18 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 function attach(cv, draw, dur) { const c = makeChart(cv, draw, dur); cv._chart = c; io.observe(cv); c.render(); return c; }
 function redrawAll() { refreshPal(); for (const c of charts) c.render(); }
 
-/* ===== hero: cycle Western showpieces (the East has its own room) ===== */
-const heroIds = ['a-christmas-carol', 'dorian-gray', 'the-great-gatsby', 'emma', 'cinderella-perrault'];
+/* ===== hero: the curves Vonnegut draws in the lecture ===== */
+const LECTURE_CURVES = [
+  { name: 'Man in a hole', pts: [[0, .3], [.2, .15], [.45, -.65], [.7, -.25], [1, .6]] },
+  { name: 'Boy meets girl', pts: [[0, 0], [.1, .05], [.35, .65], [.6, -.6], [.8, -.3], [1, .8]] },
+  { name: 'Cinderella', pts: [[0, -.7], [.12, -.55], [.22, -.55], [.32, -.35], [.42, -.35], [.52, .35], [.58, .55], [.62, -.8], [.85, -.6], [1, .95]] },
+];
 let heroIdx = 0;
 const heroChart = attach(document.getElementById('heroCv'), (ctx, W, H, p) => {
-  const b = BOOKS.find(x => x.id === heroIds[heroIdx % heroIds.length]);
-  drawBook(ctx, W, H, b, p);
-  if (p > .05) labelText(ctx, b.title, 14, 34 + 16, PAL.ink, 'left');
+  const c = LECTURE_CURVES[heroIdx % LECTURE_CURVES.length];
+  const f = frame(ctx, W, H, {});
+  strokeLine(ctx, catmull(c.pts, 130), f.X, f.Y, p, PAL.line, 3, hashStr(c.name));
+  if (p > .05) labelText(ctx, c.name, 14, 34 + 16, PAL.ink, 'left');
 }, 3000);
 if (!REDUCED) setInterval(() => { if (!document.hidden && heroChart.p >= 1) { heroIdx++; heroChart.play(); } }, 5200);
 
