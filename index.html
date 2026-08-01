@@ -134,7 +134,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <header id="hero">
   <div>
-    <div class="kicker">After Kurt Vonnegut · 114 stories, East and West · one line each</div>
+    <div class="kicker">after Kurt Vonnegut</div>
     <h1>The Shape of<br>Stories</h1>
     <p class="lede">Track how well things are going for a story’s hero, moment by moment, and draw it
       as a line: beginning on the left, end on the right, up is good luck, down is bad.
@@ -161,7 +161,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <p class="lede">Six were confirmed by the Vermont team across 1,327 novels — three basic moves, each
     also possible upside down. The seventh is Vonnegut’s own exception: the line that refuses to commit.
     The eighth is a braid — stories that genuinely reverse again and again; not a new basic shape, but a
-    weave of the six. Counts are from this atlas’s 114 stories.</p>
+    weave of the six.</p>
   <div class="cardGrid" id="shapeGrid"></div>
 </section>
 
@@ -181,13 +181,11 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <section id="atlas">
   <div class="kicker">Part IV — The atlas</div>
-  <h2>Ninety-two Western stories, one line each</h2>
-  <p class="lede">Every line answers one question — <em>how well are things going for the protagonist?</em> —
-    and every line was scored the same way: an AI agent judged the story’s events beat by beat.
-    For a few works the agent read the entire text; for the rest it worked from the book’s published plot
-    synopsis, which is open, citable information anyone can check. Each book’s page says which, and links
-    the source. Lines are colored by their shape family. The Eastern classics have
-    <a href="#east">a room of their own below</a>.</p>
+  <h2>The Western canon, one line per story</h2>
+  <p class="lede">Every line answers one question: <em>how well are things going for the hero?</em>
+    Click any book to watch its story draw itself. The Eastern classics have
+    <a href="#east">a room of their own below</a>; how the lines were made is in the
+    <a href="#method">method notes</a>.</p>
   <div class="filters" id="filters">
     <input id="search" type="search" placeholder="Search title or author…">
     <span id="shapeChips"></span>
@@ -199,15 +197,13 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <section id="reader">
   <div class="kicker">Part V — Why this method</div>
   <h2>Why score events instead of counting words?</h2>
-  <p class="lede">We took five books and scored them twice: once with the word-mood method, once with an
-    AI agent that read the full text and judged the <em>events</em>. On four of the five, the two lines
-    barely relate — and the failures cluster at <b>endings</b>, where weddings and redemptions are brief
-    in words but enormous in meaning. The word-counter hears A Christmas Carol’s party scenes; it cannot
-    hear that the last page is the whole point. (Thirty-seven books in the atlas carry their word-mood
-    line as a toggle, so you can check the disagreement yourself on any of them.)</p>
+  <p class="lede">We drew five books twice: once by counting word-moods, once by reading the events.
+    On four of the five the two lines barely relate — and the failures cluster at <b>endings</b>, where
+    weddings and redemptions are brief in words but enormous in meaning. The word-counter hears
+    A Christmas Carol’s party scenes; it cannot hear that the last page is the whole point.</p>
   <div class="keyRow">
-    <span><span class="sw" style="background:var(--reader)"></span>the hero’s events, scored by reading (solid, colored by shape)</span>
-    <span><span class="sw" style="background:repeating-linear-gradient(90deg,var(--muted) 0 6px,transparent 6px 11px)"></span>mood of the words (2016 method)</span>
+    <span><span class="sw" style="background:var(--reader)"></span>the hero’s fortune</span>
+    <span><span class="sw" style="background:repeating-linear-gradient(90deg,var(--muted) 0 6px,transparent 6px 11px)"></span>the sound of the words</span>
   </div>
   <div class="panelGrid" id="readerGrid"></div>
   <p class="lede" style="margin-top:16px">And the shapes themselves? Every reader-scored line still lands
@@ -595,7 +591,7 @@ const sg = document.getElementById('shapeGrid');
 SHAPE_ORDER.forEach(key => {
   const s = SHAPES[key];
   const card = document.createElement('div'); card.className = 'card';
-  card.innerHTML = `<h3>${s.name}</h3><div class="aka">${s.aka} · ${counts[key] || 0} of ${BOOKS.length} stories</div>
+  card.innerHTML = `<h3>${s.name}</h3><div class="aka">${s.aka} · ${counts[key] || 0} stories</div>
     <div class="cvWrap"><canvas></canvas></div><p>${SHAPE_DESC[key]}</p>`;
   sg.appendChild(card);
   // Fig-4 style: the ideal curve bold, the actual member stories faint behind it
@@ -724,8 +720,8 @@ const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
     const hero = lineOf(detailBook);
     const anns = annotatedBeats(detailBook);
     const q = [0.3, 0.14, 0.44, 0.58].find(c => anns.every(a => Math.abs(a.t - c) > 0.12)) ?? 0.36;
-    labelText(ctx, 'mood of the words (2016 method, scaled to match)', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.muted, 'left');
-    labelText(ctx, 'the hero’s events', f.X(q), f.Y(valueAt(hero, q)) + 18, shapeColor(detailBook), 'left');
+    labelText(ctx, 'the sound of the words', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.muted, 'left');
+    labelText(ctx, 'the hero’s fortune', f.X(q), f.Y(valueAt(hero, q)) + 18, shapeColor(detailBook), 'left');
   }
 }, 2800);
 function openDetail(b) {
@@ -733,27 +729,21 @@ function openDetail(b) {
   document.getElementById('detailTitle').textContent = b.title;
   const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
   document.getElementById('detailMeta').textContent =
-    `${b.author} · ${year}${b.region !== 'west' ? ' · ' + REGION_NAME[b.region] : ''} · shape: ${SHAPES[b.shape].name} (${SHAPES[b.shape].aka})`;
+    `${b.author} · ${year}${b.region !== 'west' ? ' · ' + REGION_NAME[b.region] : ''} · ${SHAPES[b.shape].name}`;
   const prov = document.getElementById('detailProv');
-  prov.textContent = HOW_PROV[b.how] + (b.protagonist ? ` Protagonist scored: ${b.protagonist}.` : '');
+  prov.textContent = 'Hover the line for the story behind any point.';
   if (b.how === 'synopsis' && b.source && b.source.length) {
-    b.source.forEach((url, i) => {
-      const a = document.createElement('a');
-      a.href = url; a.target = '_blank'; a.rel = 'noopener';
-      a.textContent = i === 0 ? ' View the synopsis ↗' : ` Supplemental source ${b.source.length > 2 ? i : ''} ↗`;
-      prov.appendChild(a);
-    });
+    const a = document.createElement('a');
+    a.href = b.source[0]; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = ' Read the synopsis this was drawn from ↗';
+    prov.appendChild(a);
   }
   document.getElementById('detailNote').textContent = b.note || '';
   const mt = document.getElementById('moodToggle');
   const hasBoth = !!b.mood;
   mt.style.display = hasBoth ? '' : 'none';
-  if (!hasBoth) prov.appendChild(Object.assign(document.createElement('span'),
-    { textContent: ' No word-mood comparison exists for this book — it is not in the 2016 study’s public-domain corpus.' }));
   if (hasBoth) {
-    const r = corr(b.pts.map(q => q[1]),
-      b.pts.map(q => valueAt(moodLineOf(b), q[0])));
-    mt.textContent = `Word-mood line (agreement r = ${r >= 0 ? '+' : ''}${r.toFixed(2)})`;
+    mt.textContent = 'Compare: the sound of the words';
     mt.setAttribute('aria-pressed', 'true');
   }
   if (!detail.classList.contains('open')) lastFocus = document.activeElement;
@@ -792,13 +782,10 @@ detailCv.addEventListener('pointermove', e => {
   let best = null, bd = .06;
   for (const [wt, txt] of whys) { const d = Math.abs(wt - t); if (d < bd) { bd = d; best = [wt, txt]; } }
   if (best) {
-    const score = Math.round(rawBeatValue(detailBook, best[0]) * 4 + 5);
-    tipEl.textContent = Math.round(best[0] * 100) + '% — ' + best[1] + ` (scored ${score}/9)`;
+    tipEl.textContent = best[1];
     tipEl.style.left = (e.clientX - r.left) + 'px'; tipEl.style.top = (e.clientY - r.top) + 'px'; tipEl.style.opacity = 1;
   } else {
-    const v = valueAt(lineOf(detailBook), t);
-    tipEl.textContent = Math.round(t * 100) + '% · ' + (v >= 0 ? 'good fortune' : 'ill fortune') + ' ' + v.toFixed(2);
-    tipEl.style.left = (e.clientX - r.left) + 'px'; tipEl.style.top = (e.clientY - r.top) + 'px'; tipEl.style.opacity = 1;
+    tipEl.style.opacity = 0;
   }
 });
 detailCv.addEventListener('pointerleave', () => document.getElementById('detailTip').style.opacity = 0);
@@ -809,9 +796,9 @@ const readerGrid = document.getElementById('readerGrid');
 READER_FIVE.forEach(id => {
   const b = BOOKS.find(x => x.id === id);
   const r = corr(b.pts.map(q => q[1]), b.pts.map(q => valueAt(moodLineOf(b), q[0])));
-  const verdict = r > .5 ? 'the methods agree' : (r < -.3 ? 'the word-line is upside down' : 'no relation');
+  const verdict = r > .5 ? 'the two lines agree' : (r < -.3 ? 'the word-line is upside down' : 'the two lines don’t match');
   const el = document.createElement('div'); el.className = 'panel';
-  el.innerHTML = `<h3>${b.title}</h3><div class="sub">agreement r = ${r >= 0 ? '+' : ''}${r.toFixed(2)} — ${verdict}</div>
+  el.innerHTML = `<h3>${b.title}</h3><div class="sub">${verdict}</div>
     <div class="cvWrap"><canvas></canvas></div>`;
   readerGrid.appendChild(el);
   attach(el.querySelector('canvas'), (ctx, W, H, p) => {
