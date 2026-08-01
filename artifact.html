@@ -2,36 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Shape of Stories</title>
 <style>
+/* One visual world, deliberately: Vonnegut's chalkboard. */
 :root {
-  color-scheme: light;
-  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e;
-  --muted: #898781; --grid: #e1e0d9; --baseline: #c3c2b7; --ring: rgba(11,11,11,.10);
-  --line: #eda100; --reader: #2a78d6;
-  --sh-rise: #2a78d6; --sh-cinderella: #e87ba4; --sh-hole: #1baf7a; --sh-icarus: #eda100;
-  --sh-oedipus: #4a3aa7; --sh-tragedy: #e34948; --sh-complex: #008300; --sh-flatline: #898781;
-  --wobble: 0;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
-    --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
-    --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
-    --line: #c98500; --reader: #3987e5;
-    --sh-rise: #3987e5; --sh-cinderella: #d55181; --sh-hole: #199e70; --sh-icarus: #c98500;
-    --sh-oedipus: #9085e9; --sh-tragedy: #e34948; --sh-complex: #229b22; --sh-flatline: #898781;
-  }
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7;
-  --muted: #898781; --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,.10);
-  --line: #c98500; --reader: #3987e5;
-  --sh-rise: #3987e5; --sh-cinderella: #d55181; --sh-hole: #199e70; --sh-icarus: #c98500;
-  --sh-oedipus: #9085e9; --sh-tragedy: #e34948; --sh-complex: #229b22; --sh-flatline: #898781;
-}
-:root[data-skin="chalk"], :root[data-skin="chalk"][data-theme="light"] {
   color-scheme: dark;
   --page: #1d2b26; --surface: #22332d; --ink: #f5f2e8; --ink2: #cfd8ce;
   --muted: #93a396; --grid: #2e423a; --baseline: #47594f; --ring: rgba(245,242,232,.14);
@@ -39,6 +11,8 @@
   --sh-rise: #7db8f0; --sh-cinderella: #f0a2c0; --sh-hole: #7fd6ac; --sh-icarus: #f2c14e;
   --sh-oedipus: #b9a7f5; --sh-tragedy: #f07f74; --sh-complex: #9fd6a0; --sh-flatline: #93a396;
   --wobble: 1;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -101,6 +75,9 @@ nav .spacer { flex: 1; }
 .sheet h2 { margin-right: 60px; }
 .sheet .meta { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-bottom: 6px; }
 .sheet .prov { font-family: var(--sans); font-size: 13px; color: var(--ink2); margin: 12px 0 0; max-width: 75ch; }
+#detailShape { display: flex; align-items: center; gap: 9px; font-family: var(--sans); font-size: 13.5px; font-weight: 650; margin-top: 4px; }
+.quietLink { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+.quietLink:hover { color: var(--ink2); }
 .sheet .note { color: var(--ink2); font-size: 15px; max-width: 72ch; }
 #detailCvWrap { aspect-ratio: 16/9; border: 1px solid var(--ring); border-radius: 12px; overflow: hidden; position: relative; background: var(--surface); margin-top: 14px; }
 .hoverTip { position: absolute; pointer-events: none; background: var(--ink); color: var(--page); font-family: var(--sans);
@@ -125,11 +102,9 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <nav>
   <span class="brand">The Shape of Stories</span>
   <a href="#idea">The idea</a><a href="#shapes">The shapes</a><a href="#machine">The machine</a>
-  <a href="#atlas">Atlas</a><a href="#reader">A better reader</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#method">Method</a>
+  <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#method">Method</a>
   <span class="spacer"></span>
   <button class="tbtn" id="tourBtn">▶ Tour</button>
-  <button class="tbtn" id="skinBtn" aria-pressed="false">Chalk</button>
-  <button class="tbtn" id="themeBtn" aria-pressed="false">Dark</button>
 </nav>
 
 <header id="hero">
@@ -140,7 +115,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
       as a line: beginning on the left, end on the right, up is good luck, down is bad.
       Thousands of very different stories draw the same few lines. These are those lines.</p>
     <p class="lede" style="font-family:var(--sans); font-size:13px; color:var(--muted)">
-      Click any book. Toggle <b>Chalk</b> for Vonnegut’s blackboard. Press <b>Tour</b> to watch stories draw themselves.</p>
+      Click any book. Press <b>Tour</b> to watch the stories draw themselves.</p>
   </div>
   <div class="bigCv"><canvas id="heroCv"></canvas></div>
 </header>
@@ -173,10 +148,10 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
     a book, average the ratings of its words, slide forward, average again: the line below draws itself
     from vocabulary alone. Watch the window slide:</p>
   <div class="bigCv" style="max-width:900px"><canvas id="machineCv"></canvas></div>
-  <p class="lede" style="margin-top:16px">The fine print that matters: this line hears the <b>mood of the
-    words</b>, not the <b>luck of the hero</b>. Most of the time they travel together. When they don’t —
-    and we tested this — the word-line can be flat, or even upside down. That test is
-    <a href="#reader">Part V</a>.</p>
+  <p class="lede" style="margin-top:16px">The fine print that matters: that line hears the <b>mood of the
+    words</b>, not the <b>luck of the hero</b> — so the lines in this atlas were made a stronger way:
+    a reader that follows the events. How, and how we checked it, is in the
+    <a href="#method">method notes</a>.</p>
 </section>
 
 <section id="atlas">
@@ -194,25 +169,8 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <div class="cardGrid" id="atlasGrid"></div>
 </section>
 
-<section id="reader">
-  <div class="kicker">Part V — Why this method</div>
-  <h2>Why score events instead of counting words?</h2>
-  <p class="lede">We drew five books twice: once by counting word-moods, once by reading the events.
-    On four of the five the two lines barely relate — and the failures cluster at <b>endings</b>, where
-    weddings and redemptions are brief in words but enormous in meaning. The word-counter hears
-    A Christmas Carol’s party scenes; it cannot hear that the last page is the whole point.</p>
-  <div class="keyRow">
-    <span><span class="sw" style="background:var(--reader)"></span>the hero’s fortune</span>
-    <span><span class="sw" style="background:repeating-linear-gradient(90deg,var(--muted) 0 6px,transparent 6px 11px)"></span>the sound of the words</span>
-  </div>
-  <div class="panelGrid" id="readerGrid"></div>
-  <p class="lede" style="margin-top:16px">And the shapes themselves? Every reader-scored line still lands
-    inside the same six families. The better instrument corrects <em>which</em> shape a book gets — it found
-    no new shapes. Vonnegut’s alphabet survives.</p>
-</section>
-
 <section id="east">
-  <div class="kicker">Part VI — East and West</div>
+  <div class="kicker">Part V — East and West</div>
   <h2>Twenty-two Eastern classics, same alphabet, different accents</h2>
   <p class="lede">From Gilgamesh — the oldest story we have — through the Sanskrit epics, the Persian
     romances, China’s four classic novels, Genji, the Heike, Chunhyang and the Tale of Kieu: the same
@@ -228,7 +186,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </section>
 
 <section id="map">
-  <div class="kicker">Part VII — The map</div>
+  <div class="kicker">Part VI — The map</div>
   <h2>Every book in shape-space</h2>
   <p class="lede">Left–right: does the story end worse or better than it began? Up–down: is its middle a
     peak or a pit? The shape families fall out as neighborhoods.</p>
@@ -307,6 +265,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
     <button class="tbtn close" id="detailClose">✕ Esc</button>
     <div class="meta" id="detailMeta"></div>
     <h2 id="detailTitle"></h2>
+    <div id="detailShape"></div>
     <div id="detailCvWrap"><canvas id="detailCv"></canvas><div class="hoverTip" id="detailTip"></div></div>
     <p class="prov" id="detailProv"></p>
     <p class="note" id="detailNote"></p>
@@ -314,7 +273,6 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
       <button class="tbtn" id="detailPrev">← Prev</button>
       <button class="tbtn" id="detailReplay">↻ Replay</button>
       <button class="tbtn" id="detailNext">Next →</button>
-      <button class="tbtn" id="moodToggle" style="display:none" aria-pressed="true">Show word-mood line</button>
     </div>
   </div>
 </div>
@@ -693,71 +651,38 @@ syncFilters();
 
 /* ===== detail ===== */
 const detail = document.getElementById('detail'), detailCv = document.getElementById('detailCv');
-let detailBook = null, showMood = true, lastFocus = null;
-function corr(a, b) {
-  const n = Math.min(a.length, b.length);
-  const xs = [], ys = [];
-  for (let i = 0; i < n; i++) { xs.push(a[i]); ys.push(b[i]); }
-  const ma = xs.reduce((s, v) => s + v, 0) / n, mb = ys.reduce((s, v) => s + v, 0) / n;
-  let cov = 0, va = 0, vb = 0;
-  for (let i = 0; i < n; i++) { cov += (xs[i] - ma) * (ys[i] - mb); va += (xs[i] - ma) ** 2; vb += (ys[i] - mb) ** 2; }
-  return cov / Math.sqrt(va * vb || 1);
-}
+let detailBook = null, lastFocus = null;
 const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
   if (!detailBook) return;
-  const f = drawBook(ctx, W, H, detailBook, p);
-  let mood = moodLineOf(detailBook);
-  if (mood && showMood) {
-    // the 2016 line has no absolute units (each book normalized to its own range);
-    // rescale it into this book's event range so only SHAPE is being compared
-    const ev = detailBook.pts.map(q => q[1]);
-    const eMin = Math.min(...ev), eMax = Math.max(...ev);
-    const mv = mood.map(q => q[1]);
-    const mMin = Math.min(...mv), mMax = Math.max(...mv), mR = (mMax - mMin) || 1;
-    mood = mood.map(([t, v]) => [t, eMin + (v - mMin) / mR * (eMax - eMin)]);
-    ctx.setLineDash([6, 5]); ctx.globalAlpha = .8;
-    strokeLine(ctx, mood, f.X, f.Y, p, PAL.muted, 1.7, hashStr(detailBook.id) + 5);
-    ctx.setLineDash([]); ctx.globalAlpha = 1;
-    // name each line at a spot clear of both the ending and any annotation labels
-    const hero = lineOf(detailBook);
-    const anns = annotatedBeats(detailBook);
-    const q = [0.3, 0.14, 0.44, 0.58].find(c => anns.every(a => Math.abs(a.t - c) > 0.12)) ?? 0.36;
-    labelText(ctx, 'the sound of the words', f.X(q), f.Y(valueAt(mood, q)) - 10, PAL.muted, 'left');
-    labelText(ctx, 'the hero’s fortune', f.X(q), f.Y(valueAt(hero, q)) + 18, shapeColor(detailBook), 'left');
-  }
+  drawBook(ctx, W, H, detailBook, p);
 }, 2800);
 function openDetail(b) {
-  detailBook = b; showMood = true;
+  detailBook = b;
   document.getElementById('detailTitle').textContent = b.title;
   const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
   document.getElementById('detailMeta').textContent =
-    `${b.author} · ${year}${b.region !== 'west' ? ' · ' + REGION_NAME[b.region] : ''} · ${SHAPES[b.shape].name}`;
+    `${b.author} · ${year}${b.region !== 'west' ? ' · ' + REGION_NAME[b.region] : ''}`;
+  // the shape gets its own treatment: glyph + name in the family's color
+  const shapeEl = document.getElementById('detailShape');
+  const sk = SHAPE_SKETCH[b.shape];
+  const path = sk.map(([t, v], i) => `${i ? 'L' : 'M'}${(t * 34).toFixed(1)},${(9 - v * 7).toFixed(1)}`).join(' ');
+  shapeEl.innerHTML = `<svg width="38" height="18" viewBox="0 0 34 18" aria-hidden="true">
+      <path d="${path}" fill="none" stroke="var(--sh-${b.shape})" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span style="color:var(--sh-${b.shape})">${SHAPES[b.shape].name}</span>`;
   const prov = document.getElementById('detailProv');
   prov.textContent = 'Hover the line for the story behind any point.';
   if (b.how === 'synopsis' && b.source && b.source.length) {
     const a = document.createElement('a');
-    a.href = b.source[0]; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = ' Read the synopsis this was drawn from ↗';
+    a.href = b.source[0]; a.target = '_blank'; a.rel = 'noopener'; a.className = 'quietLink';
+    a.textContent = ' source';
     prov.appendChild(a);
   }
-  document.getElementById('detailNote').textContent = b.note || '';
-  const mt = document.getElementById('moodToggle');
-  const hasBoth = !!b.mood;
-  mt.style.display = hasBoth ? '' : 'none';
-  if (hasBoth) {
-    mt.textContent = 'Compare: the sound of the words';
-    mt.setAttribute('aria-pressed', 'true');
-  }
+  document.getElementById('detailNote').textContent = b.note || SHAPE_DESC[b.shape];
   if (!detail.classList.contains('open')) lastFocus = document.activeElement;
   detail.classList.add('open'); document.body.style.overflow = 'hidden';
   document.getElementById('detailClose').focus();
   requestAnimationFrame(() => detailChart.play());
 }
-document.getElementById('moodToggle').onclick = e => {
-  showMood = !showMood;
-  e.target.setAttribute('aria-pressed', showMood);
-  detailChart.render();
-};
 function closeDetail() {
   detail.classList.remove('open'); document.body.style.overflow = '';
   if (lastFocus && lastFocus.focus) lastFocus.focus();
@@ -774,49 +699,32 @@ function stepDetail(d) {
   const i = vis.indexOf(detailBook);
   openDetail(vis[(i + d + vis.length) % vis.length]);
 }
-/* hover: show the event behind the nearest point */
+/* hover: snap to the nearest beat ON the line — only when the cursor is actually near it */
 detailCv.addEventListener('pointermove', e => {
   const tipEl = document.getElementById('detailTip');
   if (!detailBook) { tipEl.style.opacity = 0; return; }
   const r = detailCv.getBoundingClientRect();
-  const t = Math.max(0, Math.min(1, (e.clientX - r.left - 14) / (r.width - 28)));
-  const whys = detailBook.whys || [];
-  let best = null, bd = .06;
-  for (const [wt, txt] of whys) { const d = Math.abs(wt - t); if (d < bd) { bd = d; best = [wt, txt]; } }
+  const m = { l: 14, r: 14, t: 26, b: 26 };
+  const px = e.clientX - r.left, py = e.clientY - r.top;
+  const line = lineOf(detailBook);
+  const X = t => m.l + t * (r.width - m.l - m.r);
+  const Y = v => m.t + (1 - (v + 1) / 2) * (r.height - m.t - m.b);
+  let best = null, bd = 34 * 34;
+  for (const [wt, txt] of (detailBook.whys || [])) {
+    const bx = X(wt), by = Y(valueAt(line, wt));
+    const d = (bx - px) ** 2 + (by - py) ** 2;
+    if (d < bd) { bd = d; best = { bx, by, txt }; }
+  }
   if (best) {
-    tipEl.textContent = best[1];
-    tipEl.style.left = (e.clientX - r.left) + 'px'; tipEl.style.top = (e.clientY - r.top) + 'px'; tipEl.style.opacity = 1;
+    tipEl.textContent = best.txt;
+    tipEl.style.left = Math.max(90, Math.min(r.width - 90, best.bx)) + 'px';
+    tipEl.style.top = Math.max(78, best.by - 8) + 'px'; tipEl.style.opacity = 1;
   } else {
     tipEl.style.opacity = 0;
   }
 });
 detailCv.addEventListener('pointerleave', () => document.getElementById('detailTip').style.opacity = 0);
 
-/* ===== better reader: five overlay panels ===== */
-const READER_FIVE = ['the-metamorphosis', 'a-christmas-carol', 'emma', 'the-odyssey', 'dorian-gray'];
-const readerGrid = document.getElementById('readerGrid');
-READER_FIVE.forEach(id => {
-  const b = BOOKS.find(x => x.id === id);
-  const r = corr(b.pts.map(q => q[1]), b.pts.map(q => valueAt(moodLineOf(b), q[0])));
-  const verdict = r > .5 ? 'the two lines agree' : (r < -.3 ? 'the word-line is upside down' : 'the two lines don’t match');
-  const el = document.createElement('div'); el.className = 'panel';
-  el.innerHTML = `<h3>${b.title}</h3><div class="sub">${verdict}</div>
-    <div class="cvWrap"><canvas></canvas></div>`;
-  readerGrid.appendChild(el);
-  attach(el.querySelector('canvas'), (ctx, W, H, p) => {
-    const f = frame(ctx, W, H, { mini: true });
-    const ev = b.pts.map(q => q[1]);
-    const eMin = Math.min(...ev), eMax = Math.max(...ev);
-    const m0 = moodLineOf(b), mv = m0.map(q => q[1]);
-    const mMin = Math.min(...mv), mR = (Math.max(...mv) - mMin) || 1;
-    const mood = m0.map(([t, v]) => [t, eMin + (v - mMin) / mR * (eMax - eMin)]);
-    ctx.setLineDash([5, 4]); ctx.globalAlpha = .8;
-    strokeLine(ctx, mood, f.X, f.Y, p, PAL.muted, 1.6, hashStr(b.id) + 5);
-    ctx.setLineDash([]); ctx.globalAlpha = 1;
-    strokeLine(ctx, lineOf(b), f.X, f.Y, p, shapeColor(b), 2.3, hashStr(b.id));
-  }, 2300);
-  makePanelClickable(el, b);
-});
 function makePanelClickable(el, b) {
   el.style.cursor = 'pointer';
   el.tabIndex = 0; el.setAttribute('role', 'button'); el.setAttribute('aria-label', 'Open ' + b.title);
@@ -975,20 +883,5 @@ addEventListener('keydown', e => {
 });
 
 /* ===== theme & skin ===== */
-const themeBtn = document.getElementById('themeBtn'), skinBtn = document.getElementById('skinBtn');
-themeBtn.onclick = () => {
-  const cur = document.documentElement.dataset.theme;
-  const dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-  document.documentElement.dataset.theme = dark ? 'light' : 'dark';
-  themeBtn.setAttribute('aria-pressed', !dark);
-  redrawAll();
-};
-skinBtn.onclick = () => {
-  const on = document.documentElement.dataset.skin === 'chalk';
-  if (on) delete document.documentElement.dataset.skin; else document.documentElement.dataset.skin = 'chalk';
-  skinBtn.setAttribute('aria-pressed', !on);
-  redrawAll();
-};
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redrawAll);
 addEventListener('resize', () => { clearTimeout(window._rz); window._rz = setTimeout(redrawAll, 120); });
 </script>
