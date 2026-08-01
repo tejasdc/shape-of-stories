@@ -104,11 +104,11 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
     <h1>The Shape of<br>Stories</h1>
     <p class="lede">Ever noticed that Hamlet and The Lion King are the same story? A king murdered
       by his brother, a haunted heir who runs from it, a reckoning. Once you see it there, you start
-      seeing it everywhere — a lot of stories follow the same few arcs.</p>
-    <p class="lede">Kurt Vonnegut noticed this back in the 1980s. In <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">a short lecture</a> — four minutes
-      and one chalkboard — he broke down the hidden geometry of storytelling: a character’s ups and
-      downs, drawn as a graph over time. He drew the man who gets into trouble and out of it; the
-      boy who meets a girl, loses her, wins her back. Then he drew Cinderella — and her shape turned
+      seeing it everywhere. A lot of stories follow the same few arcs.</p>
+    <p class="lede">Kurt Vonnegut noticed this back in the 1980s. In <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">a short lecture</a>, with four minutes
+      and one chalkboard, he broke down the hidden geometry of storytelling: a character’s ups and
+      downs, drawn as a graph over time. He drew the man who gets into trouble and out of it, and the
+      boy who meets a girl, loses her, and wins her back. Then he drew Cinderella, whose shape turned
       out to match a story nobody in the room expected. He ended on a dare: the shapes are so
       simple, he said, <em>“there is no reason why they can’t be fed into computers.”</em></p>
   </div>
@@ -118,7 +118,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <section id="shapes">
   <h2>It turns out he was right</h2>
   <p class="lede">In 2016, a research team took the dare. They plotted the arcs of more than a
-    thousand novels — and the shapes were there. Nearly every story is built from the same few
+    thousand novels, and the shapes were there. Nearly every story is built from the same few
     moves: a rise, a fall, a valley, a peak. Here they are, each drawn over the real stories
     that take its shape.</p>
   <div class="cardGrid" id="shapeGrid"></div>
@@ -138,13 +138,13 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 <section id="east">
   <h2>The oldest stories draw the same lines</h2>
   <p class="lede">Gilgamesh, the Sanskrit epics, the Persian romances, China’s classic novels, Genji,
-    the Tale of Kieu — the same shapes appear everywhere, with their own accents: in both Indian epics
-    the trapdoor is a dice game, and the Ramayana keeps going past the moment a Western telling would
-    roll credits — after the triumph, the wheel keeps turning.</p>
+    the Tale of Kieu: the same shapes appear everywhere, each with its own accent. In both Indian epics
+    the trapdoor is a dice game. The Ramayana keeps going past the moment a Western telling would
+    roll credits; after the triumph, the wheel keeps turning.</p>
   <div class="panelGrid" id="eastGrid"></div>
   <p class="lede" style="margin-top:16px">One caveat we owe the material: several of these traditions
     compose a <em>sequence of emotions</em> (Sanskrit rasa theory) or a cyclical cosmology rather than one
-    hero’s luck — where an Eastern text looks odd under this lens, part of that is the lens.</p>
+    hero’s luck. Where an Eastern text looks odd under this lens, part of that is the lens.</p>
 </section>
 
 <section id="map">
@@ -156,14 +156,14 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <section id="machine">
   <h2>How a computer read a thousand books it couldn’t understand</h2>
-  <p class="lede">A computer can’t follow a plot — but ten thousand common words have been rated for
-    happiness by human readers — “laughter” scores 8.5 out of 9, “terrorist” 1.3. Take a moving chunk of
+  <p class="lede">A computer can’t follow a plot. But ten thousand common words have been rated for
+    happiness by human readers: “laughter” scores 8.5 out of 9, “terrorist” 1.3. Take a moving chunk of
     a book, average the ratings of its words, slide forward, average again: the line below draws itself
     from vocabulary alone. Watch the window slide:</p>
   <div class="bigCv" style="max-width:900px"><canvas id="machineCv"></canvas></div>
   <p class="lede" style="margin-top:16px">The fine print that matters: that line hears the <b>mood of the
-    words</b>, not the <b>luck of the hero</b> — so the lines in this atlas were made a stronger way:
-    a reader that follows the events. How, and how we checked it, is in the
+    words</b>, not the <b>luck of the hero</b>. So the lines in this atlas were made a stronger way,
+    by a reader that follows the events. How, and how we checked it, is in the
     <a href="#method">method notes</a>.</p>
 </section>
 <section id="method">
@@ -173,24 +173,24 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
       <h3>How every line was made</h3>
       <p>Every fortune line in the atlas was scored by an AI agent judging the story’s <b>events</b> against
         one shared rubric (1 = catastrophic, 5 = ordinary life, 9 = triumphant; prose mood never counts).
-        Lines are drawn as a gently smoothed envelope of those scores — beat scoring exaggerates each event
-        into a full swing — and every raw beat score is available on hover.
+        Lines are drawn as a gently smoothed envelope of those scores (beat scoring exaggerates each event
+        into a full swing), and every raw beat score is available on hover.
         The difference between books is the <b>evidence</b> the agent worked from:</p>
-      <p><b>Full text</b> (9 works): the agent read the entire book in equal slices — twenty for novels and
-        epics, sixteen for the two shorter works — scoring each slice as it went.</p>
+      <p><b>Full text</b> (9 works): the agent read the entire book in equal slices (twenty for novels and
+        epics, sixteen for the two shorter works), scoring each slice as it went.</p>
       <p><b>Published synopsis</b> (105 works): the agent scored beat-by-beat from the book’s public plot
         synopsis (linked on each book’s page), so every score is checkable against the same source. Event
-        positions along the book are approximate — synopses compress unevenly. Known wrinkles, kept visible:
+        positions along the book are approximate; synopses compress unevenly. Known wrinkles, kept visible:
         one book (A Man Called Ove) was scored from its faithful film adaptation’s synopsis because the
         novel’s page lacks one; Into Thin Air’s thin plot section was supplemented with the 1996 Everest
         disaster article; The Hunger Games was re-scored after a first pass accidentally covered the whole
-        trilogy — the validation gates exist because these things happen.</p>
-      <p><b>Word-mood lines</b> (the 2016 method — average happiness of a moving chunk of vocabulary,
+        trilogy; the validation gates exist because these things happen.</p>
+      <p><b>Word-mood lines</b> (the 2016 method: average happiness of a moving chunk of vocabulary,
         Reagan et&nbsp;al., EPJ Data Science 2016, labMT lexicon) appear only as toggleable overlays on
         37 pre-1923 books, for comparison: they are the book’s soundtrack, not its plot. A scale note:
         event scores use absolute anchors (1 = catastrophic anywhere in literature, 9 = fairy-tale peak;
-        across all 1,771 scored beats only 2% are 9s), while the 2016 lines have no absolute units — each
-        book is normalized to its own range — so overlays are rescaled to the book’s event range and
+        across all 1,771 scored beats only 2% are 9s), while the 2016 lines have no absolute units (each
+        book is normalized to its own range), so overlays are rescaled to the book’s event range and
         compare <em>shape only</em>.</p>
     </div>
     <div>
@@ -198,13 +198,13 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
       <p>Before trusting synopsis-scored lines, we tested them against ground truth: nine works that had
         been scored from their <em>full texts</em> were independently re-scored from synopses alone.
         Seven of nine reproduce the full-text shape (r = +0.61 to +0.87, median +0.68). The two
-        failures are the two epics — whose synopses summarize a different selection of episodes than the
-        condensed translations the full-text reader used — so epic-scale works are the method’s known
+        failures are the two epics, whose synopses summarize a different selection of episodes than the
+        condensed translations the full-text reader used, so epic-scale works are the method’s known
         weak spot, and the two epics in this atlas display their full-text lines, not synopsis lines.
         Separately, adversarial audits re-checked 199 beats across 12 random books against their cited
         synopses: one fabricated event (corrected), no order errors beyond one, and a tail of
         embellished details beyond the synopsis text (corrected). Treat the lines as careful readings
-        with known error bars — not ground truth.</p>
+        with known error bars, not ground truth.</p>
       <h3>What we verified ourselves</h3>
       <ul>
         <li>Re-ran the 2016 decomposition on the corpus: three basic curves ± their mirrors explain ~84%
@@ -212,7 +212,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
         <li>Word-mood vs reader-scored fortune on 5 books: near-zero agreement on 4 (r = −0.14…+0.16);
           Dorian Gray the exception (r = +0.90). Failures concentrate at endings.</li>
         <li>No new shapes in 9 reader-scored stories, Western or Indian.</li>
-        <li>The “Ramayana” in one common anthology is Book One only — always check a text covers the
+        <li>The “Ramayana” in one common anthology is Book One only; always check a text covers the
           full arc before trusting its line.</li>
       </ul>
     </div>
@@ -224,7 +224,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
         <li>Dodds et&nbsp;al. 2011 (labMT lexicon)</li>
         <li>Boyd, Blackburn &amp; Pennebaker 2020 · Science Advances (narrative structure beyond sentiment)</li>
         <li>R. C. Dutt’s condensed Ramayana &amp; Mahabharata (1898–99); Ryder’s Shakuntala; Arnold’s Nala and Damayanti</li>
-        <li>Campbell, <i>The Hero with a Thousand Faces</i> — his monomyth, traced as fortune, is the valley shape</li>
+        <li>Campbell, <i>The Hero with a Thousand Faces</i>: his monomyth, traced as fortune, is the valley shape</li>
       </ul>
     </div>
   </div>
@@ -266,18 +266,14 @@ const SHAPE_SKETCH = {
   complex: [[0,-.2],[.15,.55],[.3,-.6],[.45,.4],[.6,-.5],[.75,.5],[.9,-.3],[1,.3]],
 };
 const SHAPE_DESC = {
-  rise: 'Things keep getting better. Rarer in great books than optimism predicts — pure ascent is hard to sustain for 300 pages.',
+  rise: 'Things keep getting better. Rarer in great books than you’d expect. Pure ascent is hard to sustain for 300 pages.',
   tragedy: 'The floor keeps giving way. The reader stays for the dignity of the descent.',
   hole: 'Somebody gets into trouble and gets out again, better off. Vonnegut’s favorite; also Campbell’s Hero’s Journey, traced as luck. The most common shape here.',
   icarus: 'The climb that earns the crash. The higher the middle, the harder the ending lands.',
   cinderella: 'Up, a midnight, up again. Vonnegut noticed this is also the shape of the New Testament.',
   oedipus: 'The cruelest one: a recovery that turns out to be a trapdoor.',
-  flatline: 'The line that refuses to commit — it stays in a narrow band the whole way. Vonnegut’s point about Hamlet: sometimes that refusal is the honesty.',
-  complex: 'A true sawtooth: the story reverses again and again with no single dominant valley or peak. Not a new basic shape — a braid of the six, and some traditions braid far more than others.',
-};
-const HOW_PROV = {
-  fulltext: 'This line was scored by an AI agent that read the entire text in equal slices, judging the protagonist’s situation from events — never from prose mood. Hover the line to see the event behind every point.',
-  synopsis: 'This line was scored by an AI agent from the book’s published plot synopsis — open, citable public information (source below). Event positions along the book are approximate; every score is checkable against the same synopsis.',
+  flatline: 'The line refuses to commit and stays in a narrow band the whole way. Vonnegut’s point about Hamlet: sometimes that refusal is the honesty.',
+  complex: 'The story reverses again and again, with no single dominant valley or peak. It is not a new basic shape but a braid of the six, and some traditions braid far more than others.',
 };
 const REGION_NAME = { west: 'Western', india: 'India', china: 'China', japan: 'Japan', korea: 'Korea',
   vietnam: 'Vietnam', persia: 'Persia', arabia: 'Arabic tradition', mesopotamia: 'Mesopotamia' };
@@ -307,7 +303,7 @@ function lineOf(b) {
   if (p[0][0] > 0.005) p = [[0, p[0][1]], ...p];
   if (p[p.length - 1][0] < 0.995 && b.id !== 'diary-of-a-young-girl') p = [...p, [1, p[p.length - 1][1]]];
   // the drawn line is the story's envelope: beat scores exaggerate every event into a
-  // full swing, so smooth gently for reading — the raw beats stay visible as dots
+  // full swing, so smooth gently for reading; raw beat scores surface on hover
   const cm = catmull(p), w = 5;
   return cm.map(([t, v], i) => {
     const lo = Math.max(0, i - w), hi = Math.min(cm.length, i + w + 1);
