@@ -84,13 +84,6 @@ nav .spacer { flex: 1; }
   font-size: 12px; padding: 5px 9px; border-radius: 7px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
   opacity: 0; transition: opacity .12s; z-index: 3; }
 .navBtns { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
-#tour { background: var(--page); }
-#tour .stage { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 4vh 6vw; }
-#tourCvWrap { flex: 0 0 58vh; border: 1px solid var(--ring); border-radius: 16px; overflow: hidden; background: var(--surface); position: relative; }
-#tour h2 { font-size: clamp(28px, 4vw, 52px); margin: 20px 0 4px; }
-#tour .meta { font-family: var(--sans); color: var(--muted); font-size: 15px; }
-#tour .note { font-size: clamp(15px, 1.6vw, 19px); color: var(--ink2); min-height: 3.2em; opacity: 0; transition: opacity .6s; }
-#tour .hud { position: fixed; top: 14px; right: 16px; display: flex; gap: 8px; font-family: var(--sans); }
 #mapWrap { aspect-ratio: 16/9; min-height: 380px; border: 1px solid var(--ring); border-radius: 14px; background: var(--surface); margin-top: 24px; overflow: hidden; position: relative; }
 #method { border-top: 1px solid var(--ring); }
 #method p, #method li { font-size: 14.5px; color: var(--ink2); }
@@ -101,48 +94,33 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 
 <nav>
   <span class="brand">The Shape of Stories</span>
-  <a href="#idea">The idea</a><a href="#shapes">The shapes</a><a href="#machine">The machine</a>
+  <a href="#shapes">The shapes</a><a href="#machine">The machine</a>
   <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#map">Map</a><a href="#method">Method</a>
   <span class="spacer"></span>
-  <button class="tbtn" id="tourBtn">▶ Tour</button>
 </nav>
 
 <header id="hero">
   <div>
-    <div class="kicker">after Kurt Vonnegut</div>
     <h1>The Shape of<br>Stories</h1>
-    <p class="lede">Track how well things are going for a story’s hero, moment by moment, and draw it
-      as a line: beginning on the left, end on the right, up is good luck, down is bad.
-      Thousands of very different stories draw the same few lines. These are those lines.</p>
-    <p class="lede" style="font-family:var(--sans); font-size:13px; color:var(--muted)">
-      Click any book. Press <b>Tour</b> to watch the stories draw themselves.</p>
+    <p class="lede">In 1985, Kurt Vonnegut stood at a chalkboard and drew stories as lines —
+      good fortune up, ill fortune down, beginning to end. His claim: every story ever told
+      takes one of a few simple shapes.</p>
+    <p class="lede">We wanted to see that for ourselves, across the books people actually read —
+      West and East. This page is what we found.</p>
   </div>
   <div class="bigCv"><canvas id="heroCv"></canvas></div>
 </header>
 
-<section id="idea">
-  <div class="kicker">Part I — The idea</div>
-  <h2>One line per story</h2>
-  <p class="lede">In 1985 Kurt Vonnegut walked to a chalkboard and drew story after story as a single
-    line — good fortune up, ill fortune down, beginning to end. His point: the specifics vanish and a
-    handful of simple shapes remain. His joke with teeth: since the shapes are so simple,
-    <em>“there is no reason why they can’t be fed into computers.”</em> Thirty years later, a team at the
-    University of Vermont did exactly that.</p>
-</section>
-
 <section id="shapes">
-  <div class="kicker">Part II — The shapes</div>
-  <h2>Eight shapes cover everything here</h2>
-  <p class="lede">Six were confirmed by the Vermont team across 1,327 novels — three basic moves, each
-    also possible upside down. The seventh is Vonnegut’s own exception: the line that refuses to commit.
-    The eighth is a braid — stories that genuinely reverse again and again; not a new basic shape, but a
-    weave of the six.</p>
+  <h2>It turns out he was right</h2>
+  <p class="lede">Researchers later put Vonnegut’s claim to the test across more than a thousand
+    novels — and it held. Nearly every story is built from the same few moves: a rise, a fall,
+    a valley, a peak. Here they are, each drawn over the real stories that take its shape.</p>
   <div class="cardGrid" id="shapeGrid"></div>
 </section>
 
 <section id="machine">
-  <div class="kicker">Part III — The machine</div>
-  <h2>How a computer read 1,327 books it couldn’t understand</h2>
+  <h2>How a computer read a thousand books it couldn’t understand</h2>
   <p class="lede">A computer can’t follow a plot. But ten thousand common words have been rated for
     happiness by human readers — “laughter” scores 8.5 out of 9, “terrorist” 1.3. Take a moving chunk of
     a book, average the ratings of its words, slide forward, average again: the line below draws itself
@@ -155,12 +133,8 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </section>
 
 <section id="atlas">
-  <div class="kicker">Part IV — The atlas</div>
-  <h2>The Western canon, one line per story</h2>
-  <p class="lede">Every line answers one question: <em>how well are things going for the hero?</em>
-    Click any book to watch its story draw itself. The Eastern classics have
-    <a href="#east">a room of their own below</a>; how the lines were made is in the
-    <a href="#method">method notes</a>.</p>
+  <h2>Now look at the stories themselves</h2>
+  <p class="lede">Click any book to watch its line draw itself.</p>
   <div class="filters" id="filters">
     <input id="search" type="search" placeholder="Search title or author…">
     <span id="shapeChips"></span>
@@ -170,15 +144,11 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </section>
 
 <section id="east">
-  <div class="kicker">Part V — East and West</div>
-  <h2>Twenty-two Eastern classics, same alphabet, different accents</h2>
-  <p class="lede">From Gilgamesh — the oldest story we have — through the Sanskrit epics, the Persian
-    romances, China’s four classic novels, Genji, the Heike, Chunhyang and the Tale of Kieu: the same
-    basic shapes appear everywhere. The accents differ. The trapdoor in both Indian epics is a
-    <b>dice game</b>; battlefield victory scores as <em>grief</em> at Kurukshetra; the Ramayana and the
-    Heike keep going past the moment a Western telling would stop the camera — triumph is followed by the
-    wheel turning; and Vietnam’s Tale of Kieu is the truest sawtooth in the whole atlas, catastrophe and
-    rescue over and over.</p>
+  <h2>The oldest stories draw the same lines</h2>
+  <p class="lede">Gilgamesh, the Sanskrit epics, the Persian romances, China’s classic novels, Genji,
+    the Tale of Kieu — the same shapes appear everywhere, with their own accents: in both Indian epics
+    the trapdoor is a dice game, and the Ramayana keeps going past the moment a Western telling would
+    roll credits — after the triumph, the wheel keeps turning.</p>
   <div class="panelGrid" id="eastGrid"></div>
   <p class="lede" style="margin-top:16px">One caveat we owe the material: several of these traditions
     compose a <em>sequence of emotions</em> (Sanskrit rasa theory) or a cyclical cosmology rather than one
@@ -186,7 +156,6 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </section>
 
 <section id="map">
-  <div class="kicker">Part VI — The map</div>
   <h2>Every book in shape-space</h2>
   <p class="lede">Left–right: does the story end worse or better than it began? Up–down: is its middle a
     peak or a pit? The shape families fall out as neighborhoods.</p>
@@ -194,7 +163,6 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 </section>
 
 <section id="method">
-  <div class="kicker">Appendix</div>
   <h2>Method &amp; sources</h2>
   <div class="cols">
     <div>
@@ -277,19 +245,6 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   </div>
 </div>
 
-<div class="overlay" id="tour" role="dialog" aria-modal="true" aria-label="Story tour">
-  <div class="hud">
-    <button class="tbtn" id="tourPause" aria-label="Pause or resume the tour">⏸</button>
-    <select class="tbtn" id="tourSpeed"><option value="7000">Slow</option><option value="5000" selected>Medium</option><option value="3400">Fast</option></select>
-    <button class="tbtn" id="tourExit">✕ Esc</button>
-  </div>
-  <div class="stage">
-    <div id="tourCvWrap"><canvas id="tourCv"></canvas></div>
-    <h2 id="tourTitle"></h2>
-    <div class="meta" id="tourMeta"></div>
-    <p class="note" id="tourNote"></p>
-  </div>
-</div>
 
 <script src="data/stories3.js"></script>
 <script>
@@ -668,14 +623,15 @@ function openDetail(b) {
       <path d="${path}" fill="none" stroke="var(--sh-${b.shape})" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <span style="color:var(--sh-${b.shape})">${SHAPES[b.shape].name}</span>`;
   const prov = document.getElementById('detailProv');
-  prov.textContent = 'Hover the line for the story behind any point.';
+  prov.textContent = '';
+  const noteEl = document.getElementById('detailNote');
+  noteEl.textContent = b.note || SHAPE_DESC[b.shape];
   if (b.how === 'synopsis' && b.source && b.source.length) {
     const a = document.createElement('a');
     a.href = b.source[0]; a.target = '_blank'; a.rel = 'noopener'; a.className = 'quietLink';
     a.textContent = ' source';
-    prov.appendChild(a);
+    noteEl.appendChild(a);
   }
-  document.getElementById('detailNote').textContent = b.note || SHAPE_DESC[b.shape];
   if (!detail.classList.contains('open')) lastFocus = document.activeElement;
   detail.classList.add('open'); document.body.style.overflow = 'hidden';
   document.getElementById('detailClose').focus();
@@ -814,51 +770,10 @@ mapCv.addEventListener('keydown', e => {
   if (e.key === 'Enter' && mapCv._hover) openDetail(mapCv._hover);
 });
 
-/* ===== tour ===== */
-const tour = document.getElementById('tour'), tourCv = document.getElementById('tourCv');
-let tourList = [], tourIdx = 0, tourTimer = null, tourPaused = false, tourNoteTimer = null;
-const tourChart = makeChart(tourCv, (ctx, W, H, p) => {
-  const b = tourList[tourIdx]; if (!b) return;
-  drawBook(ctx, W, H, b, p);
-}, 2600);
-function tourShow(i) {
-  tourIdx = (i + tourList.length) % tourList.length;
-  const b = tourList[tourIdx];
-  document.getElementById('tourTitle').textContent = b.title;
-  const year = b.year < 0 ? 'c. ' + Math.abs(b.year) + ' BC' : b.year;
-  document.getElementById('tourMeta').textContent = `${b.author} · ${year} · ${SHAPES[b.shape].name}`;
-  const note = document.getElementById('tourNote');
-  note.style.opacity = 0; note.textContent = b.note || SHAPE_DESC[b.shape];
-  tourChart.play();
-  clearTimeout(tourNoteTimer);
-  tourNoteTimer = setTimeout(() => note.style.opacity = 1, Math.min(2200, +document.getElementById('tourSpeed').value * .45));
-}
-function tourNextTick() {
-  clearTimeout(tourTimer);
-  if (tourPaused) return;
-  tourTimer = setTimeout(() => { tourShow(tourIdx + 1); tourNextTick(); }, +document.getElementById('tourSpeed').value);
-}
-document.getElementById('tourBtn').onclick = () => {
-  tourList = [...BOOKS].sort(() => .5 - Math.random());
-  const lead = ['a-christmas-carol', 'nala-damayanti', 'ramayana', 'dorian-gray', 'emma', 'the-odyssey'];
-  tourList.sort((a, b) => (lead.indexOf(a.id) + 999 * (lead.indexOf(a.id) < 0)) - (lead.indexOf(b.id) + 999 * (lead.indexOf(b.id) < 0)));
-  tour.classList.add('open'); document.body.style.overflow = 'hidden';
-  tourPaused = false; document.getElementById('tourPause').textContent = '⏸';
-  document.getElementById('tourExit').focus();
-  tourShow(0); tourNextTick();
-};
-document.getElementById('tourExit').onclick = exitTour;
-function exitTour() { tour.classList.remove('open'); document.body.style.overflow = ''; clearTimeout(tourTimer); clearTimeout(tourNoteTimer); }
-document.getElementById('tourPause').onclick = () => {
-  tourPaused = !tourPaused;
-  document.getElementById('tourPause').textContent = tourPaused ? '▶' : '⏸';
-  if (!tourPaused) tourNextTick();
-};
-document.getElementById('tourSpeed').onchange = tourNextTick;
 /* keep Tab inside whichever overlay is open */
 addEventListener('keydown', e => {
   if (e.key !== 'Tab') return;
-  const openOv = detail.classList.contains('open') ? detail : (tour.classList.contains('open') ? tour : null);
+  const openOv = detail.classList.contains('open') ? detail : null;
   if (!openOv) return;
   const focusables = [...openOv.querySelectorAll('button, select, [tabindex]')].filter(el => el.offsetParent);
   if (!focusables.length) return;
@@ -868,12 +783,7 @@ addEventListener('keydown', e => {
   else if (!openOv.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
 });
 addEventListener('keydown', e => {
-  if (tour.classList.contains('open')) {
-    if (e.key === 'Escape') exitTour();
-    if (e.key === ' ') { e.preventDefault(); document.getElementById('tourPause').click(); }
-    if (e.key === 'ArrowRight') { tourShow(tourIdx + 1); tourNextTick(); }
-    if (e.key === 'ArrowLeft') { tourShow(tourIdx - 1); tourNextTick(); }
-  } else if (detail.classList.contains('open')) {
+  if (detail.classList.contains('open')) {
     if (e.key === 'Escape') closeDetail();
     if (e.key === 'ArrowRight') stepDetail(1);
     if (e.key === 'ArrowLeft') stepDetail(-1);
