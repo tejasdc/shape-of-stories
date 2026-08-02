@@ -27,9 +27,12 @@ section { padding: clamp(44px, 6.5vw, 90px) clamp(18px, 5vw, 64px); }
 nav { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 4px;
   padding: 10px clamp(14px, 4vw, 48px); background: color-mix(in srgb, var(--page) 86%, transparent);
   backdrop-filter: blur(10px); border-bottom: 1px solid var(--ring); font-family: var(--sans); font-size: 13px; flex-wrap: wrap; }
-nav .brand { font-family: var(--serif); font-weight: 700; font-size: 15px; margin-right: 12px; white-space: nowrap; }
+nav .brand { font-family: var(--serif); font-weight: 700; font-size: 15px; margin-right: 12px; white-space: nowrap;
+  color: var(--ink); text-decoration: none; }
 nav a { text-decoration: none; color: var(--ink2); padding: 6px 9px; border-radius: 7px; white-space: nowrap; }
 nav a:hover { color: var(--ink); background: var(--ring); }
+nav a.here { color: var(--ink); background: var(--ring); }
+section, #hero { scroll-margin-top: 58px; }
 nav .spacer { flex: 1; }
 .tbtn { border: 1px solid var(--ring); background: var(--surface); color: var(--ink); border-radius: 8px;
   padding: 6px 11px; cursor: pointer; font-size: 12.5px; font-family: var(--sans); }
@@ -103,8 +106,8 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 
-<nav>
-  <span class="brand">The Shape of Stories</span>
+<nav id="topNav">
+  <a class="brand" href="#hero">The Shape of Stories</a>
   <a href="#shapes">The shapes</a>
   <a href="#atlas">Atlas</a><a href="#east">East &amp; West</a><a href="#machine">Method</a>
   <span class="spacer"></span>
@@ -114,10 +117,10 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
   <div>
     <h1>The Shape of<br>Stories</h1>
     <p class="lede">Did you know Cinderella and the New Testament are almost identical? Not in
-      their stories: in their shape.</p>
+      their stories, but in their shape.</p>
     <p class="lede">Kurt Vonnegut noticed this back in the 1980s. In <a class="quietLink" href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ" target="_blank" rel="noopener">a short lecture</a>,
-      he put it on a chalkboard: track a character’s fortunes from the beginning of the story to the
-      end, and you get a curve. He graphed a few famous stories this way and saw that they followed
+      he drew it on a chalkboard. If you track a character’s fortunes from the beginning of the story
+      to the end, you get a curve. He graphed a few famous stories this way and saw that they followed
       simple shapes, and that different stories kept overlapping on the same ones. Computers, he
       thought, could see those shapes too. <em>“There is no reason why the simple shapes of stories
       can’t be fed into computers.”</em></p>
@@ -851,4 +854,15 @@ COMPARE.forEach(([id, sub]) => {
 
 /* ===== theme & skin ===== */
 addEventListener('resize', () => { clearTimeout(window._rz); window._rz = setTimeout(redrawAll, 120); });
+
+/* ===== nav: mark the section in view ===== */
+const navLinks = [...document.querySelectorAll('#topNav a')].filter(a => a.getAttribute('href') !== '#hero');
+const navSections = navLinks.map(a => document.getElementById(a.getAttribute('href').slice(1)));
+function spyNav() {
+  let current = -1;
+  navSections.forEach((s, i) => { if (s.getBoundingClientRect().top <= 90) current = i; });
+  navLinks.forEach((a, i) => a.classList.toggle('here', i === current));
+}
+addEventListener('scroll', () => requestAnimationFrame(spyNav), { passive: true });
+spyNav();
 </script>
