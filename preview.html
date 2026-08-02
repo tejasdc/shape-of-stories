@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Shape of Stories — preview</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #1d2b26; }
+  iframe { width: 1280px; border: 0; transform-origin: 0 0; pointer-events: none; display: block; }
+</style>
+<iframe id="page" src="./" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+<script>
+'use strict';
+const page = document.getElementById('page');
+function fit() {
+  const scale = innerWidth / 1280;
+  page.style.transform = `scale(${scale})`;
+  page.style.height = (innerHeight / scale) + 'px';
+}
+addEventListener('resize', fit);
+fit();
+</script>
