@@ -24,5 +24,21 @@ images, not described in prose.
 
 ## Publish
 
-The artifact redeploys from artifact.html (inline data). Never claim more than validation supports:
-the validation numbers and their limits live in the Method appendix and in tmp/reviews/.
+Canonical home: https://tejas.nyc/stories/ (stories.tejas.nyc 301s there). Published via the
+ship-to-site skill at level "sovereign" — no site chrome, one-line attribution only.
+
+- Republish: from this directory run
+  `node /Users/tejasdc/workspace/chann.app/scripts/ship-to-site.mjs` with NO flags
+  (`.publish.json` here is the descriptor; the registry entry lives in
+  `chann.app/scripts/artifacts-registry.json`, specimen = element screenshot of `#heroCv`).
+- artifact.html is a SECONDARY preview (claude.ai artifact): rebuild it by inlining
+  `data/stories3.js` in place of its `<script src>` tag, then republish. Same for every release:
+  ship both surfaces, not one.
+- Never claim more than validation supports: the validation numbers and their limits live in
+  the Method appendix and in tmp/reviews/.
+
+## Copy is locked
+
+The hero paragraphs, section ledes, and the atlas spoiler line are Tejas-approved verbatim
+(often his dictation). Do not rewrite, "improve", or re-punctuate reader-facing copy without
+his explicit direction, per line.
