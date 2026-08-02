@@ -73,7 +73,7 @@ nav .spacer { flex: 1; }
   padding: clamp(18px, 3vw, 36px); position: relative; }
 .sheet .close { position: absolute; top: 14px; right: 14px; }
 .sheet h2 { margin-right: 60px; }
-.sheet .meta { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.sheet .meta { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-bottom: 6px; margin-right: 76px; }
 .sheet .prov { font-family: var(--sans); font-size: 13px; color: var(--ink2); margin: 12px 0 0; max-width: 75ch; }
 #detailShape { display: flex; align-items: center; gap: 9px; font-family: var(--sans); font-size: 13.5px; font-weight: 650; margin-top: 4px; }
 .quietLink { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
@@ -85,6 +85,16 @@ nav .spacer { flex: 1; }
   color: var(--ink); box-shadow: 0 6px 18px rgba(0,0,0,.35);
   font-size: 12px; padding: 6px 10px; border-radius: 8px; transform: translate(-50%, -130%); white-space: normal; max-width: 300px;
   opacity: 0; transition: opacity .12s; z-index: 3; }
+.hoverTip.below { transform: translate(-50%, 0); }
+.beatList { display: none; }
+@media (max-width: 700px) {
+  .beatList { display: block; margin-top: 12px; font-family: var(--sans); }
+  .beatList .beat { display: flex; gap: 10px; align-items: baseline; padding: 6px 2px;
+    color: var(--ink2); font-size: 13.5px; line-height: 1.5; cursor: pointer; }
+  .beatList .beat.active { color: var(--ink); }
+  .beatList .bdot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--ink);
+    position: relative; top: -1px; }
+}
 .navBtns { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
 #machine { border-top: 1px solid var(--ring); }
 #machine .cols p, #machine .cols li { font-size: 14.5px; color: var(--ink2); }
@@ -260,6 +270,7 @@ footer { padding: 30px clamp(18px, 5vw, 64px) 60px; color: var(--muted); font-fa
     <h2 id="detailTitle"></h2>
     <div id="detailShape"></div>
     <div id="detailCvWrap"><canvas id="detailCv"></canvas><div class="hoverTip" id="detailTip"></div></div>
+    <div class="beatList" id="detailBeats"></div>
     <p class="prov" id="detailProv"></p>
     <p class="note" id="detailNote"></p>
     <div class="navBtns">
@@ -467,10 +478,11 @@ function drawBook(ctx, W, H, b, p, opts = {}) {
   const pts = lineOf(b);
   const color = shapeColor(b);
   const tip = strokeLine(ctx, pts, f.X, f.Y, p, opts.color || color, opts.mini ? 1.9 : 2.8, hashStr(b.id));
-  if (!opts.mini && W >= 480) {
+  if (!opts.mini) {
     for (const beat of annotatedBeats(b)) {
       if (beat.t > tip[0] + .002) continue;
       ctx.fillStyle = PAL.ink; ctx.beginPath(); ctx.arc(f.X(beat.t), f.Y(beat.v), 3, 0, 7); ctx.fill();
+      if (W < 480) continue;   // narrow screens: the beat list below the chart carries the words
       const above = beat.v < 0;
       const x = Math.max(78, Math.min(W - 78, f.X(beat.t)));
       wrapLabel(ctx, beat.txt, x, f.Y(beat.v) + (above ? -34 : 22), 120, PAL.ink2);
@@ -657,10 +669,43 @@ syncFilters();
 /* ===== detail ===== */
 const detail = document.getElementById('detail'), detailCv = document.getElementById('detailCv');
 let detailBook = null, lastFocus = null;
+let beatPulse = null;
 const detailChart = makeChart(detailCv, (ctx, W, H, p) => {
   if (!detailBook) return;
-  drawBook(ctx, W, H, detailBook, p);
+  const f = drawBook(ctx, W, H, detailBook, p);
+  if (beatPulse) {
+    const e = Math.min(1, (performance.now() - beatPulse.t0) / 750);
+    ctx.beginPath(); ctx.arc(f.X(beatPulse.t), f.Y(beatPulse.v), 4 + e * 14, 0, 7);
+    ctx.strokeStyle = shapeColor(detailBook); ctx.lineWidth = 2;
+    ctx.globalAlpha = 1 - e; ctx.stroke(); ctx.globalAlpha = 1;
+  }
 }, 2800);
+function pulseBeat(beat) {
+  beatPulse = { t: beat.t, v: beat.v, t0: performance.now() };
+  const loop = () => {
+    if (!beatPulse) return;
+    detailChart.render();
+    if (performance.now() - beatPulse.t0 < 750) requestAnimationFrame(loop);
+    else { beatPulse = null; detailChart.render(); }
+  };
+  requestAnimationFrame(loop);
+}
+const detailBeatRows = new Map();
+function fillBeatList(b) {
+  const beatsEl = document.getElementById('detailBeats');
+  beatsEl.textContent = ''; detailBeatRows.clear();
+  for (const beat of annotatedBeats(b)) {
+    const row = document.createElement('div'); row.className = 'beat';
+    const dot = document.createElement('span'); dot.className = 'bdot';
+    const txt = document.createElement('span'); txt.textContent = beat.txt;
+    row.append(dot, txt);
+    row.onclick = () => { markBeatRow(row); pulseBeat(beat); };
+    beatsEl.appendChild(row); detailBeatRows.set(beat, row);
+  }
+}
+function markBeatRow(row) {
+  for (const r of detailBeatRows.values()) r.classList.toggle('active', r === row);
+}
 function openDetail(b) {
   detailBook = b;
   document.getElementById('detailTitle').textContent = b.title;
@@ -684,6 +729,7 @@ function openDetail(b) {
     a.textContent = ' source';
     noteEl.appendChild(a);
   }
+  fillBeatList(b);
   if (!detail.classList.contains('open')) lastFocus = document.activeElement;
   detail.classList.add('open'); document.body.style.overflow = 'hidden';
   document.getElementById('detailClose').focus();
@@ -715,6 +761,20 @@ function showBeatAt(clientX, clientY, radius) {
   const line = lineOf(detailBook);
   const X = t => m.l + t * (r.width - m.l - m.r);
   const Y = v => m.t + (1 - (v + 1) / 2) * (r.height - m.t - m.b);
+  if (r.width < 480) {
+    // narrow screens: snap to the dotted beats and light up their entry in the list
+    let best = null, bd = radius * radius;
+    for (const beat of annotatedBeats(detailBook)) {
+      const d = (X(beat.t) - px) ** 2 + (Y(beat.v) - py) ** 2;
+      if (d < bd) { bd = d; best = beat; }
+    }
+    if (best) {
+      pulseBeat(best);
+      const row = detailBeatRows.get(best);
+      if (row) { markBeatRow(row); row.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    }
+    return;
+  }
   let best = null, bd = radius * radius;
   for (const [wt, txt] of (detailBook.whys || [])) {
     const bx = X(wt), by = Y(valueAt(line, wt));
@@ -724,7 +784,11 @@ function showBeatAt(clientX, clientY, radius) {
   if (best) {
     tipEl.textContent = best.txt;
     tipEl.style.left = Math.max(90, Math.min(r.width - 90, best.bx)) + 'px';
-    tipEl.style.top = Math.max(78, best.by - 8) + 'px'; tipEl.style.opacity = 1;
+    const tall = tipEl.offsetHeight * 1.3;
+    const below = best.by - 8 - tall < 4;
+    tipEl.classList.toggle('below', below);
+    tipEl.style.top = (below ? best.by + 14 : best.by - 8) + 'px';
+    tipEl.style.opacity = 1;
   } else {
     tipEl.style.opacity = 0;
   }
