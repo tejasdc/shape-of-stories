@@ -1,49 +1,98 @@
 # The Shape of Stories
 
-An animated atlas of the narrative arcs of 114 stories — Western canon plus 22 Eastern classics
-across eight traditions — after Kurt Vonnegut's "Shape of Stories."
+An interactive atlas for seeing how stories move: the rises, reversals, recoveries,
+and endings that give a narrative its shape.
 
-**Live:** https://claude.ai/code/artifact/2ca30c0c-9f32-4723-a5f7-ae8741fee187
-**Local:** `python3 -m http.server 8321` then open `http://localhost:8321/index.html`
+**[Explore the atlas →](https://tejas.nyc/stories/)**
 
-## What's in it
+## Why I made it
 
-- **114 stories, one fortune line each**, all event-scored by AI agents against one rubric:
-  9 from full texts read in slices (`data/pilot/`), 105 from published plot synopses with
-  source URLs (`data/synopsis/`). Word-mood lines (Reagan et al. 2016) survive only as
-  toggleable comparison overlays on 37 pre-1923 books.
-- **Eight shape buckets** with descriptive names ("Fall, then rise") — the six confirmed
-  basic shapes, Vonnegut's refuses-to-commit line, and a "braid" bucket for true sawtooths.
-  Labels from an editorial pass (`data/shape-labels.json`) for synopsis books; the nine
-  full-text books keep their story-level analyzed shapes.
-- **22 Eastern classics** (Mesopotamia, India, Persia, Arabic tradition, China, Japan,
-  Korea, Vietnam) beside 92 Western works.
-- Annotated self-drawing lines (events at the extremes, per-point hover), shape-space map,
-  autoplay tour, chalk skin, light/dark.
+A writing workshop introduced me to Kurt Vonnegut’s *Shape of Stories*: beginning to
+end on one axis, good fortune to bad fortune on the other. I wanted to see what
+those drawings looked like across books I knew, and books I hadn’t read. Which
+shapes kept coming back? Was fortune always the right thing to track, or could a
+story take a different shape when you followed knowledge, connection, or power?
 
-## Data provenance
+I built this to learn by seeing the stories side by side. The animations and plot
+events make an abstract idea about narrative something I can look at, compare,
+and question. Along the way, I wanted to understand whether the mood of a book’s
+words follows what actually happens to its characters, and whether stories from
+Asian traditions, especially Indian mythology, trace similar arcs.
 
-- Measured arcs: Reagan, Mitchell, Kiley, Danforth & Dodds, *"The emotional arcs of stories are
-  dominated by six basic shapes"* (EPJ Data Science 5:31, 2016; arXiv:1606.07772), per-book labMT
-  time series from [andyreagan/core-stories](https://github.com/andyreagan/core-stories)
-  (`src/VACC-scripts/timeseries.tgz`; no explicit license — used with attribution; underlying
-  texts are Project Gutenberg public domain).
-- **Series orientation was empirically verified**: re-derived five books from raw Gutenberg text with
-  the labMT lexicon; all correlate positively with the tarball series (r = +0.15..+0.67), so the
-  stored values are happiness-as-is. (An earlier "fix" that flipped the sign was wrong — plot
-  intuition is not lexical sentiment. See below.)
-- The lexicon hears vocabulary, not plot: five famous books whose measured line contradicts the
-  remembered plot (A Christmas Carol, Emma, The Odyssey, The Metamorphosis, Pride & Prejudice)
-  carry both lines — "The plot as remembered" (authored, primary) vs "What the lexicon heard"
-  (measured) — as deliberate crossed pairs.
-- Tension-axis framing informed by Boyd, Blackburn & Pennebaker, *"The narrative arc"*
-  (Science Advances 6:eaba2196, 2020; data at osf.io/q2a7m).
+The current atlas focuses on characters’ fortunes. Those broader questions were
+the starting point; the charts are readings to explore, rather than a claim that
+every story can be reduced to one universal formula.
 
-## Pipeline
+## Explore
 
-Scripts live in `~/workspace/agent-scripts/`: `extract_arcs.py` (smooth + normalize + archetype-fit
-measured series), `merge_stories.py` (validate + merge authored batches + augments → `data/stories.js`),
-`verify_sign*.py` (labMT orientation checks), `shoot_shapes.mjs` (Playwright screenshot suite).
-`artifact.html` is `index.html` with the data inlined (single-file, CSP-safe).
+Start with the shape sketches, then open a familiar book in the atlas to connect
+its curve to the events you remember. Search by title or author, filter by shape,
+and hover or tap along a story’s line to inspect its turning points. The **East &
+West** section extends the comparison beyond the Western collection. **Method**
+shows how the lines were made, including comparisons between the mood of the
+words and the fortunes of the characters.
 
-Externally reviewed by Codex (session log in `tmp/reviews/`), iterated to GO.
+The event annotations include endings, so expect spoilers.
+
+## Run locally
+
+This is a static HTML, CSS, and JavaScript site using Canvas for the charts. It
+needs no package installation, build step, API key, or backend.
+
+```sh
+git clone https://github.com/tejasdc/shape-of-stories.git
+cd shape-of-stories
+python3 -m http.server 8321 --bind 127.0.0.1
+```
+
+Open [localhost:8321](http://localhost:8321/). Press Ctrl+C to stop the server.
+
+## Method and sources
+
+The checked-in atlas contains 114 works: 92 in the Western collection and 22
+across eight other traditions. Its eight shape groups combine the six basic
+emotional arcs studied by Reagan and colleagues with a line of ambiguous fortune
+and a group for stories with repeated reversals.
+
+The main curves were scored by AI agents judging plot events against a shared
+fortune rubric: nine works from full texts or condensed translations, and 105
+from published synopses. Each line is a smoothed interpretation of those scores.
+Synopsis links and event explanations are retained in the data; synopsis-based
+stories also link to their source in the detail view. Event positions are
+approximate, synopses omit things, and choosing whose fortunes to follow is
+itself an interpretation. These are not objective measurements of a book’s
+meaning or quality.
+
+The dataset also retains vocabulary-based mood curves for 37 books. The Method
+section draws selected comparisons with the event-based curves; the two kinds
+of line answer different questions. The project’s full-text/synopsis comparison
+records are in [data/validation/](data/validation/), and the
+[live Method section](https://tejas.nyc/stories/#machine) explains the checks and
+their limitations, particularly for sprawling epics.
+
+The project draws on:
+
+- Kurt Vonnegut’s [*Shape of Stories* lecture](https://www.youtube.com/watch?v=oP3c1h8v2ZQ),
+  which prompted the exploration.
+- Reagan, Mitchell, Kiley, Danforth & Dodds,
+  [*The emotional arcs of stories are dominated by six basic shapes*](https://arxiv.org/abs/1606.07772)
+  (2016), and the accompanying [core-stories repository](https://github.com/andyreagan/core-stories),
+  the source of the labMT vocabulary-based comparison series.
+- Boyd, Blackburn & Pennebaker,
+  [*The narrative arc*](https://doi.org/10.1126/sciadv.aba2196) (2020), which informed
+  the early exploration of narrative dimensions beyond fortune.
+
+## Repository guide
+
+- [index.html](index.html) — the app, chart drawing, interactions, and explanatory copy.
+- [data/stories3.js](data/stories3.js) — the dataset loaded by the app.
+- [data/pilot/](data/pilot/), [data/synopsis/](data/synopsis/), and
+  [data/validation/](data/validation/) — scoring records and comparison inputs.
+- [artifact.html](artifact.html) — a standalone export with its data inlined.
+- [preview.html](preview.html) — the animated preview used on the portfolio.
+- [docs/plans/](docs/plans/) and the earlier data files — the original design and
+  earlier experiments; they do not all describe the current interface.
+
+The data preparation scripts used during development lived outside this
+repository and are not included. The checked-in data is enough to run the atlas;
+this repository does not yet reproduce the entire data-generation process.
