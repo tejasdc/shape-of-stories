@@ -5,3 +5,4 @@ data/reagan/*.tgz
 data/reagan/*.gz
 data/reagan/*.csv
 .DS_Store
+.claude/*.lock

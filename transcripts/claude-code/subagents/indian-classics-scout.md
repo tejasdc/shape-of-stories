@@ -1,0 +1,23 @@
+# Helper agent — Scout Indian epic texts
+
+**Agent `team-lead` reported** — 
+
+> Research task — write findings to ./tmp/reviews/indian-classics-sources.md. We want to point a "hero fortune line" analysis (an LLM reads a text in 20 chunks and scores how well things are going for the protagonist) at INDIAN CLASSICS that have stood the test of time, to compare their shapes against Western story shapes (Vonnegut's / Reagan et al. 2016's six shapes). Find, with verified live URLs (prefer Project Gutenberg; public domain English translations): 1. Ramayana — best available complete or condensed English translation (e.g., Romesh C. Dutt's verse condensation; Griffith's translation). Note length and whether a condensed version is more analyzable. 2. Mahabharata — same question (Dutt's condensation; Ganguli's full translation is huge — note sizes). Also self-contained episodes worth analyzing alone: Nala and Damayanti, Savitri and Satyavan. 3. Shakuntala (Kalidasa's play, e.g., Sir William Jones or Arthur Ryder translation). 4. Panchatantra / Hitopadesha fable collections (note: fables are short — flag whether per-tale analysis makes more sense). 5. Harishchandra legend — any public-domain English telling. 6. Anything else canoni…
+
+> *[ToolSearch: select:WebFetch,WebSearch,SendMessage]* · *[WebSearch: Project Gutenberg Ramayana Dutt English translation]* · *[WebSearch: Project Gutenberg Mahabharata Ganguli English translation ebook]* · *[WebSearch: Project Gutenberg Shakuntala Kalidasa English translation]* · *[WebSearch: Project Gutenberg Panchatantra Hitopadesha English translation]* · *[WebFetch: https://www.gutenberg.org/ebooks/24869]* · *[WebFetch: https://www.gutenberg.org/ebooks/7864]* · *[WebFetch: https://www.gutenberg.org/ebooks/16659]* · *[WebFetch: https://www.gutenberg.org/ebooks/12169]* · *[WebSearch: Project Gutenberg Ramayana Romesh Dutt condensed verse ebook number]* · *[WebSearch: Project Gutenberg Buddhacarita Ashvaghosha English translation Cowell]* · *[WebSearch: Project Gutenberg Jataka tales English translation Cowell]* · *[WebSearch: Project Gutenberg Harishchandra English translation legend]* · *[WebFetch: https://www.gutenberg.org/ebooks/author/8787]* · *[WebFetch: https://www.gutenberg.org/ebooks/13268]* · *[WebFetch: https://www.gutenberg.org/ebooks/19630]* · *[WebFetch: https://www.gutenberg.org/ebooks/15474]* · *[WebFetch: https://www.gutenberg.org/ebooks/15476]* · *[WebSearch: "gutenberg.org" Panchatantra Ryder ebook]* · *[WebSearch: "gutenberg.org" Buddhist Mahayana texts ebook Cowell Asvaghosa]* · *[WebSearch: Sanskrit narrative structure frame story cyclical rasa Western linear scholarly]* · *[WebFetch: https://www.gutenberg.org/ebooks/15475]* · *[WebFetch: https://www.gutenberg.org/ebooks/author/2563]* · *[WebFetch: https://www.gutenberg.org/ebooks/author/49280]* · *[WebFetch: https://www.gutenberg.org/ebooks/search/?query=buddha-carita]* · *[WebFetch: https://www.gutenberg.org/ebooks/2290]* · *[WebSearch: Savitri Satyavan Mahabharata episode public domain English translation Gutenberg]* · *[WebSearch: Gita Govinda Jayadeva English translation public domain Edwin Arnold]* · *[WebFetch: https://www.gutenberg.org/ebooks/15477]* · *[WebFetch: https://www.gutenberg.org/ebooks/25965]* · *[WebFetch: https://www.gutenberg.org/ebooks/51880]* · *[WebFetch: https://www.gutenberg.org/ebooks/57265]* · *[WebFetch: https://www.gutenberg.org/ebooks/search/?query=buddhacarita]*
+
+**Claude:**
+
+Now I have enough. Writing the report.
+
+> *[Bash: Ensure reviews directory exists]* · *[Write: ./tmp/reviews/indian-classics-sources.md]* · *[SendMessage]*
+
+**Claude:**
+
+Report written to `./tmp/reviews/indian-classics-sources.md`.
+
+Three-line summary:
+- Gutenberg has Ramayana (Griffith full verse #24869, M.N. Dutt full prose 4 vols), Mahabharata (Ganguli full prose 4 vols + Romesh Dutt's condensed #19630 which is the best single-hero-throughline version at ~54k words), Shakuntala (Monier-Williams #12169 and Ryder omnibus #16659), and Edwin Arnold's compendium "Hindu Literature" #13268 (~130k words bundling Hitopadesa + Nala-Damayanti + condensed Ramayana + Sakoontala — ideal cheap pilot).
+- Panchatantra (Ryder) and Buddhacarita (Cowell) are Internet Archive only, not on Gutenberg; Harishchandra has no clean public-domain standalone English translation; fables (Panchatantra/Jataka/22 Goblins) flagged as structural outliers to the fortune-line frame.
+- Included scholarly note on frame-story nesting (Serrano Zapata), cyclical yuga time, and rasa-as-structural-target (Gerow on Śakuntalā, JSTOR) so we can present flatter/cyclical Indian shapes as partly artifacts of a single-axis Western lens, not just claims about the texts.
+

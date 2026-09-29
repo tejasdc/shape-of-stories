@@ -90,6 +90,7 @@ The project draws on:
   [data/validation/](data/validation/) — scoring records and comparison inputs.
 - [artifact.html](artifact.html) — a standalone export with its data inlined.
 - [preview.html](preview.html) — the animated preview used on the portfolio.
+- [transcripts/](transcripts/) — the agent conversations the project was built in, lightly redacted.
 - [docs/plans/](docs/plans/) and the earlier data files — the original design and
   earlier experiments; they do not all describe the current interface.
 

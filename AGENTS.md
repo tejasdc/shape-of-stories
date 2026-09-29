@@ -42,3 +42,11 @@ ship-to-site skill at level "sovereign" — no site chrome, one-line attribution
 The hero paragraphs, section ledes, and the atlas spoiler line are Tejas-approved verbatim
 (often his dictation). Do not rewrite, "improve", or re-punctuate reader-facing copy without
 his explicit direction, per line.
+
+## Transcripts
+
+`transcripts/` is the public record of the agent sessions that built this project (July 28 to
+August 2, 2026), rendered from the transcript archive as readable Markdown and redacted: no tool
+output, no injected instructions, no local paths or private preview links, explicit language
+replaced. Anything added there must go through the same redaction review first, because this
+repository is public.
